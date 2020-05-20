@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Salesforce Platform Events</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">Salesforce Platform Events</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:void(0)">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="../index.html">Main</a></li>
+      </ul>
+
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>Platform Events</h4>
+
+        <ul>
+          <li>Platform Events Architecture</li>
+          <li>Event Object</li>
+          <li>Demo - Publishing events via API</li>
+          <li>Demo - Subscribing to events via Process Builder</li>
+          <li>Demo - Subscribing to events using CometD in Lightning Component</li>
+        </ul>
+       </section>
+
+
+      <section>
+        <h4>Platform Events Architecture</h4>
+        <img style='border-radius:10px;border:1px;' src='./img/pe/pe-1.png' alt="Platform Architecture Architecture" />
+      </section>
+
+      <section>
+        <h4>Platform Events Components</h4>
+        <ul>
+          <li>Provides an event-driven messaging architecture to enable apps to communicate inside and outside of Salesforce</li>
+          <li> Consists of event producers, event consumers, and channel (Event Bus)</li>
+          <li>Publishers and subscribers communicate with each other through events </li>
+          <li>One or more subscribers can listen to the same event and carry out actions</li>
+        </ul>
+      </section>
+
+      <section>
+         <h4>Quiz - 1</h4>
+        <ul>
+
+          <li>Channel and Event Bus are the same thing?</li>
+        </ul>
+      </section>
+
+      <section><h4>Sliding Window</h4>
+        <img style='border-radius:10px;border:0px;' class='simg' src='./img/pe/pe-2.png' alt="Platform Events" />
+        <p>Sliding window is 24 hours (now, may change)</p>
+      </section>
+
+      <section>
+        <h4>Event Object Types</h4>
+        <ol>
+          <li>Standard Events</li>
+          <ul>
+            <li>AssetTokenEvent (Represents an event associated with an asset token, such as token issuance and registration of a connected device as an Asset)</li>
+            <li>OrgLifecycleNotification</li>
+          </ul>
+          <li>Change Events
+            <ul>
+              <li>Change Data Capture (create, update, delete)</li>
+              <li>Example: Sync Heroku Postgres data with Org data</li>
+              <li><a target="_blank" href="./cdc.html">Notes about Change Data Capture</a>
+            </ul>
+
+          </li>
+          <li>Custom Events
+            <ul>
+              <li>Entities with suffix:<code> __e</code> </li>
+            </ul>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h4>Sample Event Object </h4>
+        <p><code>Notification</code> with custom field: <code>Message</code>
+          <button class='btn btn-success'  title='Click to view the image in full page'><a target="_blank" href='./img/pe/pe-event-object.png.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+
+        </p>
+
+        <img src='./img/pe/pe-event-object.png.png' height="480" style='border-radius:10px;border:0px;' alt="" />
+      </section>
+
+      <section>
+        <h4>Event object - special kind of entity</h4>
+        <ul>
+          <li>It is different from Standard and Custom objects. </li>
+          <li>An event message is an instance of a platform event, similar to how a record is an instance of a standard/custom object
+          </li>
+          <li> Update or delete event records not allowed</li>
+          <li> Can’t view event records in the Salesforce UI and don’t have page layouts</li>
+          <li>Deleting a platform event definition will result in permanent deletion</li>
+          <ul>
+            <li>Event definition and all events in the topic are deleted</li>
+          </ul>
+          <li> You can grant permissions to users in profiles or in permission sets</li>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>Event object - special kind of entity - contd.</h4>
+        <ul>
+          <li>Events are in their own transaction. So if you publish from apex, it cannot be rolled back, but the publish is a transaction</li>
+          <li>
+            The <code>allOrNoneHeader</code> API header is ignored when publishing platform events through the API.</li>
+          <li>The Apex <code>setSavepoint()</code> and <code>rollback()</code> Database methods aren’t supported with platform events.</li>
+          <li> DML limits and other Apex governor limits apply for publishing platform events </li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Quiz - 2</h4>
+        <ul>
+          <li>Can we view event records in the Salesforce UI ?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Custom field types supported</h4>
+        <ul>
+          <li>Checkbox </li>
+          <li>Date </li>
+          <li>Date/Time </li>
+          <li>Number </li>
+          <li>Text </li>
+          <li>Text Area (Long)</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h4>Quiz - 3</h4>
+        <ul>
+          <li>Field type <b>Checkbox</b> is supported for Event Object?</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4><code>ReplayId</code> System Field</h4>
+        <ul>
+          <li>Identifies a platform event record </li>
+          <li>Used to get stored events that are within the retention window</li>
+          <li>The subscribed CometD client can retrieve past events using the <code>ReplayId</code> field</li>
+          <li>The <code>ReplayId</code> is unique for the org and the channel (Event Bus)</li>
+          <li>Similar to Kafka's <code>offset</code></li>
+          <li><a target="_blank"
+            href='./kafka.html'>Notes about Apache Kafka</a>
+        </ul>
+      </section>
+
+      <section>
+         <h4>Publishing Event Message with Apex</h4>
+          <pre>
+           // Call method to publish events (pubEvents)
+           List<Database.SaveResult> results = EventBus.publish(pubEvents);
+       </pre>
+
+      </section>
+
+      <section>
+         <h4>Publishing Event Message with API</h4>
+          <p>POST to the Endpoint: <code>/services/data/v41.0/sobjects/Event_Name__e/</code>
+          <br/>In our case,  <code>Event_Name__e</code> is <code>Notification__e</code></p>
+          <p>Sample request payload:</p>
+          <pre>
+            { "Message__c" : "Power Off" }
+          </pre>
+
+      </section>
+
+      <section>
+         <h4>Publishing Event Message with API - Demo</h4>
+         <img style='border-radius:10px;border:0px;'  class='simg' src='./img/pe/publish-event.png' alt="Publish  Event  with API" />
+         <img style='border-radius:10px;border:0px;' height="80"  class='simg' src='./img/pe/event-pub-payload.png' alt="Event payload" />
+
+
+      </section>
+
+
+
+
+      <section>
+         <h4>Subscribe to Event Message with Process Builder
+         <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='./img/pe/pe-pb-subscribe.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+       </h4>
+
+         <img style='border-radius:10px;border:0px;'  class='simg' src='./img/pe/pe-pb-subscribe.png' alt="Subscribe to Event Message with Process Builder" />
+
+
+      </section>
+
+      <section>
+         <h4>Subscribe to Event Message with Process Builder - contd.
+           <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='./img/pe/pe-pb-subscribe-2.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+         </h4>
+         <img style='border-radius:10px;border:0px;' class='simg' src='./img/pe/pe-pb-subscribe-2.png' alt="Subscribe to Event Message with Process Builder" />
+      </section>
+
+      <section>
+         <h4>Subscribe to Event Message with Process Builder - contd.
+
+           <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='./img/pe/pe-pb-subscribe-3.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+         </h4>
+         <img style='border-radius:10px;border:0px;'  class='simg' src='./img/pe/pe-pb-subscribe-3.png' alt="Subscribe to Event Message with Process Builder" />
+      </section>
+
+
+      <section>
+         <h4>Subscribe to Event Message with Process Builder - contd.
+           <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='./img/pe/pe-pb-subscribe-4.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+         </h4>
+         <img style='border-radius:10px;border:0px;'  class='simg' src='./img/pe/pe-pb-subscribe-4.png' alt="Subscribe to Event Message with Process Builder" />
+      </section>
+
+
+      <section>
+         <h4>Subscribe to Event Message with Process Builder - contd.
+           <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='./img/pe/pe-pb-subscribe-5.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+         </h4>
+         <p>Note we are using Email Alert as the action for the event received</p>
+         <img style='border-radius:10px;border:0px;'   class='simg' src='./img/pe/pe-pb-subscribe-5.png' alt="Subscribe to Event Message with Process Builder" />
+      </section>
+
+      <section>
+         <h4>Subscribe to Event Message with Process Builder - contd.</h4>
+         <img style='border-radius:10px;border:0px;' width="500"  class='simg' src='./img/pe/pe-pb-subscribe-6.png' alt="Subscribe to Event Message with Process Builder" />
+      </section>
+
+      <section>
+         <h4>Email Template Setup</h4>
+         <img style='border-radius:10px;border:0px;'   class='simg' src='./img/pe/email-alert-setup.png' alt="Email Template Setup" />
+      </section>
+
+      <section>
+         <h4>Email Alert Setup</h4>
+         <img style='border-radius:10px;border:0px;'   class='simg' src='./img/pe/email-alert-setup.png' alt="Email Alert Setup" />
+      </section>
+
+      <section>
+         <h4>Email Alert - result of Event Subscription Action</h4>
+         <img style='border-radius:10px;border:0px;'   class='simg' src='./img/pe/email-alert.png' alt="Email Alert" />
+      </section>
+
+
+
+
+      <section>
+         <h4>Subscribe Event Message with cometD</h4>
+          <p>Channel Name: <code>/event/Event_Name__e/</code>
+          <p>cometD Endpoint: <code>/cometd/41.0</code>
+          <p>Sample response payload:</p>
+          <pre>
+            { "data": {
+                  "schema": "dffQ2QLzDNHqwB8_sHMxdA",
+                  "payload": {
+                    "CreatedDate": "2017-26-11T18:31:40Z",
+                    "CreatedById": "005D0000001cSZs",
+                    "Message__c": "Power Off"
+                  },
+                  "event": { "replayId": 2 }
+                },
+                "channel": "/event/Notification__e"
+              }
+          </pre>
+
+      </section>
+
+
+      <section>
+         <h4>Subscribe Event Message with cometD - Example
+         <button class='btn btn-success'  title='Click to view the demo in full page'>
+           <a target="_blank" href='img/pe/cometd-2.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+       </h4>
+         <img  height="480" src='img/pe/cometd-2.png'/>
+      </section>
+
+      <section>
+         <h4>Subscribe Event Message with cometD - Demo
+           <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='img/pe/demos/pe-ltng-cometd-demo-1.gif'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+         </h4>
+
+         <img  src='img/pe/demos/pe-ltng-cometd-demo-1.gif'/>
+      </section>
+
+
+      <section>
+         <h4>Subscribe Event Message with cometD - Demo - event payload
+
+           <button class='btn btn-success'  title='Click to view the demo in full page'><a target="_blank" href='img/pe/demos/pe-event-payload.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+          </h4>
+         <img   src='img/pe/demos/pe-event-payload.png'/>
+      </section>
+
+      <section>
+        <h4>Resources for demo</h4>
+        <ul>
+          <li><a  target="_blank" href='https://github.com/mohan-chinnappan-n/mohan-chinnappan-n.github.io/tree/master/sfdc/demo/pe'>Demo code: Components and Server-side Controller</a></li>
+          <li>
+            <a target="_blank" href='https://trailhead.salesforce.com/projects/workshop-platform-events'>Trailhead: Build an Instant Notification App</a>
+          </li>
+          <li><a target="_blank" href="https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro.htm">Platform Events Developer Guide</a>
+          <li><a target="_blank" href="https://github.com/wadewegner/sfdx-platformevents">SFDX Platform Events</a>
+
+        </ul>
+      </section>
+
+
+      <section>
+        <h4>About CometD </h4>
+        <p>Implemention of Bayeux protocol</li>
+        <p>Supported Methods</p>
+        <ul>
+          <li><code>connect</code>
+          <li><code>disconnect</code></li>
+          <li><code>handshake</code></li>
+          <li><code>subscribe</code></li>
+          <li><code>unsubscribe</code></li>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>Bayeux</h4>
+        <ul>
+          <li>Protocol for transporting asynchronous messages </li>
+          <li>Primarily over web protocols such as HTTP and WebSocket
+          <li>With low latency between a web server and web clients</li>
+          <li>Supports responsive bidirectional interactions between web client and the web server using AJAX</li>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>References</h4>
+        <ul>
+         <li><a href="https://docs.cometd.org/current/reference/#_bayeux">Bayeux Protocol Specification 1.0</a></li>
+          <li><a href="https://developer.salesforce.com/docs/atlas.en-us.api_streaming.meta/api_streaming/BayeauxProtocolAndCometD.htm">
+            Bayeux Protocol, CometD, and Long Polling</a>
+          </li>
+        </ul>
+      </section>
+
+
+
+     <section>
+       <h4>Platform Event Limits</h4>
+         <img src='img/pe/pe-gov-limits.png'/>
+         <a target='_blank' href="https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_event_limits.htm">Limits Doc</a>
+     </section>
+
+     <section>
+        <h4>Video:Platform Events: Inside and Out</h4>
+          <iframe height="450" width="800" data-src="https://www.youtube.com/embed/L6OWyCfQD6U?autoplay=0"></iframe>
+    </section>
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+
+
+
+    })
+  </script>
+</body>
+
+</html>

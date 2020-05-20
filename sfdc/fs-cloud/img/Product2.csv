@@ -1,0 +1,21 @@
+"sobjectName","sobjectLabel","name","label","type","length","nillable","referenceTo","relationshipName","unique","updateable","inlineHelpText","picklistValues","externalId"
+"Product2","Product","Id","Product ID","id",18,false,"[]",,false,false,,"[]",false
+"Product2","Product","Name","Product Name","string",255,false,"[]",,false,true,,"[]",false
+"Product2","Product","ProductCode","Product Code","string",255,true,"[]",,false,true,,"[]",false
+"Product2","Product","Description","Product Description","textarea",4000,true,"[]",,false,true,,"[]",false
+"Product2","Product","IsActive","Active","boolean",0,false,"[]",,false,true,,"[]",false
+"Product2","Product","CreatedDate","Created Date","datetime",0,false,"[]",,false,false,,"[]",false
+"Product2","Product","CreatedById","Created By ID","reference",18,false,"[""User""]","CreatedBy",false,false,,"[]",false
+"Product2","Product","LastModifiedDate","Last Modified Date","datetime",0,false,"[]",,false,false,,"[]",false
+"Product2","Product","LastModifiedById","Last Modified By ID","reference",18,false,"[""User""]","LastModifiedBy",false,false,,"[]",false
+"Product2","Product","SystemModstamp","System Modstamp","datetime",0,false,"[]",,false,false,,"[]",false
+"Product2","Product","Family","Product Family","picklist",40,true,"[]",,false,true,,"[""None""]",false
+"Product2","Product","ExternalDataSourceId","External Data Source ID","reference",18,true,"[""ExternalDataSource""]",,false,true,,"[]",false
+"Product2","Product","ExternalId","External ID","string",255,true,"[]",,false,true,,"[]",false
+"Product2","Product","DisplayUrl","Display URL","url",1000,true,"[]",,false,true,,"[]",false
+"Product2","Product","QuantityUnitOfMeasure","Quantity Unit Of Measure","picklist",40,true,"[]",,false,true,,"[""Each""]",false
+"Product2","Product","IsDeleted","Deleted","boolean",0,false,"[]",,false,false,,"[]",false
+"Product2","Product","IsArchived","Archived","boolean",0,false,"[]",,false,false,,"[]",false
+"Product2","Product","LastViewedDate","Last Viewed Date","datetime",0,true,"[]",,false,false,,"[]",false
+"Product2","Product","LastReferencedDate","Last Referenced Date","datetime",0,true,"[]",,false,false,,"[]",false
+"Product2","Product","StockKeepingUnit","Product SKU","string",180,true,"[]",,false,true,,"[]",false

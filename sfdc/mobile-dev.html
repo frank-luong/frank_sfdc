@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+      </section>
+      <section>
+          <h4>Accessing Salesforce mobile app in three ways</h4>
+        <div class="row" style="font-size:20px;">
+          <div class="col-md-4">Device <img style="border:0px;" height="500" src="img/mobile/2/home.png" alt=""> </div>
+          <div class="col-md-4">Simulator <img style="border:0px;" height="500" src="img/mobile/home-simulator.png" alt=""> </div>
+          <div class="col-md-4">Chrome Browser <img style="border:0px;" height="500" src="img/mobile/home-browser.png" alt=""> </div>
+        </div>
+       </section>
+
+    <section>
+      <h4>Salesforce App</h4>
+      <ul style="font-size:35px;">
+        <li>Enterprise-class mobile apps give your users real-time access to the same information that they see in the office</li>
+        <li>But organized for getting work done in those precious free moments when they’re between customer meetings,
+          waiting for a flight</li>
+        <li>How to get?
+         <ul>
+           <li>As an app for iOS from the App Store or an app for Android from Google Play</li>
+           <li>As mobile web experience that runs in supported mobile browsers.<br/>
+              This option doesn’t require anything to be installed</li>
+
+       </ul>
+        </li>
+        <li>
+            On most devices, Salesforce is supported in portrait orientation only. <br/>
+             For iOS on iPad tablets, where both portrait and landscape orientation are supported.
+        </li>
+
+      </ul>
+    </section>
+
+
+    <section>
+      <h4>Tour of Salesforce App - Feed</h4>
+      <div class="row">
+        <div class="col-md-6">
+            <img style="border:0px;" src="img/mobile/sfdc-mobile-app-1.png" alt="">
+        </div>
+          <div class="col-md-6">
+
+               <ol style="font-size:30px;float-top;">
+                 <li>Search bar</li>
+                 <li>Sort and filter options </li>
+                 <li>Feeds drop-down menu</li>
+                 <li>Feed items</li>
+               </ol>
+      </div>
+    </div>
+    </section>
+
+
+    <section>
+      <h4>Tour of Salesforce App -  Action Bar and Menu</h4>
+
+       <div class="row">
+         <div class="col-md-6">
+              <img style="border:0px;"  src="img/mobile/sfdc-mobile-app-action-bar.png" alt="">
+         </div>
+           <div class="col-md-6">
+                 <ul style="font-size:30px;float-top;">
+                 <li>Users can tap
+                   <img style="border:0px;margin-bottom:0px;" src="img/mobile/more.png" alt=""> Action Menu icon from the action bar to open the action menu,
+                   which contains the full set of actions that are available for the object.</li>
+               </ul>
+         </div>
+      </div>
+
+    </section>
+
+
+    <section>
+      <h4>Tour of Salesforce App - App Navigation Menu</h4>
+      <ul style="font-size:25px;">
+        <li>Users can tap
+          <img style="border:0px;margin-bottom:0px;" src="img/mobile/menu-icon.png" alt=""> tap it to access the navigation menu</li></li>
+      </ul>
+
+       <div class="row">
+         <div class="col-md-6">
+              <img style="border:0px;"  src="img/mobile/mobile-app-menu.png" alt="">
+         </div>
+           <div class="col-md-6">
+                 <ol style="font-size:30px;float-top;">
+                   <li>Search box</li>
+                   <li>Menu items—any items you place above the Smart Search Items element when you customize the navigation menu</li>
+                   <li>Smart Search Items</li>
+                   <li>Apps section</li>
+               </ol>
+         </div>
+      </div>
+
+      <aside class="notes"> Notes go here... </aside>
+
+    </section>
+
+
+
+    <section>
+      <h4>Tour of Salesforce App - Record Menu</h4>
+      <ul style="font-size:30px;">
+        <li>At the top of each record page is the record highlights area. <br>
+          Displays the first four fields that are assigned to the <b>compact layout</b> for the object
+        </li>
+        <li>The record view is made up of these pages:</li>
+
+      </ul>
+    <div class="row">
+      <div class="col-md-6">
+           <img style="border:0px;"  src="img/mobile/mobilr-record-view.png" alt="">
+      </div>
+        <div class="col-md-6">
+              <ol style="font-size:30px;float-top;">
+                <li>Record feed</li>
+                <li>Record Details</li>
+                <li>Related information</li>
+            </ol>
+      </div>
+   </div>
+
+   <aside class="notes"> Notes go here... </aside>
+
+ </section>
+
+
+ <section>
+   <h4>Other Salesforce Mobile Apps</h4>
+    <ul style="font-size:25px;">
+
+      <table class="table-bordered table-hover table-striped" style="font-size:25px;">
+        <tr>
+          <th>App</th>
+          <th>Comments</th>
+        </tr>
+        <tr>
+          <td>SalesforceA</td>
+          <td> gives administrators mobile access to essential organization management tasks.<br/>
+             Use it to edit, unlock, freeze, and deactivate user accounts, reset passwords, and assign permission sets.</li>
+        </td>
+        </tr>
+        <tr>
+          <td> Mobile Classic </td>
+          <td>On December 1, 2017 was removed from App Store and Google Play</td>
+      </tr>
+
+      <tr>
+          <td> Einstein Analytics</td>
+          <td>Get important analytics information and make data-driven decisions from any configured mobile device</td>
+      </tr>
+        <tr>
+          <td>Authenticator</td>
+          <td>Secure your account by using your mobile device for two-factor authentication.
+            Verify your identity or block unrecognized activity with a one-tap response to a push notification.</td>
+      </tr>
+
+
+      </table>
+
+   </ul>
+ </section>
+
+
+
+  <section>
+      <h4>Lightning Experience App Manager </h4>
+    <div class="row" style="font-size:20px;">
+      <div class="col-md-12"> <img style="border:0px;"  src="img/mobile/lx-app-mgr.png" alt=""> </div>
+    </div>
+   </section>
+
+ <section>
+     <h4>Create a Lightning App</h4>
+   <div class="row" style="font-size:20px;">
+     <div class="col-md-12"> <img style="border:0px;" height="400"  src="img/mobile/new-lx-app-1.png" alt=""> </div>
+   </div>
+  </section>
+
+ <section>
+     <h4>Create a Lightning App</h4>
+   <div class="row" style="font-size:20px;">
+     <div class="col-md-12"> <img style="border:0px;" height="400" src="img/mobile/new-lx-app-2.png" alt=""> </div>
+   </div>
+  </section>
+
+
+  <section>
+      <h4>Create a Lightning App - Contd.</h4>
+    <div class="row" style="font-size:20px;">
+      <div class="col-lg-12"> <img style="border:0px;" height="400" src="img/mobile/new-lx-app-3.png" alt=""> </div>
+    </div>
+   </section>
+
+
+  <section>
+      <h4>Create a Lightning App - Contd.</h4>
+    <div class="row" style="font-size:20px;">
+      <div class="col-lg-12"> <img style="border:0px;" height="400" src="img/mobile/new-lx-app-4.png" alt=""> </div>
+    </div>
+   </section>
+
+
+   <section>
+       <h4>Create a Lightning App - Contd..</h4>
+     <div class="row" style="font-size:20px;">
+       <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/new-lx-app-5.png" alt=""> </div>
+       <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/new-lx-app-6.png" alt=""> </div>
+     </div>
+    </section>
+
+
+    <section>
+        <h4>Create a Lightning App - Contd...</h4>
+      <div class="row" style="font-size:20px;">
+        <div class="col-lg-6"> <img style="border:0px;" height="400" src="img/mobile/lx-app-11.png" alt=""> </div>
+        <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-12.png" alt="">
+          <img style="border:0px;"  src="img/mobile/lx-app-13.png" alt="">
+         </div>
+      </div>
+     </section>
+
+
+     <section>
+         <h4>Create a Lightning App - Contd....</h4>
+       <div class="row" style="font-size:20px;">
+         <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-13.png" alt=""> </div>
+         <div class="col-lg-6">
+           <img style="border:0px;"  src="img/mobile/lx-app-15.png" alt="">
+          </div>
+       </div>
+      </section>
+
+      <section>
+        <h4>Create Quick Action</h4>
+        <ul>
+          <li>Quick Actions are things you want to do immediately from your mobile device.
+          </li>
+          <li>Quick actions allow users to quickly create and modify records</li>
+          <li>These actions live in a special place called the Publisher.</li>
+          <li> You can customize the Publisher so that your most important actions are there at your fingertips.</li>
+          <li>The Publisher Layout determines which Quick Actions you see in the Action bar</li>
+        </ul>
+      </section>
+
+
+      <section>
+          <h4>Create Quick Action - Contd.</h4>
+        <div class="row" style="font-size:20px;">
+          <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-21.png" alt=""> </div>
+          <div class="col-lg-6">
+            <img style="border:0px;"  src="img/mobile/lx-app-22.png" alt="">
+           </div>
+        </div>
+       </section>
+
+
+       <section>
+           <h4>Create Quick Action - Contd..</h4>
+         <div class="row" style="font-size:20px;">
+           <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-23.png" alt=""> </div>
+           <div class="col-lg-6">
+             <img style="border:0px;"  src="img/mobile/lx-app-24.png" alt="">
+            </div>
+         </div>
+        </section>
+
+
+        <section>
+            <h4>Create Quick Action - Contd...</h4>
+          <div class="row" style="font-size:20px;">
+            <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-25.png" alt=""> </div>
+            <div class="col-lg-6">
+              <img style="border:0px;"  src="img/mobile/lx-app-28.png" alt="">
+             </div>
+          </div>
+         </section>
+
+
+         <section>
+           <h4>Lightning App Builder</h4>
+           <ul>
+             <li> Lets developers and business users build beautiful custom user interfaces that are designed
+               to work perfectly on your desktop and mobile devices,
+               all without writing a single line of code.</li>
+            <li>. Lightning Pages are built using Lightning components — compact, configurable,
+                 and reusable elements that you can drag and drop into regions of the page in the Lightning App Builder.</li>
+           </ul>
+         </section>
+
+
+
+         <section>
+             <h4>Build Lightning App</h4>
+           <div class="row" style="font-size:20px;">
+             <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-1.png" alt=""> </div>
+           </div>
+          </section>
+
+          <section>
+              <h4>Build Lightning App</h4>
+            <div class="row" style="font-size:20px;">
+              <div class="col-lg-12">
+                <img style="border:0px;"  src="img/mobile/lx-app-build-2.png" alt="">
+               </div>
+            </div>
+           </section>
+
+
+
+          <section>
+              <h4>Build Lightning App - contd.</h4>
+            <div class="row" style="font-size:20px;">
+              <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-3.png" alt=""> </div>
+            </div>
+           </section>
+
+          <section>
+              <h4>Build Lightning App - contd.</h4>
+            <div class="row" style="font-size:20px;">
+              <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-4.png" alt=""> </div>
+            </div>
+           </section>
+
+
+           <section>
+               <h4>Build Lightning App - contd..</h4>
+             <div class="row" style="font-size:20px;">
+               <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-5.png" alt=""> </div>
+             </div>
+            </section>
+
+
+           <section>
+               <h4>Build Lightning App - contd..</h4>
+             <div class="row" style="font-size:20px;">
+               <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-6.png" alt=""> </div>
+             </div>
+            </section>
+
+
+
+             <section>
+                 <h4>Build Lightning App - contd...</h4>
+               <div class="row" style="font-size:20px;">
+                 <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-8.png" alt=""> </div>
+               </div>
+              </section>
+
+
+              <section>
+                  <h4>Build Lightning App - contd....</h4>
+                <div class="row" style="font-size:20px;">
+                  <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-9.png" alt=""> </div>
+                </div>
+               </section>
+
+              <section>
+                  <h4>Build Lightning App - contd....</h4>
+                <div class="row" style="font-size:20px;">
+                  <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-10.png" alt=""> </div>
+                </div>
+               </section>
+
+
+               <section>
+                   <h4>Build Lightning App - contd.....</h4>
+                 <div class="row" style="font-size:20px;">
+                   <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-11.png" alt=""> </div>
+                 </div>
+                </section>
+
+               <section>
+                   <h4>Build Lightning App - contd.....</h4>
+                 <div class="row" style="font-size:20px;">
+                   <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-build-12.png" alt=""> </div>
+                 </div>
+                </section>
+
+
+                <section>
+                    <h4>Add Quick Actions and Page Configuration</h4>
+                  <div class="row" style="font-size:20px;">
+                    <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-add-actions-1.png" alt=""> </div>
+                  </div>
+                 </section>
+
+                <section>
+                    <h4>Add Quick Actions and Page Configuration - contd.</h4>
+                  <div class="row" style="font-size:20px;">
+                    <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-add-actions-2.png" alt=""> </div>
+                  </div>
+                 </section>
+
+                <section>
+                  <h4>Activate and Configure Page - Page Settings</h4>
+                  <ul style="font-size:30px;">
+                    <li> Activate the app to create tabs and adds them to the Salesforce mobile app navigation </li>
+                  </ul>
+                  <div class="row" style="font-size:20px;">
+                    <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-page-config-1.png" alt=""> </div>
+                  </div>
+                </section>
+
+
+                <section>
+                  <h4>Page Configuration - LX</h4>
+                  <div class="row" style="font-size:20px;">
+                    <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-page-config-2.png" alt=""> </div>
+                  </div>
+                </section>
+
+                 <section>
+                  <h4>Page Configuration - Mobile</h4>
+                  <div class="row" style="font-size:20px;">
+                    <div class="col-lg-12"> <img style="border:0px;"  src="img/mobile/lx-app-page-config-3.png" alt=""> </div>
+                  </div>
+                </section>
+
+
+                <section>
+                 <h4>Testing Mobile App</h4>
+                 <div class="row" style="font-size:20px;">
+                   <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-test-1.png" alt=""> </div>
+                  <div class="col-lg-6"> <img style="border:0px;"  src="img/mobile/lx-app-test-2.png" alt=""> </div
+                 </div>
+               </section>
+
+
+               <section>
+                <h4>Testing Mobile App - contd.</h4>
+                <div class="row" style="font-size:20px;">
+                  <div class="col-lg-6"> <img style="border:0px;" height="400" src="img/mobile/lx-app-test-3.png" alt=""> </div>
+                  <div class="col-lg-6"> <img style="border:0px;" height="400"  src="img/mobile/lx-app-test-4.png" alt=""> </div
+                </div>
+              </section>
+
+              <section>
+               <h4>Testing Mobile App - contd..</h4>
+               <div class="row" style="font-size:20px;">
+                 <div class="col-lg-6"> <img style="border:0px;"  height="400" src="img/mobile/lx-app-test-5.png" alt=""> </div>
+                 <div class="col-lg-6"> <img style="border:0px;"  height="400" src="img/mobile/lx-app-test-6.png" alt=""> </div
+               </div>
+               <a target="_blank" href="https://trailhead.salesforce.com/en/projects/quickstart-app-builder/steps/quickstart-app-builder4">
+                 Testing using Chrome
+               </a>
+             </section>
+
+             <section>
+               <h4 style="font-size:30px;">How Salesforce tests mobile apps </h4>
+
+               <div style="font-size:25px;">
+               Salesforce mobile apps go through rigorous testing processes before our customers see them in the App Store or Google Play.
+              Our mobile apps are tested by numerous engineering teams to ensure the highest quality possible.
+               Tests we conduct include, but not limited to :
+             </div>
+              <ul style="font-size:25px;">
+                <li>UI automated regression</li>
+                <li>Unit level testing</li>
+                <li>Manual regression</li>
+                <li>Performance</li>
+                <li>Security</li>
+                <li>Accessibility</li>
+                <li>Server side upgrades</li>
+                <li>Instance refreshes/Org migrations</li>
+                <li>Localization</li>
+              </ul>
+
+             </section>
+
+             <section>
+               <h4 style="font-size:30px;">How Salesforce tests mobile apps - contd. </h4>
+
+               <p style="font-size:25px;">
+              While conducting the set of tests mentioned above,
+              we are paying special attention to numerous metrics that may impact the performance and functional stability of our mobile apps:
+              </p>
+              <ul style="font-size:25px;">
+                 <li>App crashes</li>
+                 <li>Low memory events</li>
+                 <li>Background out of memory (BOOM)</li>
+                 <li>Foreground out of memory (FOOM)</li>
+                 <li>Performance under different network conditions (WiFi/LTE/3G/Edge)</li>
+                 <li>App bugs introduced by new functionality</li>
+                 <li>New OS versions</li>
+                 <li>Automation pass stability and many more</li>
+              </ul>
+
+             </section>
+
+             <section>
+               <h4 style="font-size:30px;">Areas that we recommend our customers concentrate special attention on:</h4>
+               <p style="font-size:25px;">
+                 Focus on the main use cases for your users. It is critical to focus your testing on functionality that your users use the most
+              </p>
+               <ul style="font-size:25px;">
+                  <li>Advanced authentication</li>
+                  <li>MDM deployment</li>
+                  <li>Scenarios specific to your security policy</li>
+                  <li>Custom Visualforce, Canvas, Flexi Pages</li>
+                  <li>Custom Connected App settings</li>
+                  <li>Integrations with non-salesforce systems/apps</li>
+                  <li>Custom network restrictions (e.g. VPN/IP range limitations)</li>
+               </ul>
+               <hr>
+               <a style="font-size:20px;" target="_blank" href="https://help.salesforce.com/articleView?id=000264799&language=en_US&type=1">KB:000264799:  Testing Mobile apps: salesforce recommended best practices
+</a>
+             </section>
+
+
+
+    <section>
+      <h4 style="font-size:30px;">How to test Salesforce App with Chrome DevTools - Toggle Device Mode </h4>
+
+      <div class="row">
+        <div class="col-lg-8">
+          <img style="border:0px;" src="https://developers.google.com/web/tools/chrome-devtools/device-mode/imgs/device-mode-initial-view.png" alt="">
+        </div>
+        <div class="col-lg-4">
+
+          <ul style="font-size:20px;">
+            <li>Accurately simulate device input for touch events, geolocation, and device orientation </li>
+            <li>Toggle the Device Mode button to turn Device Mode on or off </li>
+            <li>When Device Mode is on, the icon is blue<img  style="border:0px;" alt="device mode on" src="https://developers.google.com/web/tools/chrome-devtools/device-mode/imgs/device-mode-on.png"></li>
+            <li>When it's off, the icon is grey<img  style="border:0px;" alt="device mode off" src="https://developers.google.com/web/tools/chrome-devtools/device-mode/imgs/device-mode-off.png"></li>
+            <li>Device Mode is enabled by default </li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+        <section>
+          <h4 style="font-size:30px;">How to test Salesforce App with Chrome DevTools - Demo </h4>
+
+          <div class="row">
+            <div class="col-lg-9">
+              <img style="border:0px;" src="img/app-testing-3.gif" alt="">
+            </div>
+            <div class="col-lg-3">
+
+              <ul style="font-size:25px;">
+                <li>Switch to Lightning Experience </li>
+                <li>Refresh the browser </li>
+                <li>You will see the Salesforce1 Flash Screen</li>
+                <li>Hereafter it is in Mobile App mode</li>
+                <li>You can use Selenium Tools for Web Testing for Test Automation </li>
+              </ul>
+            </div>
+
+          </div>
+
+
+        </section>
+
+
+
+
+    <section>
+      <h4>References</h4>
+      <ul style="font-size:30px;">
+        <li>
+          <a target="_blank" href="https://developer.salesforce.com/docs/atlas.en-us.salesforce1.meta/salesforce1/salesforce1_guide_introduction.htm">Salesforce App Developer Guide
+</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://trailhead.salesforce.com/projects/quickstart-app-builder">Trialhead: Quick Start: Lightning App Builder</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://trailhead.salesforce.com/en/modules/salesforce1_rollout/units/salesforce1_rollout_customize">
+            Trailhead: Test Your Mobile Cutomizations
+          </a>
+        </li>
+
+        <li>
+          <a target="_blank" href="https://help.salesforce.com/articleView?id=limits_mobile_sf1_productivity.htm&type=5">
+            Productivity Features: What’s Different or Not Available in the Salesforce App
+          </a>
+        </li>
+
+
+
+
+      </ul>
+    </section>
+
+
+
+    <!--
+    https://www.youtube.com/watch?time_continue=10&v=W2Q0QB3IOXc
+  -->
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Salesforce Mobile App Development";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

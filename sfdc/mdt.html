@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+        <img height="250" src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-usfce09801e48b33235a556d6beb251bd4.gif" alt="">
+        <img height="250" src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-us1a7a065f4e286df97b78b73d1ee2990e.gif" alt="">
+
+        <div style="font-size:30px;">
+          "
+            Define reusable functionality that determines your application’s behavior based on the configuration (data) defined in your custom metadata type
+          "
+
+
+        </div>
+       </section>
+
+  <section>
+    <h4>What are the Custom Metadata Types</h4>
+    <ul>
+      <li> Custom metadata types enable you to create your <b>own setup objects</b> whose records are <b>metadata rather than data</b>.</li>
+      <li>
+           These are typically used to <b>define application configurations</b>
+            that need to be migrated from one environment to another, or packaged and installed.
+       </li>
+
+
+    <li>You can create custom <b>metadata types</b> and add <b>metadata records</b>,
+      with all the manageability that comes with metadata: package, deploy, and upgrade.
+   </li>
+   <li> Querying custom metadata records <b>doesn't count against SOQL limits</b>.</li>
+    </ul>
+  </section>
+
+
+  <section>
+    <h4>Uses of Custom Metadata Types</h4>
+<ul style="font-size:30px;">
+
+
+<li><b>Mappings</b>—You can use custom metadata types to <b>create associations</b> between different objects.
+   <hr/>For example, you can create a custom metadata type that assigns cities, states, or provinces to particular regions in a country.</li>
+<li><b>Business rules</b>—Salesforce has lots of ways to define business rules.
+  One way is to <b>combine configuration records with custom functionality</b>.
+  <hr/>For example, you can use custom metadata types along with some Apex code to <b>route payments to the correct endpoint</b>.</li>
+<li><b>Master data</b>—Say that your org uses a standard accounting app.
+  You can create a custom metadata type that <b> defines custom charges, like duties and VAT rates</b>.
+  If you include this type as part of an extension package, subscriber orgs can reference this master data.</li>
+</ul>
+
+  </section>
+
+
+  <section>
+    <h4> Custom metadata types support</h4>
+    <ul style="font-size:30px;">
+      <li>Metadata Relationship</li>
+      <li>Checkbox</li>
+      <li>Date and Date/Time</li>
+      <li>Email and Phone</li>
+      <li>Number</li>
+      <li>Percent</li>
+      <li>Picklist</li>
+      <li>Text and Text Area</li>
+      <li>URL</li>
+    </ul>
+
+  </section>
+
+  <section>
+    <h4>Creating Custom Metadata Type</h4>
+    <img style='border:0px;' src="img/mdt-1.png" alt="">
+  </section>
+
+  <section>
+    <h4>Adding Custom Fields to Custom Metadata Type</h4>
+    <img style='border:0px;' src="img/mdt-2.png" alt="">
+  </section>
+
+  <section>
+    <h4>Managing data  -  Custom Metadata Type</h4>
+    <img style='border:0px;' src="img/mdt-manage-data-1.png" alt="">
+  </section>
+
+  <section>
+    <h4> Metadata - Custom Metadata Type</h4>
+    <img style='border:0px;' height="500" src="img/mdt-manage-data-2.png" alt="">
+  </section>
+
+  <section>
+    <h4>Managing data - data  - Custom Metadata Type</h4>
+    <img style='border:0px;' src="img/mdt-manage-data-3.png" alt="">
+  </section>
+
+  <section>
+    <h4> Declare an Apex variable of a custom metadata type</h4>
+    <img style='border:0px;' src="img/mdt-apex-access-1.png" alt="">
+    <img style='border:0px;' src="img/mdt-apex-access-2.png" alt="">
+  </section>
+
+
+<section>
+  <h4>Relationship Among objects - key factors</h4>
+  <ul style="font-size:30px;">
+       <li>handle data deletion</li>
+       <li>record ownership</li>
+       <li>security</li>
+       <li>required fields in page layouts</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Types of Relationships</h4>
+  <table style="font-size:20px;">
+    <tr>
+      <th>Realtionship Type</th>
+      <th>Data deletion</th>
+      <th>Record Ownership</th>
+      <th>Paget layout requirements</th>
+    </tr>
+    <tr>
+      <td>Master-Details (1:n) - parent-child relationship. Master object controls certain behaviors of the detail object</td>
+      <td>When a record of the master object is deleted, its related detail records are also deleted.</td>
+      <td>The <b>Owner</b> field on the detail object is not available
+          <ul>
+            <li><b>Owner</b> field is automatically set to the owner of its associated master record.</li>
+            <li> Custom objects on the detail side of a master-detail relationship cannot have sharing rules
+              , manual sharing, or queues, as these require the <b>Owner</b> field.
+            </li>
+            <li>The detail record <b>inherits</b> the sharing and security settings of its master record. </li>
+          </ul>
+      </td>
+      <td>The master-detail relationship field is required on the page layout of the detail record</td>
+      <td>
+
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h4>Master-detail (1:n) Notes</h4>
+    <ul style="font-size:25px;">
+      <li>The detail object doesn’t work as a stand-alone.</li>
+      <li><b>By default</b>, records <b>can’t be reparented</b> in master-detail relationships.
+        Administrators can, however, allow child records in master-detail relationships
+         on custom objects to be reparented to different parent records by selecting the <b>Allow reparenting
+         option</b> in the master-detail relationship definition.</li>
+      <li>
+        You can define master-detail relationships between custom objects or between a custom object and a standard object.
+        C:C, S:C <br/>
+        However, the standard object cannot be on the detail side of a relationship with a custom object.
+        C:S not allowed, since standard object can't lose the <b>Owner</b> field<br/>
+         In addition, you <b>cannot</b> create a master-detail relationship in which the <b>User or Lead</b> objects are the master.<br/>
+      </li>
+      <li>When you define a master-detail relationship, the custom object on which you are working is the detail side.
+        Its data can appear as a <b>custom related list</b> on page layouts for the master object.</li>
+    <li>You can create rollup summary fields on the master record to summarize the detail records. </li>
+    <li>The relationship field allows users to click on a lookup icon to select a value from a popup list.
+       The master object is the source of the values in the list.</li>
+    <li>As a best practice, don't exceed 10,000 child records for a master-detail relationship. </li>
+    <li>Each custom object can have up to two master-detail relationships and up to 25 total relationships. </li>
+    </ul>
+</section>
+
+<section>
+  <h4>Many-to-Many -  Notes</h4>
+  <ul style="font-size:30px;">
+    <li>You can use master-detail relationships to model <b>many-to-many</b> relationships between any two objects. </li>
+    <li>A many-to-many relationship allows each record of one object to be linked to multiple records from another object and vice versa.</li>
+    <li>For example, you create a custom object called “Bug” that relates to the standard case object such that a bug could be related to multiple cases
+     and a case could also be related to multiple bugs. </li>
+    <li>To create a many-to-many relationship,  create a custom junction object with two master-detail relationship fields,
+     each linking to the objects you want to relate. <b>M:J:D</b>, Example: <b>Case : Case-Bug : Bug</b> </li>
+  </ul>
+
+</section>
+
+
+
+<section>
+  <h4>Many-to-Many -  Case-to-Bug - Step-1</h4>
+  <ul style="font-size:30px;">
+    <li>Create the Custom Juction Object: BugCaseAssociation</li>
+  </ul>
+  <img src="img/m-m-1.png" alt="">
+</section>
+
+<section>
+  <h4>Many-to-Many -  Case-to-Bug - Step-2</h4>
+  <ul style="font-size:30px;">
+    <li>Create Master-detail Realtionship field  for : BugCaseAssociation object</li>
+  </ul>
+  <img src="img/m-m-2.png" alt="">
+</section>
+
+<section>
+  <h4>Many-to-Many -  Case-to-Bug - Step-3</h4>
+  <ul style="font-size:30px;">
+    <li>Set Master-detail Realtionship field  for : BugCaseAssociation object as <b>Case</b> object</li>
+  </ul>
+  <div class="row">
+
+   <div class="col-lg-6">
+     <img  style="border:0px" height="200" src="img/m-m-3.png" alt="">
+   </div>
+   <div class="col-lg-6">
+    <img  style="border:0px" height="300" src="img/m-m-4.png" alt="">
+   </div>
+  </div>
+</section>
+
+
+<section>
+  <h4>Many-to-Many -  Case-to-Bug - Step-3 - contd.</h4>
+  <img style="border:0px" src="img/m-m-5.png" alt="">
+</section>
+
+<section>
+  <h4 style="font-size:30px;">Many-to-Many -  Case-to-Bug - Step-4</h4>
+  <ul style="font-size:30px;">
+    <li>Set Master-detail Realtionship field  for : BugCaseAssociation object as <b>Bug</b> object</li>
+  </ul>
+  <div class="row">
+
+   <div class="col-lg-6">
+     <img  style="border:0px" height="300" src="img/m-m-6.png" alt="">
+   </div>
+   <div class="col-lg-6">
+    <img  style="border:0px" height="300" src="img/m-m-7.png" alt="">
+   </div>
+  </div>
+</section>
+
+<section>
+  <h4>Many-to-Many -  Case-to-Bug - Step-4 - contd.</h4>
+  <img style="border:0px" src="img/m-m-8.png" alt="">
+</section>
+
+<section>
+  <h4>Many-to-Many -  Case-to-Bug - Schema</h4>
+  <img style="border:0px" src="img/m-m-9.png" alt="">
+</section>
+
+<section>
+  <h4>Lookup</h4>
+  <ul>
+    <li>Links 2 objects together</li>
+    <li>Similar to Master-detail relationship, except Lookups do not support sharing or roll-up summary fields</li>
+    <li>An Object can link to itself (except: User Object) (hierarchical):
+      Custom Object Bug link to itself - to show how different bugs are releated.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Lookup example : Account - Contact </h4>
+  <img style="border:0px" src="img/lookup-account-contact-1.png" alt="">
+</section>
+
+<section>
+  <h4>Lookup example : Property - Offer </h4>
+  <img style="border:0px" src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-usc2522a70dfde1c538e39b802d8cde60e.png" alt="">
+</section>
+
+
+<section>
+  <h4>Lookup - Notes</h4>
+  <ul style="font-size:30px;">
+    <li>If the lookup field is <b>Required</b> :Make the lookup field required for saving a record, requiring it on the corresponding page layout as well.</li>
+   <li>If the lookup field is <b>Optional</b> :
+      <ul>
+        <li>
+          Clear the value of this field
+        </li>
+        <li>Don’t allow deletion of the lookup record that’s part of a lookup relationship </li>
+        <li>Delete this record also ( can result in a cascade-delete) - to provide  tightly coupling</li>
+        <li>A cascade-delete bypasses security and sharing settings,
+          which means users can delete records when the target lookup record is deleted even if they don’t have access to the records.
+          <br/> To prevent records from being accidentally deleted, cascade-delete is disabled by default.
+          <br> Contact Salesforce to get the cascade-delete option enabled for your organization.</li>
+      </ul>
+   </li>
+   <li>We can use lookup relationships when objects are only related in <b>some cases</b>.
+     <br/> Sometimes a contact is associated with a specific account, but sometimes it’s just a contact.
+     <br/> Objects in lookup relationships usually work as stand-alone objects and have their own tabs in the user interface.
+   </li>
+  </ul>
+</section>
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Custom Metadata Types";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

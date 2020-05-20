@@ -1,0 +1,5 @@
+"sobjectName","sobjectLabel","name","label","type","length","nillable","referenceTo","relationshipName","unique","updateable","inlineHelpText","picklistValues","externalId"
+"GroupMember","Group Member","Id","Group Member ID","id",18,false,"[]",,false,false,,"[]",false
+"GroupMember","Group Member","GroupId","Group ID","reference",18,false,"[""Group""]","Group",false,false,,"[]",false
+"GroupMember","Group Member","UserOrGroupId","User/Group ID","reference",18,false,"[""Group"",""User""]",,false,false,,"[]",false
+"GroupMember","Group Member","SystemModstamp","System Modstamp","datetime",0,false,"[]",,false,false,,"[]",false

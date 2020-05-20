@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+      </section>
+
+      <section>
+        <h4>Datasets</h4>
+        <ul>
+          <li>Load is loaded into Datasets
+            <ul>
+              <li>Dataset is a colletion of realted data</li>
+              <li>Data in dataset is stored in a denormalized, but in highly compressed form</li>
+              <li>Dataset can have combined data from different sources, drived(calculated) fields/values and cleaned data
+            </ul>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section>
+        <h4> Types Dataset fields</h4>
+        <ul>
+          <li>Date
+         <ul>
+           <li>Can be represented as a day, month, year, and, optionally, time</li>
+            <li>We can group, filter, and perform math on dates</li>
+         </ul>
+          </li>
+          <li>Dimension
+           <ul>
+             <li>A dimension is a <b>qualitative</b> value</li>
+             <li>Example: region, product name, and model number </li>
+             <li>Can’t perform math on dimensions </li>
+             <li>Analytics indexes all dimension fields in datasets to improve query performance</li>
+           </ul>
+          </li>
+
+          <li>Measure
+           <ul>
+             <li>A measure is a <b>quantitative</b> value</li>
+             <li>Example: total revenue, minimum exchange rate </li>
+             <li>Can perform math on measures </li>
+           </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>Row-level security</h4>
+        <ul>
+          <li>Used to restrict access to records in the dataset</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Big NO to all null values! </h4>
+        <ul>
+          <li>Columns with all null values won't be created in datasets and can't be referenced in
+            <ul>
+              <li>dataflows, lenses, or dashboards</li>
+              <li>Consider providing a default value for null values, like <b>n/a</b> or <b>empty</b></li>
+
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Numberic - Min and Max</h4>
+        <ul>
+          <li>Maximum numeric value that can be stored in a dataset: <br/>
+            +36,028,797,018,963,967 </li>
+          <li>Minimum numeric value:<br/>
+            -36,028,797,018,963,968</li>
+          <li>
+            If any numerical value exceeds the maximum or goes below the minimum, the value overflows and Analytics returns an incorrect result
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Date - components</h4>
+        <ul>
+          <li>Second, Minute, Hour</li>
+          <li>Day, Week, Month</li>
+          <li>Quarter, Year</li>
+          <li>Week_Fiscal, Month_Fiscal</li>
+          <li>Quarter_Fiscal, Year_Fiscal</li>
+          <li>sec_epoch, day_epoch</li>
+        </ul>
+        <ul>
+          <li>General Format: FieldName_<component>; example: CreateDate_<b>Second</b></li>
+          <li>Note: <b>Create_Date</b> file in the date field in the dataset will create conflict!</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Date - Formats</h4>
+
+        <ul>
+          <li> Dates must match the format exactly and can’t have any extra text </li>
+          <li>Example: Format: MM-dd-yyyy hh:mm:ss value: 12-31-2015 12:00:00</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Date - format symbols</h4>
+
+        <p>
+          <table class="featureTable sort_table" summary="">
+
+
+            <thead class="thead sorted" align="left">
+              <tr>
+                <th class="featureTableHeader  " id="d582e1368">Symbol</th>
+
+                <th class="featureTableHeader  " id="d582e1371">Meaning</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+              <tr>
+                <td  data-title="Symbol">yyyy or yy</td>
+
+                <td  data-title="Meaning">Four-digit year (yyyy) or two-digit year (yy)</td>
+
+              </tr>
+
+              <tr>
+                <td  data-title="Symbol">MM</td>
+
+                <td  data-title="Meaning">Two-digit month (01–12)</td>
+
+              </tr>
+
+              <tr>
+                <td  data-title="Symbol">dd</td>
+
+                <td  data-title="Meaning">Two-digit day (01–31)</td>
+
+              </tr>
+
+              <tr>
+                <td  data-title="Symbol">‘T’</td>
+
+                <td  data-title="Meaning">A separator that indicates that time of day follows</td>
+
+              </tr>
+
+              <tr>
+                <td  data-title="Symbol">HH</td>
+
+                <td  data-title="Meaning">Two-digit hour (00–23)</td>
+
+              </tr>
+
+
+            </tbody>
+
+          </table></p>
+      </section>
+
+      <section>
+        <h4>Date format - Symobls - contd.</h4>
+        <p>
+          <table class="featureTable sort_table" summary="">
+
+
+            <thead class="thead sorted" align="left">
+              <tr>
+                <th class="featureTableHeader  " id="d582e1368">Symbol</th>
+
+                <th class="featureTableHeader  " id="d582e1371">Meaning</th>
+
+              </tr>
+
+            </thead>
+
+            <tbody class="tbody">
+        <tr>
+          <td  data-title="Symbol">mm</td>
+
+          <td  data-title="Meaning">Two-digit minute (00–59)</td>
+
+        </tr>
+
+        <tr>
+          <td  data-title="Symbol">ss</td>
+
+          <td  data-title="Meaning">Two-digit seconds (00–59)</td>
+
+        </tr>
+
+        <tr>
+          <td  data-title="Symbol">SSS</td>
+
+          <td  data-title="Meaning">Optional three-digit milliseconds (000–999)</td>
+
+        </tr>
+
+        <tr>
+          <td  data-title="Symbol">‘Z’</td>
+
+          <td  data-title="Meaning">The reference UTC time zone</td>
+
+        </tr>
+
+      </tbody>
+
+    </table></p>
+      </section>
+
+
+      <section>
+        <h4>Fiscal Periods in Analytics</h4>
+        <ul>
+          <li>If the calendar and fiscal year differ, you can enable Analytics to generate
+             the fiscal date fields in the dataset in addition to calendar date
+         fields</li>
+          <li> If your fiscal year begins in April, set fiscalMonthOffset to '3'.</li>
+        </ul>
+        <ul>
+          <li> metadata attributes for each date column</li>
+        </ul>
+
+      </section>
+
+      <section>
+        <h4>Fiscal Year</h4>
+        <ul>
+          <li>Because the fiscal year can start in one calendar year and end in another calendar year,
+             you must specify which year to use for the fiscal year</li>
+          <li>The
+<code>isYearEndFiscalYear</code>
+ attribute indicates whether the fiscal year is the year in which the fiscal year ends or begins</li>
+
+
+
+        </ul>
+      </section>
+
+
+<section>
+  <h4>Fiscal Year - Contd.</h4>
+  <ul>
+    <li><code>isYearEndFiscalYear = true</code></li>
+    <li>As shown in the following diagram, any dates between 4/1/2015 and
+   3/31/2016 are part of the fiscal year 2016 because the fiscal year ends in 2016.</li>
+    <li><img src="https://resources.help.salesforce.com/images/1420169a6d71cfbf3babdeaa76dd6355.png"/></li>
+
+  </ul>
+</section>
+
+<section>
+  <h4>Fiscal Year - Contd.</h4>
+  <ul>
+  <li> As shown in the following
+   diagram, any dates between 4/1/2015 and 3/31/2016 are part of the fiscal year 2015 because the fiscal year begins in 2015.</li>
+    <li><code>isYearEndFiscalYear = false</code></li>
+   <li><img src="https://resources.help.salesforce.com/images/12d2deb7cc3f8634e8747737396bdfb7.png"/></li>
+
+  </ul>
+</section>
+
+<section>
+  <h4>Week Numbering</h4>
+  <ul>
+    <li>
+      For each date loaded into a dataset, Analytics generates the corresponding week number for the calendar year and, if applicable, fiscal
+      year
+
+    </li>
+    <li> Similar to the SOQL function <code>WEEK_IN_YEAR</code>, week 1</li>
+    <li>Week 1 in Analytics  =  January 1 - January 7.</li>
+
+  </ul>
+</section>
+
+<section>
+  <h4>Week Numbering  - contd</h4>
+
+  <ul>
+    <li> You can configure the week to start on a particular day of the week by setting the <code>firstDayOfWeek</code> attribute</li>
+     <li>if January 1 is a Saturday and you configure the week to start on a Monday as  <code>firstDayOfWeek</code>
+         , then week 1 is January 1 - 2. Week 2 starts on Monday,
+January 3. Week 3 starts January 10, the following Monday.
+</li>
+<li> Notice that week 1 can be a short week to ensure that the subsequent weeks
+start on the specified day of the week.</li>
+</ul>
+</section>
+
+<section>
+  <h4>Einstein Analytics Connector for Excel</h4>
+  <ul>
+    <li>The Salesforce Einstein Analytics Connector for Excel makes it easy to import data from Microsoft Excel 2013 to Analytics</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Inferred Column type</h4>
+  <ul>
+    <li>For external data, Analytics infers metadata about each column of data in the external data file unless you specify different metadata
+attributes in a metadata file</li>
+<li>A metadata file is a JSON file that describes the structure of an external data file</li>
+<li> If no metadata file is provided when
+you upload external data, Analytics treats every column as a <b>dimension</b>
+ and sets the field type to 'Text.' </li>
+ <li>Note: You can’t perform mathematical calculations on dataset columns with a Text field typ</li>
+ <li>After you create a dataset based on an external data file, you can edit the dataset to apply a new metadata file. This enables you to
+change the metadata attributes of each column.</li>
+
+  </ul>
+</section>
+
+<section>
+  <h4>External Data API</h4>
+  <ul>
+    <li>You can use the External Data API to create a single dataset based on external data in the .csv format</li>
+    <li>
+     <img style='border:0px' src="https://developer.salesforce.com/docs/resources/img/en-us/212.0?doc_id=help%2Fimages%2Fbi_connect_data_external_detail_diagram.png&folder=bi_dev_guide_ext_data" alt="">
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h4>Steps in using External API</h4>
+<ul>
+<li>  Prepare your data in CSV format, and then create a metadata file to specify the structure of the data.
+</li><li>  Connect programmatically to your Salesforce organization.
+</li><li>  Configure the upload by inserting a row into the
+  <code>InsightsExternalData</code>
+   object, and then set input values such as the name of the dataset, the format of the data,
+   and the operation to perform on the data.
+
+
+</ul>
+</section>
+
+
+<section>
+  <h4>Steps in using External API - contd.</h4>
+<ul>
+ <li>  Split your data into <b>10-MB</b> chunks, and then upload the chunks to
+   <code>InsightsExternalDataPart</code> objects.
+</li><li> Start the upload by updating the Action field in the InsightsExternalData object.
+</li><li>  Monitor the InsightsExternalData object for status updates, and then verify that the file upload was successful.
+</li>
+
+</ul>
+</section>
+
+      <section>
+        <h4>ETL vs ELT</h4>
+        <img style='border:0px' src="img/ea/ETL.jpg" height="260" alt="ETL">
+
+        <img style='border:0px' src="img/ea/ELT.jpg" height="260" alt="ELT">
+      </section>
+
+
+      <section>
+        <h4>References</h4>
+        <ul>
+          <li>
+
+            <a target="_blank" href="https://resources.docs.salesforce.com/sfdc/pdf/bi_admin_guide_data_integration_guide.pdf">
+Analytics Data Integration Guide </a>
+          </li>
+        </ul>
+        <p>
+
+        Analytics Best Practices:
+        https://developer.salesforce.com/page/Analytics_Best_Practices
+
+
+        Best Practices for the Einstein Analytics Integration User:
+        https://help.salesforce.com/articleView?id=000240544&type=1
+
+
+        Docs/Links:
+
+        Integration Guide:
+        https://resources.docs.salesforce.com/sfdc/pdf/bi_admin_guide_data_integration_guide.pdf
+
+        Analytics External Data API Developer Guide:
+        https://resources.docs.salesforce.com/212/latest/en-us/sfdc/pdf/bi_dev_guide_ext_data.pdf
+
+        Analyze your data:
+        https://resources.docs.salesforce.com/210/latest/en-us/sfdc/pdf/analytics.pdf
+
+        Einstein Analytics Learning Map:
+        http://www.einsteinanalyticslearningmap.com/
+
+
+        Explore Data and Take Action with Einstein Analytics:
+        https://help.salesforce.com/articleView?id=bi.htm&type=5
+</p>
+      </section>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Einstein Analytics - Data Integration";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

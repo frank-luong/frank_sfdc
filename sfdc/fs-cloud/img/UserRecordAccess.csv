@@ -1,0 +1,10 @@
+"sobjectName","sobjectLabel","name","label","type","length","nillable","referenceTo","relationshipName","unique","updateable","inlineHelpText","picklistValues","externalId"
+"UserRecordAccess","User Record Access","Id","User Record Access ID","id",18,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","UserId","User ID","reference",18,false,"[""User""]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","RecordId","Record ID","picklist",40,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","HasReadAccess","Has Read Access","boolean",0,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","HasEditAccess","Has Edit Access","boolean",0,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","HasDeleteAccess","Has Delete Access","boolean",0,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","HasTransferAccess","Has Transfer Access","boolean",0,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","HasAllAccess","Has All Access","boolean",0,false,"[]",,false,false,,"[]",false
+"UserRecordAccess","User Record Access","MaxAccessLevel","Maximum Access Level","picklist",40,true,"[]",,false,false,,"[""Private"",""Read Only"",""Read/Write"",""Delete"",""Read/Write/Transfer"",""Owner""]",false

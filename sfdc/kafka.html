@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:void(0)">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="../index.html">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4> {{appName}}</h4>
+        <p>Gift from folks at LinkedIn </p>
+        <div class="row">
+          <div class="col-lg-6">
+             <img height="200" style="border:0px;" src="img/kafka/kafka-logo.jpg" alt="kafka logo">
+
+          </div>
+             <div class="col-lg-6">
+        <ul>
+          <li>Messaging System </li>
+          <li>Storage System</li>
+          <li>Stream Processing System</li>
+        </ul>
+      </div>
+    </div>
+       </section>
+
+       <section>
+         <h4>Architecture</h4>
+         <div class="row">
+           <div class="col-lg-6">
+              <img height="200" style="border:0px;" src="img/kafka/kafka-arch-1.png" alt="kafka arch">
+
+           </div>
+              <div class="col-lg-6">
+         <ul style="font-size:30px;">
+           <li>Best of two models: queuing and publish-subscribe </li>
+           <li><b>Strength of queuing</b> : allowing to <b>divide up</b> the processing of data over multiple consumer instances to scale the processing </li>
+           <li><b>Weakness of queuing</b> : Not a multi-subscriber. Once one process/consumer reads the data it's gone!<hr/></li>
+           <li><b>Strength of pub-sub</b>:  Allows to broadcast data to multiple processes</li>
+           <li><b>Weakness of pub-sub</b>: Has no way of scaling processing: Every message goes to every subscriber</li>
+       </ul>
+     </div>
+</div>
+       </section>
+
+       <section>
+         <h4>Best of both worlds</h4>
+         <div class="row">
+           <div class="col-lg-6">
+              <img height="200" style="border:0px;" src="img/kafka/kafka-arch-1.png" alt="kafka arch">
+              <ul style="font-size:30px;">
+                <li>Consumer Groups</li>
+                <li>Partitions</li>
+              </ul>
+
+           </div>
+              <div class="col-lg-6">
+                <ul style="font-size:30px;">
+                  <li>The consumer group concept in Kafka helps to acheive this</li>
+                  <li>As in <b>queuing</b>:  consumer group feature allows to <b>divide up</b> processing over a collection of processes :  members of the consumer group</li>
+                  <li>As in <b>pub-sub</b>: Kafka broadcasts messages to multiple consumer groups<hr/></li>
+                  <li>With this, Kafka can scale processing and also supports multi-subscriber</li>
+                  <li>Supports parallel consumption with the <b>Partitions</b></li>
+                </ul>
+              </div>
+         </div>
+
+       </section>
+
+       <section>
+         <h4> Parallel consumption</h4>
+         <div class='row'>
+           <div class='col-lg-6'>
+             <img style="border:0px;" height="250" src="img/kafka/kafka-arch-1.png" alt="log anatomy">
+           </div>
+           <div class='col-lg-6'>
+             <img  style="border:0px;" height="250" src="img/kafka/log_anatomy.png" alt="log anatomy">
+           </div>
+        </div>
+
+         <ul style="font-size:30px;">
+          <li>Assigning the partitions in the topic to the consumers in the consumer group </li>
+          <li>So each partition is consumed by <b>exactly one consumer</b> in the consumer group. </li>
+          <li>Number of consumer instances in a consumer group  = Number of partitions </li>
+         </ul>
+       </section>
+
+
+       <section>
+         <h4>Storage System</h4>
+         <ul style="font-size:30px;">
+           <li>Data written to Kafka is written to disk and replicated for fault-tolerance</li>
+           <li>Producers to wait on acknowledgement so that a write isn't considered complete until it is fully replicated</li>
+           <li>Special purpose distributed filesystem dedicated to:
+               <table class='table table-bordered'>
+                 <tr><th>high-performance</th>
+                   <th>low-latency commit log storage</th>
+                   <th>replication</th>
+                   <th>propagation</th>
+                </tr></table>
+              </li>
+         </ul>
+       </section>
+
+       <section>
+         <h4>Stream Processing</h4>
+         <ul style="font-size:30px;">
+           <li>Takes continual streams of data from input topics</li>
+           <li> Performs some processing on this input</li>
+           <li> Produces continual streams of data to output topics<hr/></li>
+           <li> Example: retail application takes in <b>input</b> streams of sales and shipments
+             and <b>output</b> a stream of reorder and price adjustments computed off this data<hr/></li>
+           <li> Uses the producer and consumer APIs for input</li>
+           <li> Has stateful storage</li>
+           <li> Uses the consumer group mechanism for fault tolerance among the stream processor instances</li>
+
+
+        </ul>
+
+       </section>
+
+       <section>
+         <h4>Stream Processing  - past and future data</h4>
+        <img height="200" style="border:0px" src="img/kafka/kafka-apis.png" alt="">
+         <ul style="font-size:30px;">
+           <li> Enterprise messaging system allows processing <b>future</b> messages that will arrive after you subscribe</li>
+           <li>A distributed file system like HDFS allows storing static files for <b>batch processing</b> -
+              Allows storing and processing historical data from the past</li>
+           <li> With Kafka by combining storage and low-latency subscriptions, streaming applications can treat both<b> past and future data</b>
+              the same way </li>
+        </ul>
+
+       </section>
+
+       <section>
+         <h4>Kafka uses Apache ZooKeeper</h4>
+           <p>ZooKeeper is Centralized service for maintaining: </p>
+           <ul style="font-size:30px;">
+             <li>Configuration information</li>
+             <li>Naming</li>
+             <li>Providing distributed synchronization and group services</li>
+
+           </ul>
+        </section>
+
+        <section>
+           <h4 style="font-size:30px;">Video: Apache Kafka and the Stream Data Platform - Jay Kreps - team built Kafka </h4>
+             <iframe height="450" width="800" data-src="https://www.youtube.com/embed/o-952-TxDDE?autoplay=0"></iframe>
+       </section>
+
+
+         <section>
+            <h4 style="font-size:30px;">Video: Stanford Seminar - I ♥ Logs: Apache Kafka, Stream Processing, and Real-time Data </h4>
+              <iframe height="450" width="800" data-src="https://www.youtube.com/embed/SU8LaHLh6Ng?autoplay=0"></iframe>
+        </section>
+
+
+        <section>
+           <h4 style="font-size:30px;">Video: ACM: Putting Apache Kafka to Use for Event Streams, Jay Kreps </h4>
+             <iframe height="450" width="800" data-src="https://www.youtube.com/embed/el-SqcZLZlI?autoplay=0"></iframe>
+       </section>
+
+
+
+
+        <section>
+          <h4>Setup - Starting ZooKeeper Server</h4>
+              <img style="border:0px" src="img/kafka/kafka-zookeepr-config.png" alt="kafka-zookeepr-config">
+              <img style="border:0px" height="80" src="img/kafka/kafka-zookeeper-starting.png" alt="zookeeper start server">
+        </section>
+
+
+        <section>
+          <h4>Setup -  Kafka Server Config</h4>
+              <img style="border:0px" height="500" src="img/kafka/kafka-server-config.png" alt="kafka-server-config">
+        </section>
+
+        <section>
+          <h4>Setup -  Kafka Server Starting</h4>
+              <img style="border:0px" src="img/kafka/kafka-start-server.png" alt="Kafka start server">
+              <img style="border:0px" src="img/kafka/kafka-start-server-2.png" alt="Kafka start server">
+        </section>
+
+        <section>
+          <h4 style="font-size:30px;">Simple Demo - Producer on left and Consumer on right</h4>
+              <img style="border:0px" height="500" src="img/kafka/kafka-1.gif" alt="Kafka Demo">
+        </section>
+
+        <section>
+          <h4>Advantages of Message based async integration</h4>
+          <img style="border:0px" height="500" src="img/kafka/adv-disadv-1.png" alt="">
+
+        </section>
+
+
+        <section>
+          <h4 style="font-size:30px;">Key Ideas - Data/Journal Logs - programmatic access</h4>
+          <ul style="font-size:30px;">
+            <li> Write-ahead logs or commit logs or transaction logs </li>
+            <li>Logs are heart of many distributed data systems, data integration and real-time application architectures.</li>
+            <li>Append-only, totally-ordered sequence of records ordered by time</li>
+            <li>Records what happened and when.</li>
+            <li>The ordering of records defines a notion of "time" since entries to the left are defined to be older then entries to the right.</li>
+            <li>The log entry number can be thought of as the "timestamp" of the entry.</li>
+            <li>database uses a log to write out information about the records they will be modifying,
+              before applying the changes to all the various data structures it maintains. </li>
+
+            <li>Since the log is immediately persisted it is used as the authoritative source in
+               restoring all other persistent structures in the event of a crash.</li>
+            <li>The use of logs as a mechanism for data subscription seems to have arisen almost by chance -
+            supporting messaging, data flow, and real-time data processing</li>
+            <li>The two problems a log solves: ordering changes and distributing data</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Key Ideas - Logs - contd.</h4>
+          <ul style="font-size:30px;">
+
+            <li>If you feed two deterministic pieces of code the same input log, they will produce the same output.</li>
+            <li>You can reduce the problem of making multiple machines all do
+              the same thing to the problem of implementing a distributed consistent log to feed these processes input.</li>
+              <li> Time-stamps that index the log now act as the clock for the state of the replicas</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h4>Use case: Salesforce as consumer to Kafka topic</h4>
+          <ul style="font-size:30px;">
+            <li>Kafka Producer  publishes message to topic <b>test</b></li>
+            <li>Kafka Consumer  consumes  message from the topic <b>test</b>.<br/>
+              On the receipt of the message it creates a new Account record based on the received message field
+                 </li>
+          </ul>
+        </section>
+
+        <section>
+          <h4 style="font-size:20px;">Use case: Salesforce as consumer to Kafka topic - Demo</h4>
+            <img style="border:0px"  src="img/kafka/kafa-node-sfdc-1.gif" alt="usecase demo">
+
+        </section>
+
+        <section>
+          <h4>How Kafka inspired SFDC Platform Events Architecture</h4>
+          <ul>
+            <li> scalability challenges addressed by:
+              <ul>
+                <li>asynchronous</li>
+                <li>event-driven</li>
+              </ul>
+
+            </li>
+            <li>Provide:  time-ordered immutable event stream to our customers. </li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Data Integration - Then</h4>
+          <ul>
+            <li><b>Data Integration</b> :REST and SOAP APIs</li>
+            <li><b>Business Process Integration</b>: Web Service calls via Apex</li>
+            <li>
+              <b>External Objects: Provide data virtualization and federated query</b> </li>
+            <li>Event-driven architectural patterns:
+                <ul>
+                  <li>Shift towards decoupling services - async interactions - publish/subscribe model </li>
+                  <li> subscription durability </li>
+                </ul>
+              </li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h4> Kafka Key points</h4>
+          <div class='row'>
+            <div class='col-lg-6'>
+              <img style="border:0px;"
+               src="img/kafka/kafka-arch-2.png" alt="log anatomy">
+            </div>
+            <div class='col-lg-6'>
+             <ul style="font-size:23px;">
+               <li>Events are immutable and are stored on disk in a form of a time-ordered log. <br/>
+                    Each message is stored on disk precisely once, regardless of how many subscribers consume it.
+                </li>
+               <li>Publishers always append at the head of the log. Each newly written event is assigned a new offset — 
+                 this is the point when its relative order is established</li>
+               <li>Subscribers can read events at their own pace. If a subscriber has to reconnect,
+                 it can supply the “last seen” offset to resume exactly where it left off <br/>
+                 Tracking of a subscriber position can be the responsibility of the subscriber,
+                 so the broker does not suffer from a state explosion as it services more and more subscribers.<br/>
+                 Offset-based subscription durability ensures, and even dictates, strict order of events.
+                </li>
+               <li>
+                  To conserve resources, the oldest events can be periodically purged.
+               </li>
+               <li>So, a subscriber can miss events if it falls behind for more than the retention period
+               </li>
+             </ul>
+            </div>
+         </div>
+
+        </section>
+
+        <section>
+          <h4 style="font-size:30px;">SFDC - Schema: contents of the message</h4>
+          <h5 style="font-size:20px;">Platform Events combine:  the elegance of a time-ordered event log (Kafka) with the power of Salesforce’s metadata layer</h5>
+          <ul style="font-size:30px;">
+            <li>All participants in the system share a metadata repository </li>
+            <li>Allows publishers and subscribers to evolve completely independently</li>
+            <li>Schema is published in the metadata repository, subscribers can discover the new message type</li>
+            <li>Enables application lifecycle decoupling</li>
+            <li>Events can be defined as custom entities (Objects) and
+                 their custom definitions can be used as a schema for event serialization and consumption by the subscribers.</li>
+             <li>We translate event definitions to Apache Avro so subscribers can consume events
+                in this highly efficient serialization format with libraries in many language environments.</li>
+          </ul>
+        </section>
+
+
+        <section>
+          <h4 style="font-size:30px;">Salesforce Platform Events -
+          Kafka and the Salesforce metadata system
+        </h4>
+          <ul style="font-size:30px;">
+            <li>Events are defined just like custom objects. Subscribers can discover and describe them in the same ways as any other metadata</li>
+            <li>Subscribers can tap into the topics on the platform via:
+                <ul>
+                  <li> Event Apex Triggers</li>
+                  <li> Visual Flow</li>
+                </ul>
+             </li>
+             <li>For external integrations: topics are exposed via the Salesforce Streaming API. </li>
+             <li>Publishers can live within the platform: Lightning, Apex and Visual Flow can send platform events</li>
+             <li>External publishers: can use any form of SObject API (REST API) that can save an SObject </li>
+             <li>Platform Events are first-class Salesforce Objects</li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>SFDC Operations - Kafka</h4>
+           <img style="border:0px;" height="400" src="img/kafka/sfdc-kafka-1.png" alt="sfdc kafka">
+           <ul style="font-size:30px;">
+             <li>Unified, near-real-time transport for a wide variety of data types:
+               including system metrics and state information, system logs, network flow data, and application logs.
+             </li>
+           </ul>
+        </section>
+
+        <section>
+          <h4>Performance Tips</h4>
+          <ul style="font-size:30px;">
+            <li>Message size:
+            <ul>
+              <li>Apache Kafka is optimized for small messages (1KB)</li>
+              <li> Larger messages ( 10 MB to 100 MB) can decrease throughput and significantly impact operations</li>
+              <li>The Kafka producer can compress messages <br/>
+                if the original message is a text-based format (JSON/XML...),
+              <code>compression.codec</code> and <code>compressed.topic</code>  can be used for setting up the compression: Gzip </li>
+            </ul>
+          </li>
+          <li>Partitions and memory usage:
+            <ul>
+              <li>Brokers allocate a buffer the size of <code>replica.fetch.max.bytes</code> for each partition they replicate</li>
+              <li>If <code>replica.fetch.max.bytes</code> is set to 1 MiB, and you have 1000 partitions, about 1 GiB of RAM is required</li>
+              <li>The same consideration applies for the consumer <code>fetch.message.max.bytes </code> setting</li>
+            </ul>
+          </li>
+          <li>Garbage Collection:
+            <ul>
+               <li> Large messages can cause longer garbage collection (GC) pauses as brokers allocate large chunks</li>
+                <li> Monitor the GC log and the server log. If long GC pauses cause Kafka to abandon the ZooKeeper session,<br/>
+                   you may need to configure longer timeout values for <code>zookeeper.session.timeout.ms</code>
+               </li>
+            </ul>
+          </li>
+
+        </ul>
+
+        </section>
+
+        <section>
+          <h4>Broker Config</h4>
+          <ul style="font-size:30px;">
+            <li>
+              <code>message.max.bytes </code>:
+               Maximum message size the broker will accept.
+               <br/>
+                Must be smaller than the consumer <b>fetch.message.max.bytes</b>, or the consumer cannot consume the message.
+                Default: 1MB
+            </li>
+
+            <li>
+              <code>log.segment.bytes </code>:
+              Size of a Kafka data file. Must be larger than any single message.
+                Default: 1GB
+            </li>
+
+            <li>
+              <code>replica.fetch.max.bytes </code>:
+              Maximum message size a broker can replicate. Must be larger than <code>message.max.bytes</code>
+              or a broker can accept messages it cannot replicate, potentially resulting in data loss.
+                Default: 1MB
+            </li>
+
+
+          </ul>
+        </section>
+
+        <section>
+          <h4>Consumer Config</h4>
+          <ul style="font-size:30px;">
+            <li>
+              <code>max.partition.fetch.bytes</code>:
+              The maximum amount of data per-partition the server will return.
+                Default: 10MB
+
+            </li>
+
+            <li>
+              <code>fetch.max.bytes </code>:
+              The maximum amount of data the server should return for a fetch request.
+                Default: 50MB
+            </li>
+
+            <li>
+              <code>fetch.message.max.bytes </code>:
+              Maximum message size a consumer can read. Must be at least as large as <code>message.max.bytes</code>
+                Default: 1MB
+            </li>
+            <li>
+              Note:
+              If a single message batch is larger than any of the default values above,
+              the consumer will still be able to consume the batch, but the batch will be sent alone, which can cause
+              <b>performance degradation</b>
+
+
+            </li>
+
+
+          </ul>
+        </section>
+
+        <section>
+          <h4>Kafka is balanced  for both Latency and throughput</h4>
+          <ul style="font-size:30px;">
+            <li>Latency: how long it takes to process one event</li>
+            <li>Throughput:  how many events arrive within a specific amount of time</li>
+            <li>A well tuned Kafka system has just enough brokers to handle topic throughput,
+                given the latency required to process information as it is received
+              <br/>:
+            Expected:  100,000 events per second.</li>
+
+          </ul>
+        </section>
+
+        <section>
+          <h4>Tuning Kafka Producers</h4>
+          <ul style="font-size:30px;">
+            <li>Kafka uses an asynchronous publish/subscribe model.
+              <br/> When your producer calls the <code>send()</code> command, the result returned is a <code>future</code></li>
+              <li>When the batch is ready (fill up buffers on the producer), the producer sends it to the broker.
+                <br/> The Kafka broker waits for an event, receives the result, and then responds that the transaction is complete (OK)</li>
+            <li><code>batch.size </code>: measures batch size in total bytes instead of the number of messages <br/>
+            - how many bytes of data to collect before sending messages to the Kafka broker<br/>
+            Default: 16384 (set this as high as possible, without exceeding available memory)
+          </li>
+          <li>
+            <code>linger.ms </code>:  maximum time to buffer data in asynchronous mode<br/>
+            Instead of sending immediately, we can set <code>linger.ms</code> to 5 and send more messages in one batch.<br/>
+            This would reduce the number of requests sent,
+            but would add up to 5 milliseconds of latency to records sent, even if the load on the system does not warrant the delay
+
+
+          </li>
+        </ul>
+
+        </section>
+
+        <section>
+
+          <h4>Tuning Kafka Brokers</h4>
+          <img style="border:0px; border-radius:10px;"src="img/kafka/kafka-part-1.png" height="300" alt="">
+          <ul style="font-size:30px;">
+            <li>Topics are divided into partitions. Each partition has a leader. <br/>
+              Most partitions are written into leaders with multiple replicas.  <br/>
+              When the leaders are not balanced properly, one might be overworked, compared to others</li>
+            <li>
+              Recommended: one partition per physical storage disk and <b> one consumer per partition</b>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Tuning Kafka Consumers</h4>
+          <img style="border:0px; border-radius:10px;"src="img/kafka/kafka-part-2.png" height="300" alt="">
+            <ul style="font-size:20px;">
+            <li><b>The max. number of consumers for a topic  = the number of partitions</b></li>
+            <li>You need <b>enough partitions to handle all the consumers</b> needed to keep up with the producers</li>
+            <li>Consumers in the same consumer group split the partitions among them</li>
+            <li>Adding more consumers to a group can enhance performance</li>
+            <li>
+              <code>replica.high.watermark.checkpoint.interval.ms </code>:
+              If you have to go back and locate missing data,
+               you have a checkpoint from which to move forward without having to reread prior data.
+               <br>
+               If you set the checkpoint watermark for every event, you will never lose a message, but it significantly impacts performance.
+               If, instead, you set it to check the offset every hundred messages, you have a margin of safety with much less impact on throughput.
+
+
+            </li>
+          </ul>
+        </section>
+
+
+
+
+
+        <section>
+          <h4>Balancing Apache Kafka Clusters </h4>
+            <iframe height="450" width="800" data-src="https://www.youtube.com/embed/t2pN4_HfGbY?autoplay=0"></iframe>
+        </section>
+
+        <section>
+          <h4>Tuning Your Apache Kafka Cluster </h4>
+            <iframe height="450" width="800" data-src="https://www.youtube.com/embed/6hFhf6LgEps?autoplay=0"></iframe>
+        </section>
+
+
+        <section>
+          <h4>Quotas: Cloudera Distribution of Apache Kafka </h4>
+            <iframe height="450" width="800" data-src="https://www.youtube.com/embed/zMAwFoPdcmM?autoplay=0"></iframe>
+        </section>
+
+        <section>
+          <h4>How Does Apache Kafka Work</h4>
+            <iframe height="450" width="800" data-src="https://www.youtube.com/embed/EiWsPd6JDoo?autoplay=0"></iframe>
+        </section>
+
+
+
+        <section>
+          <h4>References</h4>
+
+          <ul>
+            <li>
+              <a target="_blank" href="https://www.salesforce.com/video/302281/">
+                How We Built Heroku's Real-Time Platform Event Stream
+              </a>
+            </li>
+
+
+            <li>
+              <a target="_blank" href="https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying">
+The Log              </a>
+            </li>
+
+
+            <li>
+              <a target="_blank" href="https://people.eecs.berkeley.edu/~brewer/cs262/SystemR.pdf">
+                A History and Evaluation of System R
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://engineering.salesforce.com/how-apache-kafka-inspired-our-platform-events-architecture-2f351fe4cf63">
+              How Apache Kafka Inspired Our Platform Events Architecture
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.cloudera.com/documentation/kafka/latest/topics/kafka_performance.html">
+                Configuring Apache Kafka for Performance and Resource Management
+              </a>
+            </li>
+
+            <li>
+              <a target="_blank" href="https://engineering.linkedin.com/kafka/benchmarking-apache-kafka-2-million-writes-second-three-cheap-machines">
+                Benchmarking Apache Kafka: 2 Million Writes Per Second (On Three Cheap Machines)
+              </a>
+            </li>
+
+          </ul>
+        </section>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Apache Kafka";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

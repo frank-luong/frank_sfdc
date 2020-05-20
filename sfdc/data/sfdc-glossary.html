@@ -1,0 +1,163 @@
+
+<!doctype html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <title>SFDC  Glossary</title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-touch.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-sanitize.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../../css/navbar-blue.css">
+  <link rel="stylesheet" href="sfdc-glossary.css">
+
+  <script src="js/Chart.min.js"></script>
+  <script src="js/angular-chart.min.js"></script>
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="javascript:void(0)"><i class='glyphicon glyphicon-book'></i> Glossary </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#/home">Home</a></li>
+    </ul>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Main</a></li>
+    </ul>
+
+    <div class="inner-addon right-addon navbar-form navbar-right">
+      <i class="glyphicon glyphicon-search"></i>
+      <input type="text" class="form-control" placeholder="Search" />
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown ">
+        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="./help.html">Help Topics</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</nav>
+
+
+ <div ng-controller="MainCtrl" style="margin-left:30px;">
+   <div class="row">
+    <div class="col-lg-1"> <h4>Topics: </h4> </div>
+    <div class="col-lg-1"> <button title="toggle graph" class="btn btn-info" ng-click='showGraph=!showGraph'>
+       <i class="fa fa-line-chart"></i></button> </div>
+    <div class="col-lg-10">
+     <ul class="inline" >
+       <li  class='badge badge-info'
+            ng-click='selectTopic(topic)'
+            style='padding:10px;margin:2px;' ng-repeat="topic in topics | unique " > {{topic}}</li>
+     </ul>
+   </div>
+   </div>
+    <div class='row'>
+      <div class='col-lg-6'>
+         <input class='searcher' placeholder='type few chars for the word' type="search" size="99" ng-model="auto" autocomplete="true" />
+       </div>
+    </div>
+  <div class='row' style="margin-top:5px;">
+     <div class='col-lg-6'  ng-show='meaning || term'
+          style='margin-left:20px; text-transform:capitalize2;font-size:20px;border-radius:10px;background-color:#eff9f9;padding:30px;'><b>
+
+      <h4 ng-show='term'>{{term}}
+        <a target="_blank" href="https://www.google.com/search?q=salesforce+{{term.split(':')[1]}}">Search &raquo;</a>
+        <hr/>
+      </h4>
+        {{selectedWord2}}</b>
+
+
+       <div ng-bind-html="trustAsHtml(meaning)"></div>
+
+        <span  ng-show='meaning'
+              <a
+               target="_blank"  href="https://www.google.com/search?q=salesforce+trailhead+{{selectedWord.split(':')[1]}}">More Info &raquo;</a>
+               | <a target="_blank"  href="https://www.google.com/search?q=define+{{selectedWord.split(':')[1]}}">Define &raquo;</a>
+        </span>
+
+        <span ng-show="usage">
+         <i>"{{usage}}"</i>
+       </span>
+        </div>
+        <div class="col-lg-3" style2="font-size:30px;">
+          <h4 ng-show="myList.length > 0">My Terms <span class='badge badge-info'>{{myList.length}}</span></h4>
+          <ul class="list-group list-group-striped list-group-hover">
+            <li class="list-group-item" ng-repeat="item in myList | unique " ng-click="fillinItem(item)">{{item}}</li>
+          </ul>
+
+        </div>
+    </div>
+
+    <div class="row" ng-show='showGraph'>
+      <div class="col-lg-6">
+      </div>
+      <div class="col-lg-6" style="border:5px #eff9f9 solid; border-radius:10px;margin-left:20px;">
+        <h4 style="text-transform:capitalize;text-align:center;">Topics Spread</h4>
+          <canvas id="doughnut" class="chart chart-doughnut" chart-data="sfdcCounts" chart-labels="topics"> </canvas>
+          <canvas id="barchart" class="chart chart-bar" chart-data="sfdcCounts" chart-labels="topics"> </canvas>
+          <canvas id="linechart" class="chart chart-line" chart-data="sfdcCounts" chart-labels="topics"> </canvas>
+      </div>
+
+    </div>
+
+
+
+
+</div>
+<script src="sfdc-glossary-2.js"></script>
+<script src="sfdc-glossary-ea.js"></script>
+<script src="sfdc-glossary-shield.js"></script>
+<script src="sfdc-glossary-dx.js"></script>
+<script src="sfdc-glossary-fc.js"></script>
+
+<script src="sfdc-lx.js?v=1"></script>
+
+
+<script src="aws-glossary.js"></script>
+<script src="db.js"></script>
+<script src="farming-2.js"></script>
+<script src="plumbing.js"></script>
+<script src="res-wiring.js"></script>
+
+<script src="gre.js"></script>
+<script src="music.js"></script>
+<script src="plants.js?v=2"></script>
+
+<script src="sfdc-glossary-app.js?v=2"></script>
+
+
+</body>
+
+</html>

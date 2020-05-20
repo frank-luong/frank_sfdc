@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+    pre {
+      font-size: 13px;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+        <img style="border:0px;" src="https://spark.apache.org/docs/latest/img/spark-logo-hd.png" alt="">
+       </section>
+
+       <section>
+         <h4>What is Apache Spark?</h4>
+         <ul>
+           <li>Distributed General Purpose, Lightning-fast Cluster Computing Framework with:
+             <ul>
+                <li>In-Memory data processing engine</li>
+                <li>ETL</li>
+                <li>SQL and Dataframes</li>
+                <li>Analytics</li>
+                <li>Machine Learning (MLlib)</li>
+                <li>Graph Processing on large data
+                 <ul>
+                   <li>At Rest (batch)</li>
+                   <li>In Motion (streaming)</li>
+                 </ul>
+                </li>
+             </ul>
+             <img style="border:0px;" height="180" src="https://spark.apache.org/images/spark-stack.png" alt="">
+
+           </li>
+
+
+         </ul>
+       </section>
+
+       <section>
+         <h4>Runs Everywhere</h4>
+         <ul>
+           <li>Hadoop Yarn</li>
+           <li>Apache Mesos</li>
+           <li>Standalone Cluster Mode</li>
+           <li>Cloud</li>
+           <li>EC2</li>
+         </ul>
+       </section>
+
+       <section>
+         <h4>Access Diverse Data Source including:</h4>
+         <ul>
+           <li>HDFS</li>
+           <li>Cassnadra</li>
+           <li>HBase</li>
+           <li>Hive</li>
+           <li>Tachyon</li>
+           <li>S3</li>
+         </ul>
+       </section>
+
+       <section>
+         <h4>Ease of Use, Apps can be written in</h4>
+         <ul>
+           <li>Has 80 high-level operators that makes to build <b>parallel apps</b> easy using:
+          <ul>
+           <li>Java</li>
+           <li>Scala</li>
+           <li>Python</li>
+           <li>R</li>
+         </li>
+         </ul>
+
+       </section>
+
+       <section>
+         <h4>PI calculation sample code</h4>
+         <pre style="font-size: 16px;">
+$ cat pi.scala
+<code>
+val NUM_SAMPLES = 100000
+
+val count = sc.parallelize(1 to NUM_SAMPLES).filter { _ =>
+val x = math.random
+val y = math.random
+x*x + y*y < 1
+}.count()
+println(s"Pi is roughly ${4.0 * count / NUM_SAMPLES}")
+</code>
+// running:
+
+scala> :load pi.scala
+Loading pi.scala...
+NUM_SAMPLES: Int = 100000
+count: Long = 78560
+Pi is roughly 3.1424
+
+
+         </pre>
+       </section>
+
+<section>
+  <h4>File chars length example</h4>
+ <pre style="font-size:18px;">
+   <code>
+scala> val textFile = sc.textFile("/Users/mchinnappan/text-docs/t8.shakespeare.txt")
+textFile: org.apache.spark.rdd.RDD[String] = /Users/mchinnappan/text-docs/t8.shakespeare.txt MapPartitionsRDD[16] at textFile at <console>:24
+
+scala> val lineLengths = textFile.map(s => s.length)
+lineLengths: org.apache.spark.rdd.RDD[Int] = MapPartitionsRDD[17] at map at <console>:26
+
+scala> val totalLength = lineLengths.reduce(_ + _)
+totalLength: Int = 5333743
+</code>
+ </pre>
+</section>
+
+<section>
+  <h4>Spark Dataframe</h4>
+
+ <pre style="font-size:16px;">
+  <code>
+scala> import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.SparkSession
+
+scala> val spark = SparkSession.builder().appName("Spark SQL").getOrCreate()
+18/02/06 14:55:07 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+spark: org.apache.spark.sql.SparkSession = org.apache.spark.sql.SparkSession@1a1c308b
+
+scala> import spark.implicits._
+import spark.implicits._
+
+scala> val df = spark.read.json("/Users/mchinnappan/text-docs/people.json")
+df: org.apache.spark.sql.DataFrame = [age: bigint, name: string]
+
+scala> df.show()
++---+--------------+
+|age|          name|
++---+--------------+
+| 76|  Ken Thompson|
+| 76|Dennis Ritchie|
+| 62| James Gosling|
+| 83| Niklaus Wirth|
+| 63|      Bill Joy|
++---+--------------+
+</code>
+</pre>
+
+</section>
+
+<section>
+  <h4>Spark Dataframe - Contd.</h4>
+
+ <pre style="font-size:16px;">
+
+<code>
+scala> df.printSchema()
+root
+ |-- age: long (nullable = true)
+ |-- name: string (nullable = true)
+scala> df.select("name").show()
++--------------+
+|          name|
++--------------+
+|  Ken Thompson|
+|Dennis Ritchie|
+| James Gosling|
+| Niklaus Wirth|
+|      Bill Joy|
++--------------+
+</code>
+</pre>
+</section>
+
+
+<section>
+  <h4>Spark Dataframe - Contd.</h4>
+
+ <pre style="font-size:14px;">
+
+scala> // Select everybody, but increment the age by 1
+
+scala> df.select($"name", $"age" + 1).show()
++--------------+---------+
+|          name|(age + 1)|
++--------------+---------+
+|  Ken Thompson|       77|
+|Dennis Ritchie|       77|
+| James Gosling|       63|
+| Niklaus Wirth|       84|
+|      Bill Joy|       64|
++--------------+---------+
+scala> // Select people older than 70
+
+scala> df.filter($"age" > 70).show()
++---+--------------+
+|age|          name|
++---+--------------+
+| 76|  Ken Thompson|
+| 76|Dennis Ritchie|
+| 83| Niklaus Wirth|
++---+--------------+
+
+
+
+</pre>
+</section>
+
+<section>
+  <h4>Spark Dataframe - Contd.</h4>
+
+ <pre style="font-size:14px;">
+
+   scala> // Count people by age
+
+   scala> df.groupBy("age").count().show()
+   +---+-----+
+   |age|count|
+   +---+-----+
+   | 63|    1|
+   | 83|    1|
+   | 62|    1|
+   | 76|    2|
+   +---+-----+
+ </pre>
+</section>
+
+
+<section>
+  <h4>SQL Query</h4>
+<pre style="font-size:14px;">
+
+scala> // Register the DataFrame as a SQL temporary view
+scala> df.createOrReplaceTempView("people")
+scala> val sqlDF = spark.sql("SELECT * FROM people")
+sqlDF: org.apache.spark.sql.DataFrame = [age: bigint, name: string]
+
+scala> sqlDF.show()
++---+--------------+
+|age|          name|
++---+--------------+
+| 76|  Ken Thompson|
+| 76|Dennis Ritchie|
+| 62| James Gosling|
+| 83| Niklaus Wirth|
+| 63|      Bill Joy|
++---+--------------+
+
+
+</pre>
+
+</section>
+
+<section>
+  <h4>Datasets</h4>
+<pre style="font-size:14px;">
+
+
+scala> case class Person(name: String, age: Long)
+defined class Person
+
+scala> val caseClassDS = Seq(Person("Ken Thompson", 76)).toDS()
+caseClassDS: org.apache.spark.sql.Dataset[Person] = [name: string, age: bigint]
+
+scala> caseClassDS.show()
++------------+---+
+|        name|age|
++------------+---+
+|Ken Thompson| 76|
++------------+---+
+  </pre>
+</section>
+
+
+<section>
+  <h4>Datasets - contd.</h4>
+<pre style="font-size:14px;">
+  scala> val jsonPath = "/Users/mchinnappan/text-docs/people.json"
+  jsonPath: String = /Users/mchinnappan/text-docs/people.json
+
+  scala> val peopleDS = spark.read.json(jsonPath).as[Person]
+  peopleDS: org.apache.spark.sql.Dataset[Person] = [age: bigint, name: string]
+
+  scala> peopleDS.show()
+  +---+--------------+
+  |age|          name|
+  +---+--------------+
+  | 76|  Ken Thompson|
+  | 76|Dennis Ritchie|
+  | 62| James Gosling|
+  | 83| Niklaus Wirth|
+  | 63|      Bill Joy|
+  +---+--------------+
+</pre>
+</section>
+
+
+<section>
+  <h4>RDD to Dataframe </h4>
+<pre style="font-size:14px;">
+
+val peopleDF = spark.sparkContext.textFile("/Users/mchinnappan/text-docs/people.txt")
+    .map(_.split(","))
+    .map(attributes => Person(attributes(0), attributes(1).trim.toInt))
+    .toDF()
+peopleDF: org.apache.spark.sql.DataFrame = [name: string, age: bigint]
+
+scala> peopleDF.show()
++--------------+---+
+|          name|age|
++--------------+---+
+|  Ken Thompson| 76|
+|Dennis Ritchie| 76|
+| James Gosling| 62|
+| Niklaus Wirth| 83|
+|      Bill Joy| 63|
++--------------+---+
+</pre>
+</section>
+
+
+<section>
+  <h4>RDD to Dataframe - SQL </h4>
+<pre style="font-size:14px;">
+
+scala> peopleDF.createOrReplaceTempView("people2")
+
+scala> var seventyPlusDF = spark.sql("SELECT name,age FROM people2 WHERE age BETWEEN 70 AND 90")
+seventyPlusDF: org.apache.spark.sql.DataFrame = [name: string, age: bigint]
+
+scala> seventyPlusDF.show()
++--------------+---+
+|          name|age|
++--------------+---+
+|  Ken Thompson| 76|
+|Dennis Ritchie| 76|
+| Niklaus Wirth| 83|
++--------------+---+
+</pre>
+</section>
+
+
+<section>
+  <h4>Parquet Data resource </h4>
+<pre style="font-size:14px;">
+
+scala> val usersDF = spark.read.load("/Users/mchinnappan/text-docs/users.parquet")
+usersDF: org.apache.spark.sql.DataFrame = [name: string, favorite_color: string ... 1 more field]
+
+scala> usersDF.show()
++------+--------------+----------------+
+|  name|favorite_color|favorite_numbers|
++------+--------------+----------------+
+|Alyssa|          null|  [3, 9, 15, 20]|
+|   Ben|           red|              []|
++------+--------------+----------------+
+
+scala> usersDF.createOrReplaceTempView("users")
+scala> val uDF =  spark.sql("SELECT * FROM users")
+uDF: org.apache.spark.sql.DataFrame = [name: string, favorite_color: string ... 1 more field]
+
+scala> uDF.show()
++------+--------------+----------------+
+|  name|favorite_color|favorite_numbers|
++------+--------------+----------------+
+|Alyssa|          null|  [3, 9, 15, 20]|
+|   Ben|           red|              []|
++------+--------------+----------------+
+scala> usersDF.select("name", "favorite_color").show()
++------+--------------+
+|  name|favorite_color|
++------+--------------+
+|Alyssa|          null|
+|   Ben|           red|
++------+--------------+
+
+</pre>
+</section>
+
+
+<section>
+  <h4>Wirting a Dataframe in to Parquet </h4>
+<pre style="font-size:14px;">
+// Parquet is a columnar format that is supported by many other data processing systems.
+val peopleDF = spark.read.format("json")
+               .load("/Users/mchinnappan/text-docs/people.json")
+peopleDF.select("name", "age")
+        .write.format("parquet")
+        .save("name_and_age.parquet")
+
+$ tree name_and_age.parquet/
+name_and_age.parquet/
+├── _SUCCESS
+└── part-00000-1a7c7e94-95c4-44ae-895a-b7711c510a30-c000.snappy.parquet
+
+0 directories, 2 files
+</pre>
+</section>
+
+
+<section>
+  <h4>Run SQL on files directly </h4>
+<pre style="font-size:14px;">
+
+
+
+scala> val sqlUsersDF = spark.sql("SELECT * FROM parquet.`/Users/mchinnappan/text-docs/name_and_age.parquet`")
+18/02/06 16:26:04 WARN ObjectStore: Failed to get database parquet, returning NoSuchObjectException
+sqlUsersDF: org.apache.spark.sql.DataFrame = [name: string, age: bigint]
+
+scala> sqlUsersDF.show()
++--------------+---+
+|          name|age|
++--------------+---+
+|  Ken Thompson| 76|
+|Dennis Ritchie| 76|
+| James Gosling| 62|
+| Niklaus Wirth| 83|
+|      Bill Joy| 63|
++--------------+---+
+
+</pre>
+</section>
+
+
+<section>
+  <h4>Run SQL on files directly - Contd. </h4>
+<pre style="font-size:14px;">
+
+scala> val sqlPeopleJsonDF = spark.sql("SELECT * FROM json.`/Users/mchinnappan/text-docs/people.json`")
+18/02/06 16:28:12 WARN ObjectStore: Failed to get database json, returning NoSuchObjectException
+sqlPeopleJsonDF: org.apache.spark.sql.DataFrame = [age: bigint, name: string]
+
+scala> sqlPeopleJsonDF.show()
++---+--------------+
+|age|          name|
++---+--------------+
+| 76|  Ken Thompson|
+| 76|Dennis Ritchie|
+| 62| James Gosling|
+| 83| Niklaus Wirth|
+| 63|      Bill Joy|
++---+--------------+
+
+</pre>
+</section>
+
+
+<section>
+  <h4>DataFrames with createDataset  </h4>
+<pre style="font-size:14px;">
+// A DataFrame can be created for a JSON dataset represented by
+// a Dataset[String] storing one JSON object per string
+scala> val otherPeopleDataset = spark.createDataset(
+     |   """{"name":"Mohan Chinnappan","address":{"city":"New Found City","state":"NH"}}""" :: Nil)
+otherPeopleDataset: org.apache.spark.sql.Dataset[String] = [value: string]
+
+scala> val otherPeople = spark.read.json(otherPeopleDataset)
+otherPeople: org.apache.spark.sql.DataFrame = [address: struct<city: string, state: string>, name: string]
+
+scala> otherPeople.show()
++-------------------+----------------+
+|            address|            name|
++-------------------+----------------+
+|[New Found City,NH]|Mohan Chinnappan|
++-------------------+----------------+
+</pre>
+</section>
+
+
+
+<section>
+  <h4>Bucketing, Sorting and Partitioning </h4>
+<pre style="font-size:14px;">
+scala> usersDF.show()
++------+--------------+----------------+
+|  name|favorite_color|favorite_numbers|
++------+--------------+----------------+
+|Alyssa|          null|  [3, 9, 15, 20]|
+|   Ben|           red|              []|
++------+--------------+----------------+
+scala> usersDF.write.partitionBy("favorite_color").saveAsTable("people_partitioned")
+
+$ tree spark-warehouse/
+spark-warehouse/
+└── people_partitioned
+    ├── _SUCCESS
+    ├── favorite_color=__HIVE_DEFAULT_PARTITION__
+    │   └── part-00000-e6dadc4f-24b6-4bee-b764-8bbc7ac2053e.c000.snappy.parquet
+    └── favorite_color=red
+        └── part-00000-e6dadc4f-24b6-4bee-b764-8bbc7ac2053e.c000.snappy.parquet
+    </pre>
+    </section>
+
+<section>
+<h4>Bucketing, Sorting and Partitioning - contd. </h4>
+  <pre style="font-size:14px;">
+
+scala> val numBuckets = 10
+numBuckets: Int = 10
+
+scala> usersDF.write.partitionBy("favorite_color")
+             .bucketBy(numBuckets, "name")
+             .saveAsTable("people_partitioned_bucketed")
+18/02/06 16:46:31 WARN HiveExternalCatalog: Persisting bucketed data source table `default`.`people_partitioned_bucketed` into Hive metastore in Spark SQL specific format, which is NOT compatible with Hive.
+
+$ tree spark-warehouse/
+spark-warehouse/
+├── people_partitioned
+│   ├── _SUCCESS
+│   ├── favorite_color=__HIVE_DEFAULT_PARTITION__
+│   │   └── part-00000-e6dadc4f-24b6-4bee-b764-8bbc7ac2053e.c000.snappy.parquet
+│   └── favorite_color=red
+│       └── part-00000-e6dadc4f-24b6-4bee-b764-8bbc7ac2053e.c000.snappy.parquet
+└── people_partitioned_bucketed
+    ├── _SUCCESS
+    ├── favorite_color=__HIVE_DEFAULT_PARTITION__
+    │   └── part-00000-d9ec5ec3-98ea-4bb6-90ed-e370c22fba3e_00004.c000.snappy.parquet
+    └── favorite_color=red
+        └── part-00000-d9ec5ec3-98ea-4bb6-90ed-e370c22fba3e_00008.c000.snappy.parquet
+
+</pre>
+</section>
+
+<section>
+<h4>Bucketing, Sorting and Partitioning - contd. </h4>
+  <pre style="font-size:14px;">
+scala> usersDF.write
+  .partitionBy("favorite_color")
+  .bucketBy(numBuckets, "name")
+  .sortBy("favorite_numbers")
+  .saveAsTable("people_partitioned_bucketed_sorted")
+18/02/06 16:53:20 WARN HiveExternalCatalog: Persisting bucketed data source table `default`.`people_partitioned_bucketed_sorted` into Hive metastore in Spark SQL specific format, which is NOT compatible with Hive.
+
+$ tree spark-warehouse/
+spark-warehouse/
+
+└── people_partitioned_bucketed_sorted
+    ├── _SUCCESS
+    ├── favorite_color=__HIVE_DEFAULT_PARTITION__
+    │   └── part-00000-4d811338-dda7-48ff-882d-cd4dbbf44205_00004.c000.snappy.parquet
+    └── favorite_color=red
+        └── part-00000-4d811338-dda7-48ff-882d-cd4dbbf44205_00008.c000.snappy.parque
+</pre>
+</section>
+
+
+<section>
+  <h4>Schema Merging</h4>
+    <pre style="font-size:14px;">
+// Create a simple DataFrame, store into a partition directory
+val squaresDF = spark.sparkContext.makeRDD(1 to 5).map(i => (i, i * i)).toDF("value", "square")
+squaresDF.write.parquet("data/test_table/key=1")
+scala> squaresDF.show()
++-----+------+
+|value|square|
++-----+------+
+|    1|     1|
+|    2|     4|
+|    3|     9|
+|    4|    16|
+|    5|    25|
++-----+------+
+
+// Create another DataFrame in a new partition directory,
+// adding a new column and dropping an existing column
+val cubesDF = spark.sparkContext.makeRDD(6 to 10).map(i => (i, i * i * i)).toDF("value", "cube")
+cubesDF.write.parquet("data/test_table/key=2")
+
+scala> cubesDF.show()
++-----+----+
+|value|cube|
++-----+----+
+|    6| 216|
+|    7| 343|
+|    8| 512|
+|    9| 729|
+|   10|1000|
++-----+----+
+
+
+
+    </pre>
+</section>
+
+
+<section>
+  <h4>Schema Merging - contd.</h4>
+    <pre style="font-size:14px;">
+
+scala> // Read the partitioned table
+
+scala> val mergedDF = spark.read.option("mergeSchema", "true").parquet("data/test_table")
+mergedDF: org.apache.spark.sql.DataFrame = [value: int, square: int ... 2 more fields]
+
+
+// The final schema consists of all 3 columns in the Parquet files together
+// with the partitioning column appeared in the partition directory paths root
+
+scala> mergedDF.printSchema()
+root
+|-- value: integer (nullable = true)
+|-- square: integer (nullable = true)
+|-- cube: integer (nullable = true)
+|-- key: integer (nullable = true)
+
+
+    </pre>
+</section>
+<section>
+  <h4>Schema Merging - contd.</h4>
+    <pre style="font-size:14px;">
+      $ tree data
+      data
+      └── test_table
+          ├── key=1
+          │   ├── _SUCCESS
+          │   ├── part-00000-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   ├── part-00001-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   ├── part-00002-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   ├── part-00003-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   ├── part-00004-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   ├── part-00005-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   ├── part-00006-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          │   └── part-00007-1a8f3060-7618-472c-80f3-b0c815201fe1-c000.snappy.parquet
+          └── key=2
+              ├── _SUCCESS
+              ├── part-00000-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              ├── part-00001-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              ├── part-00002-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              ├── part-00003-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              ├── part-00004-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              ├── part-00005-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              ├── part-00006-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+              └── part-00007-bc60e4d1-e390-4aba-83a5-8aad324b73f7-c000.snappy.parquet
+
+          </pre>
+      </section>
+
+
+
+<section>
+  <h4>DataFrame using JDBC</h4>
+  <pre style="font-size:14px;">
+// start the shell
+// $ spark-shell --driver-class-path postgresql-9.4-1201-jdbc41.jar --jars postgresql-9.4-1201-jdbc41.jar
+scala> var jdbcDF = spark.read.format("jdbc")
+                    .option("url", "jdbc:postgresql:dbname")
+                    .option("dbtable","zipcodes")
+                    .option("user", "postgres")
+                    .option("password","password-here")
+                    .load()
+jdbcDF: org.apache.spark.sql.DataFrame = [zipcode: string, city: string ... 3 more fields]
+
+scala> jdbcDF.show()
++-------+------------------+-----+--------+---------+
+|zipcode|              city|state|latitude|longitude|
++-------+------------------+-----+--------+---------+
+|  00705|          AIBONITO|   PR|   18.14|   -66.26|
+|  00610|            ANASCO|   PR|   18.28|   -67.14|
+|  00612|           ARECIBO|   PR|   18.45|   -66.73|
+|  00601|          ADJUNTAS|   PR|   18.16|   -66.72|
+|  00602|            AGUADA|   PR|   18.38|   -67.18|
+|  00603|         AGUADILLA|   PR|   18.43|   -67.15|
+|  00703|      AGUAS BUENAS|   PR|   18.25|    -66.1|
+|  00704|           AGUIRRE|   PR|   17.96|   -66.22|
+|  07675|          WESTWOOD|   NJ|   40.98|   -74.03|
+|  07677|    WOODCLIFF LAKE|   NJ|   41.02|   -74.05|
+|  07885|           WHARTON|   NJ|   40.89|   -74.58|
+|  07981|          WHIPPANY|   NJ|   40.82|   -74.41|
+|  07999|          WHIPPANY|   NJ|   40.82|   -74.41|
+</pre>
+</section>
+
+<section>
+  <h4>DataFrame using JDBC - contd.</h4>
+  <pre style="font-size:14px;">
+// db
+dbname=# \d testtable
+ Table "public.testtable"
+ Column | Type | Modifiers
+--------+------+-----------
+ name   | text |
+ dbname=# table testtable;                                                                                                                                                     name
+----------
+ testname
+(1 row)
+scala> import java.util.Properties
+import java.util.Properties
+scala> val connectionProperties = new Properties()
+connectionProperties: java.util.Properties = {}
+
+scala> connectionProperties.put("user", "postgres")
+res4: Object = null
+
+scala> connectionProperties.put("password", "pwd")
+res5: Object = null
+
+scala> val jdbcDF2 = spark.read
+          .jdbc("jdbc:postgresql:dbname", "testtable", connectionProperties)
+jdbcDF2: org.apache.spark.sql.DataFrame = [name: string]
+
+
+scala> jdbcDF2.show()
++--------+
+|    name|
++--------+
+|testname|
++--------+
+</pre>
+</section>
+
+
+<section>
+  <h4>Pivot</h4>
+
+  <pre style="font-size:15px;padding:10px;">
+var df = spark.read.json("/tmp/farming/fruitStock.json")
+df.show()
++----------+-------+---+
+|      date|  fruit| id|
++----------+-------+---+
+|2018-01-01|  Apple| 1f|
+|2018-01-02|  Apple| 2f|
+|2018-02-01|   Pear| 3f|
+|2018-03-01|  Mango| 4f|
+|2018-04-01|   Pear| 5f|
+|2018-05-01|Apricot| 6f|
+|2018-06-01|  Peach| 7f|
+|2018-06-01|  Apple| 8f|
++----------+-------+---+
+scala> val result = df.withColumn("date", date_format(col("date"), "MMM yyyy"))
+                      .groupBy("fruit")
+                      .pivot("date")
+                      .agg(countDistinct("id").alias("count")).na.fill(0)
+scala> result.show()
++-------+--------+--------+--------+--------+--------+--------+
+|  fruit|Apr 2018|Feb 2018|Jan 2018|Jun 2018|Mar 2018|May 2018|
++-------+--------+--------+--------+--------+--------+--------+
+|  Peach|       0|       0|       0|       1|       0|       0|
+|   Pear|       1|       1|       0|       0|       0|       0|
+|  Mango|       0|       0|       0|       0|       1|       0|
+|Apricot|       0|       0|       0|       0|       0|       1|
+|  Apple|       0|       0|       2|       1|       0|       0|
++-------+--------+--------+--------+--------+--------+--------+
+
+# ref: https://databricks.com/session/pivoting-data-with-sparksql
+
+  </pre>
+</section>
+
+<section>
+  <h4>Pivot - contd.</h4>
+    <pre style="font-size:15px;padding:10px;">
+val ratings_raw = sc.textFile("/Users/mchinnappan/farming/ml-1m/ratings.dat")
+case class Rating(user:Int, movie:Int, rating: Int)
+val ratings = ratings_raw.map(_.split("::").map(_.toInt)).map(r => Rating(r(0),r(1),r(2))).toDF
+scala> ratings.show
++----+-----+------+
+|user|movie|rating|
++----+-----+------+
+|   1| 1193|     5|
+|   1|  661|     3|
+|   1|  914|     3|
+|   1| 3408|     4|
+|   1| 2355|     5|
+|   1| 1197|     3|
+|   1| 1287|     5|
+|   1| 2804|     5|
+|   1|  594|     4|
+...
+
+val users_raw = sc.textFile("/Users/mchinnappan/farming/ml-1m/users.dat")
+case class User(user:Int, gender:String, age: Int)
+val users = users_raw.map(_.split("::")).map( u => User(u(0).toInt, u(1), u(2)toInt)).toDF
+scala> users.show
++----+------+---+
+|user|gender|age|
++----+------+---+
+|   1|     F|  1|
+|   2|     M| 56|
+|   3|     M| 25|
+|   4|     M| 45|
+|   5|     M| 25|
+|   6|     F| 50|
+...
+
+
+
+    </pre>
+</section>
+
+<section>
+  <h4>Pivot - contd..</h4>
+    <pre style="font-size:15px;padding:10px;">
+      val sample_users = users.where( expr("gender = 'F' or ( rand() * 5 < 2)"))
+      scala> sample_users.groupBy("gender").count().show()
+      +------+-----+
+      |gender|count|
+      +------+-----+
+      |     F| 1709|
+      |     M| 1691|
+
+      # 100 most popular movies
+      scala> val popular = ratings.groupBy("movie").count().orderBy($"count".desc).limit(100)
+      scala> popular.show()
+      +-----+-----+
+      |movie|count|
+      +-----+-----+
+      | 2858| 3428|
+      |  260| 2991|
+      | 1196| 2990|
+    </pre>
+
+
+</section>
+
+
+<section>
+<h4>Pivot - contd...</h4>
+<img style="border:0px;" src="img/spark/pivot-spark.png" alt="">
+</section>
+
+
+<section>
+  <h4>Stack</h4>
+  <pre style="font-size:15px;padding:10px;">
+val df = Seq(
+             ("G",Some(4),2,None),
+             ("H",None   ,4,Some(5))
+            )
+         .toDF("A","X","Y", "Z")
+df.show()
++---+----+---+----+
+|  A|   X|  Y|   Z|
++---+----+---+----+
+|  G|   4|  2|null|
+|  H|null|  4|   5|
++---+----+---+----+
+
+df.select($"A", expr("stack(3, 'X', X, 'Y', Y, 'Z', Z) as (B, C)"))
+  .where("C is not null").show
+
++---+---+---+
+|  A|  B|  C|
++---+---+---+
+|  G|  X|  4|
+|  G|  Y|  2|
+|  H|  Y|  4|
+|  H|  Z|  5|
++---+---+---+
+
+# Ref: https://svds.com/pivoting-data-in-sparksql/
+
+  </pre>
+</section>
+
+<section>
+  <h4>Structured Streaming</h4>
+  <img style="border:0px;" src="https://spark.apache.org/docs/latest/img/structured-streaming-stream-as-a-table.png" alt="">
+</section>
+
+<section>
+  <h4>Structured Streaming - Programming Model</h4>
+  <img style="border:0px;" src="https://spark.apache.org/docs/latest/img/structured-streaming-model.png" alt="">
+</section>
+
+<section>
+  <h4>Structured Streaming - Example</h4>
+  <img style="border:0px;" src="https://spark.apache.org/docs/latest/img/structured-streaming-example-model.png" alt="">
+</section>
+
+
+
+<section>
+  <h4>Structured Streaming - Contd.</h4>
+  <button class='btn btn-success'  title='Click to view the demo in full page'>
+    <a target="_blank" href='img/spark/spark-struct-streaming-1.gif'>
+      <i class="glyphicon glyphicon-fullscreen"></i></a></button>
+    <img style="border:0px" height="450" src="img/spark/spark-struct-streaming-1.gif" alt="">
+</section>
+
+<section>
+  <h4>Modes</h4>
+
+  <ul>
+    <li>
+      <p><em>Complete Mode</em> - The entire updated Result Table will be written to the external storage. It is up to the storage connector to decide how to handle writing of the entire table.</p>
+    </li>
+    <li>
+      <p><em>Append Mode</em> - Only the new rows appended in the Result Table since the last trigger will be written to the external storage. This is applicable only on the queries where existing rows in the Result Table are not expected to change.</p>
+    </li>
+    <li>
+      <p><em>Update Mode</em> - Only the rows that were updated in the Result Table since the last trigger will be written to the external storage (available since Spark 2.1.1). Note that this is different from the Complete Mode in that this mode only outputs the rows that have changed since the last trigger. If the query doesn’t contain aggregations, it will be equivalent to Append mode.</p>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h4>Spark Application </h4>
+  <ul>
+    <li>Spark Application
+    <ul>
+      <li>Driver Program
+         <ul>
+           <li>Runs user's <code>main</code> function
+            <ul>
+           <li>Executes various parallel opertaions on a cluster</li>
+           <li>Cluster has many nodes</li>
+           <li>RDD (resilient distributed dataset) is a collections of
+             elements partitioned across the nodes (so <b>distributed</b>) of the cluster </li>
+           </li>
+            </ul>
+         </ul>
+      </li>
+    </ul>
+    </li>
+    <div style="font-size:14px;">
+    The Driver sends Tasks to the empty slots on the Executors when work has to be done:
+  </div>
+</ul>
+  <img style="border:0px;" src="https://spark.apache.org/docs/latest/img/cluster-overview.png" alt="">
+</section>
+
+
+<section>
+  <h4>RDD (resilient distributed dataset) </h4>
+  <ul>
+    <li> Created by starting with a file in the Hadoop file system
+         or an existing Scala collection in the driver program, and transforming</li>
+    <li>Users may also ask Spark to persist an RDD in <b>memory</b>,
+      allowing it to be reused efficiently across parallel operations</li>
+    <li>RDDs automatically recover from node failures (so <b>resilient</b> )</li>
+  </ul>
+
+</section>
+
+<section>
+  <h4>Shared Variables</h4>
+  <ul>
+    <li>Shared Variables can be used in the parallel operations
+    </li>
+    <li>Default
+      <ul>
+        <li>Spark runs a <b>function</b> in parallel as set-of-tasks on different nodes</li>
+        <li>Spark ships a copy of each variable used in the <b>function</b> to each task</li>
+      </ul>
+
+    </li>
+    <li>If a variable needs to be shared across the tasks or between set-of-tasks
+    and driver-program</li>
+    <li>Two types of shared Variables
+      <ol>
+        <li>Broadcast variables - to cache a value in memory on all nodes</li>
+        <li>Accumulators - variables that are only <b>added</b> to - counters and sums </li>
+      </ol>
+
+      </li>
+  </ul>
+</section>
+
+<section>
+  <h4>DataFrame and SparkSQL</h4>
+  <ul>
+    <li>analyzing the query</li>
+    <li>   building up a plan</li>
+    <li>    comparing them </li>
+    <li>    finally executing it</li>
+  </ul>
+  <img style="border:0px;" src="https://training.databricks.com/databricks_guide/gentle_introduction/query-plan-generation.png" alt="">
+</section>
+
+<section>
+  <h4>Internals </h4>
+  <img style="border:0px;" src="img/spark/spark-internals.png" alt="">
+</section>
+
+
+
+<section>
+  <h4>Internals - contd</h4>
+  <ul>
+    <li>Operators (map, join, filter, groupBy...)</li>
+    <li>Block manager (simple key-value store acts as a cache)</li>
+    <li>Accumulators</li>
+    <li>Scheduler</li>
+    <li>Networking (serialization, plugin hadoop serialization lib,...)</li>
+    <li>Broadcast (Broadcast on cluster, BitTorrent, optional )</li>
+    <li>Interpreter (Scala)</li>
+    <li>Backends
+    <ul>
+      <li>Hadoop I/O</li>
+      <li>Mesos I/O</li>
+      <li>Standalone Backend - has mini-cluster manager</li>
+    </ul>
+  </ul>
+</section>
+
+<section>
+  <h4>Spark Components</h4>
+  <img height="450" style="border:0px;" src="img/spark/spark-componets.png" alt="">
+</section>
+
+<section>
+    <h4>Spark Components - contd.</h4>
+  <ul style="font-size:30px;">
+    <li>User program
+      <ul>
+      <li>Create SparkContext
+          <ul>
+            <li>Acts as client for Spark</li>
+            <li> Also acts as <b>master</b> for the application. Spark has one master for the job</li>
+            <li>Connects to the cluster and does the scheduling . If it crashes only your job is lost</li>
+            <li>So there is no single Master which knows every applications</li>
+
+
+          </ul>
+      </li>
+      <li>Create RDD</li>
+      <li>Apply operators (map, filter...)</li>
+    </li>
+      </ul>
+
+    </li>
+    <li>Spark Client
+       <ul>
+         <li>RDD graph</li>
+         <li>Scheduler - talks to workers via cluster manager
+             <ul>
+               <li>DAG Scheduler</li>
+               <li>Task Scheduler</li>
+             </ul>
+         </li>
+         <li>Block Tracker - tracks what is in memory or disk on each node</li>
+         <li>Shuffle Tracker - coordinates shuffle operations like - GroupBy </li>
+       </ul>
+    </li>
+    <li>Cluster manager</li>
+    <li>Spark Worker - Receives tasks, Runs inside its thread-pool and it can serve blocks to other nodes.
+      Tasks themselves can talk to HDFS, HBase... via block manager<br/>
+      Multiple Workers, each worker can talk to others via block manager, fetch blocks from each otherr
+
+       <ul>
+         <li>Task Threads</li>
+         <li>Block Manager (key-value store)</li>
+       </ul>
+    </li>
+  </ul>
+</section>
+
+
+
+<section>
+  <h4>Example Job</h4>
+  <img height="450" style="border:0px;" src="img/spark/example-job.png" alt="">
+</section>
+
+
+
+<section>
+  <h4>RDD graph</h4>
+  <img height="450" style="border:0px;" src="img/spark/rdd-graph.png" alt="">
+</section>
+
+
+<section>
+  <h4>RDD graph - contd.</h4>
+  <ul>
+    <li>
+       Graph of java objects (which depend on each other) is built when we perform operations (like map, filter, groupBy)
+    </li>
+    <li>In earlier diagram, file: and errors: are subclass of RDD
+    <li>RDD - stored in memory or disk in nodes - in our example, we are asking to store in memory</li>
+    <li> We run at the partition-level </li>
+    <li>Each dataset is composed of multiple parttions. Each partition may be sitting differnt nodes.
+        Some partitions may be sitting on multiple machines (replication)
+    </li>
+
+  </ul>
+
+</section>
+
+<section>
+  <h4>RDD graph - contd..</h4>
+
+  <ul>
+    <li>System knows the partition details
+       <ul>
+         <li>example: For filter operation, say 4 partitions are involved for the RDD getting filtered,
+           filter is applied on each of these 4 partitions </li>
+          <li>tasks launching:
+              <ul>
+                <li>System tried to pipeline together as many operations possible</li>
+                <li>In case: read the file, filter and do the count</li>
+                <li>One task (as task1) will be lanuched to read partition-1, filter on it and return the count</li>
+                <li>Another task (as task2) will be lanuched to read partition-2, filter on it and return the count</li>
+              </ul>
+
+
+
+          </li>
+       </ul>
+    </li>
+  </ul>
+</section>
+
+
+<section>
+  <h4>Data locality</h4>
+  <ul>
+    <li>First Run: data not in cache, so use HadoopRDD's locality prefs (from HDFS)</li>
+    <li>Second Run: FilteredRDD is in the cache, so use its locations(in memory)</li>
+    <li>If something falls out of cache, go back to HDFS</li>
+  </ul>
+</section>
+
+
+<section>
+  <h4>schedulingProcess</h4>
+  <img height="450" style="border:0px;" src="img/spark/schedulingProcess.png" alt="">
+</section>
+
+
+<section>
+  <h4>Life a job in Spark</h4>
+  <ul>
+    <li>Stage: set of tasks</li>
+    <li>Earlier diagram shows 3 stages, each stage contains set of taks to do</li>
+    <li>Boundary of a stage: where there is a shuffle.
+      Example: We need to finish all the Map tasks before we start reduce tasks</li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h4>References</h4>
+  <ul>
+    <li>
+      <a  target="_blank" href="https://spark.apache.org/docs/latest/sql-programming-guide.html">
+        Spark SQL, DataFrames and Datasets Guide
+
+      </a>
+    </li>
+    <li>
+      <a target="_blank" href="https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html">
+        Spark - Structured streaming programming guide
+      </a>
+    </li>
+    <li>
+    <a target="_blank"  href="https://spark.apache.org/docs/latest/ml-guide.html">
+      Machine Learning Library (MLlib) Guide
+    </a>
+    </li>
+    <li>
+<a target="_blank" href="https://www.youtube.com/watch?v=49Hr5xZyTEA">Introduction to AmpLab Spark Internals
+</a>
+
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h4>Key terms</h4>
+  <ul>
+    <li><b>RDD -  Represents an immutable,  partitioned collection of elements that can be operated on in parallel.</li>
+    <li>
+      <a href="https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/rdd/RDD.scala">RDD.scala</a>
+    </li>
+  </ul>
+</section>
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Apache Spark";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

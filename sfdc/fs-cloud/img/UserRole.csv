@@ -1,0 +1,17 @@
+"sobjectName","sobjectLabel","name","label","type","length","nillable","referenceTo","relationshipName","unique","updateable","inlineHelpText","picklistValues","externalId"
+"UserRole","Role","Id","Role ID","id",18,false,"[]",,false,false,,"[]",false
+"UserRole","Role","Name","Name","string",80,false,"[]",,false,true,,"[]",false
+"UserRole","Role","ParentRoleId","Parent Role ID","reference",18,true,"[""UserRole""]",,false,true,,"[]",false
+"UserRole","Role","RollupDescription","Description","string",80,true,"[]",,false,true,,"[]",false
+"UserRole","Role","OpportunityAccessForAccountOwner","Opportunity Access Level for Account Owner","picklist",40,false,"[]",,false,true,,"[""Private"",""Read Only"",""Read/Write""]",false
+"UserRole","Role","CaseAccessForAccountOwner","Case Access Level for Account Owner","picklist",40,true,"[]",,false,true,,"[""Private"",""Read Only"",""Read/Write""]",false
+"UserRole","Role","ContactAccessForAccountOwner","Contact Access Level for Account Owner","picklist",40,true,"[]",,false,false,,"[""Private"",""Read Only"",""Read/Write""]",false
+"UserRole","Role","ForecastUserId","User ID","reference",18,true,"[""User""]",,false,true,,"[]",false
+"UserRole","Role","MayForecastManagerShare","May Forecast Manager Share","boolean",0,false,"[]",,false,false,,"[]",false
+"UserRole","Role","LastModifiedDate","Last Modified Date","datetime",0,false,"[]",,false,false,,"[]",false
+"UserRole","Role","LastModifiedById","Last Modified By ID","reference",18,false,"[""User""]","LastModifiedBy",false,false,,"[]",false
+"UserRole","Role","SystemModstamp","System Modstamp","datetime",0,false,"[]",,false,false,,"[]",false
+"UserRole","Role","DeveloperName","Developer Name","string",80,true,"[]",,false,true,,"[]",false
+"UserRole","Role","PortalAccountId","Account ID","reference",18,true,"[""Account""]",,false,false,,"[]",false
+"UserRole","Role","PortalType","Portal Type","picklist",40,true,"[]",,false,false,,"[""None"",""Customer Portal"",""Partner Portal""]",false
+"UserRole","Role","PortalAccountOwnerId","User ID","reference",18,true,"[""User""]",,false,false,,"[]",false

@@ -1,0 +1,37 @@
+"sobjectName","sobjectLabel","name","label","type","length","nillable","referenceTo","relationshipName","unique","updateable","inlineHelpText","picklistValues","externalId"
+"Case","Case","Id","Case ID","id",18,false,"[]",,false,false,,"[]",false
+"Case","Case","IsDeleted","Deleted","boolean",0,false,"[]",,false,false,,"[]",false
+"Case","Case","MasterRecordId","Master Record ID","reference",18,true,"[""Case""]","MasterRecord",false,false,,"[]",false
+"Case","Case","CaseNumber","Case Number","string",30,false,"[]",,false,false,,"[]",false
+"Case","Case","ContactId","Contact ID","reference",18,true,"[""Contact""]","Contact",false,true,,"[]",false
+"Case","Case","AccountId","Account ID","reference",18,true,"[""Account""]","Account",false,true,,"[]",false
+"Case","Case","SourceId","Source ID","reference",18,true,"[""BusinessMilestone"",""EmailMessage"",""InsurancePolicy"",""PersonLifeEvent""]","Source",false,true,,"[]",false
+"Case","Case","ParentId","Parent Case ID","reference",18,true,"[""Case""]","Parent",false,true,,"[]",false
+"Case","Case","SuppliedName","Name","string",80,true,"[]",,false,true,,"[]",false
+"Case","Case","SuppliedEmail","Email Address","email",80,true,"[]",,false,true,,"[]",false
+"Case","Case","SuppliedPhone","Phone","string",40,true,"[]",,false,true,,"[]",false
+"Case","Case","SuppliedCompany","Company","string",80,true,"[]",,false,true,,"[]",false
+"Case","Case","Type","Case Type","picklist",40,true,"[]",,false,true,,"[""Problem"",""Feature Request"",""Question""]",false
+"Case","Case","Status","Status","picklist",40,true,"[]",,false,true,,"[""On Hold"",""Escalated"",""Closed"",""New""]",false
+"Case","Case","Reason","Case Reason","picklist",40,true,"[]",,false,true,,"[""User didn't attend training"",""Complex functionality"",""Existing problem"",""Instructions not clear"",""New problem""]",false
+"Case","Case","Origin","Case Origin","picklist",40,true,"[]",,false,true,,"[""Email"",""Phone"",""Web""]",false
+"Case","Case","Subject","Subject","string",255,true,"[]",,false,true,,"[]",false
+"Case","Case","Priority","Priority","picklist",40,true,"[]",,false,true,,"[""High"",""Medium"",""Low""]",false
+"Case","Case","Description","Description","textarea",32000,true,"[]",,false,true,,"[]",false
+"Case","Case","IsClosed","Closed","boolean",0,false,"[]",,false,false,,"[]",false
+"Case","Case","ClosedDate","Closed Date","datetime",0,true,"[]",,false,false,,"[]",false
+"Case","Case","IsEscalated","Escalated","boolean",0,false,"[]",,false,true,,"[]",false
+"Case","Case","OwnerId","Owner ID","reference",18,false,"[""Group"",""User""]","Owner",false,true,,"[]",false
+"Case","Case","CreatedDate","Created Date","datetime",0,false,"[]",,false,false,,"[]",false
+"Case","Case","CreatedById","Created By ID","reference",18,false,"[""User""]","CreatedBy",false,false,,"[]",false
+"Case","Case","LastModifiedDate","Last Modified Date","datetime",0,false,"[]",,false,false,,"[]",false
+"Case","Case","LastModifiedById","Last Modified By ID","reference",18,false,"[""User""]","LastModifiedBy",false,false,,"[]",false
+"Case","Case","SystemModstamp","System Modstamp","datetime",0,false,"[]",,false,false,,"[]",false
+"Case","Case","ContactPhone","Contact Phone","phone",40,true,"[]",,false,false,,"[]",false
+"Case","Case","ContactMobile","Contact Mobile","phone",40,true,"[]",,false,false,,"[]",false
+"Case","Case","ContactEmail","Contact Email","email",80,true,"[]",,false,false,,"[]",false
+"Case","Case","ContactFax","Contact Fax","phone",40,true,"[]",,false,false,,"[]",false
+"Case","Case","Comments","Internal Comments","textarea",4000,true,"[]",,false,true,,"[]",false
+"Case","Case","LastViewedDate","Last Viewed Date","datetime",0,true,"[]",,false,false,,"[]",false
+"Case","Case","LastReferencedDate","Last Referenced Date","datetime",0,true,"[]",,false,false,,"[]",false
+"Case","Case","FinServ__FinancialAccount__c","Financial Account","reference",18,true,"[""FinServ__FinancialAccount__c""]","FinServ__FinancialAccount__r",false,true,,"[]",false

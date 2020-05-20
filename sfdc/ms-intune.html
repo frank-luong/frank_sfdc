@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+       </section>
+
+      <section>
+        <h4>What is {{appName}} ?</h4>
+        <ul>
+          <li>A cloud-based desktop and mobile device management tool that helps organizations provide their employees with
+              <b>access</b> to
+              <ul>
+                <li> Corporate applications</li>
+                <li> Data and resources </li>
+              </ul>  data and resources
+              from the device of their choice</li>
+              <li>A component of Microsoft's Enterprise Mobility Suite (EMS)</li>
+              <li>Maximize user <b>productivity</b> while <b>protecting</b> corporate data</li>
+              <li>Old name: Windows Intune</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Key Features</h4>
+        <img style="border:0px;" height="100" src="img/mobile_intune/ms-intune-key.png" alt="">
+        <ul>
+          <li>Manage the <b>mobile devices</b> your workforce uses to access company data.</li>
+          <li>Manage the <b>mobile apps</b> your workforce uses.</li>
+          <li>Protect your company information by helping to control the way your workforce <b>accesses and shares it</b>.</li>
+          <li>Ensure devices and apps are <b>compliant with company security requirements</b>.</li>
+</ul>
+      </section>
+
+      <section>
+        <h4>Architecture</h4>
+        <a target="_blank" style="font-size:20px;"href="img/mobile_intune/intunearchitecture.svg" >Larger version</a>
+        <hr/>
+        <img style="border:0px;"  style="border:0px;" src="img/mobile_intune/intunearchitecture.svg" height="500"/>
+      </section>
+
+      <section>
+        <h4>How it works?</h4>
+        <ul style="font-size:32px;">
+          <li> Intune is a <b>component</b> of Enterprise Mobility + Security (EMS) that manages mobile devices and apps.</li>
+          <li> Integrates closely with other EMS components like Azure Active Directory (Azure AD) for identity and access control and Azure Information Protection for data protection. </li>
+          <li>When you use it with <b>Office 365</b>, you can enable your workforce to be productive on all their devices, while keeping your organization's information protected.</li>
+          <li>Works by using the <b>protocols or APIs</b> that are available in the <b>mobile operating systems (iOs, Android, Microsoft)</b></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Key tasks</h4>
+        <ul style="font-size:32px;">
+          <li>Enrolling devices into management so your IT department has an <b>inventory of devices</b> that are accessing corporate services</li>
+          <li>Configuring devices to ensure they meet <b> company security and health standards</b></li>
+          <li>Providing <b>certificates and Wi-Fi/VPN profiles</b> to access corporate services</li>
+          <li>Reporting on and <b> measuring device compliance to corporate standards</b></li>
+          <li><b>Removing corporate data</b> from managed devices </li>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>App management taks</h4>
+          <ul style="font-size:32px;">
+                <li>Assigning mobile apps to employees (push)</li>
+                <li>Configuring apps with <b>standard settings</b> that are used when the app runs</li>
+                <li>Controlling how <b>corporate data is used and shared in mobile apps</b></li>
+                <li><b>Removing corporate data</b> from mobile apps</li>
+                <li>Updating apps</li>
+                <li>Reporting on mobile app inventory</li>
+                <li>Tracking <b>mobile app usage</b></li>
+          </ul>
+      </section>
+
+      <section>
+        <h4>App Security - app protection policy</h4>
+        <ul style="font-size:32px;">
+          <li>Keeping personal information isolated from corporate IT awareness</li>
+          <li>Restricting the actions users can take with corporate information such as copy, cut/paste, save, and view</li>
+          <li>Removing corporate data from mobile apps, also known as selective wipe or corporate wipe</li>
+          <li>IT has control of corporate data while the end user maintains control and privacy over personal data.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Slides - Empowering Enterprise Mobility </h4>
+      <ul>
+        <li>
+
+  <iframe src="//www.slideshare.net/slideshow/embed_code/key/hzKgCLOqjLmFqu"
+   width="800" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+   style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+ </iframe>
+
+
+
+
+      </li>
+      </ul>
+    </section>
+
+    <section>
+      <h4>Video: Microsoft Intune - How it works </h4>
+        <iframe height="450" width="800" data-src="https://www.youtube.com/embed/-LxVZwrNgKM?autoplay=0"></iframe>
+    </section>
+
+    <section>
+      <h4>Video: Enroll your mobile device in Microsoft Intune for corporate access
+ </h4>
+        <iframe height="450" width="800" data-src="https://www.youtube.com/embed/eyk19T1OXy8?autoplay=0"></iframe>
+    </section>
+
+
+
+
+      <section>
+        <h4>References</h4>
+            <ul style="font-size:32px;">
+              <li>
+          <a target="_blank" href="https://www.microsoftpartnerserverandcloud.com/_layouts/download.aspx?SourceUrl=Hosted%20Documents/Intune%20Product%20Overview.pptx">
+            Microsoft Intune Product Overview Presentation
+          </a>
+          </li>
+
+          <li>
+      <a target="_blank" href="http://video.ch9.ms/sessions/ignite/2015/decks/BRK3850_Cerat.pptx">
+        Mobile Application Management for BYOD Devices with Microsoft Intune
+      </a>
+      </li>
+
+      <li>
+  <a target="_blank" href="https://sec.ch9.ms/sessions/ignite/2016/BRK2273.pptx">
+  Secure Android devices and apps with Microsoft Intune
+  </a>
+  </li>
+  <li>
+    <a target="_blank"
+     href="https://docs.microsoft.com/en-us/intune/app-wrapper-prepare-ios">Prepare iOS apps for app protection policies with the Intune App Wrapping Tool
+</a>
+  </li>
+        </ul>
+      </section>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Microsoft Intune";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

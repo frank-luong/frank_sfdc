@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+    .vis { display: none; }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+       </section>
+
+       <section>
+         <h4>Goals</h4>
+         <div class="row" style="font-size:30px;">
+           <div class="col-lg-7">
+              <img style="border:0px;"   src="img/mobile-s/mobile-security-1.png" alt=""> </div>
+           <div class="col-lg-5">
+         <ul style="font-size:25px;">
+           <li>How to prevent valuable company data from being compromised on mobile devices </li>
+           <li>Making sure that only <b>authorized users</b> are allowed to access enterprise data</li>
+           <li>Meeting <b>enterprise security and industry-compliance</b> policies </li>
+           <li>Security and compliance options available with the Salesforce app </li>
+           <li>Aligning mobile implementation with enterprise security and industry-compliance policies</li>
+           <li>Optimal balance between <b>security and ease of use</b></li>
+       </ul>
+       </section>
+
+       <section>
+         <h4>Risks and Challenges</h4>
+         <ul style="font-size:32px;">
+           <li><b>Data loss</b>: Mobile devices are more susceptible to loss or theft</li>
+           <li><b>Personal devices</b>: Bring Your Own Device (BYOD) - security measures you can put in place to protect sensitive information
+           </li>
+           <li><b>Compromised devices and risky apps</b>: If the device is not protected:  malware can be installed,
+           which may collect sensitive information: contacts or geo-location data </li>
+
+           <li><b>Unprotected Networks</b>: Unsecured networks (from Wi-Fi: Hotels, Coffee-shosp, Airports)
+             put users at greater risk because attackers can more easily intercept and hijack valuable data</li>
+         </ul>
+       </section>
+
+
+       <section>
+         <h4>Options</h4>
+         <div class="row" style="font-size:30px;">
+           <div class="col-lg-7">
+              <img style="border:0px;"   src="img/mobile-s/mobile-security-2opts.png" alt=""> </div>
+           <div class="col-lg-5">
+         <ol style="font-size:20px;">
+           <li> Configure <b>Connected App</b> policies in Setup to control:
+              <ul>
+                <li>Mobile session timeouts</li>
+                <li> PIN code enforcement</li>
+                <li> IP restrictions</li>
+              </ul>
+              This option may be sufficient for most organizations
+              <li>Implement the Salesforce app with <b>MDM</b>:
+                 For customers security and compliance requirements that can’t be met using the Salesforce app alone
+                 <ul>
+                   <li>Using MDM (Mobile Device Management) solution to
+                      add additional laryers of security and compliance safeguards</li>
+                 </ul>
+              </li>
+           </ol>
+         </div>
+       </div>
+       </section>
+
+
+      <section>
+        <h4>Features</h4>
+          <div class="col-lg-12"> <img style="border:0px;" height="550"   src="img/mobile-s/mobile-security-glossary.png" alt=""> </div>
+      </section>
+
+
+      <section>
+        <h4>Salesforce App Options</h4>
+        <ol style="font-size:30px;">
+          <li><b>Downloadable Apps</b>: The Salesforce downloadable apps are available for Android and iOS devices from Google Play or the App Store
+             that meet platform requirements.
+            </li>
+        <li><b>Mobile Browser App</b>: The Salesforce mobile browser app runs in a mobile browser on Android, iOS, and Windows devices that meet platform requirements.
+           This option doesn’t require installing anything from Apple App Store or Google Play</li>
+        </ol>
+
+
+      </section>
+
+      <section>
+        <h4>Runs in a sandboxed environment and connects as Connected App</h4>
+        <ul style="font-size:30px;">
+          <li><b>Sandboxing</b>: Mobile OS  restricts and isolates apps so they <b>can’t share data with each other</b>
+              <ul>
+                <li>Mobile apps also have to explicitly ask for permission to get access to device features,
+                    like the calendar, camera, or microphone. When the Salesforce app is installed on a device</li>
+                <li>Mobile OS prompts the user to grant a handful of permissions <hr/></li>
+
+              </ul>
+          </li>
+          <li><b>Connection to Salesforce</b> : Salesforce Mobile app establishes a connection to Salesforce using <i>Connected App</i> -
+            Since it exists outside of the full Salesforce site </li>
+
+        </ul>
+      </section>
+
+
+      <section>
+        <h4>Connected App</h4>
+        <ul style="font-size:30px;">
+          <li>An <b>external application</b> that integrates with Salesforce through APIs </li>
+          <li>Uses <b>OAuth</b> to verify both the Salesforce user and the external application:
+            <ul>
+              <li>Obtains secure access to Salesforce services </li>
+              <li>Asks user to authorize data sharing</li>
+              <li>Salesforce app collects the user’s credentials and send them to Salesforce server</li>
+              <li>Salesforce server returns a access-token (and a refresh-token) to the Mobile App to create a mobile-session</li>
+              <li>So user passwords are not stored on the mobile device</li>
+              <li>If the mobile-session is expired,  Salesforce app attempts to use the refresh-token to
+                 obtain a new access-token so the user doesn’t have to reauthenticate </li>
+              <li>Salesforce org Admin can control: how long the refresh-token for the Salesforce app is valid.
+                Admin can evoke a refresh-token when:
+                <ul>
+                  <li> First time a user uses the app</li>
+                  <li>Every time a user uses the app</li>
+                  <li>On a set schedule (hourly, daily, or monthly</li>
+                </ul>
+
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section>
+        <h4>Oauth</h4>
+        <div class="col-lg-12"> <img style="border:0px;"      src="img/mobile-s/oAuth-flow.png" alt=""> </div>
+      </section>
+
+      <section>
+        <h4>Conected App Example - apps</h4>
+        <div class="col-lg-12"> <img style="border:0px;"  height="550"  src="img/mobile-s/connected-app-0.png" alt=""> </div>
+      </section>
+
+      <section>
+        <h4>Conected App Example - iOS App</h4>
+        <div class="col-lg-12"> <img style="border:0px;"  height="550"  src="img/mobile-s/connected-app-0b.png" alt=""> </div>
+      </section>
+
+      <section>
+        <h4>Conected App Example - iOS app policies</h4>
+
+        <div class="row" style="font-size:30px;">
+          <div class="col-lg-12">
+             <img style="border:0px;"   src="img/mobile-s/connected-app-1.png" alt="">
+           </div>
+
+          </div>
+      </section>
+
+
+
+          <section>
+            <h4>Conected App Example - Notes</h4>
+
+            <div class="row" style="font-size:30px;">
+              <div class="col-lg-5">
+                 <img style="border:0px;"   src="img/mobile-s/connected-app-1.png" alt=""> </div>
+              <div class="col-lg-7">
+            <ul style="font-size:20px;">
+              <li>If we put <b>IP Relaxation</b> as <i>Enforce IP Restrictions</i>: This will make
+              the users to login to Salesforce from designated IP addresses—typically your corporate network or VPN.
+              <hr/>
+              But mobile users often aren’t on your corporate network, which means they need to connect to VPN
+              from their device every time they access the Salesforce app.
+              <hr/>
+              That can be a barrier to mobile adoption, so some organizations relax IP restrictions for mobile users.
+              <hr/>
+              For example, you can specify that mobile users aren’t required to be on VPN
+              as long as they provide a second factor of identification—for example, a verification code from a mobile authenticator app.
+              <hr/>
+              You must balance your company’s security requirements with the need to provide a good mobile user experience.
+
+              </li>
+            </ul>
+          </div>
+        </div>
+
+
+      </section>
+
+      <section>
+        <h4>Conected App Example - oAuth Usage</h4>
+        <div class="col-lg-12"> <img style="border:0px;"  height="550"  src="img/mobile-s/connected-app-2.png" alt=""> </div>
+      </section>
+
+      </section>
+
+
+      <section>
+        <h4>Refresh Token Policy</h4>
+        <ul style="font-size:30px;">
+          <li>Specifies: How long the user’s token for the Salesforce app is valid?
+              <ul>
+                <li> <b>Immediately expire refresh token</b>: The token is invalid immediately. The user can access the current session, but can’t obtain a new session without reentering credentials.</li>
+                <li><b>Expire refresh token if not used for</b>:
+                   The token expires if it isn’t used in the specified amount of time.
+                </li>
+                <li>
+                  <b>Expire refresh token after</b>:expires the token after a fixed amount of time.
+                  <hr/>For example, if the policy states 30 days, the token expires in a month even if the user is active in the Salesforce app on a daily basis.
+
+                </li>
+              </ul>
+          </li>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>Mobile Session Timout </h4>
+          <ul style="font-size:35px;">
+          <li>Timeout Value controls how long a mobile session lasts.<hr/>
+            Default: timeout value in the <b>user’s profile</b> or <b>org’s Session Settings</b></li>
+          <li>
+            <pre>
+if session_timeout = 2 hrs and refresh_token_expiry = 30 days:
+    Salesforce_App uses refresh_token to renew Session_ID
+    # during this time period, user can stop and restart w/o logging back-in
+    # When refresh-token is expired, user must log back in
+            </pre>
+          </li>
+
+        <li> Two-factor authentication (2FA) enhances your org’s security by requiring a second level of authentication for every user login.
+          When mobile users log in to the Salesforce app for the first time,
+             they are prompted to set up an identity verification method
+             if you haven’t already configured one for them.</li>
+
+        </ul>
+
+      </section>
+
+      <section>
+        <h4>PIN code enforcement</h4>
+        <ul style="font-size:30px;">
+          <li>
+             Extra layer of data protection by forcing mobile users to set up an app-specific
+             PIN code for the Salesforce app  - so it locks after a period of <b>inactivity</b>
+             <hr/>
+             <b>Reqiure Pin after</b>: 30 minutes : (1, 5, 10, 30,60, 120, 180, 240 minutes)<br/>
+             <b>Pin length</b>: 5 : (4 to 8)
+             <hr/>
+             This policy only requires that the user enter a PIN to continue using the current session
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Reset forgotten passcode (PIN) in Salesforce for Android and iOS </h4>
+        <ul style="font-size:30px;">
+          <li>
+          If you can't remember your passcode (PIN) for Salesforce mobile app, you'll need to <b>revoke</b> your Salesforce for Android and iOS access.
+           You'll then receive a new passcode the next time you attempt to log in to the Salesforce mobile app.
+
+            <ol>
+              <li>From a web browser, log in to Salesforce.</li>
+              <li>Click your name | select Settings.</li>
+              <li>Under "My Personal Information," click Connections.</li>
+              <li>Next to any Salesforce for Android and iOS login entries, click Revoke. (Note: If there are multiple entries, revoke them all)</li>
+              <li>Once you have revoked your access, attempt to log in to Salesforce for android and iOS again and you will be provided with a new passcode.</li>
+           </ol>
+         <ul>
+           <li>
+            Ref: <a target="_blank" href="https://help.salesforce.com/articleView?id=000187889&language=en_US&type=1">Reset forgotten passcode in Salesforce for Android and iOS
+</a>
+
+           </li>
+         </ul>
+      </section>
+
+      <section>
+        <h4>How to revoke the Mobile App in the user settings</h4>
+        <img style="border:0px" src="img/mobile-s/lost-pin-revoke-1.png" alt="">
+
+      </section>
+
+      <section>
+        <h4>Mobile Compliance Policies</h4>
+<ul style="font-size:25px;">
+<li>Disable the ability to <b>copy and paste</b> from Salesforce to other mobile apps (DISABLE_EXTERNAL_PASTE)</li>
+<li>Prevent the ability to <b>print</b> from the Salesforce app</li>
+<li>Require the use of a <b>specific mobile email client</b> for Salesforce (FORCE_EMAIL​_CLIENT_TO)</li>
+<li>Disable <b>file sharing</b> from Salesforce to other mobile apps (SHOW_OPEN_IN )</li>
+<li>Remove  call logging from the navigation menu (CALL_HISTORY)</li>
+</ul>
+  <div class="col-lg-12"> <img style="border:0px;"  height="300"  src="img/ea2/custom-attrb-1.png" alt=""> </div>
+  <div class="col-lg-12"> <img style="border:0px;"    src="img/ea2/custom-attrb-2.png" alt=""> </div>
+
+      </section>
+
+
+    <section>
+      <h4>Additional Security Settings</h4>
+      <div class="row" style="font-size:30px;">
+        <div class="col-lg-8">
+           <img style="border:0px;"    src="img/mobile-s/mobile-cache.png" alt=""> </div>
+        <div class="col-lg-4">
+      <ul style="font-size:25px;">
+        <li>Enable or disable the Salesforce mobile browser app </li>
+        <li>Enable for offline access (version 10 and above)
+             <ul>
+               <li>When you enable offline access for the Salesforce app, <b>data is cached securely</b> on the device</li>
+               <li>Users can keep working in the app even if they lose their connection to a Wi-Fi or cellular network </li>
+               <li>Offline access isn’t available in the mobile browser app</li>
+             </ul>
+        </li>
+        <li>Control : users can import contacts into the Salesforce app</li>
+
+      </ul>
+    </div>
+  </div>
+    </section>
+
+    <section>
+      <h4>Additional Security Settings - 2</h4>
+      <div class="row" style="font-size:30px;">
+        <div class="col-lg-8">
+           <img style="border:0px;"    src="img/mobile-s/mobile-browser-app.png" alt=""> </div>
+        <div class="col-lg-4">
+      <ul style="font-size:25px;">
+        <li>Enable or disable the Salesforce mobile browser app </li>
+             <ul>
+               <li>Mobile browser app flavor for Salesforce App is
+               for the users who decide not to install the downloadable app
+               from App Store or Google Play</li>
+               <li>You can control whether users can access the Salesforce mobile browser app when they log in to Salesforce
+                 from a supported mobile browser (default: ON) </li>
+             </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+    </section>
+
+
+
+
+        <section>
+          <h4>Monitor and Manage</h4>
+          <div class="row" style="font-size:30px;">
+            <div class="col-lg-7">
+               <img style="border:0px;"    src="img/mobile-s/app-usage-1.png" alt="">
+                <img style="border:0px;"    src="img/mobile-s/app-block.png" alt="">
+
+               </div>
+            <div class="col-lg-5">
+          <ul style="font-size:25px;">
+          <li><b>User Count</b>: Shows number of users who have run the app
+  <img style="border:0px;"    src="img/mobile-s/app-usage-2.png" alt="">
+          </li>
+          <li>With Salesforce Shield, you can see even more details about the activity of the mobile users in your organization.
+            You can view granular information about individual events or track trends to
+             swiftly identify abnormal behavior and safeguard your company’s data.</li>
+          <li><b>Revoke</b>: You can revoke a particular user by clicking <b>Revoke</b> link</li>
+          <li><b>Block</b> the App: When we block the app and then reenable it, this will  force all mobile users to reenter their credentials. </li>
+
+          </ul>
+        </div>
+      </div>
+        </section>
+
+
+        <section>
+          <h4>Adoption Dashboard and Reports By Salesforce Labs</h4>
+
+          <div class="row">
+            <div class="col-lg-6">
+                    <img style="border:0px" src="img/mobile-s/mobile-adoption-1.png" alt="">
+            </div>
+
+            <div class="col-lg-6">
+              <ul style="font-size:25px;">
+                <li>
+                  This package contains a dashboard and several reports to help you determine your adoption metrics for your Salesforce App users.<br/>
+                  <a  target="_blank" href="https://appexchange.salesforce.com/listingDetail?listingId=a0N3000000B5i9QEAR">Salesforce1 Adoption Dashboard and Reports
+    </a>
+                </li>
+                <li>
+                Quip Doc on this:<br/>
+
+                <a target="_blank" href="https://quip.com/1kP7AtxiL79m">Monitor Adoption of Salesforce1 app</a>
+              </li>
+
+              <li> <a target="_blank" href="https://trailhead.salesforce.com/en/modules/event_monitoring">Trailhead: Event Monitoring</a> </li>
+
+              <li> <a target="_blank" href="https://help.salesforce.com/articleView?id=event_monitoring_faq.htm&type=5">Help: Event Monitoring: Monitor Login Activity with Login Forensics </a> </li>
+
+               <li> <a target="_blank" href="https://salesforce-elf.herokuapp.com/">Event Log File Browser App: A Salesforce connected web app to access and download event log files </a> </li>
+
+               <li> <a target="_blank" href="https://trailhead.salesforce.com/modules/event_monitoring_analytics/units/event_monitoring_analytics_get">Trailhead: Event Monitoring Analytics App </a> </li>
+               <li> <a target="_blank" href="https://developer.salesforce.com/promotions/orgs/analytics-de">Einstein Analytics-enabled Developer Edition </a> </li>
+
+
+
+
+
+              </ul>
+            </div>
+
+          </div>
+
+
+
+
+        </section>
+
+
+
+
+        <section>
+         <h4 style="font-size:30px;">Monitor Adoption of Salesforce1 app </h4>
+         <object style="width: 100%; height: 820px" data="img/mobile-s/salesforce-app-adpotion-1.pdf"
+                 type="application/pdf">
+          </object>
+        </section>
+
+        <section>
+          <h4>Querying EventLogFile - 1</h4>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <img style="border:0px;" src="img/mobile-s/em-options-3.png" alt="">
+
+            </div>
+
+            <div style="border:0px;" class="col-lg-6">
+              <img style="border:0px;" src="img/mobile-s/em-options-4.png" alt="">
+            </div>
+
+          </div>
+
+        </section>
+
+        <section>
+          <h4>Querying EventLogFile - 2</h4>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <img style="border:0px;" src="img/mobile-s/event-options-6.png" alt="">
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+
+        <section>
+          <h4>Querying EventLogFile - ELF Browser app</h4>
+
+          <div class="row">
+            <div class="col-lg-12">
+              <img style="border:0px;" src="img/mobile-s/em-options-0.png" alt="">
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <img style="border:0px;" src="img/mobile-s/em-options-1.png" alt="">
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+
+
+        <section>
+          <h4>Salesforce App with SSO (Single Sign-On) </h4>
+
+          <div class="row" style="font-size:25px;">
+            <div class="col-lg-7">
+               <img style="border:0px;"    src="img/mobile-s/mobile-sso.png" alt="">
+               </div>
+            <div class="col-lg-5">
+          <ol style="font-size:25px;">
+
+<li>A user tries to access a service</li>
+<li>The service provider (SP) sends out a request to the identity provider (IdP) basically asking,
+   “Hey, is it okay if this user accesses my service?” </li>
+<li>The identity provider makes sure that users are who they say they are
+  by checking its (IdP) database and then returning a response saying, “Yes, this user is authorized</li>
+</ol>
+        </div>
+      </div>
+        </section>
+
+      <section>
+        <h4>SSO Links</h4>
+        <ul style="font-size:30px;">
+          <li>
+            <a target="_blank" href="https://help.salesforce.com/articleView?id=000213609&type=1&language=en_US">
+              Salesforce for iOS and Android SSO (Single Sign-On) overview
+
+            </a>
+          </li> Sample IdPs:
+            <ul>
+              <li>Microsoft’s Active Directory Federation Services (ADFS)</li>
+              <li> Ping Identity’s PingFederate</li>
+              <li> open-source Shibboleth</li>
+              <li> ForgeRock’s OpenAM</li>
+            </ul>
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>MDM - Mobile Device Management</h4>
+        <ul style="font-size:30px;">
+          <li>Enforce your company’s security policies on users’ mobile devices across mobile operating systems</li>
+          <li>Maintain and administer all the enterprise mobile apps your employees use</li>
+          <li>Before rolling out the Salesforce mobile app: <hr/>
+            Have a device management (MDM) strategy in place so your company’s
+            data is safe when users access it from phones and tablets </li>
+          <li>Mobile Device Policy
+             <ol>
+               <li>Company-issued</li>
+               <li>BYOD - Bring Your Own Device</li>
+             </ol>
+
+          </li>
+          <li>Device Management Strategy
+            <ol>
+              <li>Use Connected App policies to secure Salesforce App and manage access</li>
+              <li>Implement Salesforce App with MDM solution<hr/>
+                Large companies and businesses with strict security and compliance requirements sometimes
+                 have needs that can’t be met using the connected app policies.
+                They use MDM to help them enforce those requirements.
+              </li>
+            </ol>
+          </li>
+
+        </ul>
+
+      </section>
+
+      <section>
+        <h4>MDM Solutions</h4>
+        <ul style="font-size:30px;">
+          <li>MDM is security software that lets companies <b>monitor, manage, and secure mobile devices</b> that are
+             deployed across multiple mobile operating systems and service providers. </li>
+         <li>Provides end-to-end security:<hr/>
+             Mobile <b>apps</b>, <b>network</b>, <b>data</b>, and the <b>device itself</b> are managed with <b> a single software product</b></li>
+
+        <li>MDM solution features
+          <ul>
+                <li><b>Push apps</b> to users’ devices. You can even configure settings for the apps before deploying them. For example, you can push custom login settings to the Salesforce app.</li>
+                <li>Require <b>VPN</b> for specific apps.</li>
+                <li>Control <b>granular security and compliance settings</b>.
+                  For example, you can require a passcode at the OS level, disable screen capture, or prevent users from taking photos.</li>
+                <li>Use <b>x.509 certificates</b> to either speed up user authentication or as a second factor in the login process.</li>
+                <li>Control <b>content sharing</b> permissions.</li>
+                </ul>
+        </li>
+
+
+        </ul>
+      </section>
+
+      <section>
+        <h4>MDM Solutions - iOS and Android</h4>
+        <ul>
+          <li>iOS
+            <ul>
+              <li>MDM solutions work with the native management framework built into the
+                 operating system. This capability has been available since iOS 7</li>
+            </ul>
+          </li>
+          <li>Android
+             <ul>
+               <li>Android’s device management functionality is available with <b> Android for Work</b>,
+                  which is a program that supports enterprise use of Android devices.
+                   <b>Android for Work</b> has been available since Android 6.</li>
+             </ul>
+          </li>
+          <li>If your company already uses an MDM solution,
+            find out from the  administrator to know about the configuration and deployment of the Salesforce app.</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h4>Deploy the Salesforce App with MDM - Install, Configure, Push </h4>
+        <ol style="font-size:25px;">
+          <li>In your MDM software, <b>install</b> the Salesforce mobile App</li>
+          <li><b>Configure</b> the security and compliance settings for the Salesforce App.<hr/>
+             For example, in some MDM software you can require a VPN connection for Salesforce access.</li>
+          <li>Optionally, configure features specific to the Salesforce app, such as the ability to set up custom login hosts</li>
+          <li><b>Push</b> the Salesforce app to your users</li>
+        </ol>
+
+      </section>
+
+      <section>
+        <h4 style="font-size:30px;">Deploy Salesforce App with MDM software - AirWatch and MobileIron Demo</h4>
+        <iframe width="800" height="500" class="doc_embedded_video" src="//play.vidyard.com/CmwZeyTujF92gujFXfM5q7"
+
+        frameborder="0" allowfullscreen="1" webkitallowfullscreen="1" mozallowfullscreen="1"></iframe>
+      </section>
+
+
+      <section>
+         <h4>Video:Single Sign-On and Access Management for Mobile Applications </h4>
+           <iframe height="450" width="800" data-src="https://www.youtube.com/embed/WWRUVtVWScA?autoplay=0"></iframe>
+     </section>
+
+
+     <section>
+        <h4>Video: Reporting Mobile App Usage</h4>
+          <iframe height="450" width="800" data-src="https://www.youtube.com/embed/WWRUVtVWScA?start=678"></iframe>
+    </section>
+
+    <section>
+    <h4>Report creation: Mobile App Usage - 1</h4>
+    <div class="row" style="font-size:30px;">
+         <img style="border:0px;" height="400"    src="img/mobile-s/mobile-rpt-1.png" alt="">
+         <hr/>
+  <a target="_blank" style="font-size:25px;" href="https://help.salesforce.com/articleView?id=Salesforce1-login-tracking-using-Identity-Event-Logs&type=1">
+    Ref: Salesforce for Android and iOS login tracking using Identity Event Logs
+
+  </a>
+    </div>
+   </section>
+
+   <section>
+   <h4>Report creation: Mobile App Usage - 2</h4>
+   <div class="row" style="font-size:30px;">
+        <img style="border:0px;"    src="img/mobile-s/mobile-rpt-2.png" alt="">
+
+   </div>
+  </section>
+
+
+   <section>
+   <h4>Report creation: Mobile App Usage - 3</h4>
+   <div class="row" style="font-size:30px;">
+        <img style="border:0px;" src="img/mobile-s/mobile-rpt-3.png" alt="">
+   </div>
+  </section>
+
+  <section>
+  <h4>Report creation: Mobile App Usage - 4</h4>
+  <div class="row" style="font-size:30px;">
+       <img style="border:0px;"    src="img/mobile-s/mobile-rpt-4.png" alt="">
+
+
+  </div>
+ </section>
+
+
+
+  <section>
+  <h4>Report creation: Mobile App Usage - 5</h4>
+  <div class="row" style="font-size:30px;">
+    <div class="col-lg-12">
+       <img style="border:0px;"    src="img/mobile-s/mobile-rpt-5.png" alt="">
+
+       </div>
+  </div>
+ </section>
+
+   <section>
+   <h4>Report creation: Mobile App Usage - 6</h4>
+   <div class="row" style="font-size:30px;">
+     <div class="col-lg-12">
+        <img style="border:0px;"    src="img/mobile-s/mobile-rpt-6.png" alt="">
+
+        </div>
+   </div>
+  </section>
+
+
+
+       <section>
+         <h4>References</h4>
+         <ul>
+           <li>
+             <a target="_blank" href="https://trailhead.salesforce.com/modules/salesforce1_security/units/salesforce1_security_overview">
+               Trialhead - Mobile Security
+             </a>
+           </li>
+           <li>
+             <a target="_blank"  href="https://resources.docs.salesforce.com/sfdc/pdf/salesforce1_mobile_security.pdf">
+               Salesforce Mobile App Security Guide
+             </a>
+           </li>
+
+           <li>
+             <a target="_blank"  href="https://help.salesforce.com/articleView?id=sf1_requirements.htm&type=5">
+               Requirements for the Salesforce App
+             </a>
+           </li>
+
+
+
+
+
+
+           <li>
+             <a target="_blank"  href="http://images.apple.com/business/docs/iOS_Security_Guide.pdf">
+               iOS Security Guide
+             </a>
+           </li>
+           <li>
+             <a target="_blank"  href="https://support.google.com/work/android/answer/6095397">
+               Android Work
+             </a>
+           </li>
+
+           <li>
+             <a target="_blank"  href="https://www.darkreading.com/mobile/10-best-practices-for-byod-policy/d/d-id/1321986?print=yes">
+               10 Best Practices For BYOD Policy
+             </a>
+           </li>
+
+           <li>
+             <a target="_blank"  href="https://webobjects.cdw.com/webobjects/media/pdf/mobileiron/The-Ultimate-Guide-to-Enterprise-Mobility-Management.pdf">
+               MobileIron: The Ultimate Guide to Enterprise Mobility-Management
+             </a>
+           </li>
+
+
+
+
+         </ul>
+       </section>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Mobile Security";
+      $scope.showDiv = true;
+
+
+
+    })
+  </script>
+</body>
+
+</html>

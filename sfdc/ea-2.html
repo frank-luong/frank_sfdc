@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+       </section>
+
+
+      <section>
+        <h4>What Can You Do with Analytics? </h4>
+        <img style="border:0px;" src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-usf9a7f8b3985074fb883157b74b06f084.png" alt="">
+        <ul style="font-size:30px;">
+          <li>Make sense of large amounts of data ( loading into datasets )</li>
+          <li>Explore your data to discover new, unexpected insights (slice and dice)</li>
+          <li>Get instant visualizations that show how your business is doing</li>
+          <li>Create dashboards to continually monitor key business metrics based on the latest data</li>
+          <li>Save your insights, share them with others, and start discussions about them in Chatter</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Einstein Analytics Features </h4>
+        <h5 style="font-size:35px;"> data ➜ insights ➜ actions</h5>
+         <ul style="font-size:35px;">
+           <li>Native to Salesforce with Mobile support
+             <ul>
+               <li>Create/Edit objects within</li>
+               <li>Embed Einstein Analytics in Sales Cloud objects/records</li>
+               <li>Sharing: Share and collaborate on :
+               <ul>
+                 <li>Insights</li>
+                 <li>Actions</li>
+               </ul> </li>
+             </ul>
+
+           </li>
+         </ul>
+          </section>
+
+          <section>
+            <h4>Einstein Analytics Features - contd.</h4>
+
+            <ul style="font-size:35px;">
+              <li>Get new Insights to every member of your team from your business data using:
+                  <ul>
+                    <li>Analytics</li>
+                  </ul>
+              </li>
+              <li>Business Data  from:
+             <ul>
+               <li>Salesforce</li>
+               <li>ERP</li>
+               <li>Data warehouses</li>
+               <li>Log files</li>
+             </ul>
+             can be viewed together to provide insights to improve your business performance and
+              provide 360-degree view of your business.
+
+
+              </li>
+
+              <li>Provides self-service business intelligence to your  teams</li>
+            </ul>
+          </section>
+
+          <!--
+
+          <section>
+            <h4>Empowering Sales Team</h4>
+            <ul style="font-size:35px;">
+              <li>Drive intelligent Sales with:
+                     <ul>
+                       <li>Einstein Data Discovery</li>
+                       <li>Predictive Forecasting</li>
+                       <li>Noise filter: Separate Signals from Noise to focus on
+                         rightDeals@rightTime</li>
+                         <li>Analyze :
+                           <ul>
+                             <li>Opportunity waterfall</li>
+                             <li>Historical Trends</li>
+                             <li>Quota Progress</li>
+
+                           </ul>
+
+
+                         </li>
+                        <li>Increase Sales Team productivity by identifying coaching opportunities</li>
+                        <li>Team members stay-informed with Alerts and Notifications</li>
+
+
+                     </ul>
+                 </li>
+            </ul>
+          </section>
+-->
+
+          <section>
+            <h4>Analytics Assets</h4>
+            <img style='border:0;' height="100" src="img/ea2/ea-assets-4.png" alt="">
+            <div class="row">
+
+              <div class="col-lg-6" style="font-size:25px;">
+                <div class="col-lg-4">
+
+    <img height="90" style='border:0;' src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-uscbf988a0b4847fd004af6e0735c53948.png" alt="">
+                </div>
+                <div class="col-lg-8">
+                <b>Dataset</b> - specially formatted source data, optimized for interactive exploration<br/>
+                </div>
+              </div>
+              <div class="col-lg-6"  style="font-size:25px;">
+                <div class="col-lg-4">
+                   <img height="90" style='border:0;' src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-use5b7bae0f33462aaed158a22c54fc629.png" alt="">
+                </div>
+                <div class="col-lg-8">
+                 <b>Lens</b> -  particular view into a dataset’s data. It’s where you do exploratory analysis and visualization.
+                </div>
+
+              </div>
+            </div>
+
+  <div class="row" style="font-size:25px;">
+
+              <div class="col-lg-6">
+
+                <div class="col-lg-4">
+                <img height="90" style='border:0;' src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-usb87e2da904fd5e962422654fba6a8319.png" alt="">
+                </div>
+                <div class="col-lg-8">
+                  <b>Dashboards</b> - curated set of charts, metrics, and tables based on the data in one or more lenses.
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="col-lg-4">
+                <img height="90" style='border:0;' src="https://res.cloudinary.com/hy4kyit2a/image/upload/doc/trailhead/en-usba525ccf68f57d76369afc5fdbfa47c0.png" alt="">
+                </div>
+                <div class="col-lg-8" style="font-size:18px;">
+                   <b>Apps</b> - Contains dashboards, lenses, and datasets in any combination that makes sense for sharing your data analyses with colleagues.
+                   <br/> Apps are like folders. They allow users to organize their data projects : private and shared - control sharing.
+                </div>
+
+              </div>
+            </div>
+
+          </section>
+
+          <section>
+            <h4>More terms</h4>
+            <ul style="font-size:30px;">
+              <li> <b>Explorer</b>:  the interface where you explore datasets and lenses</li>
+              <li> <b>Dataflow</b>: a set of instructions that specifies:
+                <ul>
+                 <li>what data to extract from Salesforce objects or external datasets</li>
+                 <li>how to transform the datasets</li>
+                 <li>which datasets to make available for querying</li>
+                 <li>dataflow job processes the logic in a dataflow</li>
+                 </ul>
+              </li>
+
+            </ul>
+          </section>
+
+
+
+            <section>
+              <h4>Dataset Builder</h4>
+              <ul style="font-size:30px;">
+              <li><b>dataset builder</b>: a point-and-click user interface
+                  that allows you to easily select and extract data from related Salesforce objects to create a single dataset.
+                    <img height="400" style='border:0;' src="img/ea2/ea-dataset-creation-1.gif" alt="">
+
+             </li>
+              </ul>
+
+
+            </section>
+
+
+          <section>
+            <h4>Dimension</h4>
+            <ul style="font-size:35px;">
+              <li>
+                <b>Qualitative value</b>, like region, product name, and model number.
+                 Dimensions are handy for grouping and filtering your data.
+                 Unlike measures, <b>you can’t perform math on dimensions</b>.
+                 Like measures, dimensions also have names (region) and values (northeast).
+                Time is usually considered a dimension rather than a measure.<br/>
+                Grouping can be applied on Dimensions.
+
+              </li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h4>Measure</h4>
+            <ul style="font-size:35px;">
+              <li>
+                <b>Quantitative value</b>, like revenue and exchange rate.
+                 You <b>can do math on measures</b>, such as calculating the total revenue and minimum exchange rate.<br/>
+                 A measure is typically <b>aggregated</b> in some way, which means that it’s displayed with some math already applied to it.
+                 For example, when you first view a dataset, you often see a simple aggregation such as the <b>count of the number of rows</b>
+              </li>
+            </ul>
+          </section>
+
+
+
+
+          <section>
+            <h4>Exploration - Lens</h4>
+            <ul style="font-size:30px;">
+              <li>Two main parts of the lens: the <b>query</b> and the <b>visualization</b></li>
+              <li>Query:
+                <ul>
+
+    <li><b>Aggregating</b>: Summarize the data by <b>some measure</b>.
+        For example, the measure could be a <b>count of the rows</b> of data, as in the initial exploration state.<br/>
+         Another common measure is a <b>sum</b>of the amounts.</li>
+    <li><b>Grouping</b>: Group the data by a <b>certain dimension</b>. For example, group by product name or account.</li>
+    <li><b>Filtering</b>: Filter the data to narrow your results. For example, show only opportunities within the fiscal year. <br>
+    Both <b>Dimensions and Measures</b> can be involved in Filtering<hr/></li>
+
+  </li>
+  <li>Groups and filters are optional, whereas <b>aggregation is required</b></li>
+  <li>Regardless of the query you use, there must be at least one measure to have a visualization </li>
+                </ul>
+
+              </li>
+            </ul>
+          </section>
+
+
+          <section>
+            <h4>Parts of Lens</h4>
+            <ul style="font-size:30px;">
+              <li>Dataset</li>
+              <li>Horizontal Axis - Measures and Dimensions:
+
+                 <img style="border:0px;" height="400" src="img/ea2/hori-measure-1.png" alt="">
+              </li>
+            </ul>
+
+          </section>
+
+          <section>
+            <h4>Parts of Lens - contd.</h4>
+            <ul style="font-size:30px;">
+              <li>Horizontal Axis - Measures and Dimensions:
+
+                 <img style="border:0px;" src="img/ea2/lens-hori-axis-measure-dim-1.png" alt="">
+              </li>
+            </ul>
+
+          </section>
+
+
+          <section>
+            <h4>Parts of Lens - contd..</h4>
+            <ul style="font-size:30px;">
+              <li>Vertical Axis - Dimensions:
+                 <img style="border:0px;" src="img/ea2/lens-vert-axis-dimension-1.png" alt="">
+              </li>
+            </ul>
+
+          </section>
+
+          <section>
+            <h4>Parts of Lens - contd...</h4>
+            <ul style="font-size:30px;">
+              <li>Filter By - Dimensions and Measures:
+                 <img style="border:0px;" height="400" src="img/ea2/lens-filter-by-1.png" alt="">
+              </li>
+            </ul>
+
+          </section>
+
+
+          <section>
+            <h4>Parts of Lens - demo</h4>
+                 <img style="border:0px;" src="img/ea2/ea-basic-lens-1.gif" alt="">
+
+          </section>
+
+
+
+          <section>
+            <h4>Visualization</h4>
+            <ul>
+              <li>
+                Commonly a chart or graph, such as a bar chart, donut chart,
+                timeline, or heat map.
+                It can also be data in tabular form, such as a comparison table or pivot table.
+                Every visualization has an underlying <b>query</b>, which is how Analytics retrieves information from the <b>source data</b>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Sample Data Visualizations</h4>
+            <img  style='border:0;' src="img/ea2/sample-vizs-1.png" height="500" alt="EA Visualizations list">
+          </section>
+
+          <section>
+            <h4 style='font-size:25px;'>Selecting Right chart</h4>
+            <a style='font-size:20px;' href="../ea/chart-sel.html">Chart Selection App</a> <br/>
+            <img  style='border:0;' src="img/ea2/chosing-chart-type.jpg" height="550" alt="EA Visualizations list">
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+          <section>
+            <h4>Dataset</h4>
+            <ul>
+              <li>Set of Data Sources</li>
+              <li>Can Contain data from single Salesforce object or data from external data sources like Oracle, Postgres, MySQL...</li>
+              <li>You can create dataset by combining data from datasets.</li>
+            </ul>
+
+          </section>
+
+
+
+            <section>
+              <h4>Dataset Creation - Demo</h4>
+              <img  style="border:0px;" src="img/ea2/ea-dataset-creation-1.gif" alt="">
+
+            </section>
+
+    <!--
+            <section>
+              <h4>Recipe</h4>
+                  <img style="border:0px;" height="200" src="https://releasenotes.docs.salesforce.com/en-us/spring17/release-notes/release_notes/images/bi_integrate_dataprep_recipe_diagram.png" alt="">
+              <ul style="font-size:30px;">
+                <li>A dataset recipe is a saved set of transformations, or steps, to perform on a specific source dataset or replication.</li>
+                <li>  When you run a recipe, it applies the transformations and outputs the results to a new target dataset. </li>
+                <li>  You can schedule a recipe to run on a recurring basis to keep your target dataset up to date.</li>
+              </ul>
+            </section>
+      -->
+            <section>
+              <h4>Dataset Recipe</h4>
+              <ul>
+                <li>A dataset recipe is a user-interface tool that lets you take data from your existing datasets and replications,
+                  prepare it, and output the results to a new dataset.</li>
+              </ul>
+              <img style="border:0px;" height="300" src="https://resources.help.salesforce.com/images/a9832e1113286b27f553b45a4ce483f3.png" alt="">
+            </section>
+
+             <section>
+            <h4>Dataset Recipe - contd.</h4>
+            <ul style="font-size:30px;">
+              <li>
+                 Use a recipe to
+                  <ul>
+                    <li>combine data from multiple datasets or replications</li>
+                    <li>bucket the data</li>
+                    <li>add formula fields</li>
+                    <li>cleanse the data by transforming field values</li>
+                    <li> remove fields and filter rows that you don’t need, before you create the target dataset.</li>
+                  </ul>
+              </li>
+              <li>A dataset recipe is simply a <b>saved set of transformations, or steps, that you want to perform on a specific source dataset or replication</b>.
+                <hr/>
+                 When you run a recipe, it applies the transformations and outputs the results to a new target dataset.
+                <hr/>
+                You can schedule a recipe to run on a recurring basis to keep your target dataset up to date.
+                <hr/>
+                This new dataset can then be used as a standalone dataset for exploration or dashboard creation, or used in your dataflows or other recipes.
+              </li>
+
+            </ul>
+            </section>
+
+
+            <section>
+              <h4>Working with Recipe  - Demo</h4>
+              <img  style="border:0px;" src="img/ea2/ea-recipe-1.gif" alt="">
+
+            </section>
+
+
+            <section>
+              <h4>edgemart Transformation</h4>
+              <ul>
+                <li>Gives dataflow access to an <b>existing, registered dataset</b>, which can contain Salesforce data, external
+        data, or a combination of the two. </li>
+        <li> Example: Compare the final-sales-amount against the opportunity-amount to determine
+        if heavy discounts were offered to close deals</li>
+              </ul>
+            </section>
+
+
+
+<!--
+          <section>
+            <h4>Dataset Creation</h4>
+            <ul>
+              <li>Extraction
+                 <ul>
+                   <li>Process of bringing data into Einstein Discovery</li>
+                 </ul>
+              </li>
+              <li>Preparation
+              <ul>
+                <li>Getting that data into a form that’s meaningful to the people exploring it</li>
+                <li> It also includes several data transformation and manipulation features.</li>
+              </ul>
+              </li>
+            </ul>
+          </section>
+-->
+
+
+
+
+
+
+
+<!--
+
+      <section>
+        <h4>Measure</h4>
+         <ul>
+          <li>
+            Quantitative value, like revenue and exchange rate.
+             You can do math on measures, such as calculating the total revenue and minimum exchange rate.<br/>
+             A measure is typically aggregated in some way, which means that it’s displayed with some math already applied to it.
+             For example, when you first view a dataset, you often see a simple aggregation such as the <b>count of the number of rows</b>
+          </li>
+        </ul>
+      </section>
+-->
+
+
+
+
+      <section>
+        <h4>Date</h4>
+        <ul>
+          <li> Can be represented as a day, month, year, and, optionally, time. You can group, filter, and perform math on dates.</li>
+        </ul>
+        <img style="border:0px;" src="img/ea2/ea-date-fields-1.png" alt="">
+      </section>
+
+      <section>
+        <h4>Date filtering - Demo</h4>
+        <img style="border:0px;" src="img/ea2/ea-date-fields-1.gif" alt="">
+      </section>
+
+
+      <section>
+        <h4>Date Examples</h4>
+        <img style="border:0px;" height="300" src="img/ea2/ea-date-examples.png" alt="">
+        <pre style="font-size:20px;">
+          <code>
+--  Relative Date Ranges
+a = filter a by date('year', 'month', 'day') in ["1 year ago".."current year"];
+a = filter a by date('year', 'month', 'day') in ["2 quarters ago".."2 quarters ahead"];
+a = filter a by date('year', 'month', 'day') in ["4 months ago".."1 year ahead"];
+a = filter a by date('year', 'month', 'day') in ["2 fiscal_years ago".."current day"];
+          </code>
+        </pre>
+        <a target="_blank" style="font-size:30px;"
+        href="https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_saql.meta/bi_dev_guide_saql/bi_saql_functions_date.htm">
+          Date functions Doc
+        </a>
+      </section>
+
+
+
+      <section>
+        <h4>Date filter Example - 1</h4>
+        <img style="border:0px;" height="300" src="img/ea2/ea-filter-date-0.png" alt="">
+
+      </section>
+      <section>
+        <h4>Date filter Example - 2</h4>
+        <img style="border:0px;" height="300" src="img/ea2/ea-filter-date-2.png" alt="">
+
+      </section>
+
+
+      <section>
+        <h4 style="font-size:30px;">Date generate Example</h4>
+<pre style="font-size:15px;">
+  <code>
+q = load "DTC_Opportunity_SAMPLE";
+q = foreach q generate 'Close_Date','Close_Date_Year','Close_Date_Month', 'Close_Date_Day',
+                      (date_diff("day",
+                                       toDate('Close_Date', "yyyy-MM-dd"), now()
+                                )
+                      ) as days_from_now,
+
+                      (date_diff("month",
+                                       toDate('Close_Date', "yyyy-MM-dd"), now()
+                                )
+                      ) as months_from_now;
+q = limit q 2000;
+  </code>
+</pre>
+</section>
+
+
+<section>
+  <h4 style="font-size:30px;">Date generate Example - Contd.</h4>
+  <img style="border:0px;" height="500" src="img/ea2/ea-generate-date-1.png" alt="">
+</section>
+
+
+      <section>
+        <h4 style="font-size:20px;">generate using Case - simple case expression syntax - Example</h4>
+        <pre style="font-size:20px;">
+          <code>
+q = load "DTC_Opportunity_SAMPLE";
+q = foreach q generate 'Opportunity_Source',
+       (case 'Opportunity_Source'
+          when "Marketing" then "MKT"
+          else "Other"
+        end)
+       as Category;
+
+          </code>
+        </pre>
+
+    </section>
+
+    <section>
+      <h4 style="font-size:20px;">generate using Case - simple case expression syntax - Example</h4>
+      <img style="border:0px;"  src="img/ea2/ea-generat-using-case-1.png" alt="">
+  </section>
+
+      <section>
+        <h4 style="font-size:25px;">generate using Case - searched case expression syntax - Example - contd.</h4>
+        <pre style="font-size:20px;">
+          <code>
+    q = load "DTC_Opportunity_SAMPLE";
+    q = foreach q generate 'Opportunity_Source',
+           (case
+              when 'Opportunity_Source' == "Marketing" then "MKTG"
+              else "Other"
+            end)
+           as Category;
+
+          </code>
+        </pre>
+
+
+      </section>
+
+      <section>
+        <h4 style="font-size:25px;">generate using Case - searched case expression syntax - Example - contd.</h4>
+        <img style="border:0px;"  src="img/ea2/ea-generat-using-case-2.png" alt="">
+      </section>
+
+
+      <section>
+        <h4 style="font-size:20px;">More Case Examples - 1 </h4>
+          <img style="border:0px;" height="300" src="img/ea2/ea-generat-using-case-3.png" alt="">
+        <pre style="font-size:15px;">
+          <code>
+-- searched case expression syntax
+q = load "DTC_Opportunity_SAMPLE";
+q = foreach q generate 'Opportunity_Type',
+       (case
+        when 'Opportunity_Type' == "New Business"         then "NEW_BIZ"
+        when 'Opportunity_Type'=="Existing Business"      then "EXT_BIZ"
+        else "Other"
+        end)
+       as 'Biz Cat';
+          </code>
+        </pre>
+  </section>
+
+        <section>
+          <h4 style="font-size:20px;">More Case Examples - 2 </h4>
+        <pre style="font-size:25px;">
+          <code>
+--  simple case expression syntax
+q = load "DTC_Opportunity_SAMPLE";
+q = foreach q generate 'Opportunity_Type',
+       (case 'Opportunity_Type'
+           when  "New Business"           then "NEW_BIZS"
+           when  "Existing Business"      then "EXT_BIZS"
+           else  "Other"
+        end)
+       as 'Biz Cat';
+          </code>
+        </pre>
+      </section>
+      <section>
+        <h4 style="font-size:20px;">More Case Examples - 2  - contd.</h4>
+    <img style="border:0px;" height="500" src="img/ea2/ea-generat-using-case-4.png" alt="">
+  </section>
+
+      <section>
+        <h4>Date functions and Case Example</h4>
+        <pre style="font-size:15px;">
+          <code>
+q = load "DTC_Opportunity_SAMPLE";
+q = foreach q generate 'Close_Date','Close_Date_Year','Close_Date_Month', 'Close_Date_Day',
+                           toDate('Close_Date',   "yyyy-MM-dd") as cdt,
+                           now() as now,
+                           date_diff("day", toDate('Close_Date',   "yyyy-MM-dd"), now()) as days,
+                           (
+                              case
+                                  when date_diff("day", toDate('Close_Date',   "yyyy-MM-dd"), now() ) <= 30          then "30 Days"
+                                  when date_diff("day", toDate('Close_Date',   "yyyy-MM-dd"), now() )  > 30
+                                       and
+                                       date_diff("day", toDate('Close_Date',   "yyyy-MM-dd"), now() ) <= 60          then "60 Days"
+                                  else "60+ Days"
+                              end
+
+                           ) as days_bucket;
+
+q = filter q by date_diff("day", toDate('Close_Date',   "yyyy-MM-dd"), now()) <= 600;
+q = limit q 2000;
+          </code>
+        </pre>
+      </section>
+
+
+      <section>
+        <h4>Date functions and Case Example - contd.</h4>
+        <img style="border:0px;"src="img/ea2/ea-date-funs-case-1.png" alt="">
+      </section>
+
+
+
+      <section>
+        <h4>Group By - Order By</h4>
+        <pre style="font-size:20px">
+         <code>
+ q = load "DTC_Opportunity_SAMPLE";
+ -- interested in Agriculture and Education only
+ q = filter q by 'Industry' in ["Agriculture", "Education"];
+ q = group q by ('Industry', 'Billing_State_Province');
+ -- projection
+ q = foreach q generate 'Industry' as 'Industry', 'Billing_State_Province' as 'Billing_State_Province', sum('Amount') as 'sum_Amount';
+ -- order the projection
+ q = order q by ('Industry' asc, 'Billing_State_Province' asc);
+ q = limit q 2000;
+         </code>
+
+        </pre>
+
+
+      </section>
+
+
+      <section>
+        <h4>Filter - Group By - Order By - contd.</h4>
+        <img style="border:0px;"src="img/ea2/ea-group-by-order-by-1.png" alt="">
+      </section>
+
+      <section>
+        <h4>Filter - Group By - Order By - contd..</h4>
+        <img style="border:0px;"src="img/ea2/ea-date-funs-case-1-chart-1.png" alt="">
+      </section>
+
+      <section>
+        <h4>Filter - Group By - Order By - contd...</h4>
+        <img style="border:0px;"src="img/ea2/ea-date-funs-case-1-chart-2.png" alt="">
+      </section>
+
+
+
+
+      <section>
+        <h4>Replication</h4>
+        <ul style="font-size:30px;">
+          <li>Use to extract data from its source and load it into intermediate unregistered datasets</li>
+          <li>These replicated datasets are available for use in dataflows and dataset recipes. </li>
+          <li> Decouples the extract of <b>Salesforce data</b> from your dataflows, letting you run it on a separate schedule</li>
+          <li> Extracts <b>Salesforce data</b> incrementally by default, meaning that <b>only data that’s changed gets extracted</b></li>
+          <li>You can enable up to 50 objects for replication</li>
+          <li>Replication only performs one extract per object</li>
+          <li>Benefits
+             <ul>
+               <li>optimizes your dataflows by extracting your <b>Salesforce data in a separate job ahead of time</b></li>
+               <li>comes with a <b>host of connectors</b> that let you connect to external data and replicate it,
+                  ready for use in your dataflows and recipes.
+
+</li>
+             </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Working with Replication  - Demo</h4>
+        <img  style="border:0px;" src="img/ea2/ea-replication-1.gif" alt="">
+
+      </section>
+<!--
+      <section>
+        <h4>Analytics Connectors</h4>
+        <img style="border:0px;" height="250" src="https://resources.help.salesforce.com/images/bdd0046783d6ba61d7dcb7f089af9203.png" alt="">
+        <ul style="font-size:20px">
+          <li>Use a connector to create a connection to a data source, such as another Salesforce org or an Amazon Redshift data warehouse.
+             Then use that connection to replicate all the objects that you need from the source.
+            <hr/> You can then prepare the data in these replications, using a dataset recipe or a dataflow, to create your final dataset.
+            <hr/>
+            The Salesforce Local Connector is the default connector.
+            If you’re currently using replication for objects in your local Salesforce org, you are already using this connector.
+          </li>
+        </ul>
+        <a style="font-size:25px" href="https://help.salesforce.com/articleView?id=bi_integrate_connectors.htm&type=5">Reference</a>
+      </section>
+
+
+
+
+
+      <section>
+        <h4>Dimension</h4>
+        <ul>
+          <li>
+            A dimension is a qualitative value, like region, product name, and model number.
+             Dimensions are handy for grouping and filtering your data.
+             Unlike measures, <b>you can’t perform math on dimensions</b>.
+             Like measures, dimensions also have names (region) and values (northeast).
+            Time is usually considered a dimension rather than a measure.
+          </li>
+        </ul>
+      </section>
+-->
+
+      <section>
+        <h4>Dashboard</h4>
+        <ul style="font-size:35px;">
+          <li>Collection of widgets (performance indicators, charts, tables, filters, and images) that work together to tell a data story from multiple angles</li>
+          <li>
+            When you <b>share Analytics data</b> via a <b>dashboard</b>,
+            you’re setting up your audience members to do some exploring of their own,
+            without turning them <b>loose on the whole dataset</b>.
+          </li>
+          <li>
+            A dataset can contain vast amounts of data. Some of that data is relevant to specific questions
+            that your audience has; some of that data is <b>irrelevant noise</b>.
+            Data that’s <b>critical</b> to one set of questions is sometimes noise in relation to another set of questions.
+          </li>
+          <li>Dashboard is for carrying on a conversation based on one or more datasets that matter to your company</li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Key Elements of Dashboard</h4>
+        <img height="500" style="border:0px;" src="img/ea/dashboard-1.png" alt="">
+      </section>
+
+
+      <section>
+        <h4>Hacking a Dashboard</h4>
+        <img height="500" style="border:0px;" src="img/ea2/ea-db-regionalSales-1.gif" alt="">
+      </section>
+
+      <section>
+        <h4>Hacking a Dashboard</h4>
+        <img height="500" style="border:0px;" src="img/ea2/ea-db-regionalSales-1.gif" alt="">
+      </section>
+
+
+
+
+      <section>
+        <h4 style="font-size:30px;">Binding Toggle - Steps</h4>
+
+        <a  style="font-size:20px" target="_blank" href="https://mohan-chinnappan-n.github.io/books/lx/chap-12/ea-static-binding.html">Binding Toggle</a>
+        <img style="border:0px;" src="img/ea2/ea-binding-toggle-1.gif" alt="">
+      </section>
+
+      <section>
+        <h4 style="font-size:20px;">How to add SOQL step in Dashboard</h4>
+        <ul style="font-size:20px;">
+          <li>
+            Not recommended  for larger volumes of data, use it for simple lookups of small data.
+            <a target="_blank" href="https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_json.meta/bi_dev_guide_json/bi_dbjson_steps_types_soql.htm">Docs</a>
+          </li>
+        </ul>
+        <img style="border:0px;" src="img/ea2/ea-soql-1.gif" alt="">
+      </section>
+
+
+
+            <section>
+              <h4 style="font-size:20px;">How to add SOQL step into existing Dashboard</h4>
+              <img style="border:0px;" src="img/ea2/ea-soql-2.gif" alt="">
+            </section>
+
+            <section>
+              <h4 style="font-size:20px;">How to add SOQL step into existing Dashboard - code</h4>
+              <pre>
+                <code>
+"soql": {
+    "type": "soql",
+    "query": "SELECT Name, Amount from Opportunity",
+    "strings": ["Name"],
+    "numbers": ["Amount"],
+    "groups": ["Name"],
+    "selectMode": "single"
+   }
+                </code>
+              </pre>
+            </section>
+
+
+            <section>
+              <h4 style="font-size:20px;">How to add SOQL step into existing Dashboard - contd.</h4>
+              <img style="border:0px;" src="img/ea2/ea-soql-3.gif" alt="">
+            </section>
+
+            <section>
+              <h4 style="font-size:20px;">How to add SOQL step into existing Dashboard - code</h4>
+              <pre>
+                <code>
+  "soql2": {
+      "type": "soql",
+      "query": "SELECT Name, CloseDate, StageName, Owner.Name, Amount, Account.Name FROM Opportunity ",
+      "strings": ["Name", "CloseDate", "StageName", "Owner.Name", "Account.Name"],
+      "numbers": ["Amount"],
+      "groups": [],
+      "selectMode": "single"
+    }
+                </code>
+              </pre>
+            </section>
+
+
+
+      <section>
+        <h4 style="font-size:30px;">Take Action on Multiple Table Records with a Single Click</h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <img style="border:0px;" src="https://releasenotes.docs.salesforce.com/en-us/spring17/release-notes/release_notes/images/bi_dashboards_bulk_action_config_table_widget_properties.png" alt="">
+          </div>
+          <div class="col-lg-6">
+            <img  style="border:0px;" src="https://releasenotes.docs.salesforce.com/en-us/spring17/release-notes/release_notes/images/bi_dashboards_bulk_action_menu.png" alt="">
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8">
+              <img style="border:0px;"  src="img/ea2/ea-bulk-actions-1.png" alt="">
+            </div>
+            <div  style="font-size:20px;" class="col-lg-4">
+              References
+              <ul>
+                <li>
+                  <a target="_blank" href="https://releasenotes.docs.salesforce.com/en-us/spring17/release-notes/rn_bi_dashboards_bulk_actions.htm">
+                    Take Action on Multiple Table Records with a Single Click
+                  </a>
+                </li>
+                  <li>
+                  <a  target="_blank"  href="https://help.salesforce.com/articleView?id=bi_dashboards_configure_bulk_actions.htm">
+                    Perform Bulk Actions on Multiple Salesforce Records from Analytics
+                  </a>
+
+                </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+
+      <section>
+        <h4 style="font-size:30px;">Dynamically Set Initial Selections Based on the Dashboard Viewer </h4>
+        <a target="_blank" style="font-size:30px;" href="https://help.salesforce.com/articleView?id=bi_dashboard_initial_filters_user_tokens.htm&type=5">
+        Reference</a>
+        <div class="row">
+          <div class="col-lg-6">
+
+        <img style="border:0px" height="350" src="https://resources.help.salesforce.com/images/c261461fb7d9aff46dcd2a03bcdbe472.png" alt="">
+          </div>
+
+        <div class="col-lg-6">
+          <ul style="font-size:30px;">
+          <li>Example:
+            When the dashboard opens, you want it to dynamically filter charts based on the name of the currently logged in user.
+          </li>
+
+          <li>
+            You can set initial selections based on the following Salesforce user tokens: user.id, user.name, user.rolename, and user.roleid.</li>
+          <li>
+           Analytics retrieves the values of these tokens from Salesforce environment variables—these values don’t come from datasets.
+         </li>
+        </ul>
+
+        </div>
+        </div>
+
+
+      </section>
+
+      <section>
+        <h4>App Sharing in EA</h4>
+        <img style="border:0px"  src="img/ea2/ea-app-sharing-1.gif" alt="">
+      </section>
+
+      <section>
+        <h4>Analytics Permission Set Licenses and User Permissions</h4>
+        <img style="border:0px" height="400"  src="img/ea2/ea-permsets-1.png" alt=""><br/>
+        <a style="font-size:25px;"  target="_blank" href="https://help.salesforce.com/articleView?id=bi_setup_user_permissions.htm&type=5">Learn About Analytics Permission Set Licenses and User Permissions
+        </a>
+
+      </section>
+
+      <section>
+        <h4>Setup -  References</h4>
+        <ul style="font-size:30px;">
+          <li>
+            <a style="font-size:25px;"  target="_blank" href="https://help.salesforce.com/articleView?id=bi_help_setup.htm&type=5">
+              Set Up the Analytics Platform
+            </a>
+
+          </li>
+
+            <li>
+              <a style="font-size:25px;"  target="_blank" href="https://help.salesforce.com/articleView?id=bi_setup_user_permissions.htm&type=5">Learn About Analytics Permission Set Licenses and User Permissions
+              </a>
+            </li>
+        </ul>
+      </section>
+
+
+
+
+
+
+
+      <section>
+        <h4>Dashboard JSON Developer Guide</h4>
+        <object   data="img/ea2/bi_dev_guide_json.pdf" type="application/pdf" style="width: 100%; height: 800px;">
+
+          <p>It appears you don't have a PDF plugin for this browser</p>
+        </object>
+      </section>
+
+
+
+      <section>
+        <h4>Videos about Dashboard</h4>
+          <l>
+            <li> <a target="_blank" href="http://salesforce.vidyard.com/watch/6aA4EKE9jbuhqC2fLoHt85">Building Dashboards Series</a> </li>
+          </ul>
+
+      </section>
+
+      <section>
+        <h4>Comparision Dashboard</h4>
+        <img style="border:0px;" height="500" src="img/ea2/ea-dashboard-1.gif" alt="">
+      </section>
+
+      <section>
+        <h4>Details Dashboard</h4>
+        <img style="border:0px;" height="500" src="img/ea2/ea-dashboard-2.gif" alt="">
+      </section>
+
+
+
+      <section>
+        <h4>Summary Dashboard</h4>
+        <img style="border:0px;" height="500" src="img/ea2/ea-dashboard-summary-2.gif" alt="">
+      </section>
+
+      <section>
+        <h4>Tile Dashboard</h4>
+        <img style="border:0px;" height="500" src="img/ea2/ea-tile-dashboard-1.png" alt="">
+      </section>
+
+
+
+
+
+      <section>
+        <h4>Selection-Based Filters</h4>
+          <ul style="font-size:35px;">
+          <li>
+A selection-based filter lets you apply whatever filters you wish while viewing the dashboard.
+For example, set the minimum and maximum values in a range widget to make the dashboard show the amounts that fall within that range.
+<hr/>
+These types of filters are often tied to each other so that you can <b>progressively drill deeper</b>.
+ For example, use one filter to look at <b>sales</b> of a product. Then use the next to filter sales by <b>region</b>.
+ Finally, use another to filter sales by <b>account</b>.
+ The dashboard shows the results based on all <b>three</b> filters.
+ There are different types of selection-based filter widgets: date, list, range, and toggle.</li>
+        </ul>
+      </section>
+
+<section>
+  <h4>Key Performance Indicators (KPI)</h4>
+  <ul>
+    <li>
+Some information is best measured by <b> a single number</b>, also known a key performance indicator (KPI).
+Some number elements can be filtered based on selections in charts and filters.
+<hr/>
+For example, in a bar chart that shows individual salespeople’s pipelines, click a bar to focus on a particular person’s pipeline.
+Notice that the number changes <b>from</b> showing the total value for all salespeople <b>to</b>
+ show the value for the selected person.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Charts</h4>
+  <ul>
+    <li>A rich variety of <b>charts</b> shows you data from multiple angles.
+      Many parts of a chart are <b>interactive</b>.
+      <hr/>
+       For example, click a bar in a bar chart and watch what happens.
+       Clicking a bar filters the query that the bar chart represents.
+      Your revision changes other values in this chart, values in other charts, and number displays.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Tables</h4>
+  <ul>
+    <li>
+      A table provides the record-level details.
+      <hr/>
+       For example, a chart can show you a performance summary for each region,
+       but the table can show you the opportunity-specific details. You can sort tables to show the top and bottom records.
+      You can also create calculated columns (derived columns) in tables to compute values based on existing data.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h4>Ask your data question - using explorer</h4>
+  <img style="border:0px;" height="500" src="img/ea2/explorer.png" alt="">
+
+</section>
+
+
+<section>
+  <h4>Ask your data question - using explorer - query</h4>
+  <ul style="font-size:30px;">
+    <li>
+    Use the left panel [1] of the explorer to create your query.
+    </li>
+    <li>You can perform calculations (referred to as <b>measures</b>), like sum of amount or average case duration</li>
+    <li>To break down the measure across different areas, <b>group it</b> by descriptive fields (known as dimensions), like region or owner. </li>
+    <li>To find the top or bottom performers, sort the measure in descending or ascending order.</li>
+    <li>Apply <b>filters</b> to focus on a subset of the results.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Visual representation of the query results</h4>
+    <ul style="font-size:30px;">
+    <li>The middle explorer panel [2] shows a visual representation of the query results.
+      You can display the results as a chart or table.
+      <hr/>
+       When in <b>chart mode</b>, you can choose which chart type to use.
+       <hr/>
+       When in <b>table mode</b> you can display the dataset records as a values table or
+
+        create calculated fields and display them in a compare table.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Visualization properties</h4>
+  <ul style="font-size:30px;">
+    <li>The right explorer panel [3] shows the visualization properties—configure them to modify the appearance of the chart or table.
+  <hr/>
+   For instance, you can remove the legend, change the axis scale, or add a title.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Lens</h4>
+
+  <ul style="font-size:25px;">
+    <li>When you want to look at data in an exploratory mode, you do so in a lens.</li>
+    <li>A lens has several aspects: it’s how you view data in a dataset,
+       it’s the place where you explore the data graphically, and it’s the<b> basis for building any dashboard</b>
+     </li>
+  </ul>
+  <img style="border:0px;"  height="500" src="img/ea2/lens-2.png" alt="Lens">
+</section>
+
+<section>
+  <h4>Using SAQL for advanced query</h4>
+  <img height="500" style="border:0px;" src="img/ea2/using-saql.png" alt="">
+</section>
+
+<section>
+  <h4>Computed Columns</h4>
+  <img  height="500" style="border:0px;" src="img/ea2/ea-computed-cols.gif" alt="">
+</section>
+
+
+<section>
+  <h4>Null Handling</h4>
+  <ul style="font-size:30px;">
+    <li>EA can use data from Salesforce or from an external data source.
+      <br/>
+       To prevent data quality issues,
+        EA will disregard any fields in Salesforce (or columns in external data) that are entirely null.
+      </li>
+      <li>For Salesforce data: Use the defaultValue override in the dataflow definition.
+      <pre style="font-size:15px;">
+        {
+   "Extract_Opportunities": {
+      "action": "sfdcDigest",
+      "parameters": {
+         "object": "Opportunity",
+         "fields": [
+            { "name": "Id" },
+            { "name": "Name" },
+            {
+               "name": "Amount",
+               <b>"defaultValue":0,</b>
+               "precision":18,
+               "scale":2
+            },
+            ...
+      </pre>
+        </li>
+      <li>For external data columns: Use the defaultValue override in the metadata schema.</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Null Handling - contd.</h4>
+<ul style="font-size:33px;">
+  <li>
+    Null measure handling is important because it affects the results of certain calculations.
+    Without null measure handling (when no default value is specified), Analytics replaces <b>blanks</b> in your data with <b>zeros</b>
+  </li>
+  <li>Replacing blank values with zeros can be problematic for a number of reasons - calculating <b>average, minimum</b> will have issues</li>
+</ul>
+<img src="https://resources.help.salesforce.com/images/031a1726ffd7f3fa1aa70370e0d7960f.png" alt="">
+<img src="https://resources.help.salesforce.com/images/98faf09eaa1b85ae7eb498294071ff05.png" alt="">
+
+<img src="https://resources.help.salesforce.com/images/265382e0bc9ac89ee245d230a58b22f1.png" alt="">
+<pre style="font-size:18px;"> "defaultValue": "null"
+  // computeExpression
+  // The defaultValue attribute for a computed field accepts a value of null.
+  // specify these defaults using  special <b>null</b> value</pre>
+<a style="font-size:20px;" href="https://help.salesforce.com/articleView?id=bi_integrate_null_measures.htm&type=5">Reference</a>
+
+</section>
+
+<section>
+  <h4>Dashboard JSON</h4>
+ <ul>
+   <li>Easy way: using designer</li>
+   <li>JSON defines the components of the dashboard and how they interact</li>
+   <li>TJSON consists of properties that define layouts, pages, widgets, and steps.</li>
+   <li>Customization: Editing Dashboard JSON files
+    <ul>
+      <li>
+        Manually set up bindings to override the default faceting behavior
+        & specify the relationships between the steps that aren’t bound by default.
+      </li>
+      <li>Set Query Limits</li>
+      <li>Specify columns for a values table</li>
+      <li>Specify a SAQL query </li>
+      <li>Populate a filter selector with a specified list of <b>static values</b> instead of from a query</li>
+      <li>Set up layouts for mobile devices for a dashboard</li>
+
+    </ul>
+   </li>
+
+ </ul>
+
+
+
+
+</section>
+
+
+<section>
+  <h4>Dashboard JSON - contd.</h4>
+  <img style="border:0px;" src="img/ea2/ea2-dashboard-3.png" alt="">
+</section>
+
+<section>
+  <h4>Dashboard JSON - contd..</h4>
+  <img style="border:0px;" src="img/ea2/ea2-dashborad-json.png" alt="">
+</section>
+
+<section>
+  <h4>Dashboard JSON high level properties</h4>
+  <ul style="font-size:30px;">
+    <li>label - name of the dashboard</li>
+    <li>mobileDisabled - can be accessed in the mobile app</li>
+    <li>description</li>
+    <li>state</li>
+    <li>datasets - specifies all datasets used by steps in the dashboard. </li>
+
+  </ul>
+  <pre style="font-size:10px;">
+
+    "label": "Fruits Summary",
+    "mobileDisabled": false,
+
+    "state": {
+        "dataSourceLinks": [],
+        ...
+        "steps": {
+
+        }
+    }
+
+    datasets": [
+        {
+            "id": "0Fb1N000000LZYbSAO",
+            "label": "fruitStock",
+            "name": "fruitStock",
+            "url": "/services/data/v42.0/wave/datasets/0Fb1N000000LZYbSAO"
+        },
+        {
+            "id": "0Fb1N000000LZYgSAO",
+            "label": "fruitPrice",
+            "name": "fruitPrice",
+            "url": "/services/data/v42.0/wave/datasets/0Fb1N000000LZYgSAO"
+        },
+        {
+            "id": "0Fb1N000000LZYlSAO",
+            "label": "fruitPriceStock",
+            "name": "fruitPriceStock",
+            "url": "/services/data/v42.0/wave/datasets/0Fb1N000000LZYlSAO"
+        }
+    ]
+
+  </pre>
+</section>
+
+<section>
+  <h4>datasourceLinks properties</h4>
+  <ul>
+    <li>fields - Array of datasources in the connection</li>
+    <li>label - Label for data source connection</li>
+    <li>name - API name for the data source connection</li>
+
+  </ul>
+</section>
+
+<section>
+  <h4>gridLayouts</h4>
+
+  <ul>
+    <li>The gridLayouts section defines all layouts built for the dashboard.</li>
+  </ul>
+  <ol>
+    <li>name - name of the layout</li>
+    <li>maxWidth - max width in pixels that dashboard can use</li>
+    <li>numColumns - number of columns in the designer grid for this layout</li>
+    <li>pages - name  and id of the page</li>
+    <li>rowHeight - height of each row</li>
+    <li>selectors - device </li>
+    <li>style</li>
+
+  </ol>
+</section>
+
+
+
+<section>
+  <h4> Dashboard - Binding Toggle Steps</h4>
+    <pre style="font-size:15px;">
+       //  syntax: column(source, [columnNames...])
+       // example: column(myStep.selection, ["stateName"])
+
+
+       column( <b>staticStep.selection</b>, [\"<b>value</b>\"] ).asObject() </pre>
+  <button class='btn btn-success'  title='Click to view the image in full page'>
+    <a target="_blank" href='./img/ea2/ea-static-binding-2.gif'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+  <img src="img/ea2/ea-static-binding-2.gif" alt="">
+
+</section>
+
+
+
+<section>
+  <h4> Dashboard - Binding Toggle Steps - contd.</h4>
+    <pre style="font-size:15px;">
+column( <b>staticIndustry_1.selection</b>, [\"<b>value</b>\"] ).asObject()
+column(StaticDTC_1.selection,[\"measure\"]).asObject()}}
+     </pre>
+  <button class='btn btn-success'  title='Click to view the image in full page'>
+    <a target="_blank" href='./img/ea2/ea-static-binding-3.gif'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+  <img style="border:0px" src="img/ea2/ea-static-binding-3.gif" alt="">
+
+</section>
+
+<section>
+  <h4>Dynamic Reference Line</h4>
+  <div class="row">
+    <div class="col-lg-12">
+      <img style="border:0px" src="img/ea2/ea-refline-dyna-binding-results-from-step-2.png" alt="">
+    </div>
+  </div>
+
+    <div class="row">
+    <div class="col-lg-8">
+      <img style="border:0px" src="img/ea2/ea-refline-dyna-binding-results-from-step.png" alt="">
+    </div>
+    <div class="col-lg-4">
+      <img style="border:0px" src="img/ea2/ea-refline-dyna-binding-results-from-steps.png" alt="">
+    </div>
+  </div>
+</section>
+
+
+<section>
+  <h4> Dashboard - Binding on KPIs - Use Case</h4>
+    <ul style="font-size:30px;">
+      <li>Dataset <b>fm</b> has records for US Farmers market with a <b>Dimension</b>: "State" </li>
+      <li>To show the Binding example in query, we make following KPS:
+        <ul>
+          <li>Total Farmers Markets in USA - record-count (<b>A</b>), which is KPI: Totals</li>
+          <li>Total Farmers Markets in  CA - record-count (<b>B</b>), which is KPI: CA</li>
+          <li>Total Farmers Markets in  States other than CA - record-count (<b> C = A - B</b>), which is KPI: Others and Others2<hr/></li>
+          <li>This can be done easily with the SAQL for <b>C</b> as:
+            <pre>
+              q = load fm;
+              q = group q by all;
+              q = filter q by 'State' <b>!= \"California\"</b>;
+              q = foreach q generate count() as 'count';
+              -- this let us call as Others2
+            </pre>
+
+
+           </li>
+
+           <li>This can be also be done  with the SAQL for <b>C</b> as:
+             <button class='btn btn-success'  title='Click to view the image in full page'>
+               <a target="_blank" href='./img/ea2/query-binding-kpi.png'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+               <img  style="border:0px;"  src="img/ea2/query-binding-kpi.png" alt="">
+               <hr/>
+               Next slide shows the Demo of this
+            </li>
+
+        </ul>
+
+
+      </li>
+
+    </ul>
+</section>
+
+<section>
+  <h4> Dashboard - Binding on KPIs - Demo</h4>
+  <button class='btn btn-success'  title='Click to view the image in full page'>
+    <a target="_blank" href='./img/ea2/ea-calc-on-pki.gif'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+
+  <img style="border:0px;" src="img/ea2/ea-calc-on-pki.gif" alt="">
+
+</section>
+
+
+<section>
+  <h4>Embed Analytics Dashboards in Lightning Pages </h4>
+  <button class='btn btn-success'  title='Click to view the image in full page'>
+    <a target="_blank" href='./img/ea2/ea-embed-lx-1.gif'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+  <img style="border:0px;" src="img/ea2/ea-embed-lx-1.gif" alt="">
+  <hr/>
+  <a  href="https://help.salesforce.com/articleView?id=bi_embed_lightning.htm&type=5">Doc: Embed Analytics Dashboards in Lightning Pages
+</a>
+</section>
+
+
+<section>
+  <h4>Embed Analytics Dashboards in Classic Pages </h4>
+  <button class='btn btn-success'  title='Click to view the image in full page'>
+    <a target="_blank" href='./img/ea2/ea-embed-classic-1.gif'><i class="glyphicon glyphicon-fullscreen"></i></a></button>
+  <img style="border:0px;" src="img/ea2/ea-embed-classic-1.gif" alt="">
+  <hr/>
+  <a  href="https://help.salesforce.com/articleView?id=bi_dashboard_embed.htm&type=5">Doc: Embed Analytics Dashboards in Classic Pages
+</a>
+</section>
+
+
+<section>
+  <h4> Analytics Settings </h4>
+  <img style="border:0px;" src="img/ea2/ea-settings-1.png" alt="">
+</section>
+
+<section>
+  <h4> Change Display Labels for Dataset Fields and Values </h4>
+  <img style="border:0px;" src="img/ea2/ea-xmd-json-1.gif" alt="">
+</section>
+
+<section>
+  <h4 style="font-size:30px;"> Change Display Labels for Dataset Fields and Values - contd. </h4>
+   <div class="row">
+     <div class="col-lg-6">
+       <pre style="font-size:15px;">
+         FROM:
+         <code>
+           {
+             "dataset": {},
+             "dates": [],
+             "derivedDimensions": [],
+             "derivedMeasures": [],
+             "dimensions": [
+             ],
+             "measures": [],
+             "organizations": [],
+             "showDetailsDefaultFields": []
+           }
+         </code>
+       </pre>
+       <a style="font-size:20px;" target="_blank" href="https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_xmd.meta/bi_dev_guide_xmd/bi_xmd_change_labels.htm">
+         Change Display Labels for Dataset Fields and Values
+
+       </a>
+
+     </div>
+
+     <div class="col-lg-6">
+       <pre style="font-size:15px;">
+         TO:
+         <code>
+           {
+             "dataset": {},
+             "dates": [],
+             "derivedDimensions": [],
+             "derivedMeasures": [],
+             "dimensions": [{
+                 "field": "Stage",
+                 "label": "Stage Name",
+                 "members": [{
+                     "label": "LOST",
+                     "member": "Closed Lost"
+                   },
+                   {
+                     "label": "WON",
+                     "member": "Closed Won"
+                   }
+                 ],
+                 "showInExplorer": true
+               }
+             ],
+             "measures": [],
+             "organizations": [],
+             "showDetailsDefaultFields": []
+           }
+
+         </code>
+       </pre>
+
+     </div>
+
+   </div>
+</section>
+
+<section>
+  <h4>Compare Reports & Dashboards with EA </h4>
+    <img style="border:0px;" src="img/ea2/ea-vs-rpts.png" alt="">
+    <ul style="font-size:20px;">
+      <li>
+        <a href="https://help.salesforce.com/articleView?id=reports_historical_limits.htm&type=5">Limitations on Historical Trend Reporting </a>
+      </li>
+      <li>
+        <a href="https://support.salesforce.com/articleView?id=rd_reports_limits.htm&type=5">Report Limits, Limitations, and Allocations
+</a>
+      </li>
+
+    </ul>
+
+</section>
+
+<section>
+  <h4 style="font-size:30px;"> Reports & Dashboards References</h4>
+    <ul style="font-size:20px;">
+      <li>
+        <a target="_blank" href="https://help.salesforce.com/articleView?id=reports_historical_limits.htm&type=5">Limitations on Historical Trend Reporting </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://support.salesforce.com/articleView?id=rd_reports_limits.htm&type=5">Report Limits, Limitations, and Allocations
+</a>
+      </li>
+
+    </ul>
+</section>
+
+<section>
+  <h4>Compare Reports & Dashboards with EA - Contd.</h4>
+    <img style="border:0px;" src="img/ea2/ea-vs-rpts-2.png" alt="">
+</section>
+
+<section>
+  <h4 style="font-size:30px;">Object Limit in Report Types</h4>
+    <img style="border:0px;" src="img/ea2/sfdc-rpts-4-objects-1.png" alt="">
+    <a style="font-size:25px;" target="_blank" href="https://help.salesforce.com/articleView?id=reports_report_type_guidelines.htm&type=5"> Limits on Report Types </a>
+</section>
+
+<section>
+  <h4 style="font-size:30px;">Migrate Analytics Assets with Change Sets</h4>
+
+  <div class="row">
+    <div class="col-lg-5">
+      <img style="border:0px;" src="https://resources.help.salesforce.com/images/e75cf6a764b152b6e6f770b0f209accc.png" alt="">
+    </div>
+
+    <div class="col-lg-7">
+
+
+  <ul style="font-size:25px;">
+  <li>Use change sets to move customized Analytics assets between orgs that have a deployment connection</li>
+  <li> For example, create an Analytics app containing dashboards, lenses, datasets, dataflows in your Sandbox org, <br/>
+      then migrate the app assets to your production org once testing is complete
+      <a target="_blank" href="https://help.salesforce.com/articleView?id=bi_packaging_migrate.htm">Migrate Analytics Assets with Change Sets</a>
+
+  </li>
+  <li> Note that you must add dependent dataflows manually. That is, if you add a dataset to a change set, the associated dataflows are not automatically picked up.</li>
+  <li>Click View/Add Dependencies to ensure all dependent assets and appropriate permission sets and profile settings are added</li>
+  </ul>
+</div>
+</div>
+
+</section>
+
+
+<section>
+  <h4 style="font-size:30px;">Analytics Migration, Packaging, and Distribution </h4>
+  <ul style="font-size:25px;">
+    <li>Migrate Analytics assets using <b>change sets</b>, bundle them together in <b>managed packages</b>,
+        distribute and track packages through AppExchange and the License Management App,
+         and use the metadata API to manage customizations for your org.
+</li>
+<li>
+  <a target="_blank" href="https://help.salesforce.com/articleView?id=bi_explore_packaging_intro.htm&type=0">Refer</a>
+</li>
+  </ul>
+</section>
+
+<section>
+  <h4 style="font-size:30px;">Academy/Campfire Training Videos</h4>
+  <ul style="font-size:25px;">
+    <li>
+
+<iframe width="800" height="450" 
+   src="https://www.youtube.com/embed?list=PLjJeA2SstEtIIwI30ULDS5XKmacqcLcmt" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</li>
+  </ul>
+</section>
+
+
+
+
+<section>
+  <h4>References</h4>
+  <ul>
+
+
+    <li>
+      <a target="_blank" href="https://trailhead.salesforce.com/users/00550000006HuQZAA0/trailmixes/einstein-analytics-beginner">
+        Einstein Analytics Beginner Trailmix </a>
+    </li>
+    <li>
+      <a target="_blank" href="http://www.einsteinanalyticslearningmap.com/">Einstein Analytics Learning Map</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.youtube.com/watch?v=RX2PfnYqjf8">Binding Basics 1: Dynamic Measure</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://www.youtube.com/watch?v=wwLNerYlaQM">Binding Basics 2: Dynamic Measures</a>
+    </li>
+
+  <li>
+      <a target="_blank" href="https://www.youtube.com/channel/UCkNDwCEl-BbAsaGSQ7I6Xtg">Let's Play Salesforce</a>
+    </li>
+    <li>
+        <a target="_blank"
+        href="https://developer.salesforce.com/docs/atlas.en-us.bi_dev_guide_bindings.meta/bi_dev_guide_bindings/bi_dbjson_bindings.htm">
+        Analytics Bindings Developer Guide</a>
+
+      </li>
+
+
+  </ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Einstein Analytics - Beginner";
+
+
+
+    })
+  </script>
+</body>
+
+</html>

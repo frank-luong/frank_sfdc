@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Single-org versus Multi-org Strategy - Coordination</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../../css/navbar-blue.css">
+  <style>
+        .todos, .selection, .imgmap {
+          border: 2px solid #eeeeff;
+          background-color: #eff;
+          border-radius: 10px;
+          margin:10px;
+          opacity: .8;
+        }
+      
+    
+  </style>
+</head>
+
+<body >
+
+  <nav class="navbar navbar-default" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="javascript:void(0)">Single-org versus Multi-org Strategy - Coordination</a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#/home">Home</a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li ><a href="/">Main</a></li>
+        </ul>
+  
+        <div class="inner-addon right-addon navbar-form navbar-right">
+          <i class="glyphicon glyphicon-search"></i>
+          <input type="text" class="form-control" placeholder="Search" />
+        </div>
+  
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown ">
+            <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="./help.html">Help Topics</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+
+<div style="padding: 10px;">
+
+ <a target="_blank" class="btn btn-success" href="../org-strat-2.html"><i class="glyphicon glyphicon-gift"></i> Org Strategy Slides</a>
+<hr/>
+<p style='font-size: 18px;'><i class="glyphicon glyphicon-question-sign"></i> Click on any Quarter to select your Operating Model</p>
+<div class="row">
+    <div class="col-lg-6"> 
+    <img class="imgmap" src="https://mohan-chinnappan-n.github.io/sfdc/org-strat/img/EA_ops_model.png" usemap="#image-map">
+    <map name="image-map">
+    <area target2="_blank" alt="Coordination" title="Coordination" href="coordination.html" coords="117,62,310,194" shape="rect">
+    <area target2="_blank" alt="Unification" title="Unification" href="unification.html" coords="320,60,535,200" shape="rect">
+    <area target2="_blank" alt="Diversification" title="Diversification" href="diversification.html" coords="112,200,313,338" shape="rect">
+    <area target2="_blank" alt="Replication" title="Replication" href="replication.html" coords="317,199,533,336" shape="rect">
+
+    </map>
+    </div>
+    <div class="col-lg-6"> 
+    <h4 style="font-size: 30px;">Coordination</h4>
+    <ul class="selection" style="font-size: 25px;">
+    <li> Will have as few orgs as possible</li>
+    <li> Potential value to the company is much higher in a <b>single-org</b> </li>
+        
+    </ul> 
+    </div>
+</div>
+<hr/>
+<h4 style="font-size: 25px;">TODOs</h4>
+
+<ul class="todos" style="font-size: 20px;">
+   <li>Establish CoE for the org</li>
+   <li>
+        The CoE should design and build a <b>Reference Architecture</b> that defines where and when an additional org is reasonable or necessary
+</li>
+<li>Establish Naming standards across the data model, configuration design, and custom code </li>
+<li>Adhere to strict separation of concerns in Apex Code Design</li>
+<li>Proper Security design to support profiles, perm-sets, role-hierarchy, sharing model, public-groups </li>
+</ul>
+
+
+</body>
+</html>
+

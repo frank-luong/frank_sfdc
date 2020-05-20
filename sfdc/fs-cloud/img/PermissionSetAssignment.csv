@@ -1,0 +1,6 @@
+"sobjectName","sobjectLabel","name","label","type","length","nillable","referenceTo","relationshipName","unique","updateable","inlineHelpText","picklistValues","externalId"
+"PermissionSetAssignment","Permission Set Assignment","Id","PermissionSetAssignment ID","id",18,false,"[]",,false,false,,"[]",false
+"PermissionSetAssignment","Permission Set Assignment","PermissionSetId","PermissionSet ID","reference",18,true,"[""PermissionSet""]","PermissionSet",false,false,,"[]",false
+"PermissionSetAssignment","Permission Set Assignment","PermissionSetGroupId","PermissionSetGroup ID","reference",18,true,"[""PermissionSetGroup""]","PermissionSetGroup",false,false,,"[]",false
+"PermissionSetAssignment","Permission Set Assignment","AssigneeId","Assignee ID","reference",18,false,"[""User""]","Assignee",false,false,,"[]",false
+"PermissionSetAssignment","Permission Set Assignment","SystemModstamp","Date Assigned","datetime",0,false,"[]",,false,false,,"[]",false

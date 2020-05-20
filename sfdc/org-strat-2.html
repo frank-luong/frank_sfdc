@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-green.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+
+
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5381915020912221",
+    enable_page_level_ads: true
+  });
+</script>
+-->
+
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+      </section>
+
+       <section>
+        <h4>What is Org Strategy?</h4>
+
+        <ul>
+         <li>Plan of how to best use Salesforce across your business factoring in these considerations:
+       <ul>
+           <li> Organizational</li>
+           <li> Business</li>
+           <li> Technical </li>
+           <li> Support  </li>
+      </ul>
+      
+  </li>
+    <li>Outlines when a single-Org or multiple-Orgs should be used, and sets up  standards to for change-management :
+    <ul>
+        <li>        The procedure when a business unit wants a new Salesforce solution</li>
+        <li>        An approach for consolidating or splitting existing Orgs</li>
+        <li>        Processes to keep consistency across orgs</li>
+    </ul>
+ </li>
+        </ul>
+      </section>
+
+<section>
+   <h4>Single Org</h4>
+
+   <table class='table table-bordered' style="font-size:30px;">
+     <tr><th>Benefits</th><th>Challenges</th></tr>
+      <tr><td>
+         <ul>
+            <li>Cross-business unit collaboration </li>
+            <li>Shared solutions for common business processes</li>
+            <li>Ability to share data where appropriate </li>
+            <li>Unified reporting</li>
+         </ul>
+
+
+          </td>
+          <td>
+          <ul>
+            <li>Org complexity could become a barrier to progress - <br/> Slow down Innovation</li>
+            <li>Time to market and innovation could be impacted when multiple teams roll out new functionality concurrently</li>
+            <li>Greater potential of hitting org limits</li>
+          </ul>
+        </td>
+      </tr>
+     
+
+   </table>
+
+</section>
+
+<section>
+   <h4>Single Org</h4>
+
+   <table class='table table-bordered' style="font-size:30px;">
+     <tr><th>Pros</th><th>Cons</th></tr>
+      <tr><td>
+         <ul>
+<li>Shared data</li>
+<li>Shared configuration & coding effort</li>
+<li>Standardized processes</li>
+<li>Cross-business collaboration </li>
+<li>Clear cost to the Enterprise</li>
+<li>Single login</li>
+<li>Single support model</li>
+<li>Centralized integration</li>
+
+         </ul>
+          </td>
+          <td>
+          <ul>
+
+<li>Reduced delivery velocity</li>
+<li>Increased solution complexity: Particularly security, business rules, automation</li>
+<li>Heavier governance overhead</li>
+<li>Potential to hit technical limits</li>
+<li>Unclear cost to the business unit</li>
+<li>Change Management overhead</li>
+<li>Some loss of autonomy</li>
+
+          </ul>
+        </td>
+      </tr>
+     
+
+   </table>
+
+</section>
+
+
+<section>
+   <h4>Multi Org</h4>
+
+   <table class='table table-bordered' style="font-size:30px;">
+     <tr><th>Benefits</th><th>Challenges</th></tr>
+      <tr><td>
+         <ul>
+            <li>Org-wide settings are easier to govern and manage & Reduced risk of exceeding org limits</li>
+            <li>Simplified complexity, reduces testing burdens</li>
+            <li>Improved time to market and freedom to innovate (autonomy) - Agility</li>
+            <li>Security</li>
+         </ul>
+          </td>
+          <td>
+          <ul>
+                <li>Less reuse of configuration and code</li>
+                <li>Inferior collaboration across business units </li>
+                <li>Duplicated administration functions required</li>
+          </ul>
+        </td>
+      </tr>
+     
+
+   </table>
+
+</section>
+
+
+<section>
+   <h4>Multi Org</h4>
+
+   <table class='table table-bordered' style="font-size:30px;">
+     <tr><th>Pros</th><th>Cons</th></tr>
+      <tr><td>
+         <ul>
+<li>High autonomy</li>
+<li>Fast implementation speed</li>
+<li>Less business complexity</li>
+<li>Clear cost to the business unit</li>
+<li>Distinct leadership</li>
+<li>Distributed data</li>
+<li>Personalized and flexible</li>
+
+         </ul>
+          </td>
+          <td>
+          <ul>
+
+<li>No consolidated view and reporting</li>
+<li>Duplication of efforts</li>
+<li>Org consolidation is complex</li>
+<li>Effort to share data </li>
+<li>Effort to reuse configuration & code</li>
+<li>Reduced cross-business collaboration </li>
+<li>Potential multiple logins</li>
+<li>Complex, possibly increased cost to the enterprise</li>
+
+          </ul>
+        </td>
+      </tr>
+     
+
+   </table>
+
+</section>
+
+<section>
+ <h4>Org Strategy Considerations</h4> 
+ <ul style="font-size:30px;">
+    <li>Cultural
+     <ul>
+      <li>Collaboration</li>
+      <li>Level of autonomy</li>
+    </ul>
+    </li>
+<li>Business
+     <ul>
+      <li>Level of shared processes and data </li>
+      <li>Flexibility or ability to change </li>
+      <li>Business Unit & customer segmentation </li>
+    </ul>
+    </li>
+
+<li>Technical
+     <ul>
+      <li>Security Requirements </li>
+      <li>Salesforce Limits </li>
+      <li>Application Architecture</li>
+    </ul>
+    </li>
+<li>Support
+     <ul>
+      <li>Salesforce Governance</li>
+      <li>End-user Training</li>
+      <li>Deployment</li>
+    </ul>
+    </li>
+
+
+
+ </ul>
+</section>
+
+<section>
+ <h4>Common Insights</h4>
+   <table class='table table-bordered' style="font-size:27px;">
+     <tr><th>Challenges</th><th>Best Practices</th></tr>
+      <tr><td>
+         <ul>
+            <li><b>Focus on technology:</b> <br/>
+Many businesses want to define an org strategy and often start with the technology. However, the correct approach is to start with the <b>business requirements</b>.
+</li>
+<li>
+ <b>Culture:</b> <br/> Many customers have different cultures within different business units and this causes significant political issues that you need to consider.
+
+</li>
+<li>
+<b>Lack of Analysis</b>:<br/>
+Before making any strategic decision, gather a detailed analysis of the business and cultural considerations that need to be carried out.
+
+</li> 
+
+         </ul>
+
+
+          </td>
+          <td>
+          <ul>
+            <li><b>Focus on High Value Business Processes:</b><br/>
+Most business units have many different business processes, but when considering an org strategy, focus only on the most significant ones.
+</li>
+ 
+     <li> <b>Develop a Roadmap:</b>
+Changing the current org architecture takes time. Minimize the business risks by using a step-by-step approach.
+</li>
+
+<li>
+<b>Create a Governance Framework:</b><br/>
+To be successful in any Salesforce project, you’ll need a lightweight governance framework in place.
+
+</li>
+</ul>
+</td>
+ 
+</tr>
+     
+
+   </table>
+
+</section>
+
+<section>
+  <h4>Salesforce Cross-Org Integration Solutions</h4>
+
+  <ul>
+    <li>UI: <br>
+       <ul>
+       <li>VisualForce pages</li> <li>Canvas</li>
+      </ul>
+     </li>
+      <li>
+        Application Logic:<br/>
+       <ul>
+       <li>Apex Web Services</li> <li>Outbound Messaging</li> <li>Streaming API</li><li>Platform Events</li>
+      </ul>
+ 
+      </li>
+      <li>
+        Data Layer:<br/>
+       <ul>
+       <li>APIs(REST, SOAP, Bulk )</li> <li>Salesforce-to-Salesforce</li> <li>Salesforce Connect</li>
+      </ul>
+ 
+      </li>
+
+  </ul>
+
+</section>
+
+
+<section>
+<h4>Approaches to Data Integration with Salesforce</h4>
+
+<ul style="font-size:30px;">
+<li>Do you need a copy of the data inside Salesforce?</li>
+<li>Does that data come from other Salesforce orgs, or from external systems?</li>
+<li>How close to real time do you need the data?</li>
+<li>Do you need two way data synchronization?</li>
+<li>Do you prefer a declarative approach or a programmatic approach</li>
+<li>Do you want data to be accessed from another system, but not copied?</li>
+<li>Which objects do you need access to between systems?</li>
+
+</ul>
+
+
+</section>
+
+    <section>
+      <h4>Video : Single vs Multi-Org Strategy: The Key Questions You Need to Address </h4>
+      <iframe height="450" width="800" data-src="https://www.youtube.com/embed/OFDsdgZIGNo?autoplay=0"></iframe>
+    </section>
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="Org Strategy"
+
+
+
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='app'>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bulk API cURL </title>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-touch.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-sanitize.js"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <link rel="stylesheet" href="../../css/navbar-blue.css">
+
+ <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-select/0.20.0/select.js"></script>
+
+
+ <style media="screen">
+ #code {
+     background: #272822;
+    font-family: Monaco, Arial;
+    font-size: 12px;
+    color: #ffe;
+    border-radius: 8px;
+    padding: 10px
+}
+ </style>
+
+<script type="text/javascript">
+(function() {
+    'use strict';
+    var MODULE_NAME = 'ngclipboard';
+    var angular, ClipboardJS;
+
+    // Check for CommonJS support
+    if (typeof module === 'object' && module.exports) {
+      angular = require('angular');
+      ClipboardJS = require('clipboard');
+      module.exports = MODULE_NAME;
+    } else {
+      angular = window.angular;
+      ClipboardJS = window.ClipboardJS;
+    }
+
+    angular.module(MODULE_NAME, []).directive('ngclipboard', function() {
+        return {
+            restrict: 'A',
+            scope: {
+                ngclipboardSuccess: '&',
+                ngclipboardError: '&'
+            },
+            link: function(scope, element) {
+                //constructor for clipboardjs changed to ClipboardJS
+                var clipboard = new ClipboardJS(element[0]);
+
+                clipboard.on('success', function(e) {
+                  scope.$apply(function () {
+                    scope.ngclipboardSuccess({
+                      e: e
+                    });
+                  });
+                });
+
+                clipboard.on('error', function(e) {
+                  scope.$apply(function () {
+                    scope.ngclipboardError({
+                      e: e
+                    });
+                  });
+                });
+
+                element.on('$destroy', function() {
+                    clipboard.destroy();
+                });
+
+            }
+        };
+    });
+})();
+
+</script>
+
+
+</head>
+<body ng-controller="MainCtrl" class="container2">
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)"> <i class="glyphicon glyphicon-edit"></i> Bulk API - cURL</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+      <div class="inner-addon right-addon navbar-form navbar-right">
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown ">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Help <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="./help.html">Help Topics</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+
+  <div class="container">
+
+
+
+        <div class="row">
+          <div class="col-lg-12">
+
+
+            <ui-select ng-model="selected.value" ng-change="updateCode()">
+              <ui-select-match>
+                  <span ng-bind="$select.selected.name"></span>
+              </ui-select-match>
+              <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+                <span ng-bind="item.name"></span>
+            </ui-select-choices>
+          </ui-select>
+
+          <ui-select ng-model="selectedCT.value" ng-change="updateCode()">
+            <ui-select-match>
+                <span ng-bind="$selectedCT.selected.name"></span>
+            </ui-select-match>
+            <ui-select-choices repeat="itemCT in (itemCTArray | filter: $select.search) track by itemCT.id">
+              <span ng-bind="itemCT.name"></span>
+          </ui-select-choices>
+        </ui-select>
+
+        <ui-select ng-model="selectedData.value" ng-change="updateCode()">
+          <ui-select-match>
+              <span ng-bind="$selectedData.selected.name"></span>
+          </ui-select-match>
+          <ui-select-choices repeat="itemData in (itemDataArray | filter: $select.search) track by itemData.id">
+            <span ng-bind="itemData.name"></span>
+        </ui-select-choices>
+      </ui-select>
+
+            <textarea rows='3' cols='153' id='code'  ng-readonly="taro"> {{code}} </textarea>
+
+            <label for="taro">  <i class="glyphicon glyphicon-lock"></i></label>
+           <input type="checkbox" class="form-control" id='taro' checked ng-model="taro">
+            <input type="text"   class="form-control" ng-change="updateCode()"  ng-model="dataFile">
+            <label for="postDataFile">  <i class="glyphicon glyphicon-file"></i></label>
+           <input type="checkbox" id='postDataFile' class="form-control"  ng-change="updateCode()" checked ng-model="postDatafile">
+            <button class="btn btn-primary" ngclipboard data-clipboard-action="copy" data-clipboard-target="#code">
+               <i class="glyphicon glyphicon-copy"></i> Copy to clipboard
+            </button>
+
+            <a class="btn btn-primary" href="redirect.html">REST API cURL</a>
+
+         </div>
+           </div>
+</div>
+<script type="text/javascript">
+var app = angular.module('app',  ['ngclipboard', 'ui.select', 'ngSanitize']);
+var GScope;
+app.controller('MainCtrl', function($scope) {
+  GScope = $scope;
+  $scope.apiVersion = '42.0';
+  $scope.uri = 'limits';
+  $scope.dataFile = 'job.txt';
+
+  $scope.itemArray = [
+     {"name":  "job", "id": 1}
+    ,{"name":  "job/{jobId}/batch/", "id": 2}
+    ,{"name":  "job/{jobId}/batch/{bathId}", "id": 3}
+    ,{"name":  "job/{jobId}/batch/{bathId}/result", "id": 4}
+    ,{"name":  "job/{jobId}/", "id": 4}
+
+  ];
+  $scope.selected = { value: $scope.itemArray[0] };
+
+  $scope.itemCTArray = [
+     {"name":  "Content-Type: application/xml; charset=UTF-8", "id": 11}
+    ,{"name":  "Content-Type: text/csv; charset=UTF-8", "id": 21}
+  ];
+  $scope.selectedCT = { value: $scope.itemCTArray[0] };
+
+  $scope.itemDataArray = [
+     {"name":  "--data ", "id": 111}
+    ,{"name":  "--data-binary ", "id": 211}
+  ];
+  $scope.selectedData = { value: $scope.itemDataArray[0] };
+
+
+
+  $scope. cnpListener = function() {
+		 document.getElementById('code').select();
+     document.execCommand('copy');
+}
+
+
+if (window.localStorage.urlParams !== undefined) {
+  //alert('test')
+  $scope.oauth2Parms = JSON.parse(window.localStorage.urlParams)
+}
+
+  $scope.updateCode = function() {
+      if ($scope.dataFile !== undefined) {
+        $scope.dataFileURI = $scope.selectedData.value.name + " @" + $scope.dataFile;
+      }
+      $scope.code = "curl "  +  $scope.oauth2Parms.instance_url + "/services/async/" + $scope.apiVersion + "/" + $scope.selected.value.name
+ + "  -H '" +  $scope.selectedCT.value.name + "' "
+ +  " -H 'X-SFDC-Session: "
+                + $scope.oauth2Parms.access_token + "' " +  $scope.dataFileURI
+  }
+
+  $scope.updateCode();
+
+
+
+});
+</script>
+
+</body>
+</html>
