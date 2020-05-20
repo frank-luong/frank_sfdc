@@ -1,0 +1,1703 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SFDX & Lightning Dev · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chap-26/dx-packaging.html" />
+    
+    
+    <link rel="prev" href="../chap-24/rest-calls.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chap-1/body.html">
+            
+                <a href="../chap-1/body.html">
+            
+                    
+                    Lightning Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chap-2/body.html">
+            
+                <a href="../chap-2/body.html">
+            
+                    
+                    Classic Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chap-11/body.html">
+            
+                <a href="../chap-11/body.html">
+            
+                    
+                    Migration to Lightning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chap-11/actions.html">
+            
+                <a href="../chap-11/actions.html">
+            
+                    
+                    Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chap-11/global-actions.steps.html">
+            
+                <a href="../chap-11/global-actions.steps.html">
+            
+                    
+                    Global Actions Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chap-11/object-specific-actions.steps.html">
+            
+                <a href="../chap-11/object-specific-actions.steps.html">
+            
+                    
+                    Object-Specific Actions Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chap-11/validate-field-values.steps.html">
+            
+                <a href="../chap-11/validate-field-values.steps.html">
+            
+                    
+                    Validate Field Values Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chap-11/redirect-vf.steps.html">
+            
+                <a href="../chap-11/redirect-vf.steps.html">
+            
+                    
+                    VF page redirect with field values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chap-11/custom-link.html">
+            
+                <a href="../chap-11/custom-link.html">
+            
+                    
+                    Custom Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chap-11/lex-app.html">
+            
+                <a href="../chap-11/lex-app.html">
+            
+                    
+                    Lightning App
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../chap-11/lex-app-mgr.html">
+            
+                <a href="../chap-11/lex-app-mgr.html">
+            
+                    
+                    App Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../chap-11/lex-list-view.html">
+            
+                <a href="../chap-11/lex-list-view.html">
+            
+                    
+                    List Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../chap-11/lex-compact-lo.html">
+            
+                <a href="../chap-11/lex-compact-lo.html">
+            
+                    
+                    Compact Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../chap-11/lex-page-lo.html">
+            
+                <a href="../chap-11/lex-page-lo.html">
+            
+                    
+                    Page Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../chap-11/record-types.html">
+            
+                <a href="../chap-11/record-types.html">
+            
+                    
+                    Record Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chap-15/build-comp.html">
+            
+                <a href="../chap-15/build-comp.html">
+            
+                    
+                    Building components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../chap-15/buttons.html">
+            
+                <a href="../chap-15/buttons.html">
+            
+                    
+                    Playing with buttons
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../chap-15/expr.html">
+            
+                <a href="../chap-15/expr.html">
+            
+                    
+                    Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../chap-15/value-providers.html">
+            
+                <a href="../chap-15/value-providers.html">
+            
+                    
+                    Value Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../chap-15/lightning.html">
+            
+                <a href="../chap-15/lightning.html">
+            
+                    
+                    More lightning:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="../chap-32/page-template.html">
+            
+                <a href="../chap-32/page-template.html">
+            
+                    
+                    Custom Page Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chap-20/test-automation.html">
+            
+                <a href="../chap-20/test-automation.html">
+            
+                    
+                    Lightning Testing Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chap-20/qa-automation.html">
+            
+                <a href="../chap-20/qa-automation.html">
+            
+                    
+                    QA Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chap-22/homepage-profile-based.html">
+            
+                <a href="../chap-22/homepage-profile-based.html">
+            
+                    
+                    Profile based Home Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chap-23/canvasApp.html">
+            
+                <a href="../chap-23/canvasApp.html">
+            
+                    
+                    Canvas App
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chap-23/ea-canvas.html">
+            
+                <a href="../chap-23/ea-canvas.html">
+            
+                    
+                    EA and Other Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chap-24/rest-calls.html">
+            
+                <a href="../chap-24/rest-calls.html">
+            
+                    
+                    Consuming REST services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="lex-dx.html">
+            
+                <a href="lex-dx.html">
+            
+                    
+                    SFDX & Lightning Dev
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../chap-26/dx-packaging.html">
+            
+                <a href="../chap-26/dx-packaging.html">
+            
+                    
+                    SFDX Packaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chap-27/dh-app.html">
+            
+                <a href="../chap-27/dh-app.html">
+            
+                    
+                    SFDX DreamHouse App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chap-29/trainingTrackerApp.html">
+            
+                <a href="../chap-29/trainingTrackerApp.html">
+            
+                    
+                    SFDX TrainingTracker App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chap-11/lcc.html">
+            
+                <a href="../chap-11/lcc.html">
+            
+                    
+                    Lightning Configuration Converter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../chap-5/body.html">
+            
+                <a href="../chap-5/body.html">
+            
+                    
+                    Lightning Data Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../chap-30/body.html">
+            
+                <a href="../chap-30/body.html">
+            
+                    
+                    Lightning Out
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../chap-28/perf.html">
+            
+                <a href="../chap-28/perf.html">
+            
+                    
+                    Performance Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../chap-31/sc.html">
+            
+                <a href="../chap-31/sc.html">
+            
+                    
+                    Secure Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../chap-12/body.html">
+            
+                <a href="../chap-12/body.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../chap-12/LockerService.html">
+            
+                <a href="../chap-12/LockerService.html">
+            
+                    
+                    LockerService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../chap-12/lx-container.html">
+            
+                <a href="../chap-12/lx-container.html">
+            
+                    
+                    Lightning Container Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../chap-12/postMessage.html">
+            
+                <a href="../chap-12/postMessage.html">
+            
+                    
+                    window.postMessage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../aura/aura.html">
+            
+                <a href="../aura/aura.html">
+            
+                    
+                    Aura UI Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../perf/chap-1.html">
+            
+                <a href="../perf/chap-1.html">
+            
+                    
+                    Performance Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../sfdx/sfdx.html">
+            
+                <a href="../sfdx/sfdx.html">
+            
+                    
+                    SFDX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../sfdx/project-generator.html">
+            
+                <a href="../sfdx/project-generator.html">
+            
+                    
+                    Project Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../chap-12/ea-static-binding.html">
+            
+                <a href="../chap-12/ea-static-binding.html">
+            
+                    
+                    EA Binding Notes 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../chap-99/errors.html">
+            
+                <a href="../chap-99/errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../ref/ref.html">
+            
+                <a href="../ref/ref.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SFDX & Lightning Dev</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="sfdx-and-lightning-development">SFDX and Lightning Development</h2>
+<pre><code class="lang-bash">
+<span class="hljs-comment"># create project lexbook_prj1</span>
+$ sfdx force:project:create -n lexbook_prj1
+target dir = /Users/mchinnappan/LEX-book/dx
+   create lexbook_prj1/sfdx-project.json
+   create lexbook_prj1/README.md
+   create lexbook_prj1/.forceignore
+   create lexbook_prj1/config/project-scratch-def.json
+
+<span class="hljs-comment"># scrath org definition</span>
+$ cat lexbook_prj1/config/project-scratch-def.json 
+{
+    <span class="hljs-string">&quot;orgName&quot;</span>: <span class="hljs-string">&quot;mchinnappan Company&quot;</span>,
+    <span class="hljs-string">&quot;edition&quot;</span>: <span class="hljs-string">&quot;Developer&quot;</span>,
+    <span class="hljs-string">&quot;orgPreferences&quot;</span> : {
+        <span class="hljs-string">&quot;enabled&quot;</span>: [<span class="hljs-string">&quot;S1DesktopEnabled&quot;</span>]
+    }
+}
+
+<span class="hljs-comment">## view the project folder contents</span>
+~/lex-book/dx/lexbook_prj1:
+$ tree
+.
+&#x251C;&#x2500;&#x2500; README.md
+&#x251C;&#x2500;&#x2500; config
+&#x2502;   &#x2514;&#x2500;&#x2500; project-scratch-def.json
+&#x251C;&#x2500;&#x2500; force-app
+&#x2502;   &#x2514;&#x2500;&#x2500; main
+&#x2502;       &#x2514;&#x2500;&#x2500; default
+&#x2502;           &#x2514;&#x2500;&#x2500; aura
+&#x2514;&#x2500;&#x2500; sfdx-project.json
+
+5 directories, 3 files
+
+
+<span class="hljs-comment"># create a scratch org for our dev</span>
+$ sfdx force:org:create <span class="hljs-_">-s</span> <span class="hljs-_">-f</span> lexbook_prj1/config/project-scratch-def.json <span class="hljs-_">-a</span> lexbook_prj1_org1 --setdefaultusername
+
+<span class="hljs-comment">## Web Login into DevHub101</span>
+$ sfdx force:auth:web:login <span class="hljs-_">-a</span> DevHub101
+
+
+<span class="hljs-comment"># list the org using sfdx force:org:list</span>
+$ sfdx force:org:list
+=== Orgs
+     ALIAS      USERNAME                              ORG ID              CONNECTED STATUS
+&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+(D)  DevHub101  mohan.chinnappan.dh101@gmail.com      00Df4000003l2kBEAQ  Connected
+
+     ALIAS             SCRATCH ORG NAME     USERNAME                       ORG ID              EXPIRATION DATE
+&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+(U)  lexbook_prj1_org1  mchinnappan Company  <span class="hljs-built_in">test</span>-chpgw6fd8a2j@example.com  00D3C000000LHDqUAO  2018-06-05
+
+
+<span class="hljs-comment">## open the just created  Scratch org</span>
+$ sfdx force:org:open 
+Access org 00D3C000000LHDqUAO as user <span class="hljs-built_in">test</span>-chpgw6fd8a2j@example.com with the following URL: https://connect-java-2931-dev-ed.cs60.my.salesforce.com/secur/frontdoor.jsp?sid=00D3C000000LHDq!AR8AQITg3Xqf3p2y_Go3I5yJcFZ4<span class="hljs-keyword">in</span>IFJe4yPJbDAaPMfttnQQ2BJZ1VFTnG05kIkcpnHGqjielydZavaq7QXE.ipd3huGDI
+
+<span class="hljs-comment">## create a lightning component</span>
+
+$ sfdx force:lightning:component:create --help
+Usage: sfdx force:lightning:component:create -n &lt;string&gt; [-t &lt;string&gt;] [<span class="hljs-_">-d</span> &lt;string&gt;] [<span class="hljs-_">-a</span> &lt;string&gt;] [--json] [--loglevel &lt;string&gt;] 
+
+create a Lightning component
+
+Flags:
+ <span class="hljs-_">-a</span>, --apiversion APIVERSION        API version number (42.0*,41.0)
+ -n, --componentname COMPONENTNAME  (required) name of the generated Lightning
+                                    component
+ <span class="hljs-_">-d</span>, --outputdir OUTPUTDIR          folder <span class="hljs-keyword">for</span> saving the created files
+ -t, --template TEMPLATE            template to use <span class="hljs-keyword">for</span> file creation
+                                    (DefaultLightningCmp*)
+ --json                             JSON output
+ --loglevel LOGLEVEL                logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span> invocation
+                                    (error*,trace,debug,info,warn,fatal)
+
+If not supplied, the apiversion, template, and outputdir use default values.
+The outputdir can be an absolute path or relative to the current working directory.
+
+Examples:
+   $ sfdx force:lightning:component:create -n mycomponent
+   $ sfdx force:lightning:component:create -n mycomponent <span class="hljs-_">-d</span> lightning
+
+
+<span class="hljs-comment">## Create Ligtning Component &apos;Training&apos;</span>
+
+```bash
+$ sfdx force:lightning:component:create -n Training <span class="hljs-_">-d</span> force-app/main/default/aura
+target dir = /Users/mchinnappan/LEX-book/dx/lexbook_prj1/force-app/main/default/aura
+   create Training/Training.cmp
+   create Training/Training.cmp-meta.xml
+   create Training/TrainingController.js
+   create Training/TrainingHelper.js
+   create Training/Training.css
+   create Training/TrainingRenderer.js
+   create Training/Training.svg
+   create Training/Training.auradoc
+   create Training/Training.design
+</code></pre>
+<h2 id="load-the-project-in-vs-code">Load the project in VS Code</h2>
+<p>$ code .</p>
+<pre><code>
+## Update the Training Component in the VS Code
+```xml
+&lt;aura:component&gt;
+
+   &lt;lightning:card title=&quot;Training&quot;&gt;
+       &lt;p&gt;Training Component&lt;/p&gt;
+   &lt;/lightning:card&gt;
+
+&lt;/aura:component&gt;
+</code></pre><h2 id="source-push">source push</h2>
+<pre><code class="lang-bash">$ sfdx force:<span class="hljs-built_in">source</span>:push -u lexbook_prj1_org1
+=== Pushed Source
+STATE  FULL NAME                       TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add    Training/Training.auradoc       AuraDefinitionBundle  force-app/main/default/aura/Training/Training.auradoc
+Add    Training/Training.cmp           AuraDefinitionBundle  force-app/main/default/aura/Training/Training.cmp
+Add    Training/Training.cmp           AuraDefinitionBundle  force-app/main/default/aura/Training/Training.cmp-meta.xml
+Add    Training/Training.css           AuraDefinitionBundle  force-app/main/default/aura/Training/Training.css
+Add    Training/Training.design        AuraDefinitionBundle  force-app/main/default/aura/Training/Training.design
+Add    Training/Training.svg           AuraDefinitionBundle  force-app/main/default/aura/Training/Training.svg
+Add    Training/TrainingController.js  AuraDefinitionBundle  force-app/main/default/aura/Training/TrainingController.js
+Add    Training/TrainingHelper.js      AuraDefinitionBundle  force-app/main/default/aura/Training/TrainingHelper.js
+Add    Training/TrainingRenderer.js    AuraDefinitionBundle  force-app/main/default/aura/Training/TrainingRenderer.js
+</code></pre>
+<h2 id="add-implements-for--training-component-in-the-vs-code">Add implements for  Training Component in the VS Code</h2>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">aura:component</span> <span class="hljs-attr">implements</span>=<span class="hljs-string">&quot;flexipage:availableForAllPageTypes&quot;</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">lightning:card</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Training&quot;</span>&gt;</span>
+       <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Training Component<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">lightning:card</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:component</span>&gt;</span>
+</code></pre>
+<h2 id="source-push-again">source push again</h2>
+<pre><code class="lang-bash">$ sfdx force:<span class="hljs-built_in">source</span>:push -u lexbook_prj1_org1
+=== Pushed Source
+STATE    FULL NAME              TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Changed  Training/Training.cmp  AuraDefinitionBundle  force-app/main/default/aura/Training/Training.cmp
+</code></pre>
+<h2 id="appcreate----create-lightning-app-to-test-training-compoment">app:create -- create lightning app to test Training Compoment</h2>
+<pre><code class="lang-bash">
+$ sfdx force:lightning:app:create -h
+Usage: sfdx force:lightning:app:create -n &lt;string&gt; [-t &lt;string&gt;] [<span class="hljs-_">-d</span> &lt;string&gt;] [<span class="hljs-_">-a</span> &lt;string&gt;] [--json] [--loglevel &lt;string&gt;] 
+
+create a Lightning app
+
+Flags:
+ <span class="hljs-_">-a</span>, --apiversion APIVERSION  API version number (42.0*,41.0)
+ -n, --appname APPNAME        (required) name of the generated Lightning app
+ <span class="hljs-_">-d</span>, --outputdir OUTPUTDIR    folder <span class="hljs-keyword">for</span> saving the created files
+ -t, --template TEMPLATE      template to use <span class="hljs-keyword">for</span> file creation
+                              (DefaultLightningApp*)
+ --json                       JSON output
+ --loglevel LOGLEVEL          logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span> invocation
+                              (error*,trace,debug,info,warn,fatal)
+
+If not supplied, the apiversion, template, and outputdir use default values.
+The outputdir can be an absolute path or relative to the current working directory.
+
+Examples:
+   $ sfdx force:lightning:app:create -n myapp
+   $ sfdx force:lightning:app:create -n myapp <span class="hljs-_">-d</span> lightning
+
+
+<span class="hljs-comment">## create TestApp now</span>
+$ sfdx force:lightning:app:create -n TestApp <span class="hljs-_">-d</span> force-app/main/default/aura
+target dir = /Users/mchinnappan/LEX-book/dx/lexbook_prj1/force-app/main/default/aura
+   create TestApp/TestApp.app
+   create TestApp/TestApp.app-meta.xml
+   create TestApp/TestAppController.js
+   create TestApp/TestAppHelper.js
+   create TestApp/TestApp.css
+   create TestApp/TestAppRenderer.js
+   create TestApp/TestApp.svg
+   create TestApp/TestApp.auradoc
+</code></pre>
+<h2 id="update-testappapp-to-training-component">Update TestApp.app to Training Component</h2>
+<pre><code class="lang-xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">aura:application</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c:Training</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:application</span>&gt;</span>
+</code></pre>
+<h2 id="sourcepush">source:push</h2>
+<pre><code class="lang-bash">
+ sfdx force:<span class="hljs-built_in">source</span>:push -u lexbook_prj1_org1
+=== Pushed Source
+STATE  FULL NAME                     TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add    TestApp/TestApp.app           AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestApp.app
+Add    TestApp/TestApp.app           AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestApp.app-meta.xml
+Add    TestApp/TestApp.auradoc       AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestApp.auradoc
+Add    TestApp/TestApp.css           AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestApp.css
+Add    TestApp/TestApp.svg           AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestApp.svg
+Add    TestApp/TestAppController.js  AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestAppController.js
+Add    TestApp/TestAppHelper.js      AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestAppHelper.js
+Add    TestApp/TestAppRenderer.js    AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestAppRenderer.js
+</code></pre>
+<h3 id="open-the-app">Open the App</h3>
+<pre><code class="lang-xml">$ sfdx force:org:open -u lexbook_prj1_org1  -p c/TestApp.app
+Access org 00D3C000000LHDqUAO as user test-chpgw6fd8a2j@example.com with the following URL: https://connect-java-2931-dev-ed.cs60.my.salesforce.com/secur/frontdoor.jsp?sid=00D3C000000LHDq!AR8AQGL1sv0_mn2EY3zjnANRI7VBjsgDPiwc0G8DzeaVARLTFrexA0Ec.7HGNolC3aOBoOdZWSfDdTlbPkpTXBTHJs75LUM9&amp;retURL=c%2FTestApp.app
+~/lex-book/dx/lexbook_prj1
+</code></pre>
+<h2 id="demo-time">Demo Time</h2>
+<p><a target="_blank" href="img/lex-dx-1.gif">
+<i class="fa fa-arrows-alt" title="full screen view of the demo"></i>
+</a></p>
+<p><img src="img/lex-dx-1.gif" alt="Demo1"></p>
+<h2 id="adding-slds-style-to-the-our-test-app">adding SLDS style to the our test app</h2>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">aura:application</span>  <span class="hljs-attr">extends</span>=<span class="hljs-string">&quot;force:slds&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">c:Training</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:application</span>&gt;</span>
+</code></pre>
+<h2 id="source-push">source push</h2>
+<pre><code class="lang-bash">$ sfdx force:<span class="hljs-built_in">source</span>:push -u lexbook_prj1_org1
+=== Pushed Source
+STATE    FULL NAME            TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Changed  TestApp/TestApp.app  AuraDefinitionBundle  force-app/main/default/aura/TestApp/TestApp.app
+</code></pre>
+<h2 id="create-student-custom-object">Create Student Custom Object</h2>
+<p><img src="img/cust-obj-student-create.gif" alt="create custom object Student"></p>
+<h2 id="sourcepull-from-the-org-to-our-project-folder">Source:pull from the org to our project folder</h2>
+<pre><code class="lang-bash">
+<span class="hljs-comment"># this includes our Lightning app and Custom object Student__c, custom tab, Profile for Student__c</span>
+$ sfdx force:<span class="hljs-built_in">source</span>:pull -u lexbook_prj1_org1
+=== Pulled Source
+STATE  FULL NAME                  TYPE          PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add    Student__c                 CustomObject  force-app/main/default/objects/Student__c/Student__c.object-meta.xml
+Add    Student__c-Student Layout  Layout        force-app/main/default/layouts/Student__c-Student Layout.layout-meta.xml
+Add    Lex_Book_App_1             FlexiPage     force-app/main/default/flexipages/Lex_Book_App_1.flexipage-meta.xml
+Add    Lex_Book_App_1             CustomTab     force-app/main/default/tabs/Lex_Book_App_1.tab-meta.xml
+Add    Student__c                 CustomTab     force-app/main/default/tabs/Student__c.tab-meta.xml
+Add    Custom: Sales Profile      Profile       force-app/main/default/profiles/Custom: Sales Profile.profile-meta.xml
+Add    Custom: Marketing Profile  Profile       force-app/main/default/profiles/Custom: Marketing Profile.profile-meta.xml
+Add    Custom: Support Profile    Profile       force-app/main/default/profiles/Custom: Support Profile.profile-meta.xml
+Add    Admin                      Profile       force-app/main/default/profiles/Admin.profile-meta.xml
+</code></pre>
+<h2 id="how-to-get-the-student-record-we-created-in-ui-in-sfdx">How to get the Student record we created in UI in SFDX</h2>
+<pre><code class="lang-bash">
+$ sfdx force:data:record:get -h
+Usage: sfdx force:data:record:get <span class="hljs-_">-s</span> &lt;string&gt; [-i &lt;id&gt;] [-w &lt;string&gt;] [-t] [--perfloglevel &lt;string&gt;] [-u &lt;string&gt;] [--json] [--loglevel &lt;string&gt;] 
+
+view a record
+
+Flags:
+ -i, --sobjectid SOBJECTID            the ID of the record you&#x2019;re retrieving
+ <span class="hljs-_">-s</span>, --sobjecttype SOBJECTTYPE        (required) the <span class="hljs-built_in">type</span> of the record you&#x2019;re
+                                      retrieving
+ -u, --targetusername TARGETUSERNAME  username or <span class="hljs-built_in">alias</span> <span class="hljs-keyword">for</span> the target org;
+                                      overrides default target org
+ -t, --usetoolingapi                  retrieve the record with Tooling API
+ -w, --where WHERE                    a list of &lt;fieldName&gt;=&lt;value&gt; pairs to
+                                      search <span class="hljs-keyword">for</span>
+ --json                               format output as json
+ --loglevel LOGLEVEL                  logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span> invocation
+                                      (error*,trace,debug,info,warn,fatal)
+ --perfloglevel PERFLOGLEVEL          get API performance data.
+                                      (basic*,detailed)
+
+Specify an sObject <span class="hljs-built_in">type</span> and either an ID or a list of &lt;fieldName&gt;=&lt;value&gt; pairs.
+The format of a field-value pair is &lt;fieldName&gt;=&lt;value&gt;.
+Enclose all field-value pairs <span class="hljs-keyword">in</span> one <span class="hljs-built_in">set</span> of double quotation marks, delimited by spaces.
+Enclose values that contain spaces <span class="hljs-keyword">in</span> single quotes.
+
+To get data on API performance metrics, specify both --perfloglevel and --json.
+
+Examples:
+   $ sfdx force:data:record:get <span class="hljs-_">-s</span> Account -i 001D000000Kv3dl
+   $ sfdx force:data:record:get <span class="hljs-_">-s</span> Account -w <span class="hljs-string">&quot;Name=Acme&quot;</span>
+   $ sfdx force:data:record:get <span class="hljs-_">-s</span> Account -w <span class="hljs-string">&quot;Name=&apos;Universal Containers&apos;&quot;</span>
+   $ sfdx force:data:record:get <span class="hljs-_">-s</span> Account -w <span class="hljs-string">&quot;Name=&apos;Universal Containers&apos; Phone=&apos;(123) 456-7890&apos;&quot;</span>
+   $ sfdx force:data:record:get -t <span class="hljs-_">-s</span> TraceFlag -i 7tf170000009cUBAAY --perfloglevel <span class="hljs-string">&quot;basic&quot;</span> --json
+
+<span class="hljs-comment">## Let us get it</span>
+$ sfdx force:data:record:get <span class="hljs-_">-s</span> Student__c -u lexbook_prj1_org1 -i a003C0000010ogjQAA
+attributes:
+  <span class="hljs-built_in">type</span>: <span class="hljs-string">&quot;Student__c&quot;</span>
+  url: <span class="hljs-string">&quot;/services/data/v42.0/sobjects/Student__c/a003C0000010ogjQAA&quot;</span>
+Id: <span class="hljs-string">&quot;a003C0000010ogjQAA&quot;</span>
+OwnerId: <span class="hljs-string">&quot;0053C000000rMsrQAE&quot;</span>
+IsDeleted: null
+Name: <span class="hljs-string">&quot;Mohan Chinnappan&quot;</span>
+CreatedDate: <span class="hljs-string">&quot;2018-05-29T20:17:06.000+0000&quot;</span>
+CreatedById: <span class="hljs-string">&quot;0053C000000rMsrQAE&quot;</span>
+LastModifiedDate: <span class="hljs-string">&quot;2018-05-29T20:17:06.000+0000&quot;</span>
+LastModifiedById: <span class="hljs-string">&quot;0053C000000rMsrQAE&quot;</span>
+SystemModstamp: <span class="hljs-string">&quot;2018-05-29T20:17:06.000+0000&quot;</span>
+LastViewedDate: <span class="hljs-string">&quot;2018-05-29T20:46:57.000+0000&quot;</span>
+LastReferencedDate: <span class="hljs-string">&quot;2018-05-29T20:46:57.000+0000&quot;</span>
+</code></pre>
+<h2 id="add-report-type-and-report">Add Report Type and Report</h2>
+<p><img src="img/report-setup-1.gif" alt="Report Type setup"></p>
+<h2 id="pull-from-the-org-to-project-folder">Pull from the Org to Project Folder</h2>
+<pre><code class="lang-bash">
+$ sfdx force:<span class="hljs-built_in">source</span>:pull -u lexbook_prj1_org1
+=== Pulled Source
+STATE    FULL NAME                      TYPE            PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add      TrainingCat                    GlobalValueSet  force-app/main/default/globalValueSets/TrainingCat.globalValueSet-meta.xml
+Add      Training__c                    CustomObject    force-app/main/default/objects/Training__c/Training__c.object-meta.xml
+Add      Training__c.CompletionDate__c  CustomField     force-app/main/default/objects/Training__c/fields/CompletionDate__c.field-meta.xml
+Add      Training__c.Student__c         CustomField     force-app/main/default/objects/Training__c/fields/Student__c.field-meta.xml
+Add      Training__c.TrainingCat__c     CustomField     force-app/main/default/objects/Training__c/fields/TrainingCat__c.field-meta.xml
+Add      Training_Report                ReportType      force-app/main/default/reportTypes/Training_Report.reportType-meta.xml
+Add      Training_Reports               ReportFolder    force-app/main/default/reports/Training_Reports.reportFolder-meta.xml
+Add      Training_Reports               ReportFolder    force-app/main/default/reports/Training_Reports
+Add      Training__c-Training Layout    Layout          force-app/main/default/layouts/Training__c-Training Layout.layout-meta.xml
+Changed  Custom: Sales Profile          Profile         force-app/main/default/profiles/Custom: Sales Profile.profile-meta.xml
+Changed  Custom: Marketing Profile      Profile         force-app/main/default/profiles/Custom: Marketing Profile.profile-meta.xml
+Changed  Custom: Support Profile        Profile         force-app/main/default/profiles/Custom: Support Profile.profile-meta.xml
+Changed  Admin                          Profile         force-app/main/default/profiles/Admin.profile-meta.xml
+</code></pre>
+<h2 id="view-this-in-ide">View this in IDE</h2>
+<p><img src="img/lex-sfdx-vsc-1.png" alt="IDE project folder"></p>
+<h3 id="adding-charts-in-lightning-component">Adding charts in Lightning Component</h3>
+<h3 id="create-component-medalsbycountry">Create component MedalsByCountry</h3>
+<pre><code class="lang-bash">$ sfdx force:lightning:component:create -n MedalsByCountry <span class="hljs-_">-d</span> force-app/main/default/aura
+target dir = /Users/mchinnappan/LEX-book/dx/lexbook_prj1/force-app/main/default/aura
+   create MedalsByCountry/MedalsByCountry.cmp
+   create MedalsByCountry/MedalsByCountry.cmp-meta.xml
+   create MedalsByCountry/MedalsByCountryController.js
+   create MedalsByCountry/MedalsByCountryHelper.js
+   create MedalsByCountry/MedalsByCountry.css
+   create MedalsByCountry/MedalsByCountryRenderer.js
+   create MedalsByCountry/MedalsByCountry.svg
+   create MedalsByCountry/MedalsByCountry.auradoc
+   create MedalsByCountry/MedalsByCountry.design
+
+<span class="hljs-comment"># open the org</span>
+$ sfdx force:org:open -u lexbook_prj1_org1
+Access org 00D3C000000LHDqUAO as user <span class="hljs-built_in">test</span>-chpgw6fd8a2j@example.com with the following URL: https://connect-java-2931-dev-ed.cs60.my.salesforce.com/secur/frontdoor.jsp?sid=00D3C000000LHDq!AR8AQNUV7uq_Ux1HW7ZwzgfqXBYoQvEU1gjiO.xYdK82mo00pUoFug.0MPqb2HPF8YOXX07h9PWbqbDLRYVIfJsM_i9jqMU7
+</code></pre>
+<h2 id="create-source-pull-the-static-resources">Create source pull the static resources</h2>
+<p><img src="img/lex-chart-static-1.png" alt="static resources upload"></p>
+<pre><code class="lang-bash">
+$ sfdx force:<span class="hljs-built_in">source</span>:pull -u lexbook_prj1_org1
+=== Pulled Source
+STATE    FULL NAME           TYPE            PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add      ChartJS23           StaticResource  force-app/main/default/staticresources/ChartJS23.resource-meta.xml
+Changed  ChartJS23           StaticResource  force-app/main/default/staticresources/ChartJS23.js
+Add      OlympicDataService  StaticResource  force-app/main/default/staticresources/OlympicDataService.resource-meta.xml
+Changed  OlympicDataService  StaticResource  force-app/main/default/staticresources/OlympicDataService.js
+</code></pre>
+<h2 id="update-component-and-controller">Update Component and Controller</h2>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">aura:component</span> <span class="hljs-attr">implements</span>=<span class="hljs-string">&quot;flexipage:availableForAllPageTypes,force:hasRecordId&quot;</span> <span class="hljs-attr">access</span>=<span class="hljs-string">&quot;global&quot;</span> &gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ltng:require</span> <span class="hljs-attr">scripts</span>=<span class="hljs-string">&quot;{!join(&apos;,&apos;,
+                    $Resource.ChartJS23, 
+                    $Resource.OlympicDataService)}&quot;</span>
+                    <span class="hljs-attr">afterScriptsLoaded</span>=<span class="hljs-string">&quot;{!c.scriptsLoaded}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;Medal distribution by country&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;medalType&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;Gold&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:handler</span> <span class="hljs-attr">event</span>=<span class="hljs-string">&quot;c:ChartEvent&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;{!c.chartChange}&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slds-text-heading--medium&quot;</span>&gt;</span>{!v.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">aura:id</span>=<span class="hljs-string">&quot;chart&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;350&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:component</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js">({
+    scriptsLoaded : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">component, event, helper</span>) </span>{
+
+        <span class="hljs-keyword">var</span> ctx = component.find(<span class="hljs-string">&quot;chart&quot;</span>).getElement();
+        component.chart = <span class="hljs-keyword">new</span> Chart(ctx,{
+            type: <span class="hljs-string">&apos;bar&apos;</span>,
+            data: {
+                labels: [],
+                datasets: [
+                    {
+                        label: <span class="hljs-string">&quot;&quot;</span>,
+                        data: [],
+                    }
+                ]
+            },
+            options: {
+                responsive: <span class="hljs-literal">true</span>,
+                maintainAspectRatio: <span class="hljs-literal">false</span>,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:<span class="hljs-literal">true</span>
+                        }
+                    }]
+                }
+            }
+        });
+
+    },
+
+    chartChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">component, event, helper</span>) </span>{
+        <span class="hljs-keyword">var</span> colors = {
+            gold: <span class="hljs-string">&quot;rgba(255,203,75,.7)&quot;</span>,
+            silver: <span class="hljs-string">&quot;rgba(143,134,132,.7)&quot;</span>,
+            bronze: <span class="hljs-string">&quot;rgba(153,119,61,.7)&quot;</span>
+        };
+        <span class="hljs-keyword">var</span> filters = event.getParam(<span class="hljs-string">&quot;data&quot;</span>);
+        <span class="hljs-keyword">if</span> (!filters || !filters.year) {
+            <span class="hljs-keyword">return</span>;
+        }
+        <span class="hljs-keyword">var</span> medalType;
+        <span class="hljs-keyword">if</span> (filters.medalType) {
+            medalType = filters.medalType;
+            component.set(<span class="hljs-string">&quot;v.medalType&quot;</span>, medalType);
+        } <span class="hljs-keyword">else</span> {
+            medalType = component.get(<span class="hljs-string">&quot;v.medalType&quot;</span>);
+        }
+        <span class="hljs-keyword">var</span> years = <span class="hljs-built_in">window</span>.olympicDataService.getData();
+        years.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">year</span>) </span>{
+            <span class="hljs-keyword">if</span> (year.year == filters.year) {
+                component.set(<span class="hljs-string">&quot;v.title&quot;</span>, year.venue + <span class="hljs-string">&quot; &quot;</span> + year.year + <span class="hljs-string">&quot;, &quot;</span> + medalType + <span class="hljs-string">&quot; Medals&quot;</span>);
+                <span class="hljs-keyword">var</span> labels = [];
+                <span class="hljs-keyword">var</span> values = [];
+                year.countries.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">country</span>) </span>{
+                    labels.push(country.country);
+                    values.push(country[medalType.toLowerCase()]);
+                });
+                component.chart.data.labels = labels;
+                component.chart.data.datasets[<span class="hljs-number">0</span>].label = medalType;
+                component.chart.data.datasets[<span class="hljs-number">0</span>].data = values;
+                component.chart.data.datasets[<span class="hljs-number">0</span>].backgroundColor = colors[medalType.toLowerCase()];
+                component.chart.update();
+                <span class="hljs-keyword">return</span>;
+            }
+        })
+    }
+
+})
+</code></pre>
+<h2 id="medalstimeline-component">MedalsTimeline Component</h2>
+<pre><code class="lang-bash">
+$ sfdx force:lightning:component:create -n MedalsTimeline <span class="hljs-_">-d</span> force-app/main/default/aura
+target dir = /Users/mchinnappan/LEX-book/dx/lexbook_prj1/force-app/main/default/aura
+   create MedalsTimeline/MedalsTimeline.cmp
+   create MedalsTimeline/MedalsTimeline.cmp-meta.xml
+   create MedalsTimeline/MedalsTimelineController.js
+   create MedalsTimeline/MedalsTimelineHelper.js
+   create MedalsTimeline/MedalsTimeline.css
+   create MedalsTimeline/MedalsTimelineRenderer.js
+   create MedalsTimeline/MedalsTimeline.svg
+   create MedalsTimeline/MedalsTimeline.auradoc
+   create MedalsTimeline/MedalsTimeline.design
+</code></pre>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">aura:component</span> <span class="hljs-attr">implements</span>=<span class="hljs-string">&quot;flexipage:availableForAllPageTypes&quot;</span> <span class="hljs-attr">access</span>=<span class="hljs-string">&quot;global&quot;</span> &gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ltng:require</span> <span class="hljs-attr">scripts</span>=<span class="hljs-string">&quot;{!join(&apos;,&apos;,
+                    $Resource.ChartJS23, 
+                    $Resource.OlympicDataService)}&quot;</span>
+                    <span class="hljs-attr">afterScriptsLoaded</span>=<span class="hljs-string">&quot;{!c.scriptsLoaded}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:registerEvent</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;chartEvent&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;c:ChartEvent&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slds-text-heading--medium&quot;</span>&gt;</span>Medals Timeline<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">aura:id</span>=<span class="hljs-string">&quot;chart&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;380&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:component</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-js"><span class="hljs-comment">// MedalsTimelineController.js</span>
+({
+    scriptsLoaded : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">component, event, helper</span>) </span>{
+
+        <span class="hljs-keyword">var</span> colors = [
+            <span class="hljs-string">&apos;rgba(23, 48, 91, 1)&apos;</span>,
+            <span class="hljs-string">&apos;rgba(62, 159, 222, 1)&apos;</span>,
+            <span class="hljs-string">&apos;rgba(48, 165, 154, 1)&apos;</span>,
+            <span class="hljs-string">&apos;rgba(132, 220, 214, 1)&apos;</span>,
+            <span class="hljs-string">&apos;rgba(222, 159, 0, 1)&apos;</span>,
+            <span class="hljs-string">&apos;rgba(223, 205, 114, 1)&apos;</span>
+        ];
+
+        <span class="hljs-keyword">var</span> years = <span class="hljs-built_in">window</span>.olympicDataService.getData();
+
+        <span class="hljs-keyword">var</span> labels = [];
+        <span class="hljs-keyword">var</span> datasets = [];
+        <span class="hljs-keyword">var</span> countries = {};
+
+        years.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">year</span>) </span>{
+            labels.push(year.year);
+            year.countries.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">country</span>) </span>{
+                <span class="hljs-keyword">var</span> total = country.gold + country.silver + country.bronze;
+                <span class="hljs-keyword">if</span> (countries[country.country]) {
+                    countries[country.country].push(total);    
+                } <span class="hljs-keyword">else</span> {
+                     countries[country.country] = [total];   
+                }
+            })
+        });
+
+        <span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> key <span class="hljs-keyword">in</span> countries) {
+            datasets.push({
+                label: key, 
+                data: countries[key],
+                fill: <span class="hljs-literal">false</span>,
+                borderWidth: <span class="hljs-number">1.5</span>,
+                backgroundColor: colors[i++],
+                borderColor: colors[i],
+                pointBackgroundColor: <span class="hljs-string">&quot;#FFFFFF&quot;</span>,
+                pointBorderWidth: <span class="hljs-number">4</span>,
+                pointHoverRadius: <span class="hljs-number">8</span>,
+                pointRadius: <span class="hljs-number">6</span>,
+                pointHitRadius: <span class="hljs-number">10</span>,
+            });
+        }
+
+        <span class="hljs-keyword">var</span> ctx = component.find(<span class="hljs-string">&quot;chart&quot;</span>).getElement();
+        <span class="hljs-keyword">var</span> chart = <span class="hljs-keyword">new</span> Chart(ctx, {
+            type: <span class="hljs-string">&apos;line&apos;</span>,
+            data: {
+                labels: labels,
+                datasets: datasets
+            },
+            options: {
+                responsive: <span class="hljs-literal">true</span>,
+                maintainAspectRatio :<span class="hljs-literal">false</span>,
+                onClick: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+                    <span class="hljs-keyword">var</span> elements = chart.getElementAtEvent(event);
+                   <span class="hljs-comment">// console.log(&quot;elements&quot;);</span>
+                   <span class="hljs-comment">// console.log(elements);</span>
+                    <span class="hljs-keyword">if</span> (elements.length === <span class="hljs-number">1</span>) {
+                        <span class="hljs-keyword">var</span> year = labels[elements[<span class="hljs-number">0</span>]._index];
+                        <span class="hljs-keyword">var</span> country = datasets[elements[<span class="hljs-number">0</span>]._datasetIndex].label;
+                        <span class="hljs-keyword">var</span> chartEvent = $A.get(<span class="hljs-string">&quot;e.c:ChartEvent&quot;</span>);
+                        chartEvent.setParams({
+                            data: {year: year, country: country}
+                        });
+                        chartEvent.fire();
+                    }
+                }
+            }
+        });
+
+    }
+})
+</code></pre>
+<pre><code class="lang-bash">
+ sfdx force:<span class="hljs-built_in">source</span>:push -u lexbook_prj1_org1
+=== Pushed Source
+STATE  FULL NAME                                   TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add    MedalsTimeline/MedalsTimeline.auradoc       AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimeline.auradoc
+Add    MedalsTimeline/MedalsTimeline.cmp           AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimeline.cmp
+Add    MedalsTimeline/MedalsTimeline.cmp           AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimeline.cmp-meta.xml
+Add    MedalsTimeline/MedalsTimeline.css           AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimeline.css
+Add    MedalsTimeline/MedalsTimeline.design        AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimeline.design
+Add    MedalsTimeline/MedalsTimeline.svg           AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimeline.svg
+Add    MedalsTimeline/MedalsTimelineController.js  AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimelineController.js
+Add    MedalsTimeline/MedalsTimelineHelper.js      AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimelineHelper.js
+Add    MedalsTimeline/MedalsTimelineRenderer.js    AuraDefinitionBundle  force-app/main/default/aura/MedalsTimeline/MedalsTimelineRenderer.js
+</code></pre>
+<h2 id="chartevent">ChartEvent</h2>
+<pre><code class="lang-xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">aura:event</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;APPLICATION&quot;</span> <span class="hljs-attr">description</span>=<span class="hljs-string">&quot;Event template&quot;</span> <span class="hljs-attr">access</span>=<span class="hljs-string">&quot;global&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;data&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;Object&quot;</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:event</span>&gt;</span>
+</code></pre>
+<h2 id="medalsbytype-component">MedalsByType component</h2>
+<pre><code class="lang-bash">
+$ sfdx force:lightning:component:create -n MedalsByType <span class="hljs-_">-d</span> force-app/main/default/aura
+target dir = /Users/mchinnappan/LEX-book/dx/lexbook_prj1/force-app/main/default/aura
+   create MedalsByType/MedalsByType.cmp
+   create MedalsByType/MedalsByType.cmp-meta.xml
+   create MedalsByType/MedalsByTypeController.js
+   create MedalsByType/MedalsByTypeHelper.js
+   create MedalsByType/MedalsByType.css
+   create MedalsByType/MedalsByTypeRenderer.js
+   create MedalsByType/MedalsByType.svg
+   create MedalsByType/MedalsByType.auradoc
+   create MedalsByType/MedalsByType.design
+
+
+$ sfdx force:<span class="hljs-built_in">source</span>:push -u lexbook_prj1_org1
+=== Pushed Source
+STATE  FULL NAME                               TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Add    MedalsByType/MedalsByType.auradoc       AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.auradoc
+Add    MedalsByType/MedalsByType.cmp           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.cmp
+Add    MedalsByType/MedalsByType.cmp           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.cmp-meta.xml
+Add    MedalsByType/MedalsByType.css           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.css
+Add    MedalsByType/MedalsByType.design        AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.design
+Add    MedalsByType/MedalsByType.svg           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.svg
+Add    MedalsByType/MedalsByTypeController.js  AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByTypeController.js
+Add    MedalsByType/MedalsByTypeHelper.js      AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByTypeHelper.js
+Add    MedalsByType/MedalsByTypeRenderer.js    AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByTypeRenderer.js
+</code></pre>
+<pre><code class="lang-xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">aura:component</span> <span class="hljs-attr">implements</span>=<span class="hljs-string">&quot;flexipage:availableForAllPageTypes,force:hasRecordId&quot;</span> <span class="hljs-attr">access</span>=<span class="hljs-string">&quot;global&quot;</span> &gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ltng:require</span> <span class="hljs-attr">scripts</span>=<span class="hljs-string">&quot;{!join(&apos;,&apos;,
+                    $Resource.ChartJS23, 
+                    $Resource.OlympicDataService)}&quot;</span>
+                    <span class="hljs-attr">afterScriptsLoaded</span>=<span class="hljs-string">&quot;{!c.scriptsLoaded}&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;year&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;country&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span>/&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:attribute</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;title&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;String&quot;</span> <span class="hljs-attr">default</span>=<span class="hljs-string">&quot;Medal breakdown&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">aura:handler</span> <span class="hljs-attr">event</span>=<span class="hljs-string">&quot;c:ChartEvent&quot;</span> <span class="hljs-attr">action</span>=<span class="hljs-string">&quot;{!c.chartChange}&quot;</span>/&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;slds-text-heading--medium&quot;</span>&gt;</span>{!v.title}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">canvas</span> <span class="hljs-attr">aura:id</span>=<span class="hljs-string">&quot;chart&quot;</span> <span class="hljs-attr">height</span>=<span class="hljs-string">&quot;280&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">canvas</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">aura:component</span>&gt;</span>
+</code></pre>
+<h2 id="medalsbytype-controller">MedalsByType controller</h2>
+<pre><code class="lang-js"><span class="hljs-comment">// MedalsByTypeController.js</span>
+({
+    scriptsLoaded : <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">component, event, helper</span>) </span>{
+
+        <span class="hljs-keyword">var</span> data = {
+            labels: [<span class="hljs-string">&quot;Gold&quot;</span>, <span class="hljs-string">&quot;Silver&quot;</span>, <span class="hljs-string">&quot;Bronze&quot;</span>], 
+            datasets: [
+                {
+                    data: [<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>],
+                    backgroundColor: [
+                        <span class="hljs-string">&quot;rgba(255,203,75,.8)&quot;</span>,
+                        <span class="hljs-string">&quot;rgba(143,134,132,.8)&quot;</span>,
+                        <span class="hljs-string">&quot;rgba(153,119,61,.8)&quot;</span>
+                    ],
+                    hoverBackgroundColor: [
+                        <span class="hljs-string">&quot;rgba(255,203,75,1)&quot;</span>,
+                        <span class="hljs-string">&quot;rgba(143,134,132,1)&quot;</span>,
+                        <span class="hljs-string">&quot;rgba(143,125,92,1)&quot;</span>
+                    ]                
+                }
+            ]
+        };
+
+        <span class="hljs-keyword">var</span> ctx = component.find(<span class="hljs-string">&quot;chart&quot;</span>).getElement();
+        component.chart = <span class="hljs-keyword">new</span> Chart(ctx,{
+            type: <span class="hljs-string">&apos;doughnut&apos;</span>,
+            data: data,
+            options: {
+                responsive: <span class="hljs-literal">true</span>,
+                maintainAspectRatio: <span class="hljs-literal">false</span>,
+                onClick: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">event</span>) </span>{
+                    <span class="hljs-keyword">var</span> elements = component.chart.getElementAtEvent(event);
+                    <span class="hljs-keyword">if</span> (elements.length === <span class="hljs-number">1</span>) {
+                        <span class="hljs-keyword">var</span> chartEvent = $A.get(<span class="hljs-string">&quot;e.c:ChartEvent&quot;</span>);
+                        chartEvent.setParams({
+                            data: {
+                                year: component.get(<span class="hljs-string">&quot;v.year&quot;</span>),
+                                country: component.get(<span class="hljs-string">&quot;v.country&quot;</span>),
+                                medalType: component.chart.data.labels[elements[<span class="hljs-number">0</span>]._index]
+                            }
+                        });
+                        chartEvent.fire();
+                    }
+                }
+            }
+
+        });
+
+    },
+
+    chartChange: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">component, event, helper</span>) </span>{
+        <span class="hljs-keyword">var</span> filters = event.getParam(<span class="hljs-string">&quot;data&quot;</span>);
+        component.set(<span class="hljs-string">&quot;v.year&quot;</span>, filters.year);
+        component.set(<span class="hljs-string">&quot;v.country&quot;</span>, filters.country);
+        <span class="hljs-keyword">var</span> years = <span class="hljs-built_in">window</span>.olympicDataService.getData();
+        years.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">year</span>) </span>{
+            <span class="hljs-keyword">if</span> (year.year == filters.year) {
+                year.countries.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">country</span>) </span>{
+                    <span class="hljs-keyword">if</span> (country.country == filters.country) {
+                        component.set(<span class="hljs-string">&quot;v.title&quot;</span>, year.venue + <span class="hljs-string">&apos; &apos;</span> + year.year + <span class="hljs-string">&quot;, &quot;</span> + filters.country + <span class="hljs-string">&quot; (&quot;</span> + (country.gold + country.silver + country.bronze) + <span class="hljs-string">&quot; medals)&quot;</span>);
+                        <span class="hljs-keyword">var</span> medals = [country.gold, country.silver, country.bronze];
+                        component.chart.data.datasets[<span class="hljs-number">0</span>].data = medals;
+                        component.chart.update();
+                        <span class="hljs-keyword">return</span>;
+                    }
+                });
+            }
+        });
+    }
+
+})
+</code></pre>
+<pre><code class="lang-bash">
+$ sfdx force:<span class="hljs-built_in">source</span>:pull -u lexbook_prj1_org1
+=== Pulled Source
+STATE    FULL NAME                               TYPE                  PROJECT PATH
+&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;  &#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;
+Changed  MedalsByType/MedalsByType.cmp           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.cmp-meta.xml
+Changed  MedalsByType/MedalsByTypeRenderer.js    AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByTypeRenderer.js
+Changed  MedalsByType/MedalsByType.css           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.css
+Changed  MedalsByType/MedalsByTypeController.js  AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByTypeController.js
+Changed  MedalsByType/MedalsByTypeHelper.js      AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByTypeHelper.js
+Changed  MedalsByType/MedalsByType.cmp           AuraDefinitionBundle  force-app/main/default/aura/MedalsByType/MedalsByType.cmp
+Changed  Lex_Book_Chart_Page                     FlexiPage             force-app/main/default/flexipages/Lex_Book_Chart_Page.flexipage-meta.xml
+</code></pre>
+<h2 id="demo-time">Demo time</h2>
+<p><img src="img/lex-dx-chart-11.gif" alt="Demo Chart "></p>
+<h2 id="org-shape-currently-in-pilot">Org Shape (Currently in Pilot)</h2>
+<pre><code class="lang-bash">
+$ sfdx force:org:shape:create  -u lexbook_prj1_org1
+ERROR:  The org needs to be enabled <span class="hljs-keyword">for</span> org shape before one can be created.
+</code></pre>
+<h2 id="reference">Reference</h2>
+<p><a href="https://developer.salesforce.com/blogs/developer-relations/2017/03/building-lightning-components-chart-js.html" target="_blank">Building Lightning Components with Chart.js
+</a></p>
+<h2 id="killing-oauth-redirect-server--running-on-port-1717">Killing OAuth redirect server  running on port 1717</h2>
+<pre><code class="lang-bash">$ sudo lsof -i tcp:1717
+COMMAND   PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    55682 mchinnappan   16u  IPv4 0x5f5d9576988493f7      0t0  TCP localhost:fj-hdnet (LISTEN)
+$ sudo <span class="hljs-built_in">kill</span> -9 55682
+</code></pre>
+<h2 id="ci-with-sfdx">CI with SFDX</h2>
+<p><img src="img/ci-dx-1.png" alt="CI with DX"></p>
+<h2 id="videos-about-sfdx">Videos about SFDX</h2>
+<h3 id="how-everyone-can-leverage-salesforce-dx-packaging">How Everyone Can Leverage Salesforce DX Packaging</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/Prlurg2ORnU?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+<hr ###="" video:="" salesforce="" dx="" -="" continuous="" integration="" and="" delivery="" <iframe="" id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/wUc1l5keYmo?autoplay=0 &amp;fs=1" frameborder="0">
+<hr>
+
+### Video: Copying Your Org&apos;s Shape into Scratch Orgs
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/iDBb0RDqY2A?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+<hr>
+
+### App Hub
+[Introduction to App Hub](https://www.salesforce.com/video/1770885/)
+
+
+### Video: Test Automation and Continuous Integration In SDLC Using Salesforce DX
+
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/eo3oWaV8cb4?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chap-24/rest-calls.html" class="navigation navigation-prev " aria-label="Previous page: Consuming REST services">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chap-26/dx-packaging.html" class="navigation navigation-next " aria-label="Next page: SFDX Packaging">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SFDX & Lightning Dev","level":"3.1","depth":1,"next":{"title":"SFDX Packaging","level":"3.2","depth":1,"path":"chap-26/dx-packaging.md","ref":"chap-26/dx-packaging.md","articles":[]},"previous":{"title":"Consuming REST services","level":"2.3","depth":1,"path":"chap-24/rest-calls.md","ref":"chap-24/rest-calls.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["youtube","adsense","livereload"],"pluginsConfig":{"youtube":{},"livereload":{},"search":{},"adsense":{"client":"ca-pub-5381915020912221","slot":"8656817479","format":"auto","element":".page-inner section","position":"top"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap-25/lex-dx.md","mtime":"2018-05-31T00:33:25.800Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-10T20:39:06.437Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

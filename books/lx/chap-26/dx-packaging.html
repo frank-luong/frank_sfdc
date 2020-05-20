@@ -1,0 +1,1529 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SFDX Packaging · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chap-27/dh-app.html" />
+    
+    
+    <link rel="prev" href="../chap-25/lex-dx.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chap-1/body.html">
+            
+                <a href="../chap-1/body.html">
+            
+                    
+                    Lightning Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chap-2/body.html">
+            
+                <a href="../chap-2/body.html">
+            
+                    
+                    Classic Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chap-11/body.html">
+            
+                <a href="../chap-11/body.html">
+            
+                    
+                    Migration to Lightning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chap-11/actions.html">
+            
+                <a href="../chap-11/actions.html">
+            
+                    
+                    Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chap-11/global-actions.steps.html">
+            
+                <a href="../chap-11/global-actions.steps.html">
+            
+                    
+                    Global Actions Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chap-11/object-specific-actions.steps.html">
+            
+                <a href="../chap-11/object-specific-actions.steps.html">
+            
+                    
+                    Object-Specific Actions Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chap-11/validate-field-values.steps.html">
+            
+                <a href="../chap-11/validate-field-values.steps.html">
+            
+                    
+                    Validate Field Values Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chap-11/redirect-vf.steps.html">
+            
+                <a href="../chap-11/redirect-vf.steps.html">
+            
+                    
+                    VF page redirect with field values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chap-11/custom-link.html">
+            
+                <a href="../chap-11/custom-link.html">
+            
+                    
+                    Custom Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chap-11/lex-app.html">
+            
+                <a href="../chap-11/lex-app.html">
+            
+                    
+                    Lightning App
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../chap-11/lex-app-mgr.html">
+            
+                <a href="../chap-11/lex-app-mgr.html">
+            
+                    
+                    App Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../chap-11/lex-list-view.html">
+            
+                <a href="../chap-11/lex-list-view.html">
+            
+                    
+                    List Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../chap-11/lex-compact-lo.html">
+            
+                <a href="../chap-11/lex-compact-lo.html">
+            
+                    
+                    Compact Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../chap-11/lex-page-lo.html">
+            
+                <a href="../chap-11/lex-page-lo.html">
+            
+                    
+                    Page Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../chap-11/record-types.html">
+            
+                <a href="../chap-11/record-types.html">
+            
+                    
+                    Record Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chap-15/build-comp.html">
+            
+                <a href="../chap-15/build-comp.html">
+            
+                    
+                    Building components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../chap-15/buttons.html">
+            
+                <a href="../chap-15/buttons.html">
+            
+                    
+                    Playing with buttons
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../chap-15/expr.html">
+            
+                <a href="../chap-15/expr.html">
+            
+                    
+                    Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../chap-15/value-providers.html">
+            
+                <a href="../chap-15/value-providers.html">
+            
+                    
+                    Value Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../chap-15/lightning.html">
+            
+                <a href="../chap-15/lightning.html">
+            
+                    
+                    More lightning:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="../chap-32/page-template.html">
+            
+                <a href="../chap-32/page-template.html">
+            
+                    
+                    Custom Page Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chap-20/test-automation.html">
+            
+                <a href="../chap-20/test-automation.html">
+            
+                    
+                    Lightning Testing Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chap-20/qa-automation.html">
+            
+                <a href="../chap-20/qa-automation.html">
+            
+                    
+                    QA Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chap-22/homepage-profile-based.html">
+            
+                <a href="../chap-22/homepage-profile-based.html">
+            
+                    
+                    Profile based Home Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chap-23/canvasApp.html">
+            
+                <a href="../chap-23/canvasApp.html">
+            
+                    
+                    Canvas App
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chap-23/ea-canvas.html">
+            
+                <a href="../chap-23/ea-canvas.html">
+            
+                    
+                    EA and Other Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chap-24/rest-calls.html">
+            
+                <a href="../chap-24/rest-calls.html">
+            
+                    
+                    Consuming REST services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../chap-25/lex-dx.html">
+            
+                <a href="../chap-25/lex-dx.html">
+            
+                    
+                    SFDX & Lightning Dev
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="dx-packaging.html">
+            
+                <a href="dx-packaging.html">
+            
+                    
+                    SFDX Packaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chap-27/dh-app.html">
+            
+                <a href="../chap-27/dh-app.html">
+            
+                    
+                    SFDX DreamHouse App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chap-29/trainingTrackerApp.html">
+            
+                <a href="../chap-29/trainingTrackerApp.html">
+            
+                    
+                    SFDX TrainingTracker App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chap-11/lcc.html">
+            
+                <a href="../chap-11/lcc.html">
+            
+                    
+                    Lightning Configuration Converter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../chap-5/body.html">
+            
+                <a href="../chap-5/body.html">
+            
+                    
+                    Lightning Data Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../chap-30/body.html">
+            
+                <a href="../chap-30/body.html">
+            
+                    
+                    Lightning Out
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../chap-28/perf.html">
+            
+                <a href="../chap-28/perf.html">
+            
+                    
+                    Performance Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../chap-31/sc.html">
+            
+                <a href="../chap-31/sc.html">
+            
+                    
+                    Secure Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../chap-12/body.html">
+            
+                <a href="../chap-12/body.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../chap-12/LockerService.html">
+            
+                <a href="../chap-12/LockerService.html">
+            
+                    
+                    LockerService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../chap-12/lx-container.html">
+            
+                <a href="../chap-12/lx-container.html">
+            
+                    
+                    Lightning Container Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../chap-12/postMessage.html">
+            
+                <a href="../chap-12/postMessage.html">
+            
+                    
+                    window.postMessage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../aura/aura.html">
+            
+                <a href="../aura/aura.html">
+            
+                    
+                    Aura UI Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../perf/chap-1.html">
+            
+                <a href="../perf/chap-1.html">
+            
+                    
+                    Performance Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../sfdx/sfdx.html">
+            
+                <a href="../sfdx/sfdx.html">
+            
+                    
+                    SFDX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../sfdx/project-generator.html">
+            
+                <a href="../sfdx/project-generator.html">
+            
+                    
+                    Project Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../chap-12/ea-static-binding.html">
+            
+                <a href="../chap-12/ea-static-binding.html">
+            
+                    
+                    EA Binding Notes 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../chap-99/errors.html">
+            
+                <a href="../chap-99/errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../ref/ref.html">
+            
+                <a href="../ref/ref.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >SFDX Packaging</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="dx-packaging">DX Packaging</h2>
+<h3 id="why-use-packaging">Why use packaging?</h3>
+<h3 id="deploying-metadata-using-packages-to-prod-org">Deploying Metadata using Packages to PROD org</h3>
+<h4 id="how-we-deploy-metadata-to-prod-orgs-today">How we deploy Metadata to PROD orgs today</h4>
+<p><img src="img/pk-curr-1.png" alt="current deployment of metadata"></p>
+<p><img src="img/before-dx-1.png" alt="current deployment of metadata"></p>
+<ul>
+<li>Ant Migration Tool</li>
+<li>SFDX force:mdapi</li>
+</ul>
+<h2 id="source-based-development">Source Based Development</h2>
+<h3 id="org-based-development">Org-based development</h3>
+<p><img src="img/org-based-dev-1.png" alt="Org based Development">
+<img src="img/org-based-dev-2.png" alt="Org based Development"></p>
+<h3 id="modular-development---developing-towards-module-not-towards-org">Modular Development - developing towards module not towards org</h3>
+<p><img src="img/dx-dcp-1.png" alt="DCP"></p>
+<h3 id="dcp---developer-controlled-packages---modular-development-to-package-development">DCP - Developer Controlled Packages - Modular Development to Package Development</h3>
+<p><img src="img/prep-dcp-1.png" alt="DCP3">
+<img src="img/dx-dcp-2.png" alt="DCP2"></p>
+<p><img src="img/pack-dev-dex-1.png" alt="Modular Development"></p>
+<pre><code class="lang-bash">  $ sfdx force:mdapi -h
+Usage: sfdx force:mdapi:COMMAND [<span class="hljs-built_in">command</span>-specific-options]
+
+retrieve and deploy metadata using Metadata API
+
+sfdx force:mdapi commands: (get <span class="hljs-built_in">help</span> with sfdx <span class="hljs-built_in">help</span> force:mdapi:COMMAND)
+ force:mdapi:convert          convert metadata from the Metadata API format into the Salesforce DX format
+ force:mdapi:deploy           deploy metadata to an org using Metadata API
+ force:mdapi:deploy:report    check the status of a metadata deployment
+ force:mdapi:retrieve         retrieve metadata from an org using Metadata API
+ force:mdapi:retrieve:report  check the status of a metadata retrieval
+</code></pre>
+<ul>
+<li><p>Changesets</p>
+<ul>
+<li>Sandbox based development</li>
+<li>Collect the set of metadata should be transported</li>
+<li>Deploy to PROD instances</li>
+</ul>
+</li>
+<li><p>Unmanaged Packages</p>
+<ul>
+<li>Build an app </li>
+<li>Put it into unmanaged package</li>
+</ul>
+</li>
+</ul>
+<h4 id="challenges-with-current-methods">Challenges with current methods</h4>
+<ul>
+<li><p>Absence of an Immutable Artifcat</p>
+<ul>
+<li>Starts with list of components to deployed from one env to another</li>
+<li>No easy way to aggregating and knowing set-of-metadata moving to diffrent stages<ul>
+<li>Scratch org --&gt; Deploy Metadata to Sanbox orgs --&gt; UAT --&gt; PROD</li>
+</ul>
+</li>
+<li>Above methods do not offer this feature : Immutable Artifcat </li>
+</ul>
+</li>
+<li><p>Changes and Upgrades</p>
+<ul>
+<li>Change versioning all the way to the PROD<ul>
+<li>No concept of versioning in Changesets , Unmanaged packages, Ant migration<ul>
+<li>Once deployed -- it is happy soup of unpackaged set of  metadata</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Organization in PROD org<ul>
+<li>AppExchange Apps</li>
+<li>Unpackaged set of  metadata  - difficult to manage</li>
+<li>No concept of ownership in metadata <ul>
+<li>who is responisble for the fields, validation rules,...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="img/pk-unpk-metadata-1.png" alt="Unpackaged metadata"></p>
+<h3 id="organizing-metadata-into-packages">Organizing Metadata into Packages</h3>
+<h4 id="repeatble-scriptable-trackable">Repeatble, Scriptable, Trackable</h4>
+<p><img src="img/pk-dx-pk-features-1.png" alt="DX Packages Features"></p>
+<ul>
+<li>DX packages we can create Immutable Artifcats on a repeatable manner</li>
+<li>Version  the changes you are making - maintained in the VCS</li>
+<li><p>Versioning is built into the packaging</p>
+<ul>
+<li>Checkout a version of the package - snapshot - package version </li>
+<li>Make changes - add/edit/remove components</li>
+</ul>
+</li>
+<li><p>Can be used across the environments - transporting</p>
+</li>
+<li><p>Helps to organize metadata in the org</p>
+</li>
+<li><p>ISV packaging</p>
+<ul>
+<li>Manageability rules - ensures that packages by ISV does not break customer orgs</li>
+<li>This model does not work for Enterprise customers</li>
+<li>DX Packaging meets Enterprise customers use cases </li>
+</ul>
+</li>
+</ul>
+<h3 id="developing-and-deploying-an-app-using-dx-and-packages">Developing and Deploying an App using DX and Packages</h3>
+<p><img src="img/pk-app-dev-fullflow-1.png" alt="DX Packages App Dev Full Flow"></p>
+<ul>
+<li>Start with SFDX</li>
+<li>Set up VCS</li>
+<li>Biz Process</li>
+<li>Developer Spins up scratch org<ul>
+<li>Get Product Designer / Admin to login to Scratch org</li>
+<li>Use UI to build biz process, workflows, page-layout</li>
+<li>Developer pull these UI based changes to the scratch org</li>
+<li>Developer or release manager creates the package using sfdx cli to get a immutable package</li>
+<li>Use the package in CI Runs</li>
+<li>Use the same set of packages across the enviroments - sandboxes including UAT</li>
+<li>Use sfdx cli to install same package into PROD</li>
+</ul>
+</li>
+</ul>
+<h3 id="maintaining-and-enhancing-an-app-using-packages">Maintaining and Enhancing an App using Packages</h3>
+<p><img src="img/pk-app-dev-fullflow-2.png" alt="DX Packages App Dev Maintenance"></p>
+<h3 id="organizing-unpackaged-metadata-using-packages-to-the-benefits-of-versioning-iterating-with-help-of-dx-packaging">Organizing Unpackaged Metadata using Packages to the benefits of versioning, iterating with help of DX packaging</h3>
+<p><img src="img/pk-unpk-metadata-1.png" alt="Unpackaged metadata"></p>
+<p>TO</p>
+<p><img src="img/pk-unmaged-2-managed-1.png" alt="DX Packages App Dev Maintenance"></p>
+<p>TO</p>
+<p><img src="img/pk-unmaged-2-managed-2.png" alt="DX Packages App Dev Maintenance"></p>
+<h3 id="guidelines-and-criteria-in-identifying-metadata-that-can-be-migrated-into-a-package">Guidelines and Criteria in Identifying metadata that can be migrated into a Package</h3>
+<p><img src="img/guidelines-org-unmanaged-metadata-1.png" alt="Guidelines to making packages"></p>
+<p><img src="img/guidelines-org-unmanaged-metadata-2.png" alt="Criteria to making packages"></p>
+<h3 id="things-to-note">Things to note</h3>
+<p><img src="img/guidelines-org-unmanaged-metadata-3.png" alt="Anti patterns"></p>
+<h3 id="org-shape">Org shape</h3>
+<ul>
+<li>Features</li>
+<li>Preferences</li>
+<li>Settings</li>
+</ul>
+<p><img src="img/org-shape-1.png" alt="org shape-1 ">
+<img src="img/org-shape-2.png" alt="org shape-2 "></p>
+<h3 id="faq">FAQ</h3>
+<ul>
+<li>How to get list of packages installed in an org
+```bash</li>
+</ul>
+<p>Usage: sfdx force:package:installed:list [-u <string>] [--json] [--loglevel <string>] </string></string></p>
+<p>list the org&#x2019;s installed packages</p>
+<p>Flags:
+ -u, --targetusername TARGETUSERNAME  username or alias for the target org;
+                                      overrides default target org
+ --json                               format output as json
+ --loglevel LOGLEVEL                  logging level for this command invocation
+                                      (error*,trace,debug,info,warn,fatal)</p>
+<p>Examples:
+   $ sfdx force:package:installed:list
+   $ sfdx force:package:installed:list -u me@example.com</p>
+<pre><code>- How to install a package listed above into a target org
+```bash
+$ sfdx force:package:install -h
+Usage: sfdx force:package:install [-i &lt;id&gt;] [-w &lt;minutes&gt;] [-k &lt;string&gt;] [-p &lt;minutes&gt;] [-r] [--package &lt;string&gt;] [-u &lt;string&gt;] [--json] [--loglevel &lt;string&gt;] 
+
+install a package in the target org
+
+Flags:
+ -i, --id ID                            WARNING: The flag &quot;id&quot; has been
+                                        deprecated and will be removed in
+                                        v43.01.0 or later. Use &quot;--package&quot;
+                                        instead.
+ -k, --installationkey INSTALLATIONKEY  installation key for key-protected
+                                        package (default: null)
+ -r, --noprompt                         allow Remote Site Settings and Content
+                                        Security Policy websites to send or
+                                        receive data without confirmation
+ -p, --publishwait PUBLISHWAIT          number of minutes to wait for subscriber
+                                        package version ID to become available
+                                        in the target org WARNING: The short
+                                        name &quot;-p&quot; has been deprecated and will
+                                        be removed in v44.0 or later. Use
+                                        &quot;--publishwait&quot; instead.
+ -u, --targetusername TARGETUSERNAME    username or alias for the target org;
+                                        overrides default target org
+ -w, --wait WAIT                        number of minutes to wait for
+                                        installation status
+ --json                                 format output as json
+ --loglevel LOGLEVEL                    logging level for this command
+                                        invocation
+                                        (error*,trace,debug,info,warn,fatal)
+ --package PACKAGE                      ID (starts with 04t) or alias of the
+                                        package version to install
+
+Supply the ID of the package version you want to install. The package installs in your default target org unless you supply the username for a different target org.
+
+Examples:
+   $ sfdx force:package:install --package 04t... -u me@example.com
+   $ sfdx force:package:install --package awesome_package_alias
+   $ sfdx force:package:install --package &quot;Awesome Package Alias&quot;
+</code></pre><ul>
+<li><p>Define the dependencies between packages declaratively </p>
+<ul>
+<li>Example: Expense package has dependency on Common-Util module</li>
+<li>In scratch org install - dependent package and packages it depends on</li>
+</ul>
+</li>
+<li><p>To use a Managed package in Scratch org, install that managed package in Scaratch org and DCP for the extensions and start the development process</p>
+</li>
+<li><p>Size of the DCP is determined by the limits of the metadata api</p>
+</li>
+<li><p>Difference between Package2 and DCP</p>
+<ul>
+<li>Package2 is a umberlla term covering different types of packaging (for partners and enterprise customers)</li>
+<li>DCP is customer oriented - enterprise customers doing modular development using packaging</li>
+</ul>
+</li>
+</ul>
+<h2 id="app-hub---ui-for-sfdx">App Hub - UI for SFDX</h2>
+<p><img src="img/pk-apphub-ui-dx-1.png" alt="App Hub UI for SFDX"></p>
+<h4 id="convert-metadata-from-the-metadata-api-format-into-the-salesforce-dx-format">Convert metadata from the Metadata API format into the Salesforce DX format</h4>
+<pre><code class="lang-bash">$ sfdx force:mdapi:convert -h
+Usage: sfdx force:mdapi:convert -r &lt;directory&gt; [<span class="hljs-_">-d</span> &lt;directory&gt;] [--json] [--loglevel &lt;string&gt;]
+
+convert metadata from the Metadata API format into the Salesforce DX format
+
+Flags:
+ <span class="hljs-_">-d</span>, --outputdir OUTPUTDIR  the output directory to store the Salesforce
+                            DX&#x2013;formatted <span class="hljs-built_in">source</span>
+ -r, --rootdir ROOTDIR      (required) the root directory containing the
+                            Metadata API&#x2013;formatted metadata
+ --json                     format output as json
+ --loglevel LOGLEVEL        logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span> invocation
+                            (error*,trace,debug,info,warn,fatal)
+
+To work with metadata that you retrieved via Metadata API using the Salesforce DX tools, convert the metadata to the Salesforce DX <span class="hljs-built_in">source</span> format using<span class="hljs-string">&quot;sfdx force:mdapi:convert&quot;</span>.
+
+To convert the <span class="hljs-built_in">source</span> back to the Metadata API format, so that you can deploy it using <span class="hljs-string">&quot;sfdx force:mdapi:deploy&quot;</span>, run <span class="hljs-string">&quot;sfdx force:source:convert&quot;</span>.
+
+Examples:
+   $ sfdx force:mdapi:convert -r &lt;path to <span class="hljs-built_in">source</span>&gt;
+   $ sfdx force:mdapi:convert -r &lt;path to <span class="hljs-built_in">source</span>&gt; <span class="hljs-_">-d</span> &lt;path to outputdir&gt;
+</code></pre>
+<p><img src="img/pack2-install-before-1.png" alt="org with no installed package"></p>
+<p><img src="img/pack2-from-mdapi-1.png" alt="mdap to dx format"></p>
+<h4 id="create--a-second-generation-package-package2">Create  a second-generation package (package2)</h4>
+<pre><code class="lang-bash">
+$ sfdx force:package2:create -h
+Usage: sfdx force:package2:create -n &lt;string&gt; [-o &lt;string&gt;] [<span class="hljs-_">-d</span> &lt;string&gt;] [<span class="hljs-_">-e</span>] [-v &lt;string&gt;] [--json] [--loglevel &lt;string&gt;]
+
+WARNING: The <span class="hljs-built_in">command</span> <span class="hljs-string">&quot;create&quot;</span> has been deprecated and will be removed <span class="hljs-keyword">in</span> v43.01.0 or later. Use <span class="hljs-string">&quot;force:package:create&quot;</span> instead.
+
+create a second-generation package
+
+Flags:
+ -o, --containeroptions CONTAINEROPTIONS          [*Managed | Unlocked]
+                                                  container options <span class="hljs-keyword">for</span> the
+                                                  package2
+                                                  (Managed=DeveloperManagedSubscriberManaged,
+                                                  Unlocked=DeveloperControlledSubscriberEditable)
+
+ <span class="hljs-_">-d</span>, --description DESCRIPTION                    package description
+ -n, --name NAME                                  (required) package name
+ <span class="hljs-_">-e</span>, --nonamespace                                creates the package with no
+                                                  namespace; available only <span class="hljs-keyword">for</span>
+                                                  developer-controlled packages.
+ -v, --targetdevhubusername TARGETDEVHUBUSERNAME  username or <span class="hljs-built_in">alias</span> <span class="hljs-keyword">for</span> the dev
+                                                  hub org; overrides default dev
+                                                  hub org
+ --json                                           format output as json
+ --loglevel LOGLEVEL                              logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span>
+                                                  invocation
+                                                  (error*,trace,debug,info,warn,fatal)
+
+
+First, use this <span class="hljs-built_in">command</span> to create a second-generation package. Then create a package version.
+
+Examples:
+   $ sfdx force:package2:create -n PackageName <span class="hljs-_">-d</span> <span class="hljs-string">&apos;My New Package&apos;</span> -o Unlocked
+
+Run <span class="hljs-string">&apos;sfdx force:package2:list&apos;</span> to list all second-generation packages <span class="hljs-keyword">in</span> the Dev Hub org.
+</code></pre>
+<h4 id="example">Example</h4>
+<pre><code class="lang-bash">$ sfdx force:package2:create --containeroptions Unlocked --name <span class="hljs-string">&quot;Expense 2018.05.11 10:20&quot;</span>
+
+Successfully created a second generation package (package2):
+
+=== Ids
+
+....
+
+
+<span class="hljs-comment"># Unlocked -- allows full editablity in the org for allowing emergency patches</span>
+
+<span class="hljs-comment"># Managed (Locked) --  allows full no editablity in the org</span>
+</code></pre>
+<p><img src="img/pack2-dx-prj-1.png" alt="create package2"></p>
+<p>With Package id:
+<img src="img/pack2-dx-prj-2.png" alt="create package2"></p>
+<h4 id="create-a-second-generation-package-version">Create a second-generation package version</h4>
+<pre><code class="lang-bash">
+$ sfdx force:package2:version:create -h
+Usage: sfdx force:package2:version:create [-i &lt;id&gt;] [<span class="hljs-_">-d</span> &lt;directory&gt;] [-b &lt;string&gt;] [-t &lt;string&gt;] [-k &lt;string&gt;] [-w &lt;minutes&gt;] [-v &lt;string&gt;] [--json] [--loglevel &lt;string&gt;]
+
+WARNING: The <span class="hljs-built_in">command</span> <span class="hljs-string">&quot;version:create&quot;</span> has been deprecated and will be removed <span class="hljs-keyword">in</span> v43.01.0 or later. Use <span class="hljs-string">&quot;force:package:version:create&quot;</span> instead.
+
+create a second-generation package version
+
+Flags:
+ -b, --branch BRANCH                              the package version&#x2019;s branch
+ <span class="hljs-_">-d</span>, --directory DIRECTORY                        path to directory that
+                                                  contains the contents of the
+                                                  package version
+ -k, --installationkey INSTALLATIONKEY            installation key <span class="hljs-keyword">for</span>
+                                                  key-protected package
+                                                  (default: null)
+ -i, --package2id PACKAGE2ID                      ID of the parent package
+                                                  (starts with 0Ho)
+ -t, --tag TAG                                    the package version&#x2019;s tag
+ -v, --targetdevhubusername TARGETDEVHUBUSERNAME  username or <span class="hljs-built_in">alias</span> <span class="hljs-keyword">for</span> the dev
+                                                  hub org; overrides default dev
+                                                  hub org
+ -w, --wait WAIT                                  minutes to <span class="hljs-built_in">wait</span> <span class="hljs-keyword">for</span> the
+                                                  package version to be created
+                                                  (default:0)
+ --json                                           format output as json
+ --loglevel LOGLEVEL                              logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span>
+                                                  invocation
+                                                  (error*,trace,debug,info,warn,fatal)
+
+
+The package version is based on the package contents <span class="hljs-keyword">in</span> the specified directory.
+
+To retrieve details about a package version create request, including status and package2 version ID (05i), run <span class="hljs-string">&quot;sfdx force:package2:version:create:get -i 08c...&quot;</span>.
+
+To list package version creation requests <span class="hljs-keyword">in</span> the org, run <span class="hljs-string">&quot;sfdx force:package2:version:create:list&quot;</span>.
+
+Examples:
+   $ sfdx force:package2:version:create <span class="hljs-_">-d</span> common
+   $ sfdx force:package2:version:create -i 0Ho... <span class="hljs-_">-d</span> common
+
+
+$ sfdx force:package2:version:create <span class="hljs-_">-d</span> force-app
+
+<span class="hljs-comment">## This is async, will queue the request and provide the command to run to get the status</span>
+<span class="hljs-comment">## The package is created from the source in the local folder in the file system</span>
+</code></pre>
+<h2 id="app">App</h2>
+<ul>
+<li>Directory structure of DX workspace</li>
+</ul>
+<pre><code class="lang-bash">
+<span class="hljs-comment"># Retrive metadata</span>
+$ sfdx force:mdapi:retrieve -h
+Usage: sfdx force:mdapi:retrieve -r &lt;directory&gt; [<span class="hljs-_">-a</span> &lt;number&gt;] [-w &lt;minutes&gt;] [-k &lt;filepath&gt;] [<span class="hljs-_">-d</span> &lt;directory&gt;] [-p &lt;string&gt;...] [<span class="hljs-_">-s</span>] [-i &lt;id&gt;] [-u &lt;string&gt;] [--json] [--loglevel &lt;string&gt;] [--verbose] 
+
+retrieve metadata from an org using Metadata API
+
+Flags:
+ <span class="hljs-_">-a</span>, --apiversion APIVERSION                target API version <span class="hljs-keyword">for</span> the retrieve
+                                            (default 42.0)
+ -i, --jobid JOBID                          WARNING: The flag <span class="hljs-string">&quot;jobid&quot;</span> has been
+                                            deprecated and will be removed <span class="hljs-keyword">in</span>
+                                            v41.01.0 or later. Instead, use
+                                            <span class="hljs-string">&quot;sfdx force:mdapi:retrieve:report -i
+                                            &lt;jobId&gt; -r &lt;targetDir&gt;&quot;</span>.
+ -p, --packagenames PACKAGENAMES            a comma-separated list of packages
+                                            to retrieve
+ -r, --retrievetargetdir RETRIEVETARGETDIR  (required) directory root <span class="hljs-keyword">for</span> the
+                                            retrieved files
+ <span class="hljs-_">-s</span>, --singlepackage                        a single-package retrieve (default:
+                                            <span class="hljs-literal">false</span>)
+ <span class="hljs-_">-d</span>, --sourcedir SOURCEDIR                  <span class="hljs-built_in">source</span> dir to use instead of default
+                                            manifest sfdx-project.xml
+ -u, --targetusername TARGETUSERNAME        username or <span class="hljs-built_in">alias</span> <span class="hljs-keyword">for</span> the target
+                                            org; overrides default target org
+ -k, --unpackaged UNPACKAGED                file path of manifest of components
+                                            to retrieve
+ -w, --wait WAIT                            <span class="hljs-built_in">wait</span> time <span class="hljs-keyword">for</span> <span class="hljs-built_in">command</span> to finish <span class="hljs-keyword">in</span>
+                                            minutes (default: -1 (no <span class="hljs-built_in">limit</span>))
+ --json                                     format output as json
+ --loglevel LOGLEVEL                        logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span>
+                                            invocation
+                                            (error*,trace,debug,info,warn,fatal)
+ --verbose                                  verbose output of retrieve result
+
+The default target username is the admin user <span class="hljs-keyword">for</span> the default scratch org. You can retrieve and deploy up to 10,000 files or 400 MB (39 MB compressed) at one time.
+
+To retrieve a package with a space <span class="hljs-keyword">in</span> its name, enclose the name <span class="hljs-keyword">in</span> single quotes.
+
+Example:
+   $ sfdx force:mdapi:retrieve <span class="hljs-_">-s</span> -r ./mdapipkg -u &lt;username&gt; -p <span class="hljs-string">&apos;My Package&apos;</span>
+</code></pre>
+<h4 id="install-a-package-in-the-target-org">Install a package in the target org</h4>
+<pre><code class="lang-bash">
+
+$ sfdx force:package:install -h
+Usage: sfdx force:package:install [-i &lt;id&gt;] [-w &lt;minutes&gt;] [-k &lt;string&gt;] [-p &lt;minutes&gt;] [-r] [--package &lt;string&gt;] [-u &lt;string&gt;] [--json] [--loglevel &lt;string&gt;]
+
+install a package <span class="hljs-keyword">in</span> the target org
+
+Flags:
+ -i, --id ID                            WARNING: The flag <span class="hljs-string">&quot;id&quot;</span> has been
+                                        deprecated and will be removed <span class="hljs-keyword">in</span>
+                                        v43.01.0 or later. Use <span class="hljs-string">&quot;--package&quot;</span>
+                                        instead.
+ -k, --installationkey INSTALLATIONKEY  installation key <span class="hljs-keyword">for</span> key-protected
+                                        package (default: null)
+ -r, --noprompt                         allow Remote Site Settings and Content
+                                        Security Policy websites to send or
+                                        receive data without confirmation
+ -p, --publishwait PUBLISHWAIT          number of minutes to <span class="hljs-built_in">wait</span> <span class="hljs-keyword">for</span> subscriber
+                                        package version ID to become available
+                                        <span class="hljs-keyword">in</span> the target org WARNING: The short
+                                        name <span class="hljs-string">&quot;-p&quot;</span> has been deprecated and will
+                                        be removed <span class="hljs-keyword">in</span> v44.0 or later. Use
+                                        <span class="hljs-string">&quot;--publishwait&quot;</span> instead.
+ -u, --targetusername TARGETUSERNAME    username or <span class="hljs-built_in">alias</span> <span class="hljs-keyword">for</span> the target org;
+                                        overrides default target org
+ -w, --wait WAIT                        number of minutes to <span class="hljs-built_in">wait</span> <span class="hljs-keyword">for</span>
+                                        installation status
+ --json                                 format output as json
+ --loglevel LOGLEVEL                    logging level <span class="hljs-keyword">for</span> this <span class="hljs-built_in">command</span>
+                                        invocation
+                                        (error*,trace,debug,info,warn,fatal)
+ --package PACKAGE                      ID (starts with 04t) or <span class="hljs-built_in">alias</span> of the
+                                        package version to install
+
+Supply the ID of the package version you want to install. The package installs <span class="hljs-keyword">in</span> your default target org unless you supply the username <span class="hljs-keyword">for</span> a different target org.
+
+Examples:
+   $ sfdx force:package:install --package 04t... -u me@example.com
+   $ sfdx force:package:install --package awesome_package_<span class="hljs-built_in">alias</span>
+   $ sfdx force:package:install --package <span class="hljs-string">&quot;Awesome Package Alias&quot;</span>
+</code></pre>
+<h3 id="org-with-newly-installed-package">Org with newly installed package</h3>
+<p><img src="img/pack2-install-after-1.png" alt="org with newly installed package"></p>
+<h3 id="exploring-the-installed-package">Exploring the installed package</h3>
+<p><img src="img/pack2-installed-pckage-explore-1.gif" alt="Exploring the installed package"></p>
+<h3 id="updating-the-packaging">Updating the packaging</h3>
+<p><img src="img/pack2-config-ver-2.png" alt="next version package"></p>
+<ul>
+<li><p>Structure of sfdx-project.json file</p>
+</li>
+<li><p>Create Package and Package Version</p>
+</li>
+<li><p>The &quot;NEXT&quot; token</p>
+</li>
+</ul>
+<h3 id="key-points">Key Points</h3>
+<ul>
+<li>Sharing metadata:<ul>
+<li>Packages can depend on each other</li>
+<li>Depenedcies can be enforced at build time</li>
+<li>Check of circular references</li>
+<li>Inter-package dependencies check during the build of packages, if there any issues, the transaction will be rolled back</li>
+</ul>
+</li>
+<li>Common dependencies <ul>
+<li>Package A and B are using util Package U</li>
+<li>Salesforce does not have class loader, this issue needed by worked by the developer to maintain the forward compatability</li>
+</ul>
+</li>
+<li><p>Finding out depreciated items in the package</p>
+<ul>
+<li>Tooling API can be used for this</li>
+<li>We do not hard-delete items</li>
+<li>Explicit hard-delete is coming soon</li>
+</ul>
+</li>
+<li><p>Scratch orgs have listener for the metadata changes</p>
+</li>
+<li><p>Delta packaging is coming soon</p>
+</li>
+</ul>
+<h3 id="enable-packaging-2-beta-in-dev-hub-org">Enable Packaging 2 (Beta) in Dev Hub Org</h3>
+<p><img src="img/dx-packaging-0.png" alt="Enable Package"></p>
+<p><img src="img/dx-packaging-2-1.png" alt="Pipeline"></p>
+<h3 id="video-how-everyone-can-leverage-salesforce-dx-packaging">Video: How Everyone Can Leverage Salesforce DX Packaging</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/Prlurg2ORnU?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+<h3 id="video-simplify-your-code-with-salesforce-dx-and-module-development">Video: Simplify your code with Salesforce DX and module development</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/ZMjKmQ9j9I8?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+<h3 id="video--second-generation-packaging-for-customers-and-partners">Video:  Second Generation Packaging for Customers and Partners</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/v6ay_mNeJTE?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+
+
+<h2 id="list-package2">List Package2</h2>
+<pre><code class="lang-xml">$ sfdx force:package2:list
+No results found
+</code></pre>
+<h3 id="trailhead">Trailhead</h3>
+<ul>
+<li><a href="https://trailhead.salesforce.com/en/modules/unlocked-packages-for-customers" target="_blank">Unlocked Packages for Customers </a></li>
+</ul>
+<h3 id="resouces">Resouces</h3>
+<ul>
+<li><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_dev2gp_plan_best_practices.htm" target="_blank">Best Practices for Second-Generation Packages</a></li>
+<li><p><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_dev2gp.htm" target="_blank">Unlocked Packages and Second-Generation Managed Packages
+</a></p>
+</li>
+<li><p><a href="https://developer.salesforce.com/docs/atlas.en-us.packagingGuide.meta/packagingGuide/packaging_intro.htm" target="_blank">ISVforce Guide</a></p>
+</li>
+<li><p><a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_dev2gp_intro.htm" target="_blank">SFDX Packaging</a></p>
+</li>
+<li><p><a href="https://developer.salesforce.com/blogs/2018/02/getting-started-salesforce-dx-part-1-5.html" target="_blank">Getting started with SFDX</a></p>
+</li>
+</ul>
+<h3 id="trailblazer-community">Trailblazer Community</h3>
+<ul>
+<li><p><a href="https://success.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F93A000000Lg5U" target="_blank">Packaging 2</a></p>
+</li>
+<li><p><a href="https://success.salesforce.com/_ui/core/chatter/groups/GroupProfilePage?g=0F93A000000HTp1" target="_blank">SFDX</a></p>
+</li>
+</ul>
+<h3 id="faqs">FAQs</h3>
+<ul>
+<li><a href="https://sfdc-db-gmail.github.io/" target="_blank">FAQ - Developer-Controlled Packages (DCPs) - Spring &#x2018;18 </a></li>
+</ul>
+<h3 id="webinar">Webinar</h3>
+<ul>
+<li><a href="https://event.on24.com/eventRegistration/console/EventConsoleApollo.jsp?&amp;eventid=1767041&amp;sessionid=1&amp;username=&amp;partnerref=&amp;format=fhaudio&amp;mobile=false&amp;flashsupportedmobiledevice=false&amp;helpcenter=false&amp;key=3F814E0EEC8BC1F76878798BAC7D97D5&amp;text_language_id=en&amp;playerwidth=1000&amp;playerheight=650&amp;overwritelobby=y&amp;eventuserid=206142792&amp;contenttype=A&amp;mediametricsessionid=169675467&amp;mediametricid=2490624&amp;usercd=206142792&amp;mode=launch" target="_blank">ALM</a></li>
+</ul>
+<object data="img/ALM-webniar-jun-28-2018.pdf" type="application/pdf" style="width: 100%; height: 800px;">
+<p>It appears you don&apos;t have a PDF plugin for this browser</p>
+</object>
+
+<h3 id=""> </h3>
+<ul>
+<li><a href="https://www.codescience.com/blog/2017/dependency-injection-with-salesforce-managed-packages" target="_blank">Dependency Injection with Salesforce Managed Packages
+</a></li>
+</ul>
+<h3 id="metadatacomponentdependency-api-version-430----currently-in-pilot">MetadataComponentDependency (API Version 43.0 -- currently in Pilot)</h3>
+<p> Use SOQL queries to list the relationships between the metadata components in your org. The query results include one row for each relationship.</p>
+<h5 id="example-show-all-references-to-the-apex-class-type-yourclass-name">Example: Show all references to the Apex class (Type) YourClass (Name)</h5>
+<pre><code class="lang-sql">
+<span class="hljs-comment">-- shows pages, components, flows, and other classes that YourClass depends on</span>
+<span class="hljs-keyword">SELECT</span> MetadataComponentName,
+       MetadataComponentType
+    <span class="hljs-keyword">FROM</span> MetadataComponentDependency
+    <span class="hljs-keyword">WHERE</span> 
+          RefMetadataComponentType = <span class="hljs-string">&apos;ApexClass&apos;</span> 
+          <span class="hljs-keyword">AND</span>
+          RefMetadataComponentName = <span class="hljs-string">&apos;YourClass&apos;</span>
+</code></pre>
+<h4 id="example-shows-all-references-to-a-field-including-references-from-layouts-apex-code-flows-reports-and-so-on">Example: Shows all references to a field, including references from layouts, Apex code, flows, reports, and so on</h4>
+<pre><code class="lang-sql"><span class="hljs-comment">-- queries FieldDefinition object</span>
+<span class="hljs-comment">--  shows all the metadata components that the field with the ID yourFieldId depends on</span>
+<span class="hljs-keyword">SELECT</span> MetadataComponentName, 
+       MetadataComponentType
+    <span class="hljs-keyword">FROM</span> MetadataComponentDependency
+    <span class="hljs-keyword">WHERE</span>
+       RefMetadataComponentId = yourFieldId
+</code></pre>
+<h3 id="references">References</h3>
+<ul>
+<li><a href="https://releasenotes.docs.salesforce.com/en-us/summer18/release-notes/rn_metadata_metadatacomponentdependency.htm" target="_blank">Untangle Your Dependencies with MetadataComponentDependency Queries (Pilot)
+</a> 
+<a href="https://developer.salesforce.com/docs/atlas.en-us.214.0.api_tooling.meta/api_tooling/tooling_api_objects_metadatacomponentdependency.htm" target="_blank">MetadataComponentDependency (Pilot)</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../chap-25/lex-dx.html" class="navigation navigation-prev " aria-label="Previous page: SFDX & Lightning Dev">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chap-27/dh-app.html" class="navigation navigation-next " aria-label="Next page: SFDX DreamHouse App">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SFDX Packaging","level":"3.2","depth":1,"next":{"title":"SFDX DreamHouse App","level":"3.3","depth":1,"path":"chap-27/dh-app.md","ref":"chap-27/dh-app.md","articles":[]},"previous":{"title":"SFDX & Lightning Dev","level":"3.1","depth":1,"path":"chap-25/lex-dx.md","ref":"chap-25/lex-dx.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["youtube","adsense","livereload"],"pluginsConfig":{"youtube":{},"livereload":{},"search":{},"adsense":{"client":"ca-pub-5381915020912221","slot":"8656817479","format":"auto","element":".page-inner section","position":"top"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap-26/dx-packaging.md","mtime":"2018-07-06T00:30:57.883Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-10T20:39:06.437Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

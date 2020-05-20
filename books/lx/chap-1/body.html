@@ -1,0 +1,1273 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Lightning Architecture · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chap-2/body.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="body.html">
+            
+                <a href="body.html">
+            
+                    
+                    Lightning Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chap-2/body.html">
+            
+                <a href="../chap-2/body.html">
+            
+                    
+                    Classic Architecture
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chap-11/body.html">
+            
+                <a href="../chap-11/body.html">
+            
+                    
+                    Migration to Lightning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chap-11/actions.html">
+            
+                <a href="../chap-11/actions.html">
+            
+                    
+                    Actions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chap-11/global-actions.steps.html">
+            
+                <a href="../chap-11/global-actions.steps.html">
+            
+                    
+                    Global Actions Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chap-11/object-specific-actions.steps.html">
+            
+                <a href="../chap-11/object-specific-actions.steps.html">
+            
+                    
+                    Object-Specific Actions Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chap-11/validate-field-values.steps.html">
+            
+                <a href="../chap-11/validate-field-values.steps.html">
+            
+                    
+                    Validate Field Values Demo Steps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chap-11/redirect-vf.steps.html">
+            
+                <a href="../chap-11/redirect-vf.steps.html">
+            
+                    
+                    VF page redirect with field values
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chap-11/custom-link.html">
+            
+                <a href="../chap-11/custom-link.html">
+            
+                    
+                    Custom Link
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chap-11/lex-app.html">
+            
+                <a href="../chap-11/lex-app.html">
+            
+                    
+                    Lightning App
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.7.1" data-path="../chap-11/lex-app-mgr.html">
+            
+                <a href="../chap-11/lex-app-mgr.html">
+            
+                    
+                    App Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.2" data-path="../chap-11/lex-list-view.html">
+            
+                <a href="../chap-11/lex-list-view.html">
+            
+                    
+                    List Views
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.3" data-path="../chap-11/lex-compact-lo.html">
+            
+                <a href="../chap-11/lex-compact-lo.html">
+            
+                    
+                    Compact Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.4" data-path="../chap-11/lex-page-lo.html">
+            
+                <a href="../chap-11/lex-page-lo.html">
+            
+                    
+                    Page Layouts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7.5" data-path="../chap-11/record-types.html">
+            
+                <a href="../chap-11/record-types.html">
+            
+                    
+                    Record Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chap-15/build-comp.html">
+            
+                <a href="../chap-15/build-comp.html">
+            
+                    
+                    Building components
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../chap-15/buttons.html">
+            
+                <a href="../chap-15/buttons.html">
+            
+                    
+                    Playing with buttons
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../chap-15/expr.html">
+            
+                <a href="../chap-15/expr.html">
+            
+                    
+                    Expressions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../chap-15/value-providers.html">
+            
+                <a href="../chap-15/value-providers.html">
+            
+                    
+                    Value Providers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../chap-15/lightning.html">
+            
+                <a href="../chap-15/lightning.html">
+            
+                    
+                    More lightning:
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.5" data-path="../chap-32/page-template.html">
+            
+                <a href="../chap-32/page-template.html">
+            
+                    
+                    Custom Page Template
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chap-20/test-automation.html">
+            
+                <a href="../chap-20/test-automation.html">
+            
+                    
+                    Lightning Testing Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chap-20/qa-automation.html">
+            
+                <a href="../chap-20/qa-automation.html">
+            
+                    
+                    QA Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chap-22/homepage-profile-based.html">
+            
+                <a href="../chap-22/homepage-profile-based.html">
+            
+                    
+                    Profile based Home Page
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chap-23/canvasApp.html">
+            
+                <a href="../chap-23/canvasApp.html">
+            
+                    
+                    Canvas App
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chap-23/ea-canvas.html">
+            
+                <a href="../chap-23/ea-canvas.html">
+            
+                    
+                    EA and Other Apps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../chap-24/rest-calls.html">
+            
+                <a href="../chap-24/rest-calls.html">
+            
+                    
+                    Consuming REST services
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../chap-25/lex-dx.html">
+            
+                <a href="../chap-25/lex-dx.html">
+            
+                    
+                    SFDX & Lightning Dev
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../chap-26/dx-packaging.html">
+            
+                <a href="../chap-26/dx-packaging.html">
+            
+                    
+                    SFDX Packaging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../chap-27/dh-app.html">
+            
+                <a href="../chap-27/dh-app.html">
+            
+                    
+                    SFDX DreamHouse App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../chap-29/trainingTrackerApp.html">
+            
+                <a href="../chap-29/trainingTrackerApp.html">
+            
+                    
+                    SFDX TrainingTracker App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../chap-11/lcc.html">
+            
+                <a href="../chap-11/lcc.html">
+            
+                    
+                    Lightning Configuration Converter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../chap-5/body.html">
+            
+                <a href="../chap-5/body.html">
+            
+                    
+                    Lightning Data Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../chap-30/body.html">
+            
+                <a href="../chap-30/body.html">
+            
+                    
+                    Lightning Out
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../chap-28/perf.html">
+            
+                <a href="../chap-28/perf.html">
+            
+                    
+                    Performance Tips
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../chap-31/sc.html">
+            
+                <a href="../chap-31/sc.html">
+            
+                    
+                    Secure Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../chap-12/body.html">
+            
+                <a href="../chap-12/body.html">
+            
+                    
+                    Security
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="7.1.1" data-path="../chap-12/LockerService.html">
+            
+                <a href="../chap-12/LockerService.html">
+            
+                    
+                    LockerService
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.2" data-path="../chap-12/lx-container.html">
+            
+                <a href="../chap-12/lx-container.html">
+            
+                    
+                    Lightning Container Component
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.1.3" data-path="../chap-12/postMessage.html">
+            
+                <a href="../chap-12/postMessage.html">
+            
+                    
+                    window.postMessage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="../aura/aura.html">
+            
+                <a href="../aura/aura.html">
+            
+                    
+                    Aura UI Framework
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="../perf/chap-1.html">
+            
+                <a href="../perf/chap-1.html">
+            
+                    
+                    Performance Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="../sfdx/sfdx.html">
+            
+                <a href="../sfdx/sfdx.html">
+            
+                    
+                    SFDX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1.1" data-path="../sfdx/project-generator.html">
+            
+                <a href="../sfdx/project-generator.html">
+            
+                    
+                    Project Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="11.1" data-path="../chap-12/ea-static-binding.html">
+            
+                <a href="../chap-12/ea-static-binding.html">
+            
+                    
+                    EA Binding Notes 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="12.1" data-path="../chap-99/errors.html">
+            
+                <a href="../chap-99/errors.html">
+            
+                    
+                    Errors
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="13.1" data-path="../ref/ref.html">
+            
+                <a href="../ref/ref.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Lightning Architecture</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lightning-architecture">Lightning Architecture</h1>
+<p>Goals</p>
+<ul>
+<li>Lightning makes it easier to build responsive applications for any device</li>
+</ul>
+<h3 id="what-is-included-in-lightning">What is included in Lightning?</h3>
+<ul>
+<li>Lightning Component Framework</li>
+<li>Developer Tools</li>
+</ul>
+<h3 id="lightning-components">Lightning components</h3>
+<p>Lightning components give us :</p>
+<ul>
+<li>a client-server framework that accelerates development, as well as app performance,</li>
+<li><p>ideal for use with the Salesforce mobile app and Salesforce Lightning Experience.</p>
+<h3 id="the-lightning-app-builder">The Lightning App Builder</h3>
+<p>Lightning App Builder  empowers us to build apps:</p>
+<ul>
+<li>visually without code</li>
+<li>quicker than ever before using off-the-shelf and custom-built Lightning components.</li>
+</ul>
+<p>You can make your Lightning components available in the Lightning App Builder so administrators can build custom user interfaces without code.</p>
+</li>
+</ul>
+<p>Salesforce mobile app and Salesforce Lightning Experience are built with Lightning components.</p>
+<h3 id="benefits-of-lightning-component-framework">Benefits of Lightning Component Framework</h3>
+<ul>
+<li><p>out-of-the-box set of components</p>
+<ul>
+<li>building an app with components facilitates parallel design, improving overall development efficiency.</li>
+<li>Components are encapsulated and their internals stay private, while their public shape is visible to consumers of the component. This strong separation gives component authors freedom to change the internal implementation details and insulates component consumers from those changes.</li>
+</ul>
+</li>
+<li><p>event-driven architecture</p>
+<ul>
+<li>for better decoupling between components. Any component can subscribe to an application/component event that they can see.</li>
+</ul>
+</li>
+<li><p>framework optimized for performance</p>
+<ul>
+<li>Uses a <strong>stateful client</strong> and <strong>stateless server</strong> architecture that relies on JavaScript on the client side to manage UI component metadata and application data.</li>
+<li>The client calls the server only when absolutely necessary; for example to get more metadata or data</li>
+<li>The server only sends data that is needed by the user to maximize efficiency.</li>
+</ul>
+</li>
+</ul>
+<h2 id="component-architecture">Component Architecture</h2>
+<p><img src="img/ltng_comp_arch.jpg" alt="component Architecture"></p>
+<h2 id="components">Components</h2>
+<p>Components are the self-contained and reusable units of an app.
+Components are rendered to produce HTML DOM elements within the browser.</p>
+<p>Granularity:</p>
+<ul>
+<li>represent a reusable section of the UI, and can range in granularity from a single line of text to an entire app.</li>
+</ul>
+<p>Encapsulation:
+The details of a component&apos;s implementation are encapsulated. This allows the consumer of a component to focus on building their app, while the component author can innovate and make changes without breaking consumers. You configure components by setting the <strong>named attributes</strong> that they expose in their definition. Components <strong>interact</strong> with their environment by listening to or publishing events.</p>
+<p>Lightning Component Framework includes:</p>
+<ul>
+<li>set of pre-built components<ul>
+<li>example: components that come with the Lightning Design System styling are available in the <code>lightning</code> namespace. Also known as
+<strong>base</strong> Lightning components</li>
+</ul>
+</li>
+</ul>
+<h2 id="events">Events</h2>
+<p>A component cam register that it may fire an event in its markup. Events are fired from JavaScript controller actions of the component.</p>
+<p>Events are typically triggered by a user interacting with the user interface.</p>
+<h3 id="two-types-of-events-in-the-lightning-component-framework">Two types of events in the Lightning Component Framework:</h3>
+<ol>
+<li><p><strong>Component events</strong> are handled by the component itself or a component that instantiates or contains the component (parent component).</p>
+</li>
+<li><p><strong>Application events</strong> are handled by <strong>all components</strong> that are listening to the event. These events are essentially a traditional <strong>publish-subscribe</strong> model.</p>
+</li>
+</ol>
+<p><img src="../chap-2/img/action_event_seq.jpg" alt="Sequence Diagram"></p>
+<h2 id="components-are-object-oriented">Components Are Object Oriented</h2>
+<p>Components have encapsulated:</p>
+<ul>
+<li><p>presentation (markup)</p>
+</li>
+<li><p>data state (attributes)</p>
+<ul>
+<li>The public interface (or shape) is represented by a component&#x2019;s attributes</li>
+<li>Each attribute is declared with a data type for the value it will reference, and may be accessed from within the component&#x2019;s markup or encapsulated JavaScript</li>
+<li>expressed as tags in a component&#x2019;s markup, have a collection of available named attributes:<ul>
+<li>name</li>
+<li>type</li>
+<li>description</li>
+<li>required</li>
+<li>default</li>
+<li>access : determines the attribute&#x2019;s scope, acting as an access modifier with the values <code>public (the default), private, or global</code></li>
+</ul>
+</li>
+<li>An attribute can be assigned a <strong>default</strong> value in markup</li>
+<li>An attribute&#x2019;s value can be assigned upon a component&#x2019;s instantiation:<ul>
+<li>by passing in a value from markup</li>
+<li>by using URL parameters upon the component&#x2019;s load (one for attributes of type <code>String</code>)</li>
+<li>Attribute values can be <strong>assigned or changed</strong> after instantiation from the component&#x2019;s controller or helper JavaScript logic</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>logic (JavaScript functions)</li>
+<li>style (CSS rules).</li>
+</ul>
+<h2 id="salesforce-appexchange">Salesforce AppExchange</h2>
+<p>Lightning Components can be easily packaged and deployed through the Salesforce AppExchange, making them available to any Salesforce customer in the ecosystem. This can provide great potential to assist in the ever present challenge to reduce time to market of custom applications.</p>
+<h2 id="true-value">True value</h2>
+<p>When developer begins to combine components to build an application&#x2019;s functional user experience.</p>
+<h2 id="component-characteristics----to-support-rapid-development-of-sophisticated-applications">Component Characteristics -  to support rapid development of sophisticated applications</h2>
+<p><strong>Reusable</strong> &#x2013; a component encapsulates everything it need to function, and provides a well defined public interface that facilitates its use and reuse across multiple applications</p>
+<p><strong>Extensible</strong> &#x2013; object oriented in nature, a component can encapsulate functionality that can be subclassed and modified for specific requirements beyond its the base design</p>
+<p><strong>Independent</strong> &#x2013; a component can be deployed or replaced in a system with minimal dependencies, providing a robust architecture</p>
+<p><strong>Pluggable</strong> &#x2013; one component may be swapped for another, as long as both components expose the same public interface and provide similar functionality</p>
+<p><strong>Parallel development</strong> - loosely coupled nature is a great fit for parallel team development in the enterprise, where teams separated by both time and distance can each work on specific components that follow the design of a predefined public interface to support subsequent integration into a single application.</p>
+<h2 id="refreshing-the-display">Refreshing the Display</h2>
+<p>Client-side JavaScript can make a call to a server-side Apex action method, and how that method can return data to be processed in the callback function associated with the original client-side action.</p>
+<p>If an attribute&#x2019;s value is <strong>changed</strong> with JavaScript logic (such as a callback function,) any display element in the component with its value bound to that attribute will <strong>automatically refresh</strong> its display based on the attribute&#x2019;s new value, (this is analogous to <strong>partial page refreshes</strong> in Visualforce.)</p>
+<h2 id="non-ui-components">Non-UI Components</h2>
+<p>Non-UI components contain nothing but functional logic.</p>
+<p>For example, an application might require functionality that connects with the Salesforce Streaming API. Its sole responsibility would be to subscribe to and wait for notifications on a particular channel. When it receives such a notification, it would raise an event for any listening component to process. It needs no user interface, but rather only the logic to process the API calls, notifications, and event broadcasts.</p>
+<h2 id="component-architecture">Component Architecture</h2>
+<p><img src="img/ltng_comp_arch.jpg" alt="component Architecture"></p>
+<ol>
+<li><p>A special <strong>Application component</strong> which acts as an outermost container, which can be launched <strong>outside</strong> the context of the Salesforce app.</p>
+</li>
+<li><p>Peer components nested in the application component container</p>
+</li>
+<li><p>The ability to nest components inside other components</p>
+</li>
+<li><p>A loosely coupled messaging system across components, enabling them to function as a single application</p>
+</li>
+<li><p>An example of how components can call Apex action methods using a client-side JavaScript API that provides a service to manage efficient data transport for server-side processing</p>
+</li>
+</ol>
+<p>Components are stored as metadata inside a Salesforce org in the cloud, and are also accessible through the Tooling API.</p>
+<p>Lightning Components are built on top of Aura, the same open-source JavaScript UI framework used by Salesforce1</p>
+<p>In an Single Page Application (SPA), page content is manipulated behind the scenes using client-side JavaScript, creating the appearance of separate pages.</p>
+<p>Applications that are expected to run on a variety of mobile devices will most benefit from this web-based development approach, because they require alternate display behavior for inconsistent form factors and page transitions that are gesture-based. This approach lies at the heart of Salesforce1 technology.</p>
+<p>The heavy adoption of AJAX technology and the growing desire for browser-based applications providing a sophisticated user experience has led to the rapid evolution of SPAs. However, building SPAs is not easy, and requires expert knowledge of HTML, CSS, JavaScript, mobile UI design patterns, security, data serialization, and service oriented architecture (SOA) technologies and best practices. The beauty of the Salesforce1 SPA architecture is that implementation is kept well-hidden, with complexities abstracted away behind a metadata layer. This allows administrators to easily configure their mobile page layouts, navigation, actions, and security to configure the standard Salesforce1 app for their users.</p>
+<h3 id="visualforce-is-suboptimal-for-spas">Visualforce is Suboptimal for SPAs</h3>
+<ol>
+<li><p>The very nature of Visualforce requires the use of an <strong>iframe HTML component</strong>, adding performance overhead.</p>
+</li>
+<li><p>Core frameworks and libraries must be linked to the host Visualforce page, either with an external link, or a link to a file uploaded as a Static Resource.</p>
+</li>
+<li><p>Each framework provides its own particular architectural approach that developers must follow, and while some do promote a more manageable component-based approach well suited for scalable enterprise development, others provide little if any guidance around organizing or scaffolding code modules.</p>
+</li>
+<li><p>Developers must somehow choose which framework or approach is best suited to their purpose, learn how to use it, organize it, and maintain a consistent set of practices so that as their app&#x2019;s complexity grows, the maintenance burden is kept in check, and a robust and organized codebase maintained.</p>
+</li>
+</ol>
+<p>Even the &#x201C;best of the best&#x201D; of these frameworks provide such challenges when building custom SPAs hosted in Visualforce.</p>
+<h3 id="lightning-is-an-spa-framework">Lightning is an SPA Framework</h3>
+<ol>
+<li>An easy-to-use scaffolding pattern is provided for building, organizing, and maintaining the encapsulated HTML, CSS, and JavaScript component resources, all managed using cloud- based Salesforce developer tools.</li>
+<li>Components are stored as metadata inside a Salesforce org in the cloud, and are also accessible through the Tooling API.</li>
+<li>Patterns for inheritance and interface implementation are provided, along with a decoupled event messaging model.</li>
+<li>Components extend the capabilities of the core Salesforce1 framework, and dozens (soon to be hundreds) of pre-built components allow developers to assemble their application from modular building blocks that can be nested into other components, or further extended.</li>
+<li>Components in Lightning are &#x201C;peers&#x201D; of each other, rather than being isolated within <strong>iframes</strong>, which are not used in the framework. This makes integration easy and maintenance rapid by allowing developers to piece together components (both those they have created and those obtained from outside sources), without the need to reinvent the entire transaction model.</li>
+<li>No additional external libraries or frameworks are required, although they may be used with Lightning Components if desired.</li>
+<li>No Visualforce page is required to host Lightning Components. Lightning Components are built on top of Aura, the same open-source JavaScript UI framework used by Salesforce1. The framework was designed to serve up a mobile Salesforce user experience using an underlying component-based architecture. This is the same framework with which developers build their own components.</li>
+<li>Lightning Components can be deployed into any Salesforce org, added into Salesforce1 mobile navigation, assembled into custom Lightning Pages with a drag-and-drop Application Builder, and surfaced a number of ways in Salesforce1. They may also be used to build completely standalone apps, independent of the Salesforce1 app.</li>
+<li>Best of all, components built by Salesforce, other ISV partners, or any developer can be reused and extended by any other developer, providing enormous ability to reuse existing functionality as building blocks for rapid application development.</li>
+</ol>
+<h2 id="events-and-messaging">Events and Messaging</h2>
+<p>In the Lightning Framework, components can be easily added, removed or swapped without the risk of breaking the application.</p>
+<p>They can be built by different teams, or even purchased commercially through the AppExchange for integration in a custom application.</p>
+<p>An <strong>event driven programming model</strong> is the key characteristic of such an architecture that allows independent components to seamlessly function together as a cohesive application.</p>
+<h2 id="event-driven-programming">Event Driven Programming</h2>
+<p>An event driven programming model is required in applications heavily dependent upon a graphical user interface, such as those found in browser-based, mobile web or native mobile apps.</p>
+<p>Such apps focus heavily on performing various <strong>actions</strong> in response to data entry and gesture-based user interaction. <strong>Actions</strong> include:</p>
+<ul>
+<li>clicks</li>
+<li>button presses</li>
+<li>swipes
+all of which determine the flow of the application.</li>
+</ul>
+<p>The Lightning Component Framework supports these <strong>actions</strong> and also provides for <strong>custom events</strong> which allow messaging across loosely coupled independent component instances in an application.</p>
+<p>The eventing model in general relies on an <strong>ever-present loop</strong> that listens for the various events, and fires off associated programmatic logic (event-handler) to handle each event when detected.</p>
+<p>The Lightning Component Framework uses the JavaScript <strong>event loop</strong> to listen for events associated with browser-based user actions, as well as other custom events fired from JavaScript code.</p>
+<p>While the capture and raising of user interface events are automatically managed by the browser, developers are responsible for <strong>registering which events to listen</strong> for in each component, and for coding the associated JavaScript <strong>event handler</strong> functions.</p>
+<h3 id="the-many-flavors-of-lightning-events">The Many Flavors of Lightning Events</h3>
+<ol>
+<li><p>User interface events (lower-level events bound to the elements in the component&apos;s markup)</p>
+<p>These fire on a user&#x2019;s interaction with some HTML element rendered within the user interface of a Lightning Component.</p>
+<p>Fired from the browser and handled by JavaScript action (event handlers) in the component&apos;s controller.</p>
+</li>
+</ol>
+<p> Many Lightning tags provide named attributes beginning with <code>&#x201C;on&#x201D;, &#x201C;change&#x201D;, or &#x201C;press&#x201D;</code>.</p>
+<p>  It is the developer&#x2019;s job to code JavaScript controller action functions to handle (event-handler) the associated events.</p>
+<p>  Such functions are bound to named attributes using merge expression in the component&#x2019;s markup, such as:</p>
+<p>  <code>press = {!c.doAction}.</code></p>
+<p>   That <code>&#x201C;c.&#x201D;</code> value provider is a reference to the component&#x2019;s JavaScript controller, as all such events are both fired and handled within the same component.</p>
+<ol>
+<li>Lightning Component <strong>custom events</strong>:</li>
+</ol>
+<p>These are events fired off from JavaScript code in one component, but typically handled in one or more other Lightning Components that are listening for the event.</p>
+<p>These types of events are used to facilitate <strong>custom messaging</strong> across loosely coupled components within an application.</p>
+<p> Each custom event is defined in a special kind of component called a <strong>Lightning Event</strong>, each with its own bundle of resources. It is declared in markup, and there are two types:</p>
+<ul>
+<li>Component events</li>
+<li>Application events</li>
+</ul>
+<p>It is also possible that the action (event-handler) function may in turn fire some custom Lightning Event as a response to the user interface event.</p>
+<p>There are two additional kinds of events:</p>
+<ul>
+<li>Salesforce1 events</li>
+<li>System events</li>
+</ul>
+<h3 id="controller-action-functions">Controller Action Functions</h3>
+<p>When a user interface event is fired, the associated controller action function is invoked.</p>
+<p>Three arguments are automatically passed by <strong>dependency injection</strong> to the controller&#x2019;s action function handling the event:</p>
+<ol>
+<li><p>Component: a reference to the instance of the Lightning Component container with the markup that <strong>fired</strong> the event.</p>
+</li>
+<li><p>Event: a reference to the <strong>instance of the event</strong> that was fired off (such as a click)</p>
+</li>
+<li><p>Helper: a reference to the JavaScript helper function library in the container component</p>
+</li>
+</ol>
+<h3 id="custom-lightning-events">Custom Lightning Events</h3>
+<p>It is important to understand that custom Lightning Events are not the same as user interface events.</p>
+<p>A custom event is a coded construct that can be <strong>declared in markup</strong> and explicitly fired and/or handled in JavaScript code.</p>
+<p>Their primary purpose is to <strong>pass messages</strong> inside a component or across components, and they might be fired off as a result of some browser-based user interface event. An example of such a custom event might be to cause a refresh of a display of aggregate data in a separate component when a mobile card&#x2019;s record data is updated.</p>
+<p> We can  think of custom events as <strong>notifiers</strong> for higher level business or application processes, and their prime purpose is to <strong>pass messages</strong> across components. They are fired off from one component, and typically handled in another.</p>
+<p> <strong>Component events</strong>: these events are either fired and handled within a single component, or fired from a nested component and handled in its container component.</p>
+<p>  If the latter, the event fired off is handled by an action function in the container component&#x2019;s JavaScript controller.</p>
+<p>  The binding between the two is declared in the container&#x2019;s markup, and occurs as the nested component is instantiated inside the container component.  </p>
+<p><strong>Application events</strong>: these follow a more traditional <strong>publish and subscribe pattern</strong> for loosely coupled eventing, and may be fired off by JavaScript functions in a component, either in the controller or the helper. Any component configured as a handler for the event will receive a notification when the event is fired regardless of what component fired it off.</p>
+<p>Other than the reference to the event itself, there is no other dependency between these components.</p>
+<p>Custom Lightning Events must be registered in the markup of any component that is <strong>expected to fire off</strong> the event from JavaScript within a controller or helper.</p>
+<p> Components designed to handle custom Lightning Events must also contain markup that designates them as handlers for that event.</p>
+<h3 id="events-provide-and-promote-loose-coupling">Events Provide and Promote Loose Coupling</h3>
+<p>The benefits of custom Lightning Events, and the decoupled model they support for application development, cannot be stressed enough.</p>
+<p>They permit a development model where components don&#x2019;t need to know about each other&#x2019;s existence in an application.</p>
+<p><strong>Notifier</strong> components, those that fire the custom events, only need concern themselves with firing that event. Nothing fails or breaks if there are no components in the application registered to handle the event. The result is simply that nothing happens when the event fires.</p>
+<p>Similarly, <strong>handler</strong> components, those designed to respond to the events, are simply there listening for it to fire. Again, if no other component fires the event, the result is simply that nothing happens.</p>
+<p>While both the <strong>notifier and handler</strong> components are bound to the event component itself, they do not need to be bound to each other in order to work together in the application; that&#x2019;s loose coupling at work!</p>
+<p>In the diagram below:
+Component A as a <strong>notifier</strong> emits an event, and Components B and D handle it.</p>
+<p><img src="img/Lightning_Component_Events.jpg" alt="Lightning_Component_Events.jpg"></p>
+<h3 id="event-attributes-as-messages">Event Attributes as Messages</h3>
+<p>Developers may declare attributes in their custom Lightning Events to carry data as a <strong>message payload</strong>.</p>
+<p>Before the event is fired in JavaScript code, its attributes may be assigned data values to carry as a payload to any handler. Any functions handling the event can <strong>read the data</strong> from the event&#x2019;s parameter collection.</p>
+<p>Event attributes may be declared as any Lightning data type. While this includes simple primitive types such as string and integer, this also includes complex types such as standard and custom Salesforce objects, collections, Apex custom classes, and even JavaScript data using a variant object type.</p>
+<p>It&#x2019;s a best practice to keep the design of your Lightning Event attribute collections as <strong>light-weight as possible</strong>. Remember that the basic premise of an object oriented, event driven architecture is to facilitate <strong>sending simple messages</strong> across objects, and you will benefit in the long term if you avoid unnecessary complexity in your event structures.</p>
+<h2 id="handling-salesforce1-events">Handling Salesforce1 Events</h2>
+<p>If a Lightning Component is instantiated in the context of the <strong>Salesforce1 app</strong>, and launched from Salesforce1 mobile navigation, it may fire off a <strong>variety of events</strong> from its JavaScript functions that will <strong>automatically be handled</strong> in the Salesforce1 app.</p>
+<p> The page transitions between the various application views are handled by the built-in Salesforce1 events.</p>
+<p> Salesforce1 events activate <strong>built in handlers</strong> that are part of the Salesforce1 application to initiate transitions between your <strong>custom component and standard Salesforce1 pages and views</strong>.</p>
+<p> In addition, they can also activate related data processing actions. This allows developers to build seamless integrations between custom components and standard Salesforce1 functionality.</p>
+<p>These events manage the following kinds of activity:</p>
+<ol>
+<li>View, edit and save existing records</li>
+<li>Navigate to an object&#x2019;s Home page and view the record</li>
+<li>Navigate to an object&#x2019;s list views and child related lists</li>
+<li>Navigate to a specified URL, and more.</li>
+</ol>
+<p>It&#x2019;s important to note that if your component is running in an app <strong>outside the context</strong> of Salesforce1, <strong>your custom code will need to listen for and handle these same events</strong>.</p>
+<h2 id="handling-system-events">Handling System Events</h2>
+<p>There are collection of <strong>system level events</strong> fired off during the application and component <strong>lifecycle</strong> that can be handled by JavaScript logic in your Lightning Components.</p>
+<p>They are designed to allow your components to have awareness of what&#x2019;s going on in your application.</p>
+<p>You can register and handle these events in your components as needed.</p>
+<p>These events manage the following kinds of activity:</p>
+<ol>
+<li>Whether the application or component rendering has completed</li>
+<li>Whether the framework is in a wait state for render or request completion.</li>
+<li>Whether the URL root location has changed</li>
+<li>If there were security constraints found on a request, or whether a system error has occurred</li>
+<li>Whether some value has been initialized, changed or destroyed</li>
+</ol>
+<h2 id="videos">Videos</h2>
+<h3 id="mastering-lightning-framework-part-1-of-2">Mastering Lightning Framework Part-1 of 2</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/Jp4192ftDqI?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+
+
+<h3 id="mastering-lightning-framework-part-2-of-2">Mastering Lightning Framework Part-2 of 2</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/RtFdwq7qC0U?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+<h3 id="advanced-lightning-components">Advanced Lightning Components</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/G931jWBnxHU?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+
+<h3 id="building-lightning-components---deep-dive">Building Lightning Components - Deep Dive</h3>
+ <iframe id="ytplayer" type="text/html" width="640" height="360" src="https://www.youtube.com/embed/l5FDYYyLMEQ?autoplay=0 &amp;fs=1" frameborder="0"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="references">References</h2>
+<ol>
+<li><a href="https://developer.salesforce.com/blogs/developer-relations/2015/05/creating-lightning-components-component-based-architecture-2.html" target="_blank">Creating Lightning Components: Action Processing and Binding Data</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chap-2/body.html" class="navigation navigation-next " aria-label="Next page: Classic Architecture">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Lightning Architecture","level":"1.2","depth":1,"next":{"title":"Classic Architecture","level":"1.3","depth":1,"path":"chap-2/body.md","ref":"chap-2/body.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["youtube","adsense","livereload"],"pluginsConfig":{"youtube":{},"livereload":{},"search":{},"adsense":{"client":"ca-pub-5381915020912221","slot":"8656817479","format":"auto","element":".page-inner section","position":"top"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chap-1/body.md","mtime":"2018-06-13T00:25:00.678Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-10T20:39:06.437Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-adsense/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
