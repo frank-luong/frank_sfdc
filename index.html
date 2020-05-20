@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home Page</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/navbar-blue.css">
+  <style>
+    #sf-menu-content-list {
+      margin-left:10px;
+      font-size:25px;
+      border: 1px solid #fff; border-radius: 10px;
+    }
+
+  </style>
+</head>
+ <body>
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">Kaṭal (கடல் - Ocean) - அறம் செய விரும்பு - Do good and be good</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:void(0)">Home</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" id='sfdc-menu' aria-expanded="true">Salesforce<b class="caret"></b></a>
+          <ul class="dropdown-menu" id="sf-menu-content">
+             <li><a href="./sfdc/GettingStarted.html">Getting Started</a></li>
+             <li><a href="./sfdc/gs/workbook.html">Workbook</a></li>
+              <li class='divider'></li>
+            <li><a href="./sfdc/pevents.html">Platform Events</a></li>
+              <li><a href="./sfdc/cdc.html">Change Data Capture</a></li>
+              <li><a href="./sfdc/sso.html">SSO</a></li>
+              <li><a href="./sfdc/email-integration.html">Email Integration</a></li>
+ 
+             <li class='divider'></li>
+              <li><a href="./sfdc/dx.html">SFDX</a></li>
+              <li><a href="./sfdc/package-faq.html">SFDX Package FAQ</a></li>
+              <li><a href="./dx/plugins.html">SFDX Plugins</a></li>
+              <li><a href="./dx/dx-ci.html">SFDX Jenkins CI</a></li>
+
+
+
+              <li class='divider'></li>
+                <li><a href="./ea/ea-wb.html">Einstein Analytics Workbook</a></li>
+               <li><a href="./sfdc/ea.html">Einstein Analytics (EA)</a></li>
+               <li><a href="./sfdc/ea-wp.html">Einstein Analytics Architecture</a></li>
+                <li><a href="./sfdc/ea-2.html">EA - Beginner</a></li>
+                <li><a href="./sfdc/ea-faq.html">EA FAQs</a></li>
+                <li><a href="./sfdc/ea-du.html">EA - DatasetUtils</a></li>
+                <li><a href="./sfdc/saql.html">EA - SAQL</a></li>
+                <li><a href="./sfdc/fsc-ea.html">FSC - EA Dashboards</a></li>
+
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/dg.html">Data Governance</a></li>
+              <li><a href="./sfdc/gdpr.html">GDPR</a></li>
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/rm.html">Roadmap</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/sfdc-ecosystem.html">Products</a></li>
+              <li><a href="./sfdc/certs/products.html">Products Tree</a></li>
+              <li><a href="./sfdc/sfdc-map.html">Products Map</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/mobile-dev.html">Mobile App</a></li>
+
+
+
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/vf.html">Visual Workflow</a></li>
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/lx-bp.html">Lightning Best Practices</a></li>
+               <li><a href="./lex/ui.html">Lightning User Experience </a></li>
+               <li><a href="./sfdc/lex-ds.html">Lightning Data Services</a></li>
+              <li><a href="./sfdc/lex-dialer.html">Lightning Dailer</a></li>
+              <li class='divider'></li>
+              <li><a href="https://developer.salesforce.com/docs/component-library">Lightning Component Lib</a></li>
+               <li><a href="https://login.salesforce.com/?startURL=%2Fdocs%2Fcomponent-library">Lightning Component Lib for Your Org</a></li>
+               <li><a href="https://chrome.google.com/webstore/detail/salesforce-lightning-insp/pcpmcffcomlcjgpcheokdfcjipanjdpc">Chrome Extension: Lightning Inspector </a></li>
+               <li><a href="https://www.lightningdesignsystem.com">Lightning Design System</a></li>
+ 
+
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/finserv-cloud.html">Financial Services Cloud</a></li>
+              <li><a href="./sfdc/fs-cloud/model.html">FSC - Data Model Interactive</a></li>
+              <li><a href="https://mohan-chinnappan-n.github.io/drawio/src/main/webapp/index.html?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Untitled%20Diagram.xml#R7Vndb6M4EP9rIt09pAIcSPPYpB%2F7Umm1e7q7fXRgAGsBc8Zpk%2F71NwYDBpKITbbNVttUTfDMeDyej9%2FYyYSs0u2DoHn8yANIJo4VbCfkduI4i7mF74qwqwieO6sIkWBBRbJbwlf2Apqo50UbFkDREZScJ5LlXaLPswx82aFRIfhzVyzkSXfVnEYwIHz1aTKk%2FsMCGWuqbVkt4xOwKNZLX7uasab%2B90jwTabXmzgkLF8VO6W1Li1fxDTgzwaJ3E3ISnAuq6d0u4JEubZ2WzXv%2FgC3sVtAJsdMcCAgDoSWQ%2BfhDPcx1RqeaLKBegtegrqWAXtSBsuddpL330ZZuVzz7bRgLyyLJuRGuYCLAMQUyThAPr4%2FVz5U3NKFbsMx%2FaXY6C%2BYqb9GIqdB0Oh28m27MD5F6vMLJFQynhUxy1Fmiv%2BfQRQ8u%2FF91CzrDaAXyj1Us7T%2Fm%2B04TyAkwxS4SViUIUnyHMWoHiUQqlkcpcKkjFjI0JNkGcsUP25tfCz3AcqzyvYmtGrg85T5%2Bjmha0iWzcZXPOECWRnPQE2Tgn%2BHmoj%2BsMpXw6nzUS2oTDAkdaYhnWfynqYsUeX3N4iAZlSTda3Zjh7vW2iYRHVWoItga5B0Uj0AT0GKHYpobg0Au%2B7w2SimhabFRh3NNI3q%2Bo0axW0O44NO45EpPXt%2FKf0I6RpEbeZatElbUSRdo8n7TD9sl4q22hVoLqTmupaPXmwMMxQ6A6kip35fyhruwSg7be6A%2FlGOb1SOtt2tx70F6e0pyPlrFKTtDioyxgX6GQAB9mQ95ELGPOIZTe5aqhls9I3Y%2FatCeuXWw28jI0yFvFGHBqTdfUlptisVBC3tBQT%2Fiz9WnJHR7GUq6rsvM7S0tlxTj4%2BGuOAb4cMBP2o3oq4I5HHwU748miiibKJP3fPPT436MOi%2FPAx%2F4psCYnV4dKw%2FHlBZ%2FucHel0evezrkej1KscJm7wGehlog6FrwKYHTh0gOh76E2Fqy6SBojj6NgJgTTizT4az%2BqJ3DM7ckXBmZoa1JzMa4mjc02t85kzdKOrUJG43NUm%2FYVY71rPMi1hP0cw90KFrRZVbBorK9G02Piqj3%2BF5uLzigYLhjzvdOTA8wNw9VXoQhsklD5HeeQD7Q0fADsq%2B3UGwRc4evI0K0plA5njd4F6fiGOedRqOoY%2FpzhDLlUBx2N7%2BOtdWL5sqhadipD0EyX1NHotJ9vACECjL624FDHofKO0uJ%2B6tkQ8%2BRhTv%2BGTZB6mUBUGZvweS1kSFg2WtvxnVlkyaLxzNTPKOlrt15cwXTsfJ07lzXtesRXgYFnBuH5u%2F5z62QpSg%2Fkcfu0Afc8kF%2B9ji9%2Bhjx24LY3tc9yowe5O2Z1vuaX2PLHpJ5b1O3%2BuvUxv80xrfuNvt%2B258i6P4MLWubOL0Ot%2BMXK7z4bD9RbASb391JXf%2FAw%3D%3D">FSC - Relationship Map</a></li>
+ 
+              <li><a href="./sfdc/fsc-ea.html">FSC - EA Dashboards</a></li>
+
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/fs-cloud/model-sfdc.html">SFDC - Data Model</a></li>
+              <li class='divider'></li>
+
+              <!--
+              <li><a href="./sfdc/sandbox-rel-spring-18.html">Spring 18 Release Info</a></li>
+            -->
+              <li><a href="./sfdc/sandbox-rel-summer-18.html">Summer 18 Release Info</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/certs/certs-2.html">Certs</a></li>
+              <li><a href="./sfdc/certs/training.html">Training Videos</a></li>
+              <li><a href="./sfdc/certs/admin-cert.html">Admin - Cert</a></li>
+ 
+              <li class='divider'></li>
+              <li><a href="./sfdc/notes.html">Notes - ContentNote</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/console.html">Console</a></li>
+              <li><a href="./sfdc/omnichannel.html">Omni-Channel</a></li>
+               <li><a href="./sfdc/omnichannel-tuning.html">Omni-Channel Tuning</a></li>
+ 
+              <li class='divider'></li>
+              <li><a href="./sfdc/einstein-ai.html">Einstein Platform</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/bobj.html">Big Objects</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/dataload.html">Data Load</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/flow.html">Visual Flow</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/bp-apex.html">Apex Best Practices</a></li>
+              <li><a href="./sfdc/pb-trigger.html">Process Builder and Trigger</a></li>
+              
+               <li class='divider'></li>
+              <li><a href="./sfdc/coe.html">CoE</a></li>
+              <li><a href="./sfdc/org-strat/orgstrat.html">Org Strategy Cheat Sheet  </a></li>
+               <li><a href="./sfdc/org-strat-2.html">Org Strategy </a></li>
+               <li class='divider'></li>
+ 
+              <li><a href="./sfdc/ldv.html">Large Data Volumes</a></li>
+              <li><a href="./sfdc/soql-sosl-bp.html">SOQL Best Practices</a></li>
+              <li><a href="./sfdc/uiapi.html">UI API</a></li>
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/mc-1.html">Marketing Cloud</a></li>
+               <li><a href="./sfdc/mc/keywords.html">MC Glossary</a></li>
+ 
+
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/cheatsheets.html">Cheatsheets</a></li>
+              <li><a href="./sfdc/data/sfdc-glossary.html?f=SFDC:Lightning%20Platform">Glossary</a></li>
+              <li><a href="sfdc/glossary/">Glossary-2</a></li>
+
+              <li><a href="./sf-notes/sf-notes-1.html">Notes</a></li>
+              <li><a href="./sf-notes/notes-book.html">Notes Book</a></li>
+              <li><a href="./sfdc/shield.html">Shield</a></li>
+ 
+              <li>
+                <a href="./websecurity/csp.html">CSP</a>
+              </li>
+
+              <li class='divider'></li>
+               <li>
+                <a href="./vscode/plugins.html">VSCode Extensions</a>
+              </li>
+              <li class='divider'></li>
+               <li>
+                <a href="./heroku/private-spaces.html">Heroku Private Spaces</a>
+              </li>
+              <li class='divider'></li>
+               <li>
+                <a href="./mulesoft/mulesoft-1.html">Mulesoft - Anypoint platform</a>
+              </li>
+              <li class='divider'></li>
+               <li> <a href="./web-to/editor.html">Web-to Editor</a> </li>
+               <li> <a href="./web-to/web-to-qa.html">Web-to FAQs</a></li>
+
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">CI<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./sfdc/deploy-checklist.html">Deployment Checklist</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">VCS<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./sfdc/git.html">Git</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Apache<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./sfdc/kafka.html">Apache Kafka</a></li>
+                <li><a href="./sfdc/spark.html">Apache Spark</a></li>
+                  <li class='divider'></li>
+                <li><a href="./fwk/dropwizard.html">DropWizard</a></li>
+                  <li class='divider'></li>
+                <li><a href="./bi/kudu.html">Apache Kudu</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Amazon<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./aws/aws.html">AWS</a></li>
+              <li><a href="./aws/certs/certs-2.html">AWS Certs</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Scala<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./scala/sbt.html">SBT</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">DB<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./ora/ora.html">ORA</a></li>
+              <li class='divider'></li>
+              <li><a href="./col-db/col-db.html">Columnar DBs</a></li>
+              <li class='divider'></li>
+              <li><a href="./sfdc/xmledit.html">XML Editor</a></li>
+              <li class='divider'></li>
+              <li><a href="./json/jsonEditor.html">JSON Editor</a></li>
+              <li class='divider'></li>
+              <li><a href="./data-processing/dp-1.html">Data Processing</a></li>
+              <li class='divider'></li>
+              <li><a href="./ora/cloudgen2.html">Cloud Gen 2</a></li>
+               <li class='divider'></li>
+              <li><a href="./relational/rel1.html">Relational Database </a></li>
+ 
+
+
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Reactive<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./reactive/counter.html">Three Principles of Redux</a></li>
+              <li class='divider'></li>
+              <li><a target="_blank" href="https://christinalee.github.io/Slides/slides-master/rx-android">Intro to RX</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Mobile<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+
+              <li><a href="sfdc/emm.html" target="_blank">Enterprise Mobility Management</a></li>
+              <li><a href="sfdc/mobile-strategy.html" target="_blank">SFDC Mobile Strategy Development</a></li>
+              <li><a href="sfdc/mobile-security.html" target="_blank">SFDC Mobile Security</a></li>
+              <li><a href="sfdc/mySalesforce.html" target="_blank">mySalesforce</a></li>
+              <li class='divider'></li>
+              <li><a href="sfdc/ms-intune.html" target="_blank">MS Intune</a></li>
+                <li class='divider'></li>
+              <li><a href="sfdc/mobile-dev.html" target="_blank">Mobile Development</a></li>
+
+
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">BI<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="bi/tb.html" target="_blank">Tableau</a></li>
+              <li><a href="bi/hyperdb.html" target="_blank">Hyper DB - Extract Engine</a></li>
+              <li class='divider'></li>
+              <li><a href="charts/charts.html" target="_blank">Charts</a></li>
+
+          </ul>
+        </li>
+
+
+
+
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Books<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./books/lx">Mastering Salesforce Lightning</a></li>
+              <li class='divider'></li>
+              <li><a href="./books/shield">Salesforce Shield </a></li>
+              <li class='divider'></li>
+              <li><a href="./books/mulesoft">Salesforce Mulesoft </a></li>
+ 
+              <li class='divider'></li>
+              <li><a href="sfdc/website-security.html">Website Security</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Literature<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="https://mohansun-book-tk.herokuapp.com/" target="_blank">திருக்குறள் - Tirukkuṛaḷ - Web</a></li>
+              <li><a href="./lit/tk.html" target="_blank">திருக்குறள் - Tirukkuṛaḷ- WhatsApp Bot</a></li>
+ 
+              <li class='divider'></li>
+              <li><a href="https://chrome.google.com/webstore/detail/%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%B3%E0%AF%8D-tirukkural/ippmbpcekcodilphmakjknfckmdmodlk">திருக்குறள் - Chrome Extension</a></li>
+               <li class='divider'></li>
+               <li><a href="lit/lit-1.html" target="_blank">Literature  Videos</a></li>
+            
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Math<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./math/numbers.html" target="_blank">Numbers</a></li>
+              <li><a href="./math/fourier.html" target="_blank">Fourier</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Biz<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="./biz/biz-1.html" target="_blank">Biz Case Studies</a></li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Others<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+              <li><a href="music.html" target="_blank">Music-1</a></li>
+              <li class='divider'></li>
+              <li><a href="piano/magenta.html" target="_blank">Piano</a></li>
+              <li><a href="piano/posenet.html" target="_blank">PoseNet</a></li>
+
+              <li class='divider'></li>
+              <li><a href="chess/play-chess.html" target="_blank">Chess</a></li>
+              <li class='divider'></li>
+              <li><a href="weaving/weaving.html" target="_blank">Weaving</a></li>
+              <li class='divider'></li>
+              <li><a href="arts/screen-writing.html" target="_blank">Screen Writing</a></li>
+              <li class='divider'></li>
+
+              <li><a href="mri/mri.html" target="_blank">MRI</a></li>
+              <li class='divider'></li>
+              <li><a href="env/env-1.html" target="_blank">Environment</a></li>
+              <li><a href="env/animals-1.html" target="_blank">Animals</a></li>
+              <li class='divider'></li>
+              <li><a href="forest/f1.html" target="_blank">Plants</a></li>
+
+              <li class='divider'></li>
+              <li><a href="arch/best-arch.html" target="_blank">Proven Architectures</a></li>
+
+              <li class='divider'></li>
+              <li><a href="greats/greats-1.html" target="_blank">Greats</a></li>
+              <li><a href="movies/movies-1.html" target="_blank">Movies</a></li>
+
+              <li class='divider'></li>
+              <li><a href="voip/voip-1.html" target="_blank">VOIP</a></li>
+
+
+              <li class='divider'></li>
+              <li><a href="qa/qa.html" target="_blank">QA systems</a></li>
+
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Projects<b class="caret"></b></a>
+
+          <ul class="dropdown-menu">
+            <li><a href="./projects/all-projects.html">About Projects</a></li>
+
+            <li class='divider'></li>
+            <li><a href="./about/hydrogen.html">Waste2Energy</a></li>
+
+              <li class='divider'></li>
+             <li><a href="./projects/ai-healthcare.html">Project Healthcare</a></li>
+              <li><a href="./projects/vision.html">Project Vision</a></li>
+
+              <li class='divider'></li>
+               <li><a href="./projects/farming.html">Organic Farming</a></li>
+              <li><a href="./farming/notes-book.html"> Farming Notes</a></li>
+              <li><a href="./projects/csv-viewer.html?f=FarmersMarket">Farmers Market</a></li>
+              <li><a href="./projects/carpentry.html">Carpentry</a></li>
+              <li><a href="./non-profits/non-profits.html">Non-Profits</a></li>
+
+
+
+              <li class='divider'></li>
+              <li><a href="./autos/auto-1.html">Automobiles</a></li>
+              <li><a href="./plumbing/plumbing.html">Plumbing</a></li>
+
+              <li class='divider'></li>
+              <li><a href="./projects/cooking.html">Cooking</a></li>
+               <li><a href="./projects/yoga.html">Yoga</a></li>
+
+               <li class='divider'></li>
+               <li><a href="./htmlspec//htmlspec.html">HTML spec experiments</a></li>
+
+              <li class='divider'></li>
+              <li><a href="./projects/food-medicine.html">Food as Medicine</a></li>
+              <li><a href="./projects/food-medicine-2.html">Food as Medicine-2</a></li>
+              <li><a href="./projects/health/vairaoli.html">Vairaoli Notes</a></li>
+
+
+
+
+              <li class='divider'></li>
+              <li><a href="./projects/music-1.html">Music Composing</a></li>
+              <li><a href="./projects/lennon-1.html">John Lennon</a></li>
+              <li><a href="./projects/guitar-1.html">Guitar</a></li>
+              <li><a href="./projects/movies-1.html">Great Movies</a></li>
+
+
+
+              <li class='divider'></li>
+              <li><a href="./projects/bootstrap.html">Project Fresh Start</a></li>
+
+              <li class='divider'></li>
+              <li><a href="./sfdc/https.html">Move to HTTPS</a></li>
+
+              <li class='divider'></li>
+                <li><a href="./drawio/src/main/webapp/index.html">DrawIO</a></li>
+                <li><a href="./viz/viz.html">graphviz</a></li>
+                <li><a href="https://mohan-chinnappan-n2.github.io/2019/viz/seq/seq.html">UML-Seq Diagram</a></li>
+
+
+                <li class='divider'></li>
+                <li><a href="./blockchain/blockchain-1.html">Blockchain</a></li>
+
+ 
+ 
+                <li class='divider'></li>
+                <li><a href="./node/node-1.html">Node - Deno</a></li>
+
+                <li class='divider'></li>
+                <li><a href="./gpu/gpu-1.html">GPU</a></li>
+
+                <li class='divider'></li>
+                <li><a href="./dl/dl-1.html">DL</a></li>
+
+                <li class='divider'></li>
+                <li><a href="./heating/hvac.html">HVAC</a></li>
+                <li><a href="./cooling/ac.html">AC</a></li>
+                <li><a href="./house/house-1.html">Efficient Houses</a></li>
+
+
+
+
+                <li class='divider'></li>
+                <li><a href="./about/cv.html">About me</a></li>
+
+          </ul>
+        </li>
+
+
+
+
+
+
+      </ul>
+
+
+
+
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+
+  <script>
+    $('document').ready(function() {
+        $('#sf-menu-content-list').html(
+              $('#sf-menu-content').html()
+
+        ).hide()
+ 
+        ;
+        $('#sf-menu-content .divider').html("<button class='btn btn-info' style='height:.5px;width:300px;'></button>");
+
+        function toggleSF() {
+            $('#sf-menu-content-list').html(
+              $('#sf-menu-content').html()
+            )
+            $('#sf-menu-content-list').toggle();
+        }
+        $('#toggle-sf-content').click(function() {
+           toggleSF();
+        });
+
+        toggleSF();
+    });
+  </script>
+
+
+  <div class="container">
+    <button id="toggle-sf-content" class="btn btn-info">Toggle Salesforce Items</button>
+    <a class='btn btn-primary' href="farming" target="_blank">Farming.yeah!</a>
+    <a class='btn btn-success' href="life/life-1.html" target="_blank"> Life.yeah! <span class='glyphicon glyphicon-heart'></span></a>
+<br/ >
+    <ul id="sf-menu-content-list"></ul>
+   <hr/>    
+   <div class="row">
+      <div class="col-lg-6">
+    அகர	முதல	எழுத்தெல்லாம்	ஆதி <br/>
+    பகவன்	முதற்றே	உலகு.
+    </div>
+    <div class="col-lg-6">
+    As all letters have the letter A for their first, so the world has the eternal God for its first.
+    </div>
+    </div>
+    <hr/>
+
+    <h3> Notes about interesting topics</h3>
+    <h4>Click on top menu items to view the topics</h4>
+    <hr/>
+
+
+    <style>
+    @keyframes release {
+      from {background-color: #99ffcc;color:black;  transform: rotate(-11deg)}
+      to {background-color: ##337ab7;color:white;  transform: rotate(+11deg)}
+  }
+
+  .release {
+      animation-name: release;
+      animation-duration: 10s;
+      animation:release 5s linear 2s infinite alternate;
+  }
+  </style>
+
+
+
+    <span>
+       <div id="quote" style="float: left;">
+       </div>
+       <img src="gandhi-mahatma-large.jpg" width="40" style="border-radius:35px;float: right;">
+     </span>
+     <center>
+  <hr>
+
+
+  <object style="width: 100%; height: 820px" data="https://www.salesforce.com/content/dam/web/en_us/www/documents/infographics/lightning-readiness-overview.pdf"
+          type="application/pdf">
+   </object>
+
+
+
+   <?xml version="1.0" encoding="utf-8"?>
+          <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2000 2000" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+          <title>sfx-uxc-trailhead-astro-hi-there-512-v1</title>
+          <path class="st0 tail" d="M213.1,346c-14.2-5.6-27.6-13.1-39.8-22.3c-17.1-13-45.8-18.4-45.8-18.4s13,18,11.8,20.5
+              c-1.8,3.9-33.4-6.7-49.8-57.2c-19,40.4-1.4,72.8-4,75.4s-13.9-6-22.6-16.3c0,0,7.7,40.4,58.8,77.6c5.2,3.8-7.9,1.5-24.9-2.6
+              c0,0,39.9,49.1,116.6,5.4S213.1,346,213.1,346z"/>
+          <path id="_Path_" class="st1" d="M164.8,320.7l2.6,12.6l9.2,6.3l-3.5,15.7c0,0,7.3,14.8,6.5,14.8l-13.4-3.9l7.1,11.1l-3.6,11.5
+              l10.3,9.6l-0.5,5.7l16.8,9.4l-18.7,3.7l-9.8-5.2l-0.4-12.4l-10.7-6.5l5.3-17.2l-11.2-18.8l11.5-0.6l2.4-12.5l-6.7-7.3l-3.5-20.9
+              L164.8,320.7z"/>
+          <polygon id="_Path_2" class="st1" points="142.8,328.4 138.5,353.4 152.9,374.8 142,377.9 151.1,388.4 143.7,399.2 157.2,422.6
+              138.8,420.7 131.9,395.9 139.7,385.8 133.8,375.4 125.6,363.1 134.4,362.5 125.8,349.6 131.9,342.8 125.2,329 "/>
+          <path id="_Path_3" class="st1" d="M123.4,328.1l-9.2,10c0,0,6.6,26.7,4.8,25.3l-7.1-5.1l1.4,13.5l-7,4.8l8.6,16.6l-22.4-18.6
+              l9.2-12.9L99,341.6l10.1,3.7l-8.2-18.9h8.6l-1.1-14.7L123.4,328.1z"/>
+          <path id="_Path_4" class="st2" d="M198.4,263.4c0,0-115-67.2-34.4-183.4c0,0,28.6-40.1,80.7-41.8c0,0,102.6-15.7,145.5,41
+              c43.5,57.6,58.9,130.5-31.4,187.6C358.9,266.9,285.5,304.4,198.4,263.4z"/>
+          <g class="left-ear">
+            <path id="_Path_5" class="st2 ears" d="M237.1,41.4c0,0-87.3-86.7-68.9,36.1"/>
+          <path id="_Path_6" class="st1 ears" d="M177.8,75.3c-8-10.1-6.9-46.4,7.2-51c0,0,6.8-0.7,11,3.2c0,0,30.7,26.3,14.6,41.8
+              C196.7,82.7,183,81.8,177.8,75.3z"/>
+          <path id="_Path_7" class="st1 ears" d="M177.8,75.3l0.9-0.7c-1.5-1.9-2.8-5.1-3.6-9c-0.9-4.3-1.2-8.6-1.1-13c0-5.9,1.1-11.8,3.1-17.5
+              c0.8-2.3,2-4.4,3.6-6.3c1.2-1.6,2.9-2.7,4.8-3.4l-0.3-1.1l0.1,1.1l0,0c0.5,0,0.9,0,1.4,0c1.4,0,2.8,0.2,4.2,0.6
+              c1.7,0.4,3.2,1.2,4.5,2.4l0,0l0,0h0.1c3.6,3.2,7,6.8,10,10.6c2.4,3,4.5,6.2,6.2,9.7c1.7,3.2,2.6,6.7,2.6,10.3
+              c-0.1,3.7-1.6,7.1-4.3,9.6c-7.8,7.5-15.5,10.3-21.5,10.2c-4.4-0.1-7.7-1.7-9.7-4.2L177.8,75.3l-0.9,0.7c2.4,3.1,6.5,4.9,11.4,5
+              c6.7,0.1,14.9-3,23.1-10.8c3.1-2.9,4.9-6.9,5-11.2c-0.1-4.1-1.1-8-3-11.6c-2.8-5.3-6.3-10.2-10.4-14.5c-2-2.2-4.1-4.2-6.3-6.2
+              l-0.7,0.9l0.8-0.8c-1.6-1.4-3.4-2.4-5.5-2.9c-1.5-0.4-3.1-0.6-4.7-0.7c-1,0-1.7,0-1.7,0h-0.1h-0.1c-2.3,0.8-4.3,2.2-5.8,4.1
+              c-2.5,3.3-4.3,7.1-5.3,11.2c-1.2,4.6-1.8,9.3-1.9,14.1c-0.1,4.5,0.3,9.1,1.1,13.5c0.9,4.1,2.2,7.6,4.1,9.9L177.8,75.3z"/>
+            </g>
+          <path id="_Path_8" class="st1" d="M156.2,108.7c0,0-49.1,89.9,40.7,140.7C196.9,249.4,125.9,188.5,156.2,108.7z"/>
+          <path id="_Path_9" class="st2 right-ear" d="M323.2,43.7c0,0,90.1-83.7,67.7,38.4"/>
+          <path id="_Path_10" class="st1 right-ear" d="M382.5,79.6c8.3-9.8,8.4-46.2-5.5-51.2c0,0-6.7-0.9-11.1,2.9c0,0-31.6,25.3-16,41.3
+              C363.3,86.4,377.1,85.9,382.5,79.6z"/>
+          <path id="_Path_11" class="st1 right-ear" d="M382.5,79.6l0.9,0.7c1.9-2.2,3.3-5.6,4.3-9.5c1-4.3,1.6-8.7,1.7-13.1c0.2-6.3-0.6-12.7-2.5-18.7
+              c-0.8-2.6-2.1-5.1-3.7-7.3c-1.5-2-3.4-3.5-5.7-4.4h-0.1h-0.1c-0.5-0.1-1-0.1-1.5-0.1c-1.6,0-3.2,0.1-4.8,0.5c-2.1,0.4-4,1.4-5.7,2.8
+              l0.7,0.9l-0.7-0.9c-3.7,3.1-7.1,6.4-10.2,10c-2.7,3.1-5.1,6.4-7.1,10c-2,3.5-3.2,7.4-3.5,11.5c-0.1,4.3,1.6,8.5,4.6,11.5
+              c7.8,8,15.9,11.4,22.6,11.6c5,0.1,9.2-1.6,11.8-4.6L382.5,79.6l-0.9-0.7c-2.1,2.4-5.6,3.9-10,3.8c-5.9-0.1-13.5-3.2-21-10.9
+              c-2.7-2.6-4.1-6.2-4-9.9c0.2-3.7,1.3-7.3,3.2-10.4c2.8-5,6.4-9.6,10.5-13.6c1.8-1.8,3.3-3.2,4.5-4.2l1.3-1.1
+              c0.1-0.1,0.2-0.2,0.4-0.3l0.1-0.1l0,0l0,0c1.4-1.1,3-1.9,4.7-2.3c1.4-0.3,2.8-0.5,4.2-0.4c0.4,0,0.7,0,1,0.1h0.2h0.1l0.1-1.1
+              l-0.4,1.1c1.9,0.7,3.5,2,4.7,3.7c2.3,3.2,3.8,6.9,4.5,10.8c1,4.5,1.5,9.2,1.4,13.8c-0.1,4.2-0.6,8.5-1.6,12.6c-0.7,3.1-2,6-3.8,8.6
+              L382.5,79.6z"/>
+          <path id="_Path_12" class="st3" d="M384.2,173.4c1,38.2-28.2,71.4-69.5,83.6c-10.3,3-20.9,4.7-31.6,5c-44.3,1.2-82.7-21-98.3-53.1
+              c-0.4-0.9-0.9-1.9-1.3-2.8c-3.8-8.6-5.8-17.8-6.1-27.2c-1.2-47.4,46.1-88.4,103.2-89.9c10.2-0.3,20.4,0.7,30.4,3.1
+              C353,102.2,383.2,134.8,384.2,173.4z"/>
+          <ellipse  class="st4 left-eye" cx="230.7" cy="201.1" rx="10" ry="15"/>
+          <ellipse  class="st4 right-eye" cx="323.4" cy="207.8" rx="10" ry="15"/>
+          <path class="st4" d="M193.2,221.7c0,0-9.4-60,5.6-61.6c0,0,7.9,9.9,13,9.8c1,0-3.5-30.5,12.8-40c0,0,58.6,22.5,65.2,9.1
+              c-2-1.1-23.5-9.1-22.7-18.5c0.5-5.2,46-4.9,66.1,39.2c3.4,1.9,8.4-6.5,9.6-18.7c2.1-22.8,18.7,38.3,19.1,39.2s4.9-1.4,8.7-7
+              s2.6,36.7,1.8,41s14.8-18,12.4-46.6s-28-58.6-50.2-67.5c-21.1-8.5-56.7-23.8-111.5,4.3c-58.2,29.9-44.6,91.4-44.4,92.5
+              C180.4,203.7,190.8,221.1,193.2,221.7z"/>
+          <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="289.7656" y1="278.6893" x2="297.9551" y2="105.4657" gradientTransform="matrix(0.9996 2.949179e-02 2.949179e-02 -0.9996 -16.7595 577.7911)">
+              <stop  offset="0.4" style="stop-color:#8D735E"/>
+              <stop  offset="0.69" style="stop-color:#8B715D"/>
+              <stop  offset="0.83" style="stop-color:#836B58"/>
+              <stop  offset="0.94" style="stop-color:#766151"/>
+              <stop  offset="1" style="stop-color:#6C594B"/>
+          </linearGradient>
+          <path class="st5" d="M221.3,268.3c46.7,18.8,124.4-3.3,135.3-5.7c0.8-0.2,4.6,0,5.3,0.4c6,3.8,39.6,27.6,46,49.8
+              c0.2,0.6,0.1,1.3-0.1,1.9l-13.6,36.4c-0.3,0.8-0.9,1.4-1.7,1.8l-19.5,7.6c-1.5,0.6-3.1-0.1-3.8-1.5c-2.6-5.3-9.4-17.8-18.3-26.3
+              c-1.2-1.2-3.1-1.1-4.2,0c-0.7,0.7-1,1.7-0.8,2.6c2,12.5,7.2,34.7,11,56.1c5.7,32.1,12.7,40,21.6,58.5c10,20.9-5.3,50.2-49.4,49.8
+              c-34.6-0.4-52.2-12.2-47.6-41.6c2.9-18.3,0.9-43.9-12-43.9s-13.9,23.7-10.1,42.8c7.3,37.5-37.4,43.1-65.2,37.4
+              c-29.8-6.2-44.7-27.7-32.9-50.5c10.6-20.4,15.5-31.2,17.1-68.5c1.5-35.2,0.3-56.8,1.1-69.8"/>
+          <g id="ARM" class="arm-wave">
+                  <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="176.5925" y1="334.9932" x2="179.2582" y2="278.6074" gradientTransform="matrix(0.9996 2.949179e-02 2.949179e-02 -0.9996 -16.7595 577.7911)">
+                  <stop  offset="0.4" style="stop-color:#8D735E"/>
+                  <stop  offset="0.69" style="stop-color:#8B715D"/>
+                  <stop  offset="0.9308" style="stop-color:#8B715D"/>
+              </linearGradient>
+              <path class="st6" d="M182.8,310.7c0.1-1.3-0.7-2.6-2-3c-9.4-3.5-48-19.7-65.6-58.1c-0.7-1.5,0-3.3,1.5-4c0.2-0.1,0.5-0.2,0.7-0.2
+                  l69.7-11.8c1.3-0.2,2.7,0.5,3.2,1.7c3.2,7.1,14.9,30.2,34.3,38"/>
+              <path class="st7" d="M164.6,262.2c18.3-10,21-25.3,31.8-42.7s12-27.9,0.7-36.3c-6.4-4.7-13,1.3-17.6,7.4c-1.6,2.2-4.6,2.6-6.8,1
+                  c-0.8-0.6-1.4-1.5-1.7-2.4c-3.3-10.2-10.2-24.6-24.4-29.4c-22.8-7.8-40.2-1.9-49.4,19c-8.6,19.5-4.2,49.6,21.9,78.1
+                  C129.3,268,153.8,268.1,164.6,262.2z"/>
+          </g>
+          <path class="st7" d="M396.5,293.2c8.9,14.2,8.2,28,5.7,35.6c-5.2,15.8-14.8,18.8-28.7,23.5c-5.1,1.8-6.2,3.1-5.3,5.9
+              c2.6,8.5,7.2,25,19.4,23.5c7.4-1,10.9-4.3,12.4-7.8c1.1-2.5,4-3.7,6.6-2.6c0.4,0.2,0.7,0.4,1,0.6c5.4,4.2,15.2,11.5,25.2,5.6
+              C448.6,368.2,452.3,318.1,396.5,293.2z"/>
+          <path class="st1" d="M189.6,237.4c0,0,31.7,42.9,90.9,45.3c55.5,2.3,83.4-18.7,83.4-18.7l4.7,4c0,0-33.9,26.6-91.3,19.9
+              C222.7,281.6,206.8,261.2,189.6,237.4z"/>
+          <ellipse class="st1 left-eye" cx="272.4" cy="339.1" rx="0" ry="0.9"/>
+          <ellipse transform="matrix(2.949183e-02 -0.9996 0.9996 2.949183e-02 -76.5715 608.2202)" class="st8" cx="274.9" cy="343.5" rx="49" ry="43.4"/>
+          </svg>
+           </center>
+          <style>
+ @keyframes left-ear-shuffle {
+3% {
+  transform: scale(1, .85);
+}
+6% {
+  transform: scale(1, 1);
+}
+10% {
+  transform: scale(1, .95);
+}
+13% {
+  transform: scale(1, 1);
+}
+}
+
+@keyframes right-ear-shuffle {
+3% {
+  transform: scale(1.01, 0.85);
+}
+6% {
+  transform: scale(1, 1);
+}
+13% {
+  transform: scale(1.03, 0.95);
+}
+19% {
+  transform: scale(1, 1);
+}
+}
+
+@keyframes arm-wave {
+25% {
+  transform: rotate(-6deg);
+}
+75% {
+  transform: rotate(7deg);
+}
+}
+
+@keyframes blink {
+5% {
+  transform: scale(1.2, 0.1);
+}
+10% {
+  transform: scale(1, 1);
+}
+}
+
+@keyframes tail-move {
+25% {
+  transform: rotate(3deg);
+}
+75% {
+  transform: rotate(-3deg);
+}
+}
+
+.left-ear {
+animation: left-ear-shuffle 3s infinite;
+transform-origin: 194px 52px;
+}
+
+.right-ear {
+animation: right-ear-shuffle 2s infinite 1.4s;
+transform-origin: 366px 66px;
+}
+
+.arm-wave {
+animation: arm-wave 0.5s infinite linear;
+transform-origin: 180px 307px;
+}
+
+.left-eye {
+animation: blink 2s infinite;
+transform-origin: 230.7px 201.1px;
+}
+
+.right-eye {
+animation: blink 2s infinite;
+transform-origin: 323px 207px;
+}
+
+.tail {
+animation: tail-move 2s infinite linear;
+transform-origin: 155px 347px;
+}
+
+.st0 {
+fill: #735D4F;
+}
+
+.st1 {
+fill: #7E6454;
+}
+
+.st2 {
+fill: #8D735E;
+}
+
+.st3 {
+fill: #D0B089;
+}
+
+.st4 {
+fill: #232222;
+}
+
+.st5 {
+fill: url(#SVGID_1_);
+}
+
+.st6 {
+fill: url(#SVGID_2_);
+}
+
+.st7 {
+fill: #9E9F9F;
+}
+
+.st8 {
+fill: #805C32;
+}
+  </style>
+
+
+
+
+
+
+
+
+<h4>References</h4>
+
+<ol class="list-group">
+  <li class="list-group-item">
+    <a target="_blank" href="https://resources.docs.salesforce.com/214/latest/en-us/sfdc/pdf/salesforce_technical_requirements.pdf">
+      Salesforce System Requirements
+    </a>
+  </li>
+  <li class="list-group-item">
+    <a target="_blank" href="https://www.youtube.com/watch?v=9aUkDQ9EicM"> While there is life - there is hope! - Stephen Hawking's Motivational Video
+</a>
+  </li>
+</ol>
+<h4>IP Addresses and Security and Compliance Docs</h4>
+<ol>
+<li><a href="https://help.salesforce.com/articleView?id=000003652&type=1">What are the Salesforce IP Addresses & Domains to whitelist?  </a></li>
+<li><a href="https://scdp.salesforce.com/">Security & Compliance Documentation Portal </a></li>
+</ol>
+
+<hr/>
+ <ul>
+<li>
+<a href="https://ta.wikisource.org/wiki/%E0%AE%86%E0%AE%A4%E0%AF%8D%E0%AE%A4%E0%AE%BF%E0%AE%9A%E0%AF%82%E0%AE%9F%E0%AE%BF">ஆத்திசூடி</a>
+</li>
+  </ull>
+
+</div>
+
+
+<script>
+
+(function() {
+
+   const mp3s = [
+     {"url": "amclassical_twopart_invention_in_eflat.mp3", "name": "Beethoven: Two Part invention in E-Flat" },
+      {"url": "amclassical_chopin_prelude_in_c_minor.mp3", "name": "Chopin: Prelude in C minor, Op. 28 No. 20" },
+      {"url": "amclassical_piano_sonata_k_310_mvt_1.mp3", "name": "Mozart: Piano Sonata, K. 310, mvt. 1" },
+      {"url": "amclassical_beethoven_fur_elise.mp3.mp3", "name": "Beethoven: Fur Elise" }
+   ]
+   const mkgQuotes = [
+      {"q": ""},
+      {"q": "You must be the change you wish to see in the world."},
+      {"q": "Satisfaction lies in the effort, not in the attainment, full effort is full victory."},
+      { "q": "Where there is love there is life." },
+      { "q": "The weak can never forgive. Forgiveness is the attribute of the strong." },
+      { "q": "Strength does not come from physical capacity. It comes from an indomitable will."},
+      { "q": "You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty." },
+      { "q": "An ounce of practice is worth more than tons of preaching."},
+      { "q":"Non-violence is the greatest force at the disposal of mankind. It is mightier than the mightiest weapon of destruction devised by the ingenuity of man."},
+
+      {"q": "First they ignore you, then they laugh at you, then they fight you, then you win"}
+
+   ];
+   const START = 1;
+   const STOP = mkgQuotes.length - 1;
+   const author = "Mohandas K Gandhi"
+
+
+   const id = Math.floor((Math.random() * STOP) + START);
+   const quote = mkgQuotes[id].q
+   $('#quote').html(quote + " - " +  author);
+
+
+
+
+
+
+ })();
+
+
+</script>
+
+</body>
+
+</html>
