@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="MainCtrl">
+<head>
+  <meta charset="UTF-8">
+  <title>{{appName}}</title>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../css/navbar-blue.css">
+  <script src="../js/angular.min.js"></script>
+  <script src="../js/data-markdown.user.js"></script>
+  <script src="../bower_components/marked/marked.min.js"></script>
+  <script src="../bower_components/angular-marked/dist/angular-marked.js"></script>
+  <link rel="stylesheet" href="../reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="../reveal.js/css/theme/white.css" id="theme">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+
+  <!--[if lt IE 9]>
+    		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+    		<![endif]-->
+
+  <style>
+    .reveal .slide-number {
+      font-size: 0.5em;
+    }
+    .simg {
+      border-radius: 10px;
+      border: 1px;
+    }
+
+    .reveal section ul li,
+    .reveal section p {
+      font-size: .8em !important;
+    }
+
+    .reveal section pre code {
+      font-size: 0.7em !important;
+    }
+  </style>
+  <!--
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5381915020912221",
+    enable_page_level_ads: true
+  });
+</script>
+-->
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5381915020912221",
+    enable_page_level_ads: true
+  });
+</script>
+
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="javascript:void(0)">{{appName}}</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#/home">Home</a></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Main</a></li>
+      </ul>
+
+
+    </div>
+    <!-- /.navbar-collapse -->
+  </nav>
+  <!--
+  <div class="container" ng-controller='MainCtrl'>
+    <div marked src="'pevents.md'"></div>
+  </div>
+-->
+
+
+  <div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+      <section id="home">
+        <h4>{{appName}}</h4>
+      </section>
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:projectFile:gen </code> </li>
+          <li>purpose: <ul><li> Creates project json files for the given sfdx-project.json </li>
+                <li> Creates deploy.sh to run the source:push in sequence </li>
+           </li>
+      </ul>
+      </section>
+
+      <section>
+          <h4 style='font-size:20px;'>sfdx-mohanc-plugins - Demo-1</h4>
+            <img src='img/sfdx-mohanc-2.gif' height='520' style='border-radius:10px;border-color:#eef;opacity:1;padding:10px;'>
+           <a target='_blank' href='img/sfdx-mohanc-2.gif'>Full View</a>
+       </section>
+ 
+      <section>
+          <h4 style='font-size:20px;'>sfdx-mohanc-plugins - Demo-2</h4>
+           <img src='img/sfdx-mohanc-3.gif' height='520' style='border-radius:10px;border-color:#efe;opacity:1;padding:10px;'>
+            <a target='_blank' href='img/sfdx-mohanc-3.gif'>Full View</a>
+       </section>
+
+       <section>
+          <h4 style='font-size:20px;'>sfdx mohanc:md:rename plugin - Demo</h4>
+           <img src='img/rename-meta-3.gif' height='520' style='border-radius:10px;border-color:#efe;opacity:1;padding:10px;'>
+             <a target='_blank' href='img/renmae-meta.gif'>Full View</a>
+      </section>
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  md:rename</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:md:rename -r update.json </code> </li>
+          <li>
+              <pre><code>
+             Example:
+             Renames the given metadata type as given in the input file
+             sfdx mohanc:md:rename -r update.json
+
+            $ cat update.json | jq
+               {
+               "updates": [
+                   {
+                   "mdtype": "CustomField",
+                   "fullName": "Account.Hot_Status__c",
+                   "label": "HOT STAT",
+                   "type": "Text",
+                   "length": 12
+                   }
+               ]
+               }
+            </code>
+            </pre>
+          </li>
+      </ul>
+      </section>
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:rt</h4>
+      <ul style="font-size:25px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:rt -i /tmp/Accounts.json -o /tmp/Accounts.out.json -e sobjectName</code> </li>
+          <li>
+              <pre><code>
+            
+
+       ** Transforms the RecordTypeIds of the extracted json to target org RecordTypeIds **
+
+       sfdx mohanc:data:transform:rt -i /tmp/Accounts.json -o /tmp/Accounts.out.json -s n -e sobjectName
+
+       Note: flag: e is optional. Tool can read from the inputfile to figure out sobjectName
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:rt -i $file -o $file.out.json -s y|n -e Account
+       done
+       -----------
+  
+            </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-rt-1.gif">Demo: showing how to use Simple option with this plugin </a>
+ 
+      </section>
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:ur</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:ur -i /tmp/input.json -o /tmp/input.out.json -s y|n </code> </li>
+          <li>
+              <pre><code>
+      ** Transforms the UserRoleIds of the extracted json to target org UserRoleIds **
+
+       sfdx mohanc:data:transform:ur -i /tmp/input.json -o /tmp/input.out.json -s y|n
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:ur -i $file -o $file.out.json -s y|n
+       done
+       ----------- 
+            </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-ur-1.gif">Demo of this plugin </a>
+ 
+      </section>
+
+
+       <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:acct</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:acct -i /tmp/input.json -o /tmp/input.out.json </code> </li>
+          <li>
+              <pre><code>
+        ** Transforms the AccountId of the extracted json to target org AccountId **
+
+        sfdx mohanc:data:transform:acct -i /tmp/input.json -o /tmp/input.out.jso
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:acct -i $file -o $file.out.json
+       done
+       -----------
+            </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-acct-1.gif">Demo: showing how the Account: 'Farmers' Id gets transformed by the plugin </a>
+ 
+      </section>
+
+       <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  tooling:execute</h4>
+      <ul style="font-size:25px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx  mohanc:tooling:execute -u TestOrg2 -a apexCode.cls </code> </li>
+          <li>
+          <pre><code>
+     ** Execute Anonymous Apex **
+
+     $ sfdx  mohanc:tooling:execute -u TestOrg2 -a apexCode.cls
+          </code> </pre>
+          </li>
+      </ul>
+      </section>
+
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:profile</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:profile -i /tmp/cs.in.json -o /tmp/cs.out.json </code> </li>
+          <li>
+              <pre><code>
+            
+ ** Transforms the ProfileName of the extracted json to target org ProfileId **
+
+       sfdx mohanc:data:transform:profile -i /tmp/input.json -o /tmp/output.json -s n
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:profile -i $file -o $file.out.json -s y|n
+       done
+       -----------  
+            </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-profile-1.gif">Demo: showing how to use Simple option with this plugin </a>
+ 
+      </section>
+
+ 
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:contact</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:contact -i /tmp/input.json -o /tmp/input.out.json -s y|n</code> </li>
+          <li>
+          <pre><code>
+            
+        ** Transforms the ContactId of the extracted json to target org ContactId **
+
+        sfdx mohanc:data:transform:contact -i /tmp/input.json -o /tmp/input.out.json -s y|n
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:contact -i $file -o $file.out.json -s y|n
+       done
+       -----------
+            </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-contact-1.gif">Demo: showing how to use Simple option with this plugin </a>
+ 
+      </section>
+
+ 
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:simplify</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:simplify -i /tmp/input.json -o /tmp/input.out.json -e sobjectName</code> </li>
+          <li>
+          <pre><code>
+** Transforms the given object into simple key:value format **
+
+        sfdx mohanc:data:transform:simplify -i /tmp/input.json -o /tmp/input.out.json -e sobjectName
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:simplify -i $file -o $file.out.json -e sobjectName
+       done
+       ----------- 
+            </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-simplify-1.gif">Demo of this plugin </a>
+       <br/><a style='font-size:25px' target='_blank' href="img/acct-alias-2.png">Using Alias</a>
+      </section>
+
+      <section>
+          <h4 style='font-size:30px;'>sfdx-mohanc-plugins &#8594;  data:transform:un</h4>
+      <ul style="font-size:30px;">
+          <li>install: <code>sfdx plugins:install sfdx-mohanc-plugins</code></li>
+          <li>usage: <code> sfdx mohanc:data:transform:un -i /tmp/input.json -o /tmp/input.out.json </code> </li>
+          <li>
+          <pre><code>
+  ** Transforms the given Usernames to unique Usernames **
+
+       sfdx mohanc:data:transform:un -i /tmp/input.json -o /tmp/input.out.json
+
+       bash script to process all the files in a folder:
+       ------------
+       for file in /tmp/*
+       do
+           echo Processing "$file" ...
+           sfdx mohanc:data:transform:un -i $file -o $file.out.json
+       done
+       -----------
+           </code> </pre>
+          </li>
+      </ul>
+       <a style='font-size:25px' target='_blank' href="img/data-transform-un-1.gif">Demo of this plugin </a>
+ 
+      </section>
+
+
+       <section>
+           <h4 style='font-size:25px;'>Model export</h4>
+           <img style="border-radius:10px;border-color:#eef;" src="img/dx-model-export-1.png" alt="">
+            <a style='font-size:15px;' href='samples/login-sample.json'>Sample Login JSON file</a>
+           <img style="border-radius:10px;border-color:#eef;" src="img/dx-model-export-2.png" alt="">
+ 
+       </section>
+
+       <section>
+           <h4 style='font-size:25px;'>Model export Usage</h4>
+            <pre style='font-size:20px;'>
+<code> ## for scratch-org:
+sfdx mohanc:md:describe -s RecordType
+# For Sandbox/DE/PROD: Establish connection with:
+#   In case of sandbox  use :    sfdx force:auth:web:login -r https://test.salesforce.com
+#   In case of  PROD or DE use : sfdx force:auth:web:login -r https://login.salesforce.com
+
+## for DE or sandbox or PROD, when you do not want to use OAUTH2:
+# Sample login.json :https://mohan-chinnappan-n.github.io/dx/samples/login-sample.json
+# sfdx mohanc:md:describe -s RecordType -l login.json -o org40
+
+## ---- For full org metadata export: scratch org ----
+sfdx mohanc:md:describeGlobal   > ObjectList.txt
+sfdx mohanc:md:describe  -i ObjectList.txt
+## For full org metadata export: sandbox/DE/PROD org
+sfdx mohanc:md:describeGlobal -u username   > ObjectList.txt
+sfdx mohanc:md:describe -u username -i ObjectList.txt > org-md.csv
+      </code>
+           </pre>
+            
+ 
+       </section>
+
+       <section>
+           <h4 style='font-size:25px;'>Model export Usage - Demo</h4>
+            <img style="border-radius:10px;border-color:#eef;" height='500' src="img/dx-model-export-1.gif" alt="">
+       </section>
+
+
+       <section>
+           <h4 style='font-size:25px;'>How to get ERD for the given SObjects list</h4>
+            <pre style='font-size:20px;'>
+<code>
+## ---- how to draw ER Diagram for the given SObjects along with model export for them ----
+## SObjects list is comma-separated as shown below:
+### If you have dot program installed in your OS, ERD will be drawn in svg format :
+sfdx mohanc:md:describe -s Contact,Account -e contact-account.svg > contact-account.csv
+
+### for Sandbox/DE/PROD
+sfdx mohanc:md:describe  -u USERNAME -s Contact,Account -e contact-account.svg > contact-account.csv
+
+### If you do NOT have dot program installed in your OS, ERD will be drawn in dot format :
+sfdx mohanc:md:describe -s Contact,Account -e contact-account.dot > contact-account.csv
+### You can use our online dot-viewer to view the ERD:
+open https://mohan-chinnappan-n.github.io/viz/viz.html  
+### Click Open button in this app to load the dot file into this app
+</code>
+           </pre>
+<a style='font-size:20px;' target='_blank' href="https://mohan-chinnappan-n.github.io/viz/viz.html">Viewer App for DOT files</a>            
+ 
+       </section>
+ 
+       <section>
+           <h4 style='font-size:25px;'>How to get ERD for the given SObjects list - Demo</h4>
+             <img style="border-radius:10px;border-color:#eef;" height='500' src="img/dx-model-export-erd-3.gif" alt="">
+       </section>
+
+
+ 
+        <section>
+           <h4>jq filter</h4>
+           <img style="border-radius:10px;border-color:#eef;" height='500' src="img/data.jq-1.png" alt="">
+       </section>
+
+       <section>
+           <h4> Data Vlookup</h4>
+           <img style="border-radius:10px;border-color:#eef;" height='500' src="img/data-vlookup-1.png" alt="">
+       </section>
+
+       <section>
+           <h4 style='font-size:30px;'> Data Transformations</h4>
+           <img style="border-radius:10px;border-color:#eef;" height='500' src="img/data-tx-1.gif" alt="">
+       </section>
+
+       <section>
+           <h4 style='font-size:30px;'>Einstein Analytics (EA) Query</h4>
+           <a style='font-size:20px'; href="../sfdc/fsc-ea.html#/6">See: FSC - EA Dashboards</a>
+           <img style="border-radius:10px;border-color:#eef;" height='475' src="img/dx-ea-1.gif" alt="">
+           <hr/>
+
+ 
+       </section>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  <script src="../reveal.js/lib/js/head.min.js"></script>
+  <script src="../reveal.js/js/reveal.js"></script>
+
+
+  <script>
+    'use strict';
+
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+
+      //width: 960,
+      //	height: 700,
+
+      // Display presentation control arrows
+      controls: true,
+
+      // Help the user learn the controls by providing hints, for example by
+      // bouncing the down arrow when they first encounter a vertical slide
+      controlsTutorial: true,
+
+      // Determines where controls appear, "edges" or "bottom-right"
+      controlsLayout: 'edges',
+
+      // Visibility rule for backwards navigation arrows; "faded", "hidden"
+      // or "visible"
+      controlsBackArrows: 'faded',
+      // Display a presentation progress bar
+      progress: true,
+
+      // Set default timing of 2 minutes per slide
+      defaultTiming: 120,
+
+      // Enable keyboard shortcuts for navigation
+      keyboard: true,
+
+
+      history: true,
+      center: true,
+      slideNumber: true,
+
+      embedded: true,
+
+      transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+      menu: {
+        markers: true,
+        openSlideNumber: true,
+        themes: [{
+            name: 'Black',
+            theme: '../reveal.js/css/theme/black.css'
+          },
+          {
+            name: 'White',
+            theme: '../reveal.js/css/theme/white.css'
+          },
+          {
+            name: 'League',
+            theme: '../reveal.js/css/theme/league.css'
+          },
+          {
+            name: 'Sky',
+            theme: '../reveal.js/css/theme/sky.css'
+          },
+          {
+            name: 'Beige',
+            theme: '../reveal.js/css/theme/beige.css'
+          },
+          {
+            name: 'Simple',
+            theme: '../reveal.js/css/theme/simple.css'
+          },
+          {
+            name: 'Serif',
+            theme: '../reveal.js/css/theme/serif.css'
+          },
+          {
+            name: 'Blood',
+            theme: '../reveal.js/css/theme/blood.css'
+          },
+          {
+            name: 'Night',
+            theme: '../reveal.js/css/theme/night.css'
+          },
+          {
+            name: 'Moon',
+            theme: '../reveal.js/css/theme/moon.css'
+          },
+          {
+            name: 'Solarized',
+            theme: '../reveal.js/css/theme/solarized.css'
+          }
+        ],
+        custom: []
+      },
+
+      // Optional reveal.js plugins
+      dependencies: [{
+          src: '../reveal.js/lib/js/classList.js',
+          condition: function() {
+            return !document.body.classList;
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/marked.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/markdown/markdown.js',
+          condition: function() {
+            return !!document.querySelector('[data-markdown]');
+          }
+        },
+        {
+          src: '../reveal.js/plugin/highlight/highlight.js',
+          async: true,
+          condition: function() {
+            return !!document.querySelector('pre code');
+          },
+          callback: function() {
+            hljs.initHighlightingOnLoad();
+          }
+        },
+        {
+          src: '../reveal.js/plugin/zoom-js/zoom.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/notes/notes.js',
+          async: true
+        },
+        {
+          src: '../reveal.js/plugin/reveal.js-menu/menu.js',
+          async: true
+        }
+      ]
+    });
+
+
+
+    var app = angular.module('app', [
+      'hc.marked'
+    ]);
+    app.config(['markedProvider', function(markedProvider) {
+      markedProvider.setOptions({
+        gfm: true
+      });
+    }]);
+
+    var GSCOPE;
+    app.controller('MainCtrl', function($scope, $http, $timeout) {
+      GSCOPE = $scope; // debugging purposes
+      $scope.appName="sfdx Plugins";
+
+
+
+    })
+  </script>
+</body>
+
+</html>
