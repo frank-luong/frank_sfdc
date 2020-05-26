@@ -1,3 +1,0 @@
-.nojekyll  added
-this avoids page building in github pages
-g
